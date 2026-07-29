@@ -288,9 +288,8 @@ with tab1:
                     st.markdown(f"**Principals:** {r['principal_count']}")
                     st.markdown(f"**Verified Contacts:** {r['verified_contact_count']}")
                     est = r.get("enrichment_status", "")
-                    st.markdown(
-                        f"**Status:** {ENRICHMENT_EMOJI.get(est, '\u26aa')} {est}"
-                    )
+                    _emoji = ENRICHMENT_EMOJI.get(est, "\u26aa")
+                    st.markdown(f"**Status:** {_emoji} {est}")
                     if r.get("has_unresolved_contact"):
                         st.error("\u26a0 Has unresolved contact(s)")
                 if r.get("unresolved_warning"):

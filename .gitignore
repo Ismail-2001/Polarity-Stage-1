@@ -11,6 +11,8 @@ build/
 
 # Data
 data/sfo_enriched.json
+data/export.csv
+data/export.json
 data/chromadb/
 
 # Audit logs

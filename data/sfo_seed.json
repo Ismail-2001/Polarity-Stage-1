@@ -1,0 +1,977 @@
+[
+  {
+    "id": "SFO-001",
+    "entity_name": "Cascade Investment LLC",
+    "entity_type": "SFO",
+    "family_name": "Gates",
+    "source_of_wealth": "Microsoft co-founder",
+    "estimated_aum_usd": 171000000000.0,
+    "aum_confidence": "Verified Direct Work Email",
+    "year_established": 1995,
+    "website": "https://www.cascadeinvestment.com",
+    "hq_city": "Kirkland",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Bill Gates", "title": "Founder"},
+      {"full_name": "Michael Larson", "title": "CEO"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "No verified direct email found for decision-makers. Only generic info@ cascadeinvestment.com exists."}
+    ]
+  },
+  {
+    "id": "SFO-002",
+    "entity_name": "Iconiq Capital",
+    "entity_type": "SFO",
+    "family_name": "Zuckerberg",
+    "source_of_wealth": "Facebook / Meta Platforms",
+    "estimated_aum_usd": 75000000000.0,
+    "aum_confidence": "Verified Direct Work Email",
+    "year_established": 2011,
+    "website": "https://www.iconiqcapital.com",
+    "hq_city": "San Francisco",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Divesh Makan", "title": "CEO & CIO"},
+      {"full_name": "Will Griffith", "title": "Managing Partner"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "No direct principal emails available publicly. Generic contact forms only."}
+    ]
+  },
+  {
+    "id": "SFO-003",
+    "entity_name": "Ballmer Group",
+    "entity_type": "SFO",
+    "family_name": "Ballmer",
+    "source_of_wealth": "Microsoft former CEO",
+    "estimated_aum_usd": 100000000000.0,
+    "aum_confidence": "Verified Direct Work Email",
+    "year_established": 2015,
+    "website": "https://www.ballmergroup.org",
+    "hq_city": "Los Angeles",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Steve Ballmer", "title": "Founder"},
+      {"full_name": "Larry Cohen", "title": "Executive Director"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "info@ballmergroup.org", "confidence": "Catch-all / Generic Inbox"}
+    ]
+  },
+  {
+    "id": "SFO-004",
+    "entity_name": "Cargill Family Office",
+    "entity_type": "SFO",
+    "family_name": "Cargill",
+    "source_of_wealth": "Cargill Inc. agribusiness fortune",
+    "estimated_aum_usd": 50000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "Minneapolis",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Mariann Cargill Lieberman", "title": "Family Representative"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Private family office — no public contact information available."}
+    ]
+  },
+  {
+    "id": "SFO-005",
+    "entity_name": "Witter Family Office",
+    "entity_type": "SFO",
+    "family_name": "Witter",
+    "source_of_wealth": "Dean Witter / Morgan Stanley co-founder",
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": 1990,
+    "website": null,
+    "hq_city": "San Francisco",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "William Witter", "title": "Principal"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "No digital footprint for this private SFO."}
+    ]
+  },
+  {
+    "id": "SFO-006",
+    "entity_name": "The Pritzker Family Office",
+    "entity_type": "SFO",
+    "family_name": "Pritzker",
+    "source_of_wealth": "Hyatt Hotels, Marmon Group",
+    "estimated_aum_usd": 37000000000.0,
+    "aum_confidence": "Verified Direct Work Email",
+    "year_established": 1980,
+    "website": null,
+    "hq_city": "Chicago",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Thomas Pritzker", "title": "Chairman"},
+      {"full_name": "Gigi Pritzker", "title": "Family Member"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Private office — no direct emails published."}
+    ]
+  },
+  {
+    "id": "SFO-007",
+    "entity_name": "Bass Family Office",
+    "entity_type": "SFO",
+    "family_name": "Bass",
+    "source_of_wealth": "Oil & gas, investments",
+    "estimated_aum_usd": 8000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1960,
+    "website": null,
+    "hq_city": "Fort Worth",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Sid Bass", "title": "Family Principal"},
+      {"full_name": "Robert Bass", "title": "Family Principal"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Intensely private family. No public contact."}
+    ]
+  },
+  {
+    "id": "SFO-008",
+    "entity_name": "Mars Family Office",
+    "entity_type": "SFO",
+    "family_name": "Mars",
+    "source_of_wealth": "Mars Inc. confectionery",
+    "estimated_aum_usd": 120000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1967,
+    "website": null,
+    "hq_city": "McLean",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Jacqueline Mars", "title": "Family Principal"},
+      {"full_name": "John Mars", "title": "Family Principal"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Extremely private family office. No public contacts."}
+    ]
+  },
+  {
+    "id": "SFO-009",
+    "entity_name": "Koch Family Office",
+    "entity_type": "SFO",
+    "family_name": "Koch",
+    "source_of_wealth": "Koch Industries",
+    "estimated_aum_usd": 150000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1981,
+    "website": null,
+    "hq_city": "Wichita",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Charles Koch", "title": "Chairman"},
+      {"full_name": "Chase Koch", "title": "President"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "No verified principal emails available."}
+    ]
+  },
+  {
+    "id": "SFO-010",
+    "entity_name": "Lauder Family Office",
+    "entity_type": "SFO",
+    "family_name": "Lauder",
+    "source_of_wealth": "Estée Lauder Companies",
+    "estimated_aum_usd": 30000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1964,
+    "website": null,
+    "hq_city": "New York",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Leonard Lauder", "title": "Family Principal"},
+      {"full_name": "Ronald Lauder", "title": "Family Principal"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Private family office."}
+    ]
+  },
+  {
+    "id": "SFO-011",
+    "entity_name": "Dell Family Office",
+    "entity_type": "SFO",
+    "family_name": "Dell",
+    "source_of_wealth": "Dell Technologies",
+    "estimated_aum_usd": 50000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1999,
+    "website": "https://www.msdcapital.com",
+    "hq_city": "Austin",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Michael Dell", "title": "Founder & Chairman"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "MSD Capital manages the Dell family fortune. No direct principal emails found."}
+    ]
+  },
+  {
+    "id": "SFO-012",
+    "entity_name": "Ellison Family Office",
+    "entity_type": "SFO",
+    "family_name": "Ellison",
+    "source_of_wealth": "Oracle Corporation",
+    "estimated_aum_usd": 130000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 2008,
+    "website": null,
+    "hq_city": "Woodside",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Larry Ellison", "title": "Founder"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "No public contact information."}
+    ]
+  },
+  {
+    "id": "SFO-013",
+    "entity_name": "Bloomberg Family Office",
+    "entity_type": "SFO",
+    "family_name": "Bloomberg",
+    "source_of_wealth": "Bloomberg L.P.",
+    "estimated_aum_usd": 82000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1995,
+    "website": null,
+    "hq_city": "New York",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Michael Bloomberg", "title": "Founder"},
+      {"full_name": "Georgina Bloomberg", "title": "Family Member"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Bloomberg family office is extremely private."}
+    ]
+  },
+  {
+    "id": "SFO-014",
+    "entity_name": "Cox Family Office",
+    "entity_type": "SFO",
+    "family_name": "Cox",
+    "source_of_wealth": "Cox Enterprises (media, automotive)",
+    "estimated_aum_usd": 50000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1978,
+    "website": null,
+    "hq_city": "Atlanta",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Jim Kennedy", "title": "Chairman"},
+      {"full_name": "Anne Cox Chambers", "title": "Family Matriarch (deceased)"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Private family office."}
+    ]
+  },
+  {
+    "id": "SFO-015",
+    "entity_name": "Johnson Family Office",
+    "entity_type": "SFO",
+    "family_name": "Johnson (Fidelity)",
+    "source_of_wealth": "Fidelity Investments",
+    "estimated_aum_usd": 65000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1984,
+    "website": null,
+    "hq_city": "Boston",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Abigail Johnson", "title": "CEO, Fidelity Investments"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Family office is private."}
+    ]
+  },
+  {
+    "id": "SFO-016",
+    "entity_name": "Hearst Family Office",
+    "entity_type": "SFO",
+    "family_name": "Hearst",
+    "source_of_wealth": "Hearst Corporation (media)",
+    "estimated_aum_usd": 15000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1920,
+    "website": null,
+    "hq_city": "New York",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "William Randolph Hearst III", "title": "Board Member"},
+      {"full_name": "Steven R. Swartz", "title": "CEO, Hearst"
+      }
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "No direct principal emails."}
+    ]
+  },
+  {
+    "id": "SFO-017",
+    "entity_name": "Soros Fund Management",
+    "entity_type": "SFO",
+    "family_name": "Soros",
+    "source_of_wealth": "Hedge fund management",
+    "estimated_aum_usd": 25000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1970,
+    "website": "https://www.sorosfundmanagement.com",
+    "hq_city": "New York",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "George Soros", "title": "Founder"},
+      {"full_name": "Dawn Fitzpatrick", "title": "CEO & CIO"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "No verified principal emails available."}
+    ]
+  },
+  {
+    "id": "SFO-018",
+    "entity_name": "Ziff Family Office",
+    "entity_type": "SFO",
+    "family_name": "Ziff",
+    "source_of_wealth": "Ziff Davis publishing family",
+    "estimated_aum_usd": 12000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1989,
+    "website": null,
+    "hq_city": "New York",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Dirk Ziff", "title": "Family Principal"},
+      {"full_name": "Robert Ziff", "title": "Family Principal"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Very private family. No public contact."}
+    ]
+  },
+  {
+    "id": "SFO-019",
+    "entity_name": "Thiel Family Office",
+    "entity_type": "SFO",
+    "family_name": "Thiel",
+    "source_of_wealth": "PayPal, Palantir, Founders Fund",
+    "estimated_aum_usd": 10000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 2015,
+    "website": null,
+    "hq_city": "San Francisco",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Peter Thiel", "title": "Founder"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "No verified contact."}
+    ]
+  },
+  {
+    "id": "SFO-020",
+    "entity_name": "RedBird Capital Partners",
+    "entity_type": "SFO",
+    "family_name": "McCormick",
+    "source_of_wealth": "Goldman Sachs, media investments",
+    "estimated_aum_usd": 10000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 2014,
+    "website": "https://www.redbirdcap.com",
+    "hq_city": "New York",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Gerry Cardinale", "title": "Founder & Managing Partner"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "info@redbirdcap.com", "confidence": "Catch-all / Generic Inbox"}
+    ]
+  },
+  {
+    "id": "SFO-021",
+    "entity_name": "Saban Family Office",
+    "entity_type": "SFO",
+    "family_name": "Saban",
+    "source_of_wealth": "Media (Power Rangers, Univision)",
+    "estimated_aum_usd": 5000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1998,
+    "website": null,
+    "hq_city": "Los Angeles",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Haim Saban", "title": "Founder"},
+      {"full_name": "Cheryl Saban", "title": "Family Member"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Private office."}
+    ]
+  },
+  {
+    "id": "SFO-022",
+    "entity_name": "Laurence Family Office",
+    "entity_type": "SFO",
+    "family_name": "Laurence",
+    "source_of_wealth": "Finance / Proprietary trading",
+    "estimated_aum_usd": 3000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 2005,
+    "website": null,
+    "hq_city": "Greenwich",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "David Laurence", "title": "Family Principal"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Very private, no public presence."}
+    ]
+  },
+  {
+    "id": "SFO-023",
+    "entity_name": "Hancock Family Office",
+    "entity_type": "SFO",
+    "family_name": "Hancock",
+    "source_of_wealth": "Natural resources, timber",
+    "estimated_aum_usd": 7000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1985,
+    "website": null,
+    "hq_city": "Augusta",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "George Hancock", "title": "Principal"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "No public information."}
+    ]
+  },
+  {
+    "id": "SFO-024",
+    "entity_name": "Tisch Family Office",
+    "entity_type": "SFO",
+    "family_name": "Tisch",
+    "source_of_wealth": "Loews Corporation (hotels, insurance)",
+    "estimated_aum_usd": 28000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1955,
+    "website": null,
+    "hq_city": "New York",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Jonathan Tisch", "title": "Co-Chairman, Loews"},
+      {"full_name": "James Tisch", "title": "CEO, Loews"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Family office contact information is not public."}
+    ]
+  },
+  {
+    "id": "SFO-025",
+    "entity_name": "Anschutz Family Office",
+    "entity_type": "SFO",
+    "family_name": "Anschutz",
+    "source_of_wealth": "Oil, railroads, entertainment (AEG, Regal Cinemas)",
+    "estimated_aum_usd": 20000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1960,
+    "website": null,
+    "hq_city": "Denver",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Philip Anschutz", "title": "Founder"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Claims management is via The Anschutz Corporation. No direct principal emails."}
+    ]
+  },
+  {
+    "id": "SFO-026",
+    "entity_name": "Rowling Family Office",
+    "entity_type": "SFO",
+    "family_name": "Rowling",
+    "source_of_wealth": "Oil & gas, investments (TRT Holdings)",
+    "estimated_aum_usd": 8000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1996,
+    "website": null,
+    "hq_city": "Dallas",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Robert Rowling", "title": "President, TRT Holdings"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Private family office."}
+    ]
+  },
+  {
+    "id": "SFO-027",
+    "entity_name": "Griffin Family Office",
+    "entity_type": "SFO",
+    "family_name": "Griffin",
+    "source_of_wealth": "Citadel hedge fund",
+    "estimated_aum_usd": 35000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 2000,
+    "website": null,
+    "hq_city": "Chicago",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Ken Griffin", "title": "Founder & CEO, Citadel"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "No verified direct email."}
+    ]
+  },
+  {
+    "id": "SFO-028",
+    "entity_name": "Simons Family Office",
+    "entity_type": "SFO",
+    "family_name": "Simons",
+    "source_of_wealth": "Renaissance Technologies",
+    "estimated_aum_usd": 29000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 2005,
+    "website": null,
+    "hq_city": "East Setauket",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "James Simons", "title": "Founder, RenTech (deceased)"},
+      {"full_name": "Marilyn Simons", "title": "Family Principal"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Extremely secretive family. No public contact."}
+    ]
+  },
+  {
+    "id": "SFO-029",
+    "entity_name": "Bronfman Family Office",
+    "entity_type": "SFO",
+    "family_name": "Bronfman",
+    "source_of_wealth": "Seagram spirits fortune",
+    "estimated_aum_usd": 12000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1950,
+    "website": null,
+    "hq_city": "New York",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Edgar Bronfman Jr.", "title": "Family Principal"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "No public contact."}
+    ]
+  },
+  {
+    "id": "SFO-030",
+    "entity_name": "Golisano Family Office",
+    "entity_type": "SFO",
+    "family_name": "Golisano",
+    "source_of_wealth": "Paychex founder",
+    "estimated_aum_usd": 5000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 2000,
+    "website": null,
+    "hq_city": "Naples",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Thomas Golisano", "title": "Founder"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Private family office."}
+    ]
+  },
+  {
+    "id": "SFO-031",
+    "entity_name": "Bechtel Family Office",
+    "entity_type": "SFO",
+    "family_name": "Bechtel",
+    "source_of_wealth": "Bechtel Corporation (engineering/construction)",
+    "estimated_aum_usd": 15000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1950,
+    "website": null,
+    "hq_city": "San Francisco",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Riley Bechtel", "title": "Family Principal"},
+      {"full_name": "Brendan Bechtel", "title": "CEO, Bechtel Corp"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Family office is very private."}
+    ]
+  },
+  {
+    "id": "SFO-032",
+    "entity_name": "McClendon Family Office",
+    "entity_type": "SFO",
+    "family_name": "McClendon",
+    "source_of_wealth": "Chesapeake Energy co-founder",
+    "estimated_aum_usd": 3000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 2013,
+    "website": null,
+    "hq_city": "Oklahoma City",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Tom L. Ward", "title": "Family Representative"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Private."}
+    ]
+  },
+  {
+    "id": "SFO-033",
+    "entity_name": "Stephens Family Office",
+    "entity_type": "SFO",
+    "family_name": "Stephens",
+    "source_of_wealth": "Stephens Inc. (investment banking)",
+    "estimated_aum_usd": 5000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1958,
+    "website": null,
+    "hq_city": "Little Rock",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Warren Stephens", "title": "Chairman & CEO, Stephens Inc."}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "No public contact."}
+    ]
+  },
+  {
+    "id": "SFO-034",
+    "entity_name": "Mellon Family Office",
+    "entity_type": "SFO",
+    "family_name": "Mellon",
+    "source_of_wealth": "Mellon Bank, Gulf Oil",
+    "estimated_aum_usd": 12000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1890,
+    "website": null,
+    "hq_city": "Pittsburgh",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Thomas Mellon", "title": "Founder (deceased)"},
+      {"full_name": "Timothy Mellon", "title": "Family Principal"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Historic family office, very private."}
+    ]
+  },
+  {
+    "id": "SFO-035",
+    "entity_name": "Mott Family Office",
+    "entity_type": "SFO",
+    "family_name": "Mott",
+    "source_of_wealth": "General Motors co-founder",
+    "estimated_aum_usd": 4000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1920,
+    "website": null,
+    "hq_city": "Flint",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Charles Stewart Mott", "title": "Founder (deceased)"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "The Mott Foundation is the philanthropic arm. No family office contact found."}
+    ]
+  },
+  {
+    "id": "SFO-036",
+    "entity_name": "Weill Family Office",
+    "entity_type": "SFO",
+    "family_name": "Weill",
+    "source_of_wealth": "Citigroup former CEO",
+    "estimated_aum_usd": 8000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 2003,
+    "website": null,
+    "hq_city": "New York",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Sanford Weill", "title": "Founder"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Private office."}
+    ]
+  },
+  {
+    "id": "SFO-037",
+    "entity_name": "Perot Family Office",
+    "entity_type": "SFO",
+    "family_name": "Perot",
+    "source_of_wealth": "Electronic Data Systems (EDS), Perot Systems",
+    "estimated_aum_usd": 5000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1985,
+    "website": null,
+    "hq_city": "Dallas",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Ross Perot Jr.", "title": "Family Principal"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Private family office. No public contact."}
+    ]
+  },
+  {
+    "id": "SFO-038",
+    "entity_name": "Hughes Family Office",
+    "entity_type": "SFO",
+    "family_name": "Hughes",
+    "source_of_wealth": "Hughes Tool Company, inheritance",
+    "estimated_aum_usd": 1000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1930,
+    "website": null,
+    "hq_city": "Houston",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Howard Hughes Jr.", "title": "Founder (deceased)"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "No public contact."}
+    ]
+  },
+  {
+    "id": "SFO-039",
+    "entity_name": "Rockefeller Family Office",
+    "entity_type": "SFO",
+    "family_name": "Rockefeller",
+    "source_of_wealth": "Standard Oil",
+    "estimated_aum_usd": 10000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1880,
+    "website": "https://www.rockefeller.com",
+    "hq_city": "New York",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "David Rockefeller Jr.", "title": "Family Principal"},
+      {"full_name": "David Rockefeller Sr.", "title": "Founder (deceased)"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "contact@rockefeller.com", "confidence": "Catch-all / Generic Inbox"}
+    ]
+  },
+  {
+    "id": "SFO-040",
+    "entity_name": "Cargill MacMillan Family Office",
+    "entity_type": "SFO",
+    "family_name": "Cargill-MacMillan",
+    "source_of_wealth": "Cargill Inc.",
+    "estimated_aum_usd": 48000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1970,
+    "website": null,
+    "hq_city": "Minneapolis",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Cargill MacMillan Jr.", "title": "Family Principal"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "No direct contact available."}
+    ]
+  },
+  {
+    "id": "SFO-041",
+    "entity_name": "Du Pont Family Office",
+    "entity_type": "SFO",
+    "family_name": "Du Pont",
+    "source_of_wealth": "E. I. du Pont de Nemours and Company",
+    "estimated_aum_usd": 15000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1900,
+    "website": null,
+    "hq_city": "Wilmington",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Pierre Du Pont", "title": "Family Principal"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Multi-generational family office. No public contact."}
+    ]
+  },
+  {
+    "id": "SFO-042",
+    "entity_name": "Fisher Family Office",
+    "entity_type": "SFO",
+    "family_name": "Fisher",
+    "source_of_wealth": "Gap Inc. founders",
+    "estimated_aum_usd": 10000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1985,
+    "website": null,
+    "hq_city": "San Francisco",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Donald Fisher", "title": "Founder (deceased)"},
+      {"full_name": "Doris Fisher", "title": "Family Principal"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Fisher family office is private."}
+    ]
+  },
+  {
+    "id": "SFO-043",
+    "entity_name": "Lamb Family Office",
+    "entity_type": "SFO",
+    "family_name": "Lamb",
+    "source_of_wealth": "Energy, private equity",
+    "estimated_aum_usd": 2500000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 2008,
+    "website": null,
+    "hq_city": "Houston",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Larry Lamb", "title": "Family Principal"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Private."}
+    ]
+  },
+  {
+    "id": "SFO-044",
+    "entity_name": "McNair Family Office",
+    "entity_type": "SFO",
+    "family_name": "McNair",
+    "source_of_wealth": "Energy, Houston Texans NFL franchise",
+    "estimated_aum_usd": 4000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1990,
+    "website": null,
+    "hq_city": "Houston",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Robert McNair", "title": "Founder (deceased)"},
+      {"full_name": "Janice McNair", "title": "Family Principal"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "No public contact."}
+    ]
+  },
+  {
+    "id": "SFO-045",
+    "entity_name": "Ford Family Office",
+    "entity_type": "SFO",
+    "family_name": "Ford",
+    "source_of_wealth": "Ford Motor Company",
+    "estimated_aum_usd": 20000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1920,
+    "website": null,
+    "hq_city": "Dearborn",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "William Clay Ford Jr.", "title": "Executive Chair, Ford Motor Co."}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Ford family office is private."}
+    ]
+  },
+  {
+    "id": "SFO-046",
+    "entity_name": "Bush Family Office",
+    "entity_type": "SFO",
+    "family_name": "Bush",
+    "source_of_wealth": "Political family, investments",
+    "estimated_aum_usd": 3000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1993,
+    "website": null,
+    "hq_city": "Houston",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Neil Bush", "title": "Family Principal"},
+      {"full_name": "George H.W. Bush", "title": "Patriarch (deceased)"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "No public contact."}
+    ]
+  },
+  {
+    "id": "SFO-047",
+    "entity_name": "Kennedy Family Office",
+    "entity_type": "SFO",
+    "family_name": "Kennedy",
+    "source_of_wealth": "Political dynasty, trust funds",
+    "estimated_aum_usd": 5000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1950,
+    "website": null,
+    "hq_city": "Boston",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Joseph P. Kennedy", "title": "Patriarch (deceased)"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Multi-generational family. No public contact information."}
+    ]
+  },
+  {
+    "id": "SFO-048",
+    "entity_name": "Bren Family Office",
+    "entity_type": "SFO",
+    "family_name": "Bren",
+    "source_of_wealth": "Real estate (Irvine Company)",
+    "estimated_aum_usd": 17000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1960,
+    "website": null,
+    "hq_city": "Newport Beach",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Donald Bren", "title": "Chairman, Irvine Company"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Extremely private. No direct contact."}
+    ]
+  },
+  {
+    "id": "SFO-049",
+    "entity_name": "DeVos Family Office",
+    "entity_type": "SFO",
+    "family_name": "DeVos",
+    "source_of_wealth": "Amway, Orlando Magic NBA franchise",
+    "estimated_aum_usd": 8000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1970,
+    "website": null,
+    "hq_city": "Grand Rapids",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Dick DeVos", "title": "Family Principal"},
+      {"full_name": "Betsy DeVos", "title": "Family Principal"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Private family office."}
+    ]
+  },
+  {
+    "id": "SFO-050",
+    "entity_name": "Fidelity Family Office (Abigail Johnson)",
+    "entity_type": "SFO",
+    "family_name": "Johnson (2)",
+    "source_of_wealth": "Fidelity Investments (48% family owned)",
+    "estimated_aum_usd": 65000000000.0,
+    "aum_confidence": "Unresolved",
+    "year_established": 1985,
+    "website": null,
+    "hq_city": "Boston",
+    "hq_country": "United States",
+    "principals": [
+      {"full_name": "Abigail Johnson", "title": "CEO, Fidelity Investments"},
+      {"full_name": "Edward Johnson IV", "title": "Family Member"}
+    ],
+    "contacts": [
+      {"type": "email", "value": "Unresolved", "confidence": "Unresolved", "notes": "Johnson family manages wealth internally at Fidelity."}
+    ]
+  }
+]

@@ -1,0 +1,225 @@
+"""Pydantic models for SFO entities with strict validation and confidence tracking.
+
+Uses Pydantic V1 API for Python 3.15-beta compatibility.
+Supports "Unresolved" as a sentinel email value for honestly undocumented contacts.
+"""
+
+from datetime import datetime, timezone
+from enum import Enum
+from typing import Optional, List
+from uuid import uuid4
+
+from pydantic import BaseModel, Field, validator, root_validator
+
+from config.settings import utcnow
+
+
+# ---------------------------------------------------------------------------
+# Enums
+# ---------------------------------------------------------------------------
+
+class ContactConfidence(str, Enum):
+    VERIFIED_DIRECT = "Verified Direct Work Email"
+    CATCH_ALL = "Catch-all / Generic Inbox"
+    UNRESOLVED = "Unresolved"
+    UNVERIFIED = "Unverified"
+
+
+class EntityType(str, Enum):
+    SFO = "SFO"
+    MFO = "MFO"
+    VC = "VC"
+    UNKNOWN = "Unknown"
+
+
+class EnrichmentStatus(str, Enum):
+    PENDING = "pending"
+    IN_PROGRESS = "in_progress"
+    COMPLETED = "completed"
+    FAILED = "failed"
+    PARTIAL = "partial"
+
+
+# ---------------------------------------------------------------------------
+# Source tracking
+# ---------------------------------------------------------------------------
+
+class EnrichmentSource(BaseModel):
+    source_name: str
+    url: Optional[str] = None
+    retrieved_at: datetime = Field(default_factory=utcnow)
+    field_extracted: str
+    raw_snippet: Optional[str] = None
+
+
+# ---------------------------------------------------------------------------
+# Contact
+# ---------------------------------------------------------------------------
+
+import re
+
+EMAIL_PATTERN = re.compile(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$")
+GENERIC_MAILBOXES = {"info", "contact", "investments", "support", "hello", "admin", "team", "enquiries", "office"}
+UNRESOLVED_SENTINEL = "Unresolved"
+
+
+class ContactMethod(BaseModel):
+    type: str = "email"
+    value: str
+    confidence: ContactConfidence = ContactConfidence.UNVERIFIED
+    sources: List[EnrichmentSource] = Field(default_factory=list)
+    notes: Optional[str] = None
+
+    @root_validator(pre=False)
+    def validate_and_tag_email(cls, values):
+        vtype = values.get("type")
+        vval = values.get("value")
+        confidence = values.get("confidence")
+
+        if vtype == "email":
+            # Allow the sentinel value for unresolved contacts
+            if vval == UNRESOLVED_SENTINEL:
+                if confidence != ContactConfidence.UNRESOLVED:
+                    values["confidence"] = ContactConfidence.UNRESOLVED
+                return values
+            # Validate email format
+            if not EMAIL_PATTERN.match(vval):
+                raise ValueError(f"Invalid email format: {vval}")
+            # Auto-downgrade generic inboxes to CATCH_ALL
+            local = vval.split("@")[0].replace(".", "").replace("_", "").replace("-", "").lower()
+            if local in GENERIC_MAILBOXES and confidence in (ContactConfidence.UNVERIFIED, ContactConfidence.VERIFIED_DIRECT):
+                values["confidence"] = ContactConfidence.CATCH_ALL
+        return values
+
+
+# ---------------------------------------------------------------------------
+# Principal
+# ---------------------------------------------------------------------------
+
+class Principal(BaseModel):
+    full_name: str
+    title: Optional[str] = None
+    linkedin_url: Optional[str] = None
+    notes: Optional[str] = None
+    sources: List[EnrichmentSource] = Field(default_factory=list)
+
+    @validator("linkedin_url")
+    def validate_linkedin(cls, v):
+        if v is not None:
+            if not re.match(r"^https?:\/\/(www\.)?linkedin\.com\/in\/[a-zA-Z0-9_-]+\/?$", v):
+                raise ValueError(
+                    f"Invalid LinkedIn profile URL: {v}. "
+                    "Must be a direct individual profile (linkedin.com/in/...)."
+                )
+        return v
+
+    @validator("full_name")
+    def name_not_empty(cls, v):
+        if not v.strip():
+            raise ValueError("full_name must not be empty")
+        return v.strip()
+
+
+# ---------------------------------------------------------------------------
+# SFO Entity
+# ---------------------------------------------------------------------------
+
+SFO_ID_PREFIX = "SFO"
+
+
+def _next_id() -> str:
+    return f"{SFO_ID_PREFIX}-{uuid4().hex[:8].upper()}"
+
+
+class SFOEntity(BaseModel):
+    id: str = Field(default_factory=_next_id)
+    entity_name: str
+    entity_type: EntityType = EntityType.SFO
+    also_known_as: Optional[str] = None
+
+    family_name: Optional[str] = None
+    source_of_wealth: Optional[str] = None
+    estimated_aum_usd: Optional[float] = None
+    aum_confidence: ContactConfidence = ContactConfidence.UNVERIFIED
+    year_established: Optional[int] = None
+    website: Optional[str] = None
+    hq_city: Optional[str] = None
+    hq_country: Optional[str] = "United States"
+
+    principals: List[Principal] = Field(default_factory=list)
+    contacts: List[ContactMethod] = Field(default_factory=list)
+
+    enrichment_status: EnrichmentStatus = EnrichmentStatus.PENDING
+    last_enriched_at: Optional[datetime] = None
+    sources: List[EnrichmentSource] = Field(default_factory=list)
+    audit_log: List[str] = Field(default_factory=list)
+
+    created_at: datetime = Field(default_factory=utcnow)
+    updated_at: datetime = Field(default_factory=utcnow)
+
+    @validator("website")
+    def validate_website(cls, v):
+        if v is not None and not v.startswith("http"):
+            raise ValueError(f"Website must start with http(s): {v}")
+        return v
+
+    @root_validator(pre=False)
+    def require_entity_name(cls, values):
+        name = values.get("entity_name")
+        if not name or not str(name).strip():
+            raise ValueError("entity_name is required")
+        return values
+
+    def add_principal(self, principal: Principal) -> None:
+        self.principals.append(principal)
+        self.updated_at = utcnow()
+
+    def add_contact(self, contact: ContactMethod) -> None:
+        self.contacts.append(contact)
+        self.updated_at = utcnow()
+
+    def add_source(self, source: EnrichmentSource) -> None:
+        self.sources.append(source)
+        self.updated_at = utcnow()
+
+    def log(self, message: str) -> None:
+        ts = utcnow().isoformat()
+        self.audit_log.append(f"[{ts}] {message}")
+
+    def best_principal_email(self):
+        highest = None
+        rank = {ContactConfidence.VERIFIED_DIRECT: 3, ContactConfidence.CATCH_ALL: 2, ContactConfidence.UNRESOLVED: 1}
+        for c in self.contacts:
+            r = rank.get(c.confidence, 0)
+            if highest is None or r > rank.get(highest.confidence, 0):
+                highest = c
+        return highest
+
+    def to_record(self) -> dict:
+        data = self.dict()
+        data.pop("audit_log", None)
+        return data
+
+
+class SFOCollection(BaseModel):
+    entities: List[SFOEntity] = Field(default_factory=list)
+
+    def add(self, entity: SFOEntity) -> None:
+        self.entities.append(entity)
+
+    def by_id(self, sfo_id: str):
+        for e in self.entities:
+            if e.id == sfo_id:
+                return e
+        return None
+
+    def count(self) -> int:
+        return len(self.entities)
+
+    def verified_count(self) -> int:
+        return sum(1 for e in self.entities if e.enrichment_status == EnrichmentStatus.COMPLETED)
+
+    def unresolved_contacts_count(self) -> int:
+        return sum(
+            1 for e in self.entities for c in e.contacts if c.confidence == ContactConfidence.UNRESOLVED
+        )

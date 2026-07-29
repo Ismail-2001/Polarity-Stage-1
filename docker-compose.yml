@@ -1,0 +1,52 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      target: api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./audit:/app/audit
+    environment:
+      - SERPER_API_KEY=${SERPER_API_KEY:-}
+      - ENABLE_SEC_ENRICHMENT=${ENABLE_SEC_ENRICHMENT:-true}
+      - ENABLE_WEB_ENRICHMENT=${ENABLE_WEB_ENRICHMENT:-true}
+      - REQUEST_DELAY_SEC=${REQUEST_DELAY_SEC:-1.5}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 15s
+      timeout: 5s
+      retries: 3
+
+  ui:
+    build:
+      context: .
+      target: ui
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./audit:/app/audit
+    environment:
+      - FO_API_BASE=http://api:8000
+    depends_on:
+      api:
+        condition: service_healthy
+
+  pipeline:
+    build:
+      context: .
+      target: pipeline
+    volumes:
+      - ./data:/app/data
+      - ./audit:/app/audit
+    environment:
+      - SERPER_API_KEY=${SERPER_API_KEY:-}
+      - ENABLE_SEC_ENRICHMENT=${ENABLE_SEC_ENRICHMENT:-true}
+      - ENABLE_WEB_ENRICHMENT=${ENABLE_WEB_ENRICHMENT:-true}
+      - REQUEST_DELAY_SEC=${REQUEST_DELAY_SEC:-1.5}
+    profiles:
+      - run

@@ -1,0 +1,7 @@
+fastapi<0.100
+uvicorn[standard]
+pydantic<2
+requests
+beautifulsoup4
+httpx<0.28
+python-dotenv

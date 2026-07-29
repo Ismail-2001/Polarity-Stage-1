@@ -5,6 +5,10 @@ from dataclasses import dataclass, field
 from datetime import datetime, timezone
 from pathlib import Path
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 def utcnow() -> datetime:
     """Timezone-aware UTC now. Replaces deprecated datetime.utcnow()."""

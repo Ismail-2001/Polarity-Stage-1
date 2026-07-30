@@ -9,6 +9,7 @@ Enforces honest-refusal rules:
 
 from __future__ import annotations
 
+import re
 from typing import Optional
 
 from models.sfo import ContactConfidence
@@ -59,7 +60,6 @@ class GuardrailLayer:
 
     def check_unresolved_contact_statement(self, statements: list[str]) -> list[str]:
         """Ensure any statement about unresolved contacts is properly qualified."""
-        import re
         email_pat = re.compile(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}")
         result = []
         for s in statements:

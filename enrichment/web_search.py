@@ -6,6 +6,7 @@ Falls back gracefully if no API key is configured.
 from __future__ import annotations
 
 import json
+import re
 from typing import Optional, Tuple
 
 import requests
@@ -70,7 +71,6 @@ class WebSearchClient:
             for r in results:
                 snippet = r.get("snippet", "").lower()
                 link = r.get("link", "").lower()
-                import re
                 emails = re.findall(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", snippet + " " + link)
                 for e in emails:
                     local = e.split("@")[0].lower().replace(".", "").replace("_", "").replace("-", "")
@@ -89,7 +89,6 @@ class WebSearchClient:
         results = self.search(query, num=3)
         for r in results:
             link = r.get("link", "")
-            import re
             if re.match(r"^https?:\/\/(www\.)?linkedin\.com\/in\/[a-zA-Z0-9_-]+\/?$", link):
                 self._log.log_extraction(
                     source="serper_web", field="linkedin_url", value=link,

@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -240,7 +241,6 @@ def cmd_validate(args: argparse.Namespace) -> None:
         # 5. LinkedIn validation
         for p in entity.principals:
             if p.linkedin_url:
-                import re
                 if not re.match(r"^https?:\/\/(www\.)?linkedin\.com\/in\/[a-zA-Z0-9_-]+\/?$", p.linkedin_url):
                     errors.append(f"[FAIL] {eid} {ename}: Invalid LinkedIn URL for {p.full_name}: {p.linkedin_url}")
 

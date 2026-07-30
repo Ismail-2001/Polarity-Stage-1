@@ -130,22 +130,21 @@ def _extract_wikipedia_website(entity_name: str) -> Optional[str]:
     except (requests.RequestException, KeyError, ValueError):
         return None
     # Find the infobox table and extract the "Website" row
-    import re as _re
     # Look for <th scope="row" class="infobox-label">Website</th>
     # followed by <td class="infobox-data"><a...>url</a></td> or plain text
-    m = _re.search(
+    m = re.search(
         r'<th[^>]*>Website</th>\s*<td[^>]*class="infobox-data"[^>]*>(.*?)</td>',
-        html, _re.IGNORECASE | _re.DOTALL,
+        html, re.IGNORECASE | re.DOTALL,
     )
     if not m:
         return None
     cell = m.group(1)
     # Extract href from anchor tag, or plain text URL
-    url_m = _re.search(r'href="(https?://[^"]+)"', cell)
+    url_m = re.search(r'href="(https?://[^"]+)"', cell)
     if url_m:
         return url_m.group(1)
     # Plain text URL
-    url_m = _re.search(r'(https?://[^\s<]+)', cell)
+    url_m = re.search(r'(https?://[^\s<]+)', cell)
     if url_m:
         return url_m.group(1).rstrip(".")
     return None

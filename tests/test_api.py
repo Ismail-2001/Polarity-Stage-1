@@ -168,7 +168,7 @@ class TestPipelineEndpoint:
         resp = client.post("/pipeline/run", timeout=120)
         assert resp.status_code == 200
         data = resp.json()
-        assert data["total_records"] >= 23
+        assert data["total_records"] >= 40
         assert data["status"] in ("completed", "partial")
         assert data["indexed_entities"] >= 23
         assert len(data["steps"]) == 3

@@ -109,7 +109,7 @@ class SECEdgarClient:
             pass
         return None
 
-    def _generate_name_variants(self, family_name: str, entity_name: str) -> list[str]:
+    def generate_name_variants(self, family_name: str, entity_name: str) -> list[str]:
         """Generate search variants from family/entity names."""
         variants = []
         seen = set()
@@ -162,7 +162,7 @@ class SECEdgarClient:
         Strategy 2: Form ADV HTML scraping (fallback)
         Strategy 3: 13F filing total value
         """
-        variants = self._generate_name_variants(family_name or "", entity_name)
+        variants = self.generate_name_variants(family_name or "", entity_name)
         cik = self.lookup_cik(variants)
         if not cik:
             self._log.log_failure(

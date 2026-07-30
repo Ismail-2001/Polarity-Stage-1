@@ -9,6 +9,7 @@ Discovery path per entity:
 
 from __future__ import annotations
 
+import re
 import time
 from datetime import datetime, timezone
 from typing import Optional
@@ -149,7 +150,7 @@ class EnrichmentOrchestrator:
             entity.log("SEC: No CIK carried from discovery — trying name-based resolution")
             if not entity.family_name and not entity.entity_name:
                 return
-            cik = self.sec.lookup_cik(self.sec._generate_name_variants(
+            cik = self.sec.lookup_cik(self.sec.generate_name_variants(
                 entity.family_name or "", entity.entity_name,
             ))
         if cik:
@@ -199,7 +200,6 @@ class EnrichmentOrchestrator:
             if result:
                 email, evidence = result
                 # VERIFIED_DIRECT only if email and name appear in the same sentence or structured field
-                import re
                 sentences = re.split(r'(?<=[.!?])\s+', evidence)
                 same_sentence = any(
                     principal.full_name.lower() in s and email.lower() in s

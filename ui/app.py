@@ -10,6 +10,7 @@ from __future__ import annotations
 import json
 import os
 import sys
+import time
 from pathlib import Path
 
 import streamlit as st
@@ -41,7 +42,7 @@ except ImportError:
 
 st.set_page_config(
     page_title="FO Intelligence Pipeline",
-    page_icon="\U0001f3e6",
+    page_icon="🏦",
     layout="wide",
     initial_sidebar_state="expanded",
 )
@@ -55,15 +56,16 @@ SEED_PATH = DATA_DIR / "sfo_seed.json"
 
 CONFIDENCE_COLORS: dict[str, str] = {
     "Verified Direct Work Email": "#1a7f37",
+    "Verified": "#1a7f37",
     "Catch-all / Generic Inbox": "#bf8700",
     "Unresolved": "#cf222e",
     "Unverified": "#656d76",
 }
 ENRICHMENT_EMOJI: dict[str, str] = {
-    "completed": "\u2705",
-    "partial": "\u26a0\ufe0f",
-    "failed": "\u274c",
-    "pending": "\u26aa",
+    "completed": "✅",
+    "partial": "⚠️",
+    "failed": "❌",
+    "pending": "⚪",
 }
 
 # ── Session state ────────────────────────────────────────────────────────────
@@ -74,6 +76,8 @@ if "standalone_mode" not in st.session_state:
     st.session_state.standalone_mode = False
 if "entities" not in st.session_state:
     st.session_state.entities = []
+if "pipeline_running" not in st.session_state:
+    st.session_state.pipeline_running = False
 
 
 # ── Helpers ──────────────────────────────────────────────────────────────────
@@ -82,6 +86,23 @@ if "entities" not in st.session_state:
 def _confidence_badge(confidence: str) -> str:
     color = CONFIDENCE_COLORS.get(confidence, "#656d76")
     return f'<span style="color:{color};font-weight:bold;">{confidence}</span>'
+
+
+def _confidence_dot(confidence: str) -> str:
+    color = CONFIDENCE_COLORS.get(confidence, "#656d76")
+    return f'<span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:{color};margin-right:4px;vertical-align:middle;"></span>'
+
+
+def _get_entity_confidence(entity: dict) -> str:
+    contacts = entity.get("contacts", [])
+    if not contacts:
+        return "Unverified"
+    confidences = [c.get("confidence", "Unverified") for c in contacts]
+    if any(c == "Verified Direct Work Email" or c == "Verified" for c in confidences):
+        return "Verified"
+    if any(c == "Catch-all / Generic Inbox" for c in confidences):
+        return "Catch-all"
+    return "Unresolved"
 
 
 def _call_api(method: str, path: str, **kwargs) -> dict | None:
@@ -152,7 +173,7 @@ def _init_standalone():
 
 # ── Sidebar ──────────────────────────────────────────────────────────────────
 
-st.sidebar.title("\U0001f3e6 FO Intelligence")
+st.sidebar.title("🏦 FO Intelligence")
 st.sidebar.markdown("---")
 
 # Mode indicator
@@ -161,10 +182,10 @@ if mode != "api":
     mode = _init_standalone()
 
 if mode == "api":
-    st.sidebar.success(f"\u26a1 Connected to API at {API_BASE}")
+    st.sidebar.success(f"⚡ Connected to API at {API_BASE}")
     st.session_state.standalone_mode = False
 elif mode == "standalone":
-    st.sidebar.info("\U0001f4e1 Standalone mode (local data)")
+    st.sidebar.info("📡 Standalone mode (local data)")
     st.session_state.standalone_mode = True
 else:
     st.sidebar.warning("No data available. Run the pipeline first.")
@@ -172,23 +193,47 @@ else:
 st.sidebar.markdown("---")
 st.sidebar.markdown("### Pipeline Controls")
 
-if st.sidebar.button("\u25b6 Run Pipeline", use_container_width=True, type="primary"):
+if st.sidebar.button("▶ Run Pipeline", use_container_width=True, type="primary"):
     if mode == "api":
-        with st.spinner("Running pipeline..."):
+        with st.status("Running pipeline...", expanded=True) as status:
+            st.write("⏳ Submitting pipeline job...")
             result = _call_api("POST", "/pipeline/run")
-        if result:
-            st.sidebar.success(f"Pipeline {result['status']}")
-            st.sidebar.json(result, expanded=False)
-            st.rerun()
+            if result:
+                job_id = result.get("job_id")
+                st.write(f"📋 Job `{job_id}` created. Polling status...")
+                while True:
+                    time.sleep(2)
+                    poll = _call_api("GET", f"/pipeline/status/{job_id}")
+                    if poll:
+                        job_status = poll.get("status", "")
+                        st.write(f"🔄 Status: {job_status}")
+                        if job_status in ("completed", "failed"):
+                            break
+                    else:
+                        break
+                if poll and poll.get("status") == "completed":
+                    status.update(label="✅ Pipeline completed!", state="complete")
+                    st.toast("Pipeline completed successfully!", icon="✅")
+                    st.rerun()
+                else:
+                    status.update(label="❌ Pipeline failed", state="error")
+                    st.toast("Pipeline failed. Check logs.", icon="❌")
+            else:
+                status.update(label="❌ Pipeline failed", state="error")
+                st.toast("Failed to start pipeline.", icon="❌")
     else:
         st.sidebar.error("API not available. Run: py run_pipeline.py")
 
-if st.sidebar.button("\U0001f504 Re-index", use_container_width=True):
+if st.sidebar.button("🔄 Re-index", use_container_width=True):
     if mode == "api":
-        result = _call_api("POST", "/index")
+        with st.spinner("Re-indexing..."):
+            result = _call_api("POST", "/index")
         if result:
-            st.sidebar.success(f"Indexed {result['indexed_entities']} entities")
+            count = result.get("indexed_entities", 0)
+            st.toast(f"Indexed {count} entities", icon="✅")
             st.rerun()
+        else:
+            st.toast("Re-index failed.", icon="❌")
     else:
         data = _load_local_data()
         if data:
@@ -196,7 +241,7 @@ if st.sidebar.button("\U0001f504 Re-index", use_container_width=True):
             if engine:
                 st.session_state._local_rag = engine
                 st.session_state.rag_ready = True
-                st.sidebar.success(f"Indexed {len(data)} entities locally")
+                st.toast(f"Indexed {len(data)} entities locally", icon="✅")
                 st.rerun()
 
 st.sidebar.markdown("---")
@@ -208,7 +253,8 @@ if data:
         1 for e in data for c in e.get("contacts", []) if c.get("confidence") == "Unresolved"
     )
     verified = sum(
-        1 for e in data for c in e.get("contacts", []) if c.get("confidence") == "Verified Direct Work Email"
+        1 for e in data for c in e.get("contacts", [])
+        if c.get("confidence") in ("Verified Direct Work Email", "Verified")
     )
     st.sidebar.metric("Entities", total)
     st.sidebar.metric("Unresolved Contacts", unresolved, delta_color="inverse")
@@ -217,10 +263,10 @@ if data:
 st.sidebar.markdown("---")
 st.sidebar.markdown(
     "**Confidence Legend**\n\n"
-    "\U0001f7e2 Verified Direct Work Email\n\n"
-    "\U0001f7e1 Catch-all / Generic Inbox\n\n"
-    "\U0001f534 Unresolved\n\n"
-    "\u26aa Unverified"
+    "🟢 Verified Direct Work Email\n\n"
+    "🟡 Catch-all / Generic Inbox\n\n"
+    "🔴 Unresolved\n\n"
+    "⚪ Unverified"
 )
 
 # ── Main ─────────────────────────────────────────────────────────────────────
@@ -230,7 +276,30 @@ st.markdown(
     "_Commercial-grade SFO discovery, enrichment, validation, and semantic query._"
 )
 
-tab1, tab2, tab3 = st.tabs(["\U0001f50d Semantic Query", "\U0001f4cb Entity Browser", "\U0001f4c8 Pipeline Results"])
+# ── P0: Pipeline health banner ──────────────────────────────────────────────
+
+data_for_banner = st.session_state.entities or _load_local_data()
+if data_for_banner:
+    total = len(data_for_banner)
+    verified_count = sum(
+        1 for e in data_for_banner for c in e.get("contacts", [])
+        if c.get("confidence") in ("Verified Direct Work Email", "Verified")
+    )
+    unresolved_count = sum(
+        1 for e in data_for_banner for c in e.get("contacts", [])
+        if c.get("confidence") == "Unresolved"
+    )
+    aum_known = sum(1 for e in data_for_banner if e.get("estimated_aum_usd"))
+
+    if verified_count < total:
+        st.warning(
+            f"📊 **{verified_count}/{total}** contacts verified · "
+            f"**{unresolved_count}/{total}** unresolved · "
+            f"**{aum_known}/{total}** AUM known · "
+            f"Run enrichment to populate verified emails."
+        )
+
+tab1, tab2, tab3 = st.tabs(["🔍 Semantic Query", "📋 Entity Browser", "📈 Pipeline Results"])
 
 # =========================== TAB 1: Query ===========================
 
@@ -246,6 +315,21 @@ with tab1:
         )
     with col2:
         n_results = st.number_input("Results", min_value=1, max_value=20, value=5)
+
+    # Example query chips
+    st.markdown("**Try these:**")
+    chip_cols = st.columns(4)
+    example_queries = [
+        "Cascade Investment Gates",
+        "sports ownership family office",
+        "family offices in London",
+        "cannabis agriculture investment",
+    ]
+    for i, eq in enumerate(example_queries):
+        with chip_cols[i]:
+            if st.button(eq, key=f"chip_{i}", use_container_width=True):
+                query = eq
+                st.rerun()
 
     if query:
         results = []
@@ -304,18 +388,71 @@ with tab2:
     if not entities:
         st.info("No entities loaded. Run the pipeline or connect to the API.")
     else:
-        search_filter = st.text_input("Filter by name", placeholder="Type to filter...")
+        col_filter, col_spacer = st.columns([2, 1])
+        with col_filter:
+            search_filter = st.text_input("Filter by name", placeholder="Type to filter...")
         filtered = (
             [e for e in entities if search_filter.lower() in e.get("entity_name", "").lower()]
             if search_filter
             else entities
         )
         st.markdown(f"**{len(filtered)}** entities")
+
         for ent in filtered:
             name = ent.get("entity_name", "Unknown")
-            etype = ent.get("entity_type", "")
-            with st.expander(f"{name} ({etype})"):
-                st.json(ent, expanded=False)
+            etype = ent.get("entity_type", "SFO")
+            conf = _get_entity_confidence(ent)
+            aum = ent.get("estimated_aum_usd")
+            aum_str = f"${aum:,.0f}" if aum else "—"
+            dot = _confidence_dot(conf)
+            family = ent.get("family_name", "") or ""
+            hq = ent.get("hq_city", "") or ""
+            country = ent.get("hq_country", "") or ""
+
+            preview_parts = [f"{dot}**{name}**"]
+            if family:
+                preview_parts.append(f"Family: {family}")
+            if hq:
+                preview_parts.append(f"HQ: {hq}, {country}")
+            preview_parts.append(f"AUM: {aum_str}")
+            preview_parts.append(f"Confidence: {conf}")
+
+            with st.expander(" · ".join(preview_parts), expanded=False):
+                col_a, col_b = st.columns(2)
+                with col_a:
+                    st.markdown(f"**Entity ID:** `{ent.get('id', 'N/A')}`")
+                    st.markdown(f"**Type:** {etype}")
+                    st.markdown(f"**Family:** {family or 'N/A'}")
+                    st.markdown(f"**Source of Wealth:** {ent.get('source_of_wealth') or 'N/A'}")
+                    st.markdown(f"**Year Established:** {ent.get('year_established') or 'N/A'}")
+                    website = ent.get("website")
+                    if website:
+                        st.markdown(f"**Website:** [{website}]({website})")
+                    else:
+                        st.markdown("**Website:** —")
+                with col_b:
+                    principals = ent.get("principals", [])
+                    st.markdown(f"**Principals ({len(principals)}):**")
+                    for p in principals:
+                        st.markdown(f"- **{p.get('full_name', 'Unknown')}** — {p.get('title', '')}")
+                    contacts = ent.get("contacts", [])
+                    st.markdown(f"**Contacts ({len(contacts)}):**")
+                    for c in contacts:
+                        cval = c.get("value", "Unresolved")
+                        cconf = c.get("confidence", "Unverified")
+                        cdot = _confidence_dot(cconf)
+                        st.markdown(f"  {cdot} {cval} ({cconf})", unsafe_allow_html=True)
+
+                signals = ent.get("signals", [])
+                if signals:
+                    st.markdown("**Signals:**")
+                    for sig in signals:
+                        st.caption(f"• {sig.get('type', '')}: {sig.get('description', '')}")
+
+                inclusion = ent.get("inclusion_evidence")
+                if inclusion:
+                    st.markdown("**Inclusion Evidence:**")
+                    st.caption(inclusion)
 
 # =========================== TAB 3: Pipeline Results ==========================
 
@@ -331,7 +468,7 @@ with tab3:
         verified = sum(
             1 for e in entities
             for c in e.get("contacts", [])
-            if c.get("confidence") == "Verified Direct Work Email"
+            if c.get("confidence") in ("Verified Direct Work Email", "Verified")
         )
         catch_all = sum(
             1 for e in entities
@@ -348,8 +485,19 @@ with tab3:
         kpi_cols[4].metric("AUM Known", aum_known)
 
         st.markdown("---")
+
+        st.markdown("**Contact Confidence Distribution**")
+        import pandas as pd
+
+        chart_data = pd.DataFrame({
+            "Status": ["Verified", "Catch-all", "Unresolved"],
+            "Count": [verified, catch_all, unresolved],
+        })
+        st.bar_chart(chart_data.set_index("Status"), color=["#1a7f37", "#bf8700", "#cf222e"])
+
+        st.markdown("---")
         st.download_button(
-            "\U0001f4e5 Download as JSON",
+            "📥 Download as JSON",
             data=json.dumps(entities, indent=2, default=str),
             file_name="sfo_export.json",
             mime="application/json",

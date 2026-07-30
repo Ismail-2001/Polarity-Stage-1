@@ -4,7 +4,7 @@ from pathlib import Path
 
 import pytest
 
-from models.sfo import ContactConfidence, SFOCollection, SFOEntity
+from models.sfo import AumConfidence, ContactConfidence, SFOCollection, SFOEntity
 from pipeline.loader import SeedDataLoader
 
 
@@ -66,9 +66,10 @@ class TestSeedDataLoader:
         """Ensure no entity has Verified AUM without a realistic source."""
         data_dir = Path(__file__).resolve().parent.parent / "data"
         loader = SeedDataLoader(data_dir)
-        collection = loader.load_json("sfo_seed.json")
+        source = "sfo_enriched.json" if (data_dir / "sfo_enriched.json").exists() else "sfo_seed_DEPRECATED_famous_names.json"
+        collection = loader.load_json(source)
         for e in collection.entities:
-            if e.aum_confidence == ContactConfidence.VERIFIED_DIRECT:
+            if e.aum_confidence == AumConfidence.CONFIRMED:
                 assert e.estimated_aum_usd is not None and e.estimated_aum_usd > 0, (
                     f"{e.entity_name}: Verified AUM confidence but no AUM value"
                 )

@@ -19,6 +19,7 @@ import requests
 
 from audit import get_logger
 from enrichment.sec_edgar import SECEdgarClient, SEC_SUBMISSIONS
+from models.sfo import AumConfidence
 
 SEC_EFTS_URL = "https://efts.sec.gov/LATEST/search-index"
 
@@ -29,13 +30,14 @@ SEC_HEADERS = {
 }
 
 FAMILY_OFFICE_PATTERNS = [
-    re.compile(r"\b[Ff]amily\s*[Oo]ffice\b"),
-    re.compile(r"\bEMFO\b"),
-    re.compile(r"\bSFO\b"),
+    re.compile(r"\bfamily\s*office\b", re.IGNORECASE),
+    re.compile(r"\bEMFO\b", re.IGNORECASE),
+    re.compile(r"\bSFO\b", re.IGNORECASE),
     re.compile(r"\bFO[\s,.]", re.IGNORECASE),
-    re.compile(r"\bsingle\s*family\b"),
-    re.compile(r"\bmulti[- ]family\b"),
-    re.compile(r"\bfamily\s*investment\b"),
+    re.compile(r"\bsingle\s*family\b", re.IGNORECASE),
+    re.compile(r"\bmulti[- ]family\b", re.IGNORECASE),
+    re.compile(r"\bfamily\s*investment\b", re.IGNORECASE),
+    re.compile(r"\bfamily\s+(?:partners|capital|holdings|group|llc|lp|inc\.?)", re.IGNORECASE),
 ]
 
 EXCLUDE_PATTERNS = [
@@ -182,6 +184,15 @@ def run_discovery(max_candidates: int = 50) -> list[dict]:
         '"Family Office" LLC',
         '"Family Office" LP',
         '"FO" "family" AND 13F',
+        '"family office" AND investments',
+        '"family office" AND management',
+        '"family office" AND "wealth"',
+        '"SFO" LLC -"etf" -"mutual"',
+        '"Family Office" fund',
+        '"family office" LP -"fund"',
+        '"family partners" AND "13F"',
+        '"family capital" AND "13F"',
+        '"family holdings" "office"',
     ]
     for q in queries:
         for start in range(0, 1000, 100):
@@ -229,11 +240,12 @@ def run_discovery(max_candidates: int = 50) -> list[dict]:
             "family_name": None,
             "source_of_wealth": None,
             "estimated_aum_usd": aum,
-            "aum_confidence": "Unresolved",
+            "aum_confidence": AumConfidence.UNRESOLVED.value,
             "year_established": None,
             "website": None,
             "hq_city": hq_city,
             "hq_country": "United States",
+            "discovery_source": "sec_efts",
             "principals": [],
             "contacts": [
                 {

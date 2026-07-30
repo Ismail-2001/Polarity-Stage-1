@@ -20,6 +20,7 @@ from enrichment.sec_edgar import SECEdgarClient
 from enrichment.site_scraper import SiteScraper
 from enrichment.web_search import WebSearchClient
 from models.sfo import (
+    AumConfidence,
     ContactConfidence,
     ContactMethod,
     EnrichmentSource,
@@ -131,7 +132,7 @@ class EnrichmentOrchestrator:
         )
         if aum is not None:
             entity.estimated_aum_usd = aum
-            entity.aum_confidence = ContactConfidence.VERIFIED_DIRECT
+            entity.aum_confidence = AumConfidence.CONFIRMED
             entity.add_source(EnrichmentSource(
                 source_name="sec_edgar",
                 url=f"https://www.sec.gov/cgi-bin/browse-edgar?CIK={entity.entity_name}",
@@ -165,19 +166,28 @@ class EnrichmentOrchestrator:
                 else:
                     entity.log(f"LinkedIn NOT found for {principal.full_name}")
             # Email
-            email = self.web.search_principal_email(principal.full_name, entity.entity_name)
-            if email:
+            result = self.web.search_principal_email(principal.full_name, entity.entity_name)
+            if result:
+                email, evidence = result
+                # VERIFIED_DIRECT only if email and name appear in the same sentence or structured field
+                import re
+                sentences = re.split(r'(?<=[.!?])\s+', evidence)
+                same_sentence = any(
+                    principal.full_name.lower() in s and email.lower() in s
+                    for s in sentences
+                )
+                confidence = ContactConfidence.VERIFIED_DIRECT if same_sentence else ContactConfidence.UNVERIFIED
                 contact = ContactMethod(
                     type="email",
                     value=email,
-                    confidence=ContactConfidence.VERIFIED_DIRECT,
+                    confidence=confidence,
                     sources=[EnrichmentSource(
                         source_name="serper_web",
                         field_extracted="email",
                     )],
                 )
                 entity.add_contact(contact)
-                entity.log(f"Email found: {email}")
+                entity.log(f"Email found: {email} (confidence={confidence.value})")
             else:
                 entity.log(f"Email NOT found for {principal.full_name} — marking Unresolved")
                 contact = ContactMethod(

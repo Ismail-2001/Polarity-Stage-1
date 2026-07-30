@@ -18,6 +18,7 @@ from config.settings import settings
 from models.sfo import (
     SFOCollection,
     SFOEntity,
+    AumConfidence,
     ContactConfidence,
     EnrichmentStatus,
 )
@@ -277,7 +278,7 @@ class MicroRAGEngine:
         self,
         query_text: str,
         n_results: int = 5,
-        min_confidence: Optional[ContactConfidence] = None,
+        min_confidence: Optional[AumConfidence] = None,
     ) -> dict:
         """Query the SFO knowledge base with guardrail enforcement.
 
@@ -313,7 +314,7 @@ class MicroRAGEngine:
 
             # Confidence filter
             if min_confidence and meta.get("aum_confidence") == "Unresolved":
-                if min_confidence == ContactConfidence.VERIFIED_DIRECT:
+                if min_confidence == AumConfidence.CONFIRMED:
                     guardrail_notes.append(
                         f"⚠ {meta.get('entity_name', 'Unknown')}: AUM is Unresolved — "
                         "skipped due to VERIFIED_DIRECT confidence filter."

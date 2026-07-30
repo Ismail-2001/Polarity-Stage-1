@@ -6,6 +6,7 @@ from pathlib import Path
 import pytest
 
 from models.sfo import (
+    AumConfidence,
     ContactConfidence,
     ContactMethod,
     EnrichmentStatus,
@@ -24,7 +25,7 @@ def _make_test_collection() -> SFOCollection:
         family_name="TestFamily",
         source_of_wealth="Technology investments",
         estimated_aum_usd=500_000_000,
-        aum_confidence=ContactConfidence.VERIFIED_DIRECT,
+        aum_confidence=AumConfidence.CONFIRMED,
         hq_city="San Francisco",
         enrichment_status=EnrichmentStatus.COMPLETED,
     )
@@ -39,7 +40,7 @@ def _make_test_collection() -> SFOCollection:
         family_name="Private",
         source_of_wealth="Real estate",
         estimated_aum_usd=None,
-        aum_confidence=ContactConfidence.UNRESOLVED,
+        aum_confidence=AumConfidence.UNRESOLVED,
         hq_city="Miami",
         enrichment_status=EnrichmentStatus.COMPLETED,
     )

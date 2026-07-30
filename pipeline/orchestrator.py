@@ -31,7 +31,18 @@ class PipelineOrchestrator:
         # --- Step 1: Load seed data ---
         step_load = ExecutionStep(step_name="load_seed", status=PipelineStatus.RUNNING)
         try:
-            collection = self.loader.load_json()
+            seed_files = ["sfo_seed.json", "sfo_seed_DEPRECATED_famous_names.json", "sfo_enriched.json"]
+            collection = SFOCollection()
+            for fname in seed_files:
+                path = self.loader.data_dir / fname
+                if path.exists():
+                    collection = self.loader.load_json(fname)
+                    break
+            else:
+                raise FileNotFoundError(
+                    f"No seed file found in {self.loader.data_dir}. "
+                    f"Tried: {seed_files}"
+                )
             self._result.total_records = collection.count()
             step_load.records_processed = collection.count()
             step_load.status = PipelineStatus.COMPLETED

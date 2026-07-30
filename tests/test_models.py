@@ -4,6 +4,7 @@ import pytest
 from pydantic import ValidationError
 
 from models.sfo import (
+    AumConfidence,
     ContactConfidence,
     ContactMethod,
     EntityType,
@@ -86,10 +87,10 @@ class TestSFOEntity:
         e = SFOEntity(
             entity_name="RichFO",
             estimated_aum_usd=1000000000.0,
-            aum_confidence=ContactConfidence.VERIFIED_DIRECT,
+            aum_confidence=AumConfidence.CONFIRMED,
         )
         assert e.estimated_aum_usd == 1_000_000_000.0
-        assert e.aum_confidence == ContactConfidence.VERIFIED_DIRECT
+        assert e.aum_confidence == AumConfidence.CONFIRMED
 
 
 # ===================================================================

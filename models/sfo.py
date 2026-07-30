@@ -25,6 +25,13 @@ class ContactConfidence(str, Enum):
     UNVERIFIED = "Unverified"
 
 
+class AumConfidence(str, Enum):
+    CONFIRMED = "Confirmed"
+    ESTIMATED = "Estimated"
+    UNRESOLVED = "Unresolved"
+    UNKNOWN = "Unknown"
+
+
 class EntityType(str, Enum):
     SFO = "SFO"
     MFO = "MFO"
@@ -140,11 +147,12 @@ class SFOEntity(BaseModel):
     family_name: Optional[str] = None
     source_of_wealth: Optional[str] = None
     estimated_aum_usd: Optional[float] = None
-    aum_confidence: ContactConfidence = ContactConfidence.UNVERIFIED
+    aum_confidence: AumConfidence = AumConfidence.UNKNOWN
     year_established: Optional[int] = None
     website: Optional[str] = None
     hq_city: Optional[str] = None
     hq_country: Optional[str] = "United States"
+    discovery_source: Optional[str] = None
 
     principals: List[Principal] = Field(default_factory=list)
     contacts: List[ContactMethod] = Field(default_factory=list)

@@ -28,7 +28,7 @@ from api.schemas import (
     QueryResponse,
     StatusResponse,
 )
-from models.sfo import ContactConfidence, SFOCollection
+from models.sfo import AumConfidence, ContactConfidence, SFOCollection
 from pipeline.loader import SeedDataLoader
 from pipeline.orchestrator import PipelineOrchestrator
 from rag.engine import MicroRAGEngine
@@ -180,7 +180,7 @@ async def query_rag(request: QueryRequest):
         )
     min_conf = None
     if request.min_confidence == "verified_direct":
-        min_conf = ContactConfidence.VERIFIED_DIRECT
+        min_conf = AumConfidence.CONFIRMED
     result = rag.query(
         query_text=request.query,
         n_results=request.n_results or 5,

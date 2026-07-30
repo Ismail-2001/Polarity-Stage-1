@@ -165,9 +165,38 @@ def cmd_export(args: argparse.Namespace) -> None:
         print(f"Unsupported format: {args.format}")
 
 
+def cmd_discover(args: argparse.Namespace) -> None:
+    """Discover SFO candidates from one or more sources."""
+    from pipeline.loader import SeedDataLoader
+
+    if args.source == "multi":
+        from enrichment.discovery_wikipedia import run_multi_source_discovery
+        print(f"Running multi-source discovery (up to {args.max_candidates} candidates)...")
+        candidates = run_multi_source_discovery(max_candidates=args.max_candidates)
+    elif args.source == "wikipedia":
+        from enrichment.discovery_wikipedia import run_wikipedia_discovery
+        print(f"Discovering from Wikipedia list (up to {args.max_candidates})...")
+        candidates = run_wikipedia_discovery(max_candidates=args.max_candidates)
+    else:
+        from enrichment.discovery import run_discovery
+        print(f"Discovering from SEC EFTS (up to {args.max_candidates})...")
+        candidates = run_discovery(max_candidates=args.max_candidates)
+
+    print(f"Found {len(candidates)} candidates. Saving to seed file...")
+    loader = SeedDataLoader(settings.resolved_data_dir)
+    from models.sfo import SFOCollection, SFOEntity
+    collection = SFOCollection()
+    for item in candidates:
+        collection.add(SFOEntity(**item))
+    path = loader.save_json(collection, args.output)
+    print(f"Saved to {path}")
+    return 0
+
+
 def cmd_validate(args: argparse.Namespace) -> None:
     """Validate dataset integrity."""
     from pipeline.loader import SeedDataLoader
+    from models.sfo import AumConfidence
 
     loader = SeedDataLoader(settings.resolved_data_dir)
     enriched_path = loader.data_dir / "sfo_enriched.json"
@@ -216,7 +245,7 @@ def cmd_validate(args: argparse.Namespace) -> None:
                     errors.append(f"[FAIL] {eid} {ename}: Invalid LinkedIn URL for {p.full_name}: {p.linkedin_url}")
 
         # 6. AUM confidence consistency
-        if entity.aum_confidence.value == "Verified Direct Work Email" and not entity.estimated_aum_usd:
+        if entity.aum_confidence.value == AumConfidence.CONFIRMED.value and not entity.estimated_aum_usd:
             errors.append(f"[FAIL] {eid} {ename}: Verified AUM confidence but no AUM value")
 
     print(f"\nValidation Report for: {source.name}")
@@ -266,6 +295,14 @@ def main() -> None:
     p = sub.add_parser("export", help="Export enriched data")
     p.add_argument("-f", "--format", choices=["json", "csv"], default="json", help="Export format")
     p.set_defaults(func=cmd_export)
+
+    # discover
+    p = sub.add_parser("discover", help="Discover SFO candidates from public sources")
+    p.add_argument("--max", type=int, default=50, dest="max_candidates", help="Max candidates")
+    p.add_argument("-o", "--output", default="sfo_seed.json", help="Output filename")
+    p.add_argument("-s", "--source", choices=["sec", "wikipedia", "multi"], default="sec",
+                   help="Discovery source(s): sec, wikipedia, or multi (both, deduped)")
+    p.set_defaults(func=cmd_discover)
 
     # validate
     p = sub.add_parser("validate", help="Validate dataset integrity")

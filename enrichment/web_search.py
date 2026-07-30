@@ -6,7 +6,7 @@ Falls back gracefully if no API key is configured.
 from __future__ import annotations
 
 import json
-from typing import Optional
+from typing import Optional, Tuple
 
 import requests
 
@@ -53,10 +53,12 @@ class WebSearchClient:
             self._log.log_failure("serper_web", error=str(e), entity="", field=query)
             return []
 
-    def search_principal_email(self, full_name: str, organization: str) -> Optional[str]:
-        """Attempt to find a verified direct email for a named principal via web search.
+    def search_principal_email(self, full_name: str, organization: str) -> Optional[Tuple[str, str]]:
+        """Returns (email, evidence_snippet) if a non-generic email is found.
 
         Returns None explicitly (never hallucinates) if not found.
+        The evidence_snippet is the search result text that contained the email,
+        used downstream to gate VERIFIED_DIRECT confidence on real attribution.
         """
         queries = [
             f'"{full_name}" {organization} email',
@@ -68,7 +70,6 @@ class WebSearchClient:
             for r in results:
                 snippet = r.get("snippet", "").lower()
                 link = r.get("link", "").lower()
-                # Look for email-like patterns in snippet
                 import re
                 emails = re.findall(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}", snippet + " " + link)
                 for e in emails:
@@ -79,7 +80,7 @@ class WebSearchClient:
                             source="serper_web", field="email", value=e, entity=full_name,
                             source_url=r.get("link", ""),
                         )
-                        return e
+                        return e, snippet  # email + evidence
         return None
 
     def search_linkedin(self, full_name: str, organization: str) -> Optional[str]:

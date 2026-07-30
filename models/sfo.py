@@ -19,6 +19,7 @@ from config.settings import utcnow
 
 class ContactConfidence(str, Enum):
     VERIFIED_DIRECT = "Verified Direct Work Email"
+    VERIFIED = "Verified"
     CATCH_ALL = "Catch-all / Generic Inbox"
     UNRESOLVED = "Unresolved"
     UNVERIFIED = "Unverified"

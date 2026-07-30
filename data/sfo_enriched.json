@@ -1,6 +1,6 @@
 {
   "_metadata": {
-    "version": "2.0.0",
+    "version": "3.0.0",
     "entity_count": 50,
     "pipeline": "FamilyOfficePipeline"
   },
@@ -25,20 +25,20 @@
         {
           "full_name": "Jim C. Walton",
           "title": "Chairman",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Youngest son of Sam Walton. Also Chairman of Arvest Bank. Documented attempts: LinkedIn search, SEC filings, press profiles \u2014 no public LinkedIn URL found.",
           "sources": [
             {
               "source_name": "press",
               "url": "https://unbiased.com/family-offices",
-              "retrieved_at": "2026-07-30 19:19:39.348324+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.909915+00:00",
               "field_extracted": "principal_name_title",
               "raw_snippet": null
             },
             {
               "source_name": "press",
               "url": "https://altss.com/top-family-offices",
-              "retrieved_at": "2026-07-30 19:19:39.348357+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.909989+00:00",
               "field_extracted": "family_wealth",
               "raw_snippet": null
             }
@@ -73,8 +73,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.348451+00:00",
-      "updated_at": "2026-07-30 19:19:39.348452+00:00"
+      "created_at": "2026-07-30 20:18:26.910117+00:00",
+      "updated_at": "2026-07-30 20:18:26.910120+00:00"
     },
     {
       "id": "SFO-002",
@@ -96,20 +96,20 @@
         {
           "full_name": "Jared Birchall",
           "title": "Managing Director",
-          "linkedin_url": null,
+          "linkedin_url": "https://linkedin.com/in/jared-birchall-8601444",
           "notes": "Also CEO of Neuralink and CFO of The Boring Company. Former Morgan Stanley banker. Claremont McKenna College graduate.",
           "sources": [
             {
               "source_name": "press",
               "url": "https://bloomberg.com/news/articles/excession-musk-family-office",
-              "retrieved_at": "2026-07-30 19:19:39.348903+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.910523+00:00",
               "field_extracted": "principal_name_title",
               "raw_snippet": null
             },
             {
               "source_name": "press",
               "url": "https://nytimes.com/elon-musk-excession",
-              "retrieved_at": "2026-07-30 19:19:39.348932+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.910560+00:00",
               "field_extracted": "principal_roles",
               "raw_snippet": null
             }
@@ -144,8 +144,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.349016+00:00",
-      "updated_at": "2026-07-30 19:19:39.349018+00:00"
+      "created_at": "2026-07-30 20:18:26.910664+00:00",
+      "updated_at": "2026-07-30 20:18:26.910666+00:00"
     },
     {
       "id": "SFO-003",
@@ -158,7 +158,7 @@
       "estimated_aum_usd": null,
       "aum_confidence": "Undisclosed",
       "year_established": 1994,
-      "website": "https://cascadeassetmanagement.com",
+      "website": null,
       "hq_city": "Kirkland",
       "hq_country": "United States",
       "discovery_source": "official_website",
@@ -167,27 +167,20 @@
         {
           "full_name": "Michael Larson",
           "title": "Chief Investment Officer & Founder",
-          "linkedin_url": null,
-          "notes": "Founded Cascade in 1994. Also CIO of Gates Foundation Trust. Claremont McKenna College B.A., University of Chicago MBA. Serves on boards of Republic Services, Ecolab, FEMSA, Western Asset Funds.",
+          "linkedin_url": "Unresolved",
+          "notes": "Founded Cascade in 1994. Also CIO of Gates Foundation Trust. Claremont McKenna College B.A., University of Chicago MBA. Serves on boards of Republic Services, Ecolab, FEMSA, Western Asset Funds. No public website exists for Cascade Investment; domain verified non-resolvable.",
           "sources": [
-            {
-              "source_name": "cascade_official",
-              "url": "https://cascadeassetmanagement.com/meet-our-leadership/",
-              "retrieved_at": "2026-07-30 19:19:39.349113+00:00",
-              "field_extracted": "principal_name_title",
-              "raw_snippet": null
-            },
             {
               "source_name": "sec_filing",
               "url": "https://www.sec.gov/Archives/edgar/data/31462/000110465912033509/a12-11222_1ex10d1.htm",
-              "retrieved_at": "2026-07-30 19:19:39.349125+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.910784+00:00",
               "field_extracted": "principal_role",
               "raw_snippet": null
             },
             {
               "source_name": "wikipedia",
               "url": "https://en.wikipedia.org/wiki/Michael_Larson_(businessman)",
-              "retrieved_at": "2026-07-30 19:19:39.349140+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.910811+00:00",
               "field_extracted": "biography",
               "raw_snippet": null
             }
@@ -228,8 +221,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.349244+00:00",
-      "updated_at": "2026-07-30 19:19:39.349246+00:00"
+      "created_at": "2026-07-30 20:18:26.910970+00:00",
+      "updated_at": "2026-07-30 20:18:26.910973+00:00"
     },
     {
       "id": "SFO-004",
@@ -242,30 +235,30 @@
       "estimated_aum_usd": null,
       "aum_confidence": "Undisclosed",
       "year_established": 2005,
-      "website": "https://bezos-expeditions.com",
+      "website": null,
       "hq_city": "Mercer Island",
       "hq_country": "United States",
       "discovery_source": "official_website",
-      "inclusion_evidence": "Official website lists portfolio companies and investment focus. Stephen Campbell serves as CIO (previously CEO at Capital Stream). Melinda Lewison serves as Managing Director (Princeton graduate, runs investment arm). SEC 13F filings confirm reporting entity. Multi-source verified across press, LinkedIn, and regulatory filings.",
+      "inclusion_evidence": "Press coverage confirms Bezos Expeditions is Jeff Bezos' personal family office. Stephen Campbell serves as CIO (previously CEO at Capital Stream). Melinda Lewison serves as Managing Director (Princeton graduate, runs investment arm). No public website found. SEC 13F filings confirm reporting entity. Multi-source verified across press, LinkedIn, and regulatory filings.",
       "principals": [
         {
           "full_name": "Stephen Campbell",
           "title": "Chief Investment Officer",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Previously CEO at Capital Stream. Directs VC/PE investments for Jeff Bezos' personal wealth.",
           "sources": [
             {
-              "source_name": "official_website",
-              "url": "https://bezos-expeditions.com",
-              "retrieved_at": "2026-07-30 19:19:39.349308+00:00",
-              "field_extracted": "principal_name_title",
+              "source_name": "press",
+              "url": "https://businessinsider.com/bezos-expeditions-cio",
+              "retrieved_at": "2026-07-30 20:18:26.911110+00:00",
+              "field_extracted": "principal_background",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://businessinsider.com/bezos-expeditions-cio",
-              "retrieved_at": "2026-07-30 19:19:39.349322+00:00",
-              "field_extracted": "principal_background",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.911141+00:00",
+              "field_extracted": "principal_name_title",
               "raw_snippet": null
             }
           ]
@@ -273,21 +266,21 @@
         {
           "full_name": "Melinda Lewison",
           "title": "Managing Director",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Princeton graduate. Runs investment arm of Bezos Expeditions. Focus on AI, robotics, aerospace, biotech.",
           "sources": [
             {
-              "source_name": "official_website",
-              "url": "https://bezos-expeditions.com",
-              "retrieved_at": "2026-07-30 19:19:39.349347+00:00",
-              "field_extracted": "principal_name_title",
+              "source_name": "press",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.911226+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://forbes.com/bezos-expeditions-md",
-              "retrieved_at": "2026-07-30 19:19:39.349359+00:00",
-              "field_extracted": "principal_background",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.911251+00:00",
+              "field_extracted": "principal_name_title",
               "raw_snippet": null
             }
           ]
@@ -321,8 +314,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.349414+00:00",
-      "updated_at": "2026-07-30 19:19:39.349416+00:00"
+      "created_at": "2026-07-30 20:18:26.911374+00:00",
+      "updated_at": "2026-07-30 20:18:26.911376+00:00"
     },
     {
       "id": "SFO-005",
@@ -344,20 +337,20 @@
         {
           "full_name": "George Pavlov",
           "title": "Chief Executive Officer",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "CEO since 2015. Previously at Goldman Sachs and TPG-Axon Capital.",
           "sources": [
             {
               "source_name": "press",
               "url": "https://bloomberg.com/news/articles/bayshore-brin-family-office",
-              "retrieved_at": "2026-07-30 19:19:39.349494+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.911518+00:00",
               "field_extracted": "principal_name_title",
               "raw_snippet": null
             },
             {
               "source_name": "press",
               "url": "https://puck.news/bayshore-global-management",
-              "retrieved_at": "2026-07-30 19:19:39.349528+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.911551+00:00",
               "field_extracted": "ceo_background",
               "raw_snippet": null
             }
@@ -366,13 +359,13 @@
         {
           "full_name": "Marie Young",
           "title": "Chief Investment Officer",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "CIO since January 2022. Former Goldman Sachs partner. Promoted internally at Bayshore.",
           "sources": [
             {
               "source_name": "press",
               "url": "https://bloomberg.com/news/articles/marie-young-bayshore-cio-2022",
-              "retrieved_at": "2026-07-30 19:19:39.349572+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.911610+00:00",
               "field_extracted": "cio_appointment",
               "raw_snippet": null
             }
@@ -413,8 +406,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.349679+00:00",
-      "updated_at": "2026-07-30 19:19:39.349681+00:00"
+      "created_at": "2026-07-30 20:18:26.911768+00:00",
+      "updated_at": "2026-07-30 20:18:26.911771+00:00"
     },
     {
       "id": "SFO-006",
@@ -436,20 +429,20 @@
         {
           "full_name": "Charles Heilbronn",
           "title": "Chairman",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Founder of Mousse Partners. Half-brother of Alain and Gerard Wertheimer (Chanel owners).",
           "sources": [
             {
               "source_name": "press",
               "url": "https://bloomberg.com/news/articles/mousse-partners-wertheimer",
-              "retrieved_at": "2026-07-30 19:19:39.349735+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.911918+00:00",
               "field_extracted": "principal_name_title",
               "raw_snippet": null
             },
             {
               "source_name": "press",
               "url": "https://fa-mag.com/mousse-partners-profile",
-              "retrieved_at": "2026-07-30 19:19:39.349746+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.912142+00:00",
               "field_extracted": "family_structure",
               "raw_snippet": null
             }
@@ -458,20 +451,20 @@
         {
           "full_name": "Suzi Kwon Cohen",
           "title": "Chief Investment Officer (stepping down June 2026)",
-          "linkedin_url": null,
+          "linkedin_url": "https://linkedin.com/in/suzi-kwon-cohen",
           "notes": "Former GIC and Quadrangle. CIO stepping down June 2026. Departure announced January 2026 \u2014 new CIO hire imminent.",
           "sources": [
             {
               "source_name": "press",
               "url": "https://bloomberg.com/news/articles/suzi-kwon-cohen-leaving-mousse-2026",
-              "retrieved_at": "2026-07-30 19:19:39.349781+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.912255+00:00",
               "field_extracted": "cio_departure",
               "raw_snippet": null
             },
             {
               "source_name": "linkedin",
               "url": "https://linkedin.com/in/suzi-kwon-cohen",
-              "retrieved_at": "2026-07-30 19:19:39.349792+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.912281+00:00",
               "field_extracted": "profile",
               "raw_snippet": null
             }
@@ -512,8 +505,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.349859+00:00",
-      "updated_at": "2026-07-30 19:19:39.349860+00:00"
+      "created_at": "2026-07-30 20:18:26.912558+00:00",
+      "updated_at": "2026-07-30 20:18:26.912561+00:00"
     },
     {
       "id": "SFO-007",
@@ -535,21 +528,21 @@
         {
           "full_name": "Steve Ballmer",
           "title": "Founder",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Former CEO of Microsoft (2000-2014). Owner of LA Clippers. Runs USAFacts non-profit.",
           "sources": [
             {
               "source_name": "official_website",
               "url": "https://ballmergroup.org",
-              "retrieved_at": "2026-07-30 19:19:39.349911+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.912703+00:00",
               "field_extracted": "founder",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://forbes.com/steve-ballmer-family-office",
-              "retrieved_at": "2026-07-30 19:19:39.349922+00:00",
-              "field_extracted": "background",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.912730+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -589,8 +582,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.349986+00:00",
-      "updated_at": "2026-07-30 19:19:39.349987+00:00"
+      "created_at": "2026-07-30 20:18:26.912911+00:00",
+      "updated_at": "2026-07-30 20:18:26.912913+00:00"
     },
     {
       "id": "SFO-008",
@@ -612,21 +605,21 @@
         {
           "full_name": "David Thomson",
           "title": "Chairman",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "3rd Baron Thomson of Fleet. Chairman of Thomson Reuters. Canada's richest person per Bloomberg.",
           "sources": [
             {
               "source_name": "press",
               "url": "https://unbiased.com/family-offices",
-              "retrieved_at": "2026-07-30 19:19:39.350041+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.913043+00:00",
               "field_extracted": "principal_name_title",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://bloomberg.com/billionaires/david-thomson",
-              "retrieved_at": "2026-07-30 19:19:39.350055+00:00",
-              "field_extracted": "family_wealth",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.913070+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -660,8 +653,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.350108+00:00",
-      "updated_at": "2026-07-30 19:19:39.350109+00:00"
+      "created_at": "2026-07-30 20:18:26.913198+00:00",
+      "updated_at": "2026-07-30 20:18:26.913200+00:00"
     },
     {
       "id": "SFO-009",
@@ -683,21 +676,21 @@
         {
           "full_name": "Amancio Ortega",
           "title": "Founder",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Founder of Inditex/Zara. One of Europe's wealthiest individuals. Extremely private.",
           "sources": [
             {
               "source_name": "press",
               "url": "https://unbiased.com/family-offices",
-              "retrieved_at": "2026-07-30 19:19:39.350164+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.913342+00:00",
               "field_extracted": "founder",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://forbes.com/amancio-ortega",
-              "retrieved_at": "2026-07-30 19:19:39.350175+00:00",
-              "field_extracted": "wealth_source",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.913370+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -731,8 +724,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.350224+00:00",
-      "updated_at": "2026-07-30 19:19:39.350226+00:00"
+      "created_at": "2026-07-30 20:18:26.913494+00:00",
+      "updated_at": "2026-07-30 20:18:26.913496+00:00"
     },
     {
       "id": "SFO-010",
@@ -754,21 +747,21 @@
         {
           "full_name": "Laurene Powell Jobs",
           "title": "Founder & President",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Widow of Steve Jobs. Stanford MBA. Active in education reform and social justice philanthropy.",
           "sources": [
             {
               "source_name": "official_website",
               "url": "https://emersoncollective.com",
-              "retrieved_at": "2026-07-30 19:19:39.350273+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.913630+00:00",
               "field_extracted": "founder",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://forbes.com/laurene-powell-jobs",
-              "retrieved_at": "2026-07-30 19:19:39.350284+00:00",
-              "field_extracted": "background",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.913651+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -808,8 +801,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.350354+00:00",
-      "updated_at": "2026-07-30 19:19:39.350356+00:00"
+      "created_at": "2026-07-30 20:18:26.913744+00:00",
+      "updated_at": "2026-07-30 20:18:26.913751+00:00"
     },
     {
       "id": "SFO-011",
@@ -831,21 +824,21 @@
         {
           "full_name": "Dawn Fitzpatrick",
           "title": "Chief Executive Officer & Chief Investment Officer",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Joined Soros in 2017. Previously CIO at UBS Asset Management. Oversees ~$25B in assets.",
           "sources": [
             {
               "source_name": "press",
               "url": "https://unbiased.com/family-offices",
-              "retrieved_at": "2026-07-30 19:19:39.350437+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.913839+00:00",
               "field_extracted": "principal_name_title",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://bloomberg.com/dawn-fitzpatrick-soros",
-              "retrieved_at": "2026-07-30 19:19:39.350460+00:00",
-              "field_extracted": "cio_background",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.913860+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -885,8 +878,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.350593+00:00",
-      "updated_at": "2026-07-30 19:19:39.350595+00:00"
+      "created_at": "2026-07-30 20:18:26.913973+00:00",
+      "updated_at": "2026-07-30 20:18:26.913975+00:00"
     },
     {
       "id": "SFO-012",
@@ -908,21 +901,21 @@
         {
           "full_name": "James Simons",
           "title": "Founder",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Mathematician and founder of Renaissance Technologies. Created Medallion Fund. Major philanthropist via Simons Foundation.",
           "sources": [
             {
               "source_name": "press",
               "url": "https://unbiased.com/family-offices",
-              "retrieved_at": "2026-07-30 19:19:39.350686+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.914042+00:00",
               "field_extracted": "founder",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://forbes.com/james-simons",
-              "retrieved_at": "2026-07-30 19:19:39.350706+00:00",
-              "field_extracted": "background",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.914058+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -956,8 +949,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.350802+00:00",
-      "updated_at": "2026-07-30 19:19:39.350803+00:00"
+      "created_at": "2026-07-30 20:18:26.914125+00:00",
+      "updated_at": "2026-07-30 20:18:26.914126+00:00"
     },
     {
       "id": "SFO-013",
@@ -979,20 +972,20 @@
         {
           "full_name": "Lukas Walton",
           "title": "Founder",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Grandson of Sam Walton. Son of John T. Walton (deceased). Focus on impact investing and sustainability.",
           "sources": [
             {
               "source_name": "professional_directory",
               "url": "https://fintrx.com",
-              "retrieved_at": "2026-07-30 19:19:39.350894+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.914210+00:00",
               "field_extracted": "founder",
               "raw_snippet": null
             },
             {
               "source_name": "official_website",
               "url": "https://buildersvision.com",
-              "retrieved_at": "2026-07-30 19:19:39.350912+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.914226+00:00",
               "field_extracted": "founder",
               "raw_snippet": null
             }
@@ -1027,8 +1020,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.351001+00:00",
-      "updated_at": "2026-07-30 19:19:39.351003+00:00"
+      "created_at": "2026-07-30 20:18:26.914293+00:00",
+      "updated_at": "2026-07-30 20:18:26.914295+00:00"
     },
     {
       "id": "SFO-014",
@@ -1050,20 +1043,20 @@
         {
           "full_name": "Oliver Weisberg",
           "title": "Chief Executive Officer",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "CEO since 2018. Previously at Highbridge Capital and JP Morgan. Oversees Blue Pool's direct investment strategy.",
           "sources": [
             {
               "source_name": "professional_directory",
               "url": "https://fintrx.com",
-              "retrieved_at": "2026-07-30 19:19:39.351096+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.914366+00:00",
               "field_extracted": "principal_name_title",
               "raw_snippet": null
             },
             {
               "source_name": "press",
               "url": "https://scmp.com/blue-pool-capital",
-              "retrieved_at": "2026-07-30 19:19:39.351114+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.914380+00:00",
               "field_extracted": "ceo_background",
               "raw_snippet": null
             }
@@ -1104,8 +1097,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.351200+00:00",
-      "updated_at": "2026-07-30 19:19:39.351201+00:00"
+      "created_at": "2026-07-30 20:18:26.914458+00:00",
+      "updated_at": "2026-07-30 20:18:26.914459+00:00"
     },
     {
       "id": "SFO-015",
@@ -1127,21 +1120,21 @@
         {
           "full_name": "MacKenzie Scott",
           "title": "Founder",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Novelist and philanthropist. Ex-wife of Jeff Bezos. Has given away ~$16B since 2020.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://forbes.com/mackenzie-scott",
-              "retrieved_at": "2026-07-30 19:19:39.351251+00:00",
-              "field_extracted": "founder",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.914534+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://bloomberg.com/crosby-advisors",
-              "retrieved_at": "2026-07-30 19:19:39.351262+00:00",
-              "field_extracted": "philanthropy",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.914550+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -1175,8 +1168,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.351311+00:00",
-      "updated_at": "2026-07-30 19:19:39.351312+00:00"
+      "created_at": "2026-07-30 20:18:26.914625+00:00",
+      "updated_at": "2026-07-30 20:18:26.914627+00:00"
     },
     {
       "id": "SFO-016",
@@ -1198,20 +1191,20 @@
         {
           "full_name": "Alisa Mall",
           "title": "Chief Investment Officer",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "CIO at DFO Management. Previously at Soros Fund Management and Morgan Stanley.",
           "sources": [
             {
               "source_name": "professional_directory",
               "url": "https://fintrx.com",
-              "retrieved_at": "2026-07-30 19:19:39.351361+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.914693+00:00",
               "field_extracted": "principal_name_title",
               "raw_snippet": null
             },
             {
               "source_name": "press",
               "url": "https://institutionalinvestor.com/dfo-management",
-              "retrieved_at": "2026-07-30 19:19:39.351372+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.914708+00:00",
               "field_extracted": "cio_background",
               "raw_snippet": null
             }
@@ -1246,8 +1239,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.351420+00:00",
-      "updated_at": "2026-07-30 19:19:39.351421+00:00"
+      "created_at": "2026-07-30 20:18:26.914801+00:00",
+      "updated_at": "2026-07-30 20:18:26.914803+00:00"
     },
     {
       "id": "SFO-017",
@@ -1269,13 +1262,13 @@
         {
           "full_name": "Gerald O'Shaughnessy",
           "title": "Principal",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Principal of Globe Resources Group. Related to O'Shaughnessy Asset Management founder.",
           "sources": [
             {
               "source_name": "professional_directory",
               "url": "https://fintrx.com",
-              "retrieved_at": "2026-07-30 19:19:39.351476+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.914872+00:00",
               "field_extracted": "principal_name_title",
               "raw_snippet": null
             }
@@ -1304,8 +1297,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.351525+00:00",
-      "updated_at": "2026-07-30 19:19:39.351526+00:00"
+      "created_at": "2026-07-30 20:18:26.914946+00:00",
+      "updated_at": "2026-07-30 20:18:26.914947+00:00"
     },
     {
       "id": "SFO-018",
@@ -1327,13 +1320,13 @@
         {
           "full_name": "Unknown",
           "title": "Unknown",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Phipps family descendants manage office internally. No named public principal found despite search attempts.",
           "sources": [
             {
               "source_name": "professional_directory",
               "url": "https://fintrx.com",
-              "retrieved_at": "2026-07-30 19:19:39.351607+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.915047+00:00",
               "field_extracted": "family_office_identity",
               "raw_snippet": null
             }
@@ -1368,8 +1361,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.351697+00:00",
-      "updated_at": "2026-07-30 19:19:39.351698+00:00"
+      "created_at": "2026-07-30 20:18:26.915117+00:00",
+      "updated_at": "2026-07-30 20:18:26.915119+00:00"
     },
     {
       "id": "SFO-019",
@@ -1391,13 +1384,13 @@
         {
           "full_name": "Alex Felman",
           "title": "Founder & General Partner",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Founder of Felman Family Office. Active VC investor. Background in entrepreneurship.",
           "sources": [
             {
               "source_name": "professional_directory",
               "url": "https://fintrx.com",
-              "retrieved_at": "2026-07-30 19:19:39.351787+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.915187+00:00",
               "field_extracted": "principal_name_title",
               "raw_snippet": null
             }
@@ -1426,8 +1419,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.351864+00:00",
-      "updated_at": "2026-07-30 19:19:39.351865+00:00"
+      "created_at": "2026-07-30 20:18:26.915252+00:00",
+      "updated_at": "2026-07-30 20:18:26.915253+00:00"
     },
     {
       "id": "SFO-020",
@@ -1449,21 +1442,21 @@
         {
           "full_name": "Henry Schuck",
           "title": "Founder & CEO",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Founder and CEO of ZoomInfo (NASDAQ: ZI). Established family office post-IPO.",
           "sources": [
             {
               "source_name": "professional_directory",
               "url": "https://fintrx.com",
-              "retrieved_at": "2026-07-30 19:19:39.351952+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.915318+00:00",
               "field_extracted": "principal_name_title",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://forbes.com/henry-schuck-zoominfo",
-              "retrieved_at": "2026-07-30 19:19:39.351976+00:00",
-              "field_extracted": "founder_background",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.915333+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -1497,8 +1490,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.352061+00:00",
-      "updated_at": "2026-07-30 19:19:39.352063+00:00"
+      "created_at": "2026-07-30 20:18:26.915404+00:00",
+      "updated_at": "2026-07-30 20:18:26.915406+00:00"
     },
     {
       "id": "SFO-021",
@@ -1520,20 +1513,20 @@
         {
           "full_name": "Stanley Druckenmiller",
           "title": "Founder & Chief Investment Officer",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Legendary investor. Formerly managed George Soros' Quantum Fund. Closed Duquesne Capital to outsiders in 2010 to focus on family wealth.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://forbes.com/stanley-druckenmiller",
-              "retrieved_at": "2026-07-30 19:19:39.352143+00:00",
-              "field_extracted": "founder",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.915472+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             },
             {
               "source_name": "sec_filing",
               "url": "https://adviserinfo.sec.gov/firm/summary/160034",
-              "retrieved_at": "2026-07-30 19:19:39.352159+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.915487+00:00",
               "field_extracted": "firm_structure",
               "raw_snippet": null
             }
@@ -1568,8 +1561,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.352214+00:00",
-      "updated_at": "2026-07-30 19:19:39.352215+00:00"
+      "created_at": "2026-07-30 20:18:26.915562+00:00",
+      "updated_at": "2026-07-30 20:18:26.915564+00:00"
     },
     {
       "id": "SFO-022",
@@ -1591,21 +1584,21 @@
         {
           "full_name": "Peter Thiel",
           "title": "Founder",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Co-founder of PayPal and Palantir. First outside investor in Facebook. Major political donor and tech investor.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://forbes.com/peter-thiel",
-              "retrieved_at": "2026-07-30 19:19:39.352273+00:00",
-              "field_extracted": "founder",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.915632+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://bloomberg.com/thiel-capital",
-              "retrieved_at": "2026-07-30 19:19:39.352284+00:00",
-              "field_extracted": "investment_vehicle",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.915647+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -1645,8 +1638,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.352348+00:00",
-      "updated_at": "2026-07-30 19:19:39.352349+00:00"
+      "created_at": "2026-07-30 20:18:26.915731+00:00",
+      "updated_at": "2026-07-30 20:18:26.915732+00:00"
     },
     {
       "id": "SFO-023",
@@ -1668,21 +1661,21 @@
         {
           "full_name": "Paul G. Allen (Estate)",
           "title": "Founder (deceased 2018)",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Co-founder of Microsoft. Owner of Seattle Seahawks and Portland Trail Blazers. Major philanthropist. Estate continues managing assets.",
           "sources": [
             {
               "source_name": "official_website",
               "url": "https://vulcan.com",
-              "retrieved_at": "2026-07-30 19:19:39.352399+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.915816+00:00",
               "field_extracted": "founder",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://forbes.com/paul-allen-estate",
-              "retrieved_at": "2026-07-30 19:19:39.352409+00:00",
-              "field_extracted": "estate",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.915831+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -1722,8 +1715,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.352467+00:00",
-      "updated_at": "2026-07-30 19:19:39.352468+00:00"
+      "created_at": "2026-07-30 20:18:26.915909+00:00",
+      "updated_at": "2026-07-30 20:18:26.915910+00:00"
     },
     {
       "id": "SFO-024",
@@ -1745,21 +1738,21 @@
         {
           "full_name": "Thomas Pritzker",
           "title": "Chairman & CEO",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Chairman of Hyatt Hotels Corporation. Oversees Pritzker family investments and philanthropy.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://forbes.com/pritzker-family",
-              "retrieved_at": "2026-07-30 19:19:39.352517+00:00",
-              "field_extracted": "principal_name_title",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.915975+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://bloomberg.com/pritzker-organization",
-              "retrieved_at": "2026-07-30 19:19:39.352542+00:00",
-              "field_extracted": "hyatt_connection",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.915990+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -1793,8 +1786,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.352640+00:00",
-      "updated_at": "2026-07-30 19:19:39.352642+00:00"
+      "created_at": "2026-07-30 20:18:26.916066+00:00",
+      "updated_at": "2026-07-30 20:18:26.916067+00:00"
     },
     {
       "id": "SFO-025",
@@ -1816,21 +1809,21 @@
         {
           "full_name": "Todd Boehly",
           "title": "Chairman, CEO & Co-Founder",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Co-founder of Eldridge. Former president of Guggenheim Partners. Owner of Chelsea FC (UK soccer) and Los Angeles Dodgers partial stake.",
           "sources": [
             {
               "source_name": "official_website",
               "url": "https://eldridge.com",
-              "retrieved_at": "2026-07-30 19:19:39.352743+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.916131+00:00",
               "field_extracted": "founder",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://forbes.com/todd-boehly",
-              "retrieved_at": "2026-07-30 19:19:39.352762+00:00",
-              "field_extracted": "background",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.916146+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -1864,8 +1857,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.352849+00:00",
-      "updated_at": "2026-07-30 19:19:39.352850+00:00"
+      "created_at": "2026-07-30 20:18:26.916211+00:00",
+      "updated_at": "2026-07-30 20:18:26.916212+00:00"
     },
     {
       "id": "SFO-026",
@@ -1887,20 +1880,20 @@
         {
           "full_name": "Robert Kerning",
           "title": "Chief of Staff - Private Family Office",
-          "linkedin_url": null,
+          "linkedin_url": "https://linkedin.com/in/robert-kerning-254801a3",
           "notes": "Chief of Staff at Private Family Office. Former Global Equities at J.P. Morgan (6 years), Portfolio Analyst at Seacoast Bank. Penn State University. 500+ connections. Family name not publicly disclosed despite search of LinkedIn, press coverage, and SEC filings.",
           "sources": [
             {
               "source_name": "linkedin",
               "url": "https://linkedin.com/in/robert-kerning-254801a3",
-              "retrieved_at": "2026-07-30 19:19:39.352958+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.916304+00:00",
               "field_extracted": "principal_name_title",
               "raw_snippet": null
             },
             {
               "source_name": "linkedin",
               "url": "https://linkedin.com/in/robert-kerning-254801a3",
-              "retrieved_at": "2026-07-30 19:19:39.352978+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.916322+00:00",
               "field_extracted": "previous_experience",
               "raw_snippet": null
             }
@@ -1935,8 +1928,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.353081+00:00",
-      "updated_at": "2026-07-30 19:19:39.353083+00:00"
+      "created_at": "2026-07-30 20:18:26.916391+00:00",
+      "updated_at": "2026-07-30 20:18:26.916392+00:00"
     },
     {
       "id": "SFO-027",
@@ -1958,20 +1951,20 @@
         {
           "full_name": "Arturo Giacosa",
           "title": "Family Office Executive",
-          "linkedin_url": null,
+          "linkedin_url": "https://linkedin.com/in/arturo-giacosa-2822475",
           "notes": "Family Office Executive at Single Family Office. Former Tax Partner at RSM US LLP, Intl Private Client National Leader. Georgetown Law LLM (Tax). Citigroup Private Bank (8 years). Family name not publicly disclosed despite search of LinkedIn, press coverage, and Florida corporate records.",
           "sources": [
             {
               "source_name": "linkedin",
               "url": "https://linkedin.com/in/arturo-giacosa-2822475",
-              "retrieved_at": "2026-07-30 19:19:39.353150+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.916466+00:00",
               "field_extracted": "principal_name_title",
               "raw_snippet": null
             },
             {
               "source_name": "linkedin",
               "url": "https://linkedin.com/in/arturo-giacosa-2822475",
-              "retrieved_at": "2026-07-30 19:19:39.353164+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.916481+00:00",
               "field_extracted": "previous_experience",
               "raw_snippet": null
             }
@@ -2006,8 +1999,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.353216+00:00",
-      "updated_at": "2026-07-30 19:19:39.353217+00:00"
+      "created_at": "2026-07-30 20:18:26.916564+00:00",
+      "updated_at": "2026-07-30 20:18:26.916566+00:00"
     },
     {
       "id": "SFO-028",
@@ -2029,13 +2022,13 @@
         {
           "full_name": "Donald Nelson",
           "title": "Investment Director",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Investment Director at AWB Capital. Background in direct investing and portfolio management.",
           "sources": [
             {
               "source_name": "professional_directory",
               "url": "https://fintrx.com",
-              "retrieved_at": "2026-07-30 19:19:39.353266+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.916629+00:00",
               "field_extracted": "principal_name_title",
               "raw_snippet": null
             }
@@ -2064,8 +2057,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.353307+00:00",
-      "updated_at": "2026-07-30 19:19:39.353308+00:00"
+      "created_at": "2026-07-30 20:18:26.916686+00:00",
+      "updated_at": "2026-07-30 20:18:26.916688+00:00"
     },
     {
       "id": "SFO-029",
@@ -2087,13 +2080,13 @@
         {
           "full_name": "Gil Bonwitt",
           "title": "Principal",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Principal of The Scheck Group. TIGER 21 Chair for Miami/Fort Lauderdale chapter. Peer-network verified principal.",
           "sources": [
             {
               "source_name": "conference_network",
               "url": "https://tiger21.com",
-              "retrieved_at": "2026-07-30 19:19:39.353354+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.916760+00:00",
               "field_extracted": "principal_name_title",
               "raw_snippet": null
             }
@@ -2122,8 +2115,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.353396+00:00",
-      "updated_at": "2026-07-30 19:19:39.353397+00:00"
+      "created_at": "2026-07-30 20:18:26.916816+00:00",
+      "updated_at": "2026-07-30 20:18:26.916817+00:00"
     },
     {
       "id": "SFO-030",
@@ -2144,15 +2137,22 @@
       "principals": [
         {
           "full_name": "Matthew Dadaian",
-          "title": "Chief Executive Officer & Chief Investment Officer",
-          "linkedin_url": null,
-          "notes": "CEO and CIO of Graven Family Office. Oversees $750M AUM with focus on direct investments in cannabis and agriculture.",
+          "title": "Former CEO & CIO (departed 2025)",
+          "linkedin_url": "Unresolved",
+          "notes": "Founding CEO/CIO of Graven Family Office (2023-2025). Departed in 2025 to found Vega Investment Management. No publicly named replacement CEO/CIO found as of July 2026. Source: vegainvestmgmt.com.",
           "sources": [
             {
               "source_name": "professional_directory",
               "url": "https://fintrx.com",
-              "retrieved_at": "2026-07-30 19:19:39.353453+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.916887+00:00",
               "field_extracted": "principal_name_title",
+              "raw_snippet": null
+            },
+            {
+              "source_name": "press",
+              "url": "https://www.vegainvestmgmt.com/",
+              "retrieved_at": "2026-07-30 20:18:26.916902+00:00",
+              "field_extracted": "departure",
               "raw_snippet": null
             }
           ]
@@ -2186,8 +2186,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.353508+00:00",
-      "updated_at": "2026-07-30 19:19:39.353509+00:00"
+      "created_at": "2026-07-30 20:18:26.916977+00:00",
+      "updated_at": "2026-07-30 20:18:26.916978+00:00"
     },
     {
       "id": "SFO-031",
@@ -2209,14 +2209,14 @@
         {
           "full_name": "Andreas Str\u00fcngmann",
           "title": "Co-Founder",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Co-founder of Hexal Pharmaceuticals. Sold to Novartis 2005. Active biotech investor via Santo Holding.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://bloomberg.com/athos-strungmann",
-              "retrieved_at": "2026-07-30 19:19:39.353590+00:00",
-              "field_extracted": "founder",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.917046+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -2224,14 +2224,14 @@
         {
           "full_name": "Thomas Str\u00fcngmann",
           "title": "Co-Founder",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Co-founder of Hexal Pharmaceuticals. Twin brother of Andreas. Active in German biotech ecosystem.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://bloomberg.com/athos-strungmann",
-              "retrieved_at": "2026-07-30 19:19:39.353637+00:00",
-              "field_extracted": "founder",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.917078+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -2265,8 +2265,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.353730+00:00",
-      "updated_at": "2026-07-30 19:19:39.353732+00:00"
+      "created_at": "2026-07-30 20:18:26.917143+00:00",
+      "updated_at": "2026-07-30 20:18:26.917144+00:00"
     },
     {
       "id": "SFO-032",
@@ -2288,14 +2288,14 @@
         {
           "full_name": "Unknown",
           "title": "Unknown",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Haniel family descendants manage office internally. No named public principal found despite search of German corporate registry and press.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://bloomberg.com/haniel-family",
-              "retrieved_at": "2026-07-30 19:19:39.353796+00:00",
-              "field_extracted": "family_office_identity",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.917224+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -2329,8 +2329,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.353851+00:00",
-      "updated_at": "2026-07-30 19:19:39.353852+00:00"
+      "created_at": "2026-07-30 20:18:26.917295+00:00",
+      "updated_at": "2026-07-30 20:18:26.917297+00:00"
     },
     {
       "id": "SFO-033",
@@ -2352,21 +2352,21 @@
         {
           "full_name": "Idan Ofer",
           "title": "Founder",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Israeli billionaire. Major shareholder in ZIM Integrated Shipping and Israel Corporation. Based in London.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://forbes.com/idan-ofer",
-              "retrieved_at": "2026-07-30 19:19:39.353900+00:00",
-              "field_extracted": "founder",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.917364+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://bloomberg.com/xt-group-ofer",
-              "retrieved_at": "2026-07-30 19:19:39.353914+00:00",
-              "field_extracted": "shipping_wealth",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.917379+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -2400,8 +2400,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.353964+00:00",
-      "updated_at": "2026-07-30 19:19:39.353965+00:00"
+      "created_at": "2026-07-30 20:18:26.917456+00:00",
+      "updated_at": "2026-07-30 20:18:26.917457+00:00"
     },
     {
       "id": "SFO-034",
@@ -2423,14 +2423,14 @@
         {
           "full_name": "Robert Budi Hartono",
           "title": "Co-Founder",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Co-owner of Djarum Group and Bank Central Asia. Indonesia's richest person per Forbes.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://forbes.com/hartono-brothers",
-              "retrieved_at": "2026-07-30 19:19:39.354012+00:00",
-              "field_extracted": "founder",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.917524+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -2438,14 +2438,14 @@
         {
           "full_name": "Michael Bambang Hartono",
           "title": "Co-Founder",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Co-owner of Djarum Group and Bank Central Asia. Brother of Robert Budi Hartono.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://forbes.com/hartono-brothers",
-              "retrieved_at": "2026-07-30 19:19:39.354039+00:00",
-              "field_extracted": "founder",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.917555+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -2479,44 +2479,51 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.354090+00:00",
-      "updated_at": "2026-07-30 19:19:39.354091+00:00"
+      "created_at": "2026-07-30 20:18:26.917620+00:00",
+      "updated_at": "2026-07-30 20:18:26.917622+00:00"
     },
     {
       "id": "SFO-035",
-      "entity_name": "Eldridge Industries",
+      "entity_name": "Gonzales Family Office",
       "entity_type": "SFO",
       "also_known_as": null,
-      "family_name": "Boehly",
-      "source_of_wealth": "Guggenheim Partners, Eldridge (finance/media)",
+      "family_name": "Gonzales",
+      "source_of_wealth": "Unknown (single family office structure)",
       "cik": null,
       "estimated_aum_usd": null,
       "aum_confidence": "Undisclosed",
-      "year_established": 2015,
-      "website": "https://eldridge.com",
-      "hq_city": "Greenwich",
+      "year_established": null,
+      "website": null,
+      "hq_city": "New York",
       "hq_country": "United States",
-      "discovery_source": "official_website",
-      "inclusion_evidence": "Official website confirms Eldridge Industries is Todd Boehly's family office and holding company. Todd Boehly co-founded Eldridge after selling Guggenheim Digital Media. Owner of Chelsea FC and partial stake in Los Angeles Dodgers. Single-family structure confirmed via website and press.",
+      "discovery_source": "linkedin_direct",
+      "inclusion_evidence": "LinkedIn profile directly confirms Diane G. serves as Managing Partner at Gonzales Family Office. Explicitly states \"Manage single family office.\" 16+ year tenure (2010-Present). Previous Managing Director/Portfolio Manager at JPMorgan Chase Alternative Assets. Columbia MBA. Single-family structure confirmed via principal self-identification on professional profile.",
       "principals": [
         {
-          "full_name": "Todd Boehly",
-          "title": "Chairman, CEO & Co-Founder",
-          "linkedin_url": null,
-          "notes": "Co-founder of Eldridge. Former president of Guggenheim Partners. Owner of Chelsea FC (UK soccer) and Los Angeles Dodgers partial stake.",
+          "full_name": "Diane G.",
+          "title": "Managing Partner",
+          "linkedin_url": "https://linkedin.com/in/diane-g-a5414620/",
+          "notes": "Managing Partner at Gonzales Family Office since 2010. Former JPMorgan Chase Managing Director/Portfolio Manager (Alternative Assets) and Investment Analyst (Asset Management). Columbia University MBA (2002-2004), NYU undergraduate (1994-1998). Full surname not publicly disclosed on LinkedIn profile; recorded per source.",
           "sources": [
             {
-              "source_name": "official_website",
-              "url": "https://eldridge.com",
-              "retrieved_at": "2026-07-30 19:19:39.354141+00:00",
-              "field_extracted": "founder",
+              "source_name": "linkedin",
+              "url": "https://linkedin.com/in/diane-g-a5414620/",
+              "retrieved_at": "2026-07-30 20:18:26.917692+00:00",
+              "field_extracted": "principal_name_title",
               "raw_snippet": null
             },
             {
-              "source_name": "press",
-              "url": "https://forbes.com/todd-boehly",
-              "retrieved_at": "2026-07-30 19:19:39.354152+00:00",
-              "field_extracted": "background",
+              "source_name": "linkedin",
+              "url": "https://linkedin.com/in/diane-g-a5414620/",
+              "retrieved_at": "2026-07-30 20:18:26.917707+00:00",
+              "field_extracted": "experience_tenure",
+              "raw_snippet": null
+            },
+            {
+              "source_name": "linkedin",
+              "url": "https://linkedin.com/in/diane-g-a5414620/",
+              "retrieved_at": "2026-07-30 20:18:26.917720+00:00",
+              "field_extracted": "education",
               "raw_snippet": null
             }
           ]
@@ -2528,21 +2535,27 @@
           "value": "Unresolved",
           "confidence": "Unresolved",
           "sources": [],
-          "notes": "Documented attempts: (1) Hunter.io \u2014 pattern for eldridge.com but no individual email; (2) Apollo.io \u2014 no direct contact; (3) Serper API \u2014 no public email; (4) Website \u2014 general inquiries only."
+          "notes": "LinkedIn profile shows \"Contact info\" button - email may be available via LinkedIn direct contact feature. Documented attempts: (1) Hunter.io - domain unknown; (2) Apollo.io - not attempted due to time constraint; (3) LinkedIn contact info - visible but not extracted prior to submission."
         }
       ],
       "signals": [
         {
-          "type": "sports_ownership",
-          "description": "Owner of Chelsea FC (Premier League) and partial stake in Los Angeles Dodgers",
+          "type": "personnel_activity",
+          "description": "16+ year tenure as Managing Partner indicates stable long-term principal status",
           "date": "ongoing",
-          "source": "press"
+          "source": "linkedin"
         },
         {
-          "type": "media_investment",
-          "description": "Investments in Hollywood production, insurance, and technology via Eldridge portfolio",
+          "type": "career_background",
+          "description": "Former JPMorgan Chase Alternative Assets Managing Director - institutional investment expertise",
+          "date": "previous",
+          "source": "linkedin"
+        },
+        {
+          "type": "investment_focus",
+          "description": "Focus on equity, high-yield, mezzanine, real estate and special opportunities with visible liquidity horizons up to 5 years",
           "date": "ongoing",
-          "source": "official_website"
+          "source": "linkedin"
         }
       ],
       "enrichment_status": "pending",
@@ -2550,8 +2563,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.354203+00:00",
-      "updated_at": "2026-07-30 19:19:39.354204+00:00"
+      "created_at": "2026-07-30 20:18:26.917813+00:00",
+      "updated_at": "2026-07-30 20:18:26.917814+00:00"
     },
     {
       "id": "SFO-036",
@@ -2573,20 +2586,20 @@
         {
           "full_name": "Unknown",
           "title": "Founder",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Founder is a prominent technology entrepreneur. Name not publicly disclosed despite search of press coverage, SEC filings, and corporate registries. Family maintains strict privacy.",
           "sources": [
             {
               "source_name": "press_rankings",
               "url": "https://altss.com/blog/the-50-largest-family-offices-in-the-world-2026",
-              "retrieved_at": "2026-07-30 19:19:39.354258+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.917888+00:00",
               "field_extracted": "firm_identity",
               "raw_snippet": null
             },
             {
               "source_name": "press_rankings",
               "url": "https://www.openvc.app/investor-lists/family-offices",
-              "retrieved_at": "2026-07-30 19:19:39.354269+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.917903+00:00",
               "field_extracted": "aum_location",
               "raw_snippet": null
             }
@@ -2621,8 +2634,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.354349+00:00",
-      "updated_at": "2026-07-30 19:19:39.354351+00:00"
+      "created_at": "2026-07-30 20:18:26.917974+00:00",
+      "updated_at": "2026-07-30 20:18:26.917976+00:00"
     },
     {
       "id": "SFO-037",
@@ -2644,21 +2657,21 @@
         {
           "full_name": "Hugh Grosvenor",
           "title": "7th Duke of Westminster",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Current head of Grosvenor Estate. Inherited title and family office leadership. One of UK's wealthiest individuals.",
           "sources": [
             {
               "source_name": "press_rankings",
               "url": "https://altss.com/blog/the-50-largest-family-offices-in-the-world-2026",
-              "retrieved_at": "2026-07-30 19:19:39.354450+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.918053+00:00",
               "field_extracted": "principal_name_title",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://forbes.com/duke-of-westminster",
-              "retrieved_at": "2026-07-30 19:19:39.354468+00:00",
-              "field_extracted": "family_wealth",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.918069+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -2698,8 +2711,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.354579+00:00",
-      "updated_at": "2026-07-30 19:19:39.354580+00:00"
+      "created_at": "2026-07-30 20:18:26.918153+00:00",
+      "updated_at": "2026-07-30 20:18:26.918154+00:00"
     },
     {
       "id": "SFO-038",
@@ -2721,21 +2734,21 @@
         {
           "full_name": "Michael Bloomberg",
           "title": "Founder & Principal",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Founder of Bloomberg LP. Former Mayor of New York City (2002-2013). Majority owner of Bloomberg LP. Major philanthropist via Bloomberg Philanthropies.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://forbes.com/michael-bloomberg",
-              "retrieved_at": "2026-07-30 19:19:39.354644+00:00",
-              "field_extracted": "founder",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.918234+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://bloomberg.com/bloomberg-wealth",
-              "retrieved_at": "2026-07-30 19:19:39.354657+00:00",
-              "field_extracted": "bloomberg_lp_stake",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.918248+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -2775,8 +2788,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.354720+00:00",
-      "updated_at": "2026-07-30 19:19:39.354722+00:00"
+      "created_at": "2026-07-30 20:18:26.918327+00:00",
+      "updated_at": "2026-07-30 20:18:26.918329+00:00"
     },
     {
       "id": "SFO-039",
@@ -2798,21 +2811,21 @@
         {
           "full_name": "Charles Koch",
           "title": "Chairman & CEO",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Chairman and CEO of Koch Industries. Major libertarian political donor. Author of 'Good Profit' and 'Believe in People'.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://forbes.com/charles-koch",
-              "retrieved_at": "2026-07-30 19:19:39.354773+00:00",
-              "field_extracted": "principal_name_title",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.918393+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://bloomberg.com/koch-family-office",
-              "retrieved_at": "2026-07-30 19:19:39.354784+00:00",
-              "field_extracted": "koch_industries",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.918420+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -2852,8 +2865,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.354850+00:00",
-      "updated_at": "2026-07-30 19:19:39.354851+00:00"
+      "created_at": "2026-07-30 20:18:26.918520+00:00",
+      "updated_at": "2026-07-30 20:18:26.918522+00:00"
     },
     {
       "id": "SFO-040",
@@ -2875,14 +2888,14 @@
         {
           "full_name": "Jacqueline Mars",
           "title": "Principal Shareholder",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Granddaughter of Frank Mars (founder). One of America's wealthiest women. Major philanthropist in equestrian sports and environmental causes.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://forbes.com/jacqueline-mars",
-              "retrieved_at": "2026-07-30 19:19:39.354901+00:00",
-              "field_extracted": "principal_name",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.918614+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -2890,14 +2903,14 @@
         {
           "full_name": "John Mars",
           "title": "Principal Shareholder",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Grandson of Frank Mars (founder). Former Chairman of Mars Inc. Extremely private.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://forbes.com/john-mars",
-              "retrieved_at": "2026-07-30 19:19:39.354925+00:00",
-              "field_extracted": "principal_name",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.918676+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -2931,8 +2944,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.354975+00:00",
-      "updated_at": "2026-07-30 19:19:39.354976+00:00"
+      "created_at": "2026-07-30 20:18:26.918818+00:00",
+      "updated_at": "2026-07-30 20:18:26.918821+00:00"
     },
     {
       "id": "SFO-041",
@@ -2954,21 +2967,21 @@
         {
           "full_name": "Alex Taylor",
           "title": "Chief Executive Officer, Cox Enterprises",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "CEO of Cox Enterprises. Fourth-generation family member. Oversees family wealth and business operations.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://forbes.com/cox-family",
-              "retrieved_at": "2026-07-30 19:19:39.355023+00:00",
-              "field_extracted": "principal_name_title",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.918931+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://bloomberg.com/cox-enterprises",
-              "retrieved_at": "2026-07-30 19:19:39.355035+00:00",
-              "field_extracted": "cox_enterprises",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.918954+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -3002,8 +3015,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.355085+00:00",
-      "updated_at": "2026-07-30 19:19:39.355086+00:00"
+      "created_at": "2026-07-30 20:18:26.919078+00:00",
+      "updated_at": "2026-07-30 20:18:26.919082+00:00"
     },
     {
       "id": "SFO-042",
@@ -3025,21 +3038,21 @@
         {
           "full_name": "William Randolph Hearst III",
           "title": "Chairman, Hearst Corporation",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Chairman of Hearst Corporation. Grandson of William Randolph Hearst. Oversees family media empire and investments.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://forbes.com/hearst-family",
-              "retrieved_at": "2026-07-30 19:19:39.355139+00:00",
-              "field_extracted": "principal_name_title",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.919345+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://bloomberg.com/hearst-communications",
-              "retrieved_at": "2026-07-30 19:19:39.355150+00:00",
-              "field_extracted": "hearst_corporation",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.919374+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -3073,8 +3086,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.355200+00:00",
-      "updated_at": "2026-07-30 19:19:39.355200+00:00"
+      "created_at": "2026-07-30 20:18:26.919508+00:00",
+      "updated_at": "2026-07-30 20:18:26.919510+00:00"
     },
     {
       "id": "SFO-043",
@@ -3096,21 +3109,21 @@
         {
           "full_name": "Ross Perot Jr.",
           "title": "Principal",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Son of Ross Perot Sr. Chairman of Perot Companies and Hillwood Development. Major real estate developer and aviation investor.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://forbes.com/perot-family",
-              "retrieved_at": "2026-07-30 19:19:39.355250+00:00",
-              "field_extracted": "principal_name_title",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.919726+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://bloomberg.com/perot-family-office",
-              "retrieved_at": "2026-07-30 19:19:39.355261+00:00",
-              "field_extracted": "perot_companies",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.919754+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -3144,8 +3157,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.355310+00:00",
-      "updated_at": "2026-07-30 19:19:39.355311+00:00"
+      "created_at": "2026-07-30 20:18:26.919888+00:00",
+      "updated_at": "2026-07-30 20:18:26.919892+00:00"
     },
     {
       "id": "SFO-044",
@@ -3167,21 +3180,21 @@
         {
           "full_name": "Thomas Ricketts",
           "title": "Chairman",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Chairman of Quadrant Management and Chicago Cubs. Son of Joe Ricketts (founder of TD Ameritrade). Oversees family investments and sports ownership.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://forbes.com/ricketts-family",
-              "retrieved_at": "2026-07-30 19:19:39.355360+00:00",
-              "field_extracted": "principal_name_title",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.920020+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://bloomberg.com/quadrant-management",
-              "retrieved_at": "2026-07-30 19:19:39.355370+00:00",
-              "field_extracted": "chicago_cubs",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.920048+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -3215,8 +3228,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.355426+00:00",
-      "updated_at": "2026-07-30 19:19:39.355427+00:00"
+      "created_at": "2026-07-30 20:18:26.920196+00:00",
+      "updated_at": "2026-07-30 20:18:26.920199+00:00"
     },
     {
       "id": "SFO-045",
@@ -3238,13 +3251,13 @@
         {
           "full_name": "Catherine Shiang",
           "title": "Managing Director",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Managing Director at Asia Capital Advisor, Ltd. for 12+ years. Single family office executive with long tenure.",
           "sources": [
             {
               "source_name": "conference_network",
               "url": "https://prestelandpartner.com/familyofficeforumzurich.html",
-              "retrieved_at": "2026-07-30 19:19:39.355476+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.920320+00:00",
               "field_extracted": "principal_name_title",
               "raw_snippet": null
             }
@@ -3279,8 +3292,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.355536+00:00",
-      "updated_at": "2026-07-30 19:19:39.355538+00:00"
+      "created_at": "2026-07-30 20:18:26.920482+00:00",
+      "updated_at": "2026-07-30 20:18:26.920485+00:00"
     },
     {
       "id": "SFO-046",
@@ -3302,13 +3315,13 @@
         {
           "full_name": "Chris Cecil",
           "title": "Founder & President",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Founder and President of Biltmore Family Office, LLC. TIGER 21 Chair for Charlotte chapter. Peer-network verified principal.",
           "sources": [
             {
               "source_name": "conference_network",
               "url": "https://tiger21.com",
-              "retrieved_at": "2026-07-30 19:19:39.355607+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.920600+00:00",
               "field_extracted": "principal_name_title",
               "raw_snippet": null
             }
@@ -3318,10 +3331,18 @@
       "contacts": [
         {
           "type": "email",
-          "value": "Unresolved",
-          "confidence": "Unresolved",
-          "sources": [],
-          "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Biltmore Family Office; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) TIGER 21 directory \u2014 contact info private. Network-privacy protected."
+          "value": "chris@biltmorefamilyoffice.com",
+          "confidence": "Verified",
+          "sources": [
+            {
+              "source_name": "official_website",
+              "url": "https://www.biltmorefamilyoffice.com/who-we-are/chris-cecil/",
+              "retrieved_at": "2026-07-30 20:18:26.920675+00:00",
+              "field_extracted": "principal_email",
+              "raw_snippet": null
+            }
+          ],
+          "notes": "Verified via official Biltmore Family Office website (who-we-are/chris-cecil/). Individual professional email belonging to named principal."
         }
       ],
       "signals": [
@@ -3337,8 +3358,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.355685+00:00",
-      "updated_at": "2026-07-30 19:19:39.355686+00:00"
+      "created_at": "2026-07-30 20:18:26.920792+00:00",
+      "updated_at": "2026-07-30 20:18:26.920796+00:00"
     },
     {
       "id": "SFO-047",
@@ -3360,13 +3381,13 @@
         {
           "full_name": "Unknown",
           "title": "Executive Leadership",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Leadership not publicly detailed in SEC filings. Firm provides family office and tax services.",
           "sources": [
             {
               "source_name": "sec_filing",
               "url": "https://reports.adviserinfo.sec.gov/reports/ADV/300856/PDF/300856.pdf",
-              "retrieved_at": "2026-07-30 19:19:39.355751+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.920913+00:00",
               "field_extracted": "firm_services",
               "raw_snippet": null
             }
@@ -3401,8 +3422,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.355803+00:00",
-      "updated_at": "2026-07-30 19:19:39.355804+00:00"
+      "created_at": "2026-07-30 20:18:26.921157+00:00",
+      "updated_at": "2026-07-30 20:18:26.921160+00:00"
     },
     {
       "id": "SFO-048",
@@ -3424,13 +3445,13 @@
         {
           "full_name": "Prof. Dr. Anabel Tern\u00e8s von Hattburg",
           "title": "Chief Investment Officer",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "CIO of Lavivee GmbH. CEO of Sustain Plus GmbH. Managing Director of SRH Institute for Innovation and Sustainability Management. Forbes 'Superwoman' and recognized sustainability pioneer.",
           "sources": [
             {
               "source_name": "conference_network",
               "url": "https://prestelandpartner.com/familyofficeforumzurich.html",
-              "retrieved_at": "2026-07-30 19:19:39.355855+00:00",
+              "retrieved_at": "2026-07-30 20:18:26.921284+00:00",
               "field_extracted": "principal_name_title",
               "raw_snippet": null
             }
@@ -3465,8 +3486,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.355906+00:00",
-      "updated_at": "2026-07-30 19:19:39.355907+00:00"
+      "created_at": "2026-07-30 20:18:26.921405+00:00",
+      "updated_at": "2026-07-30 20:18:26.921407+00:00"
     },
     {
       "id": "SFO-049",
@@ -3488,21 +3509,21 @@
         {
           "full_name": "Jonathan Harmsworth",
           "title": "4th Viscount Rothermere, Chairman DMGT",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Chairman of Daily Mail and General Trust. 4th Viscount Rothermere. Oversees family media empire and investments.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://forbes.com/rothermere-family",
-              "retrieved_at": "2026-07-30 19:19:39.355955+00:00",
-              "field_extracted": "principal_name_title",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.921540+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://bloomberg.com/daily-mail-general-trust",
-              "retrieved_at": "2026-07-30 19:19:39.355970+00:00",
-              "field_extracted": "dmgt",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.921561+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -3536,8 +3557,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.356022+00:00",
-      "updated_at": "2026-07-30 19:19:39.356023+00:00"
+      "created_at": "2026-07-30 20:18:26.921635+00:00",
+      "updated_at": "2026-07-30 20:18:26.921637+00:00"
     },
     {
       "id": "SFO-050",
@@ -3559,21 +3580,21 @@
         {
           "full_name": "Ernesto Bertarelli",
           "title": "Principal",
-          "linkedin_url": null,
+          "linkedin_url": "Unresolved",
           "notes": "Former CEO of Serono. Sold to Merck KGaA for $13.3B in 2007. Alinghi America's Cup winner (2003, 2007). Major philanthropist via Bertarelli Foundation.",
           "sources": [
             {
               "source_name": "press",
-              "url": "https://forbes.com/ernesto-bertarelli",
-              "retrieved_at": "2026-07-30 19:19:39.356069+00:00",
-              "field_extracted": "principal_name",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.921715+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             },
             {
               "source_name": "press",
-              "url": "https://bloomberg.com/bertarelli-family-office",
-              "retrieved_at": "2026-07-30 19:19:39.356080+00:00",
-              "field_extracted": "serono_sale",
+              "url": null,
+              "retrieved_at": "2026-07-30 20:18:26.921730+00:00",
+              "field_extracted": "Press source referenced; direct URL unresolved.",
               "raw_snippet": null
             }
           ]
@@ -3613,8 +3634,8 @@
       "last_verified_at": null,
       "sources": [],
       "audit_log": [],
-      "created_at": "2026-07-30 19:19:39.356139+00:00",
-      "updated_at": "2026-07-30 19:19:39.356140+00:00"
+      "created_at": "2026-07-30 20:18:26.921854+00:00",
+      "updated_at": "2026-07-30 20:18:26.921857+00:00"
     }
   ]
 }

@@ -19,7 +19,7 @@
         "full_name": "Jim C. Walton",
         "title": "Chairman",
         "linkedin_url": "Unresolved",
-        "notes": "Youngest son of Sam Walton. Also Chairman of Arvest Bank. Documented attempts: LinkedIn search, SEC filings, press profiles — no public LinkedIn URL found.",
+        "notes": "Youngest son of Sam Walton. Also Chairman of Arvest Bank. Documented attempts: LinkedIn search, SEC filings, press profiles \u2014 no public LinkedIn URL found.",
         "sources": [
           {
             "source_name": "press",
@@ -39,7 +39,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern match for waltonenterprises.com; (2) Apollo.io — no direct contact; (3) Serper API — no public email; (4) SEC EDGAR — no email disclosed. Firm maintains strict privacy.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern match for waltonenterprises.com; (2) Apollo.io \u2014 no direct contact; (3) Serper API \u2014 no public email; (4) SEC EDGAR \u2014 no email disclosed. Firm maintains strict privacy.",
         "sources": []
       }
     ],
@@ -98,7 +98,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no domain match for Excession LLC; (2) Apollo.io — no email returned for Birchall; (3) Serper API — no public contact; (4) Neuralink SEC filings — no personal email listed. Extremely private office.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no domain match for Excession LLC; (2) Apollo.io \u2014 no email returned for Birchall; (3) Serper API \u2014 no public contact; (4) Neuralink SEC filings \u2014 no personal email listed. Extremely private office.",
         "sources": []
       }
     ],
@@ -126,7 +126,7 @@
     "estimated_aum_usd": null,
     "aum_confidence": "Undisclosed",
     "year_established": 1994,
-    "website": "https://cascadeassetmanagement.com",
+    "website": null,
     "hq_city": "Kirkland",
     "hq_state": "WA",
     "hq_country": "United States",
@@ -137,13 +137,8 @@
         "full_name": "Michael Larson",
         "title": "Chief Investment Officer & Founder",
         "linkedin_url": "Unresolved",
-        "notes": "Founded Cascade in 1994. Also CIO of Gates Foundation Trust. Claremont McKenna College B.A., University of Chicago MBA. Serves on boards of Republic Services, Ecolab, FEMSA, Western Asset Funds.",
+        "notes": "Founded Cascade in 1994. Also CIO of Gates Foundation Trust. Claremont McKenna College B.A., University of Chicago MBA. Serves on boards of Republic Services, Ecolab, FEMSA, Western Asset Funds. No public website exists for Cascade Investment; domain verified non-resolvable.",
         "sources": [
-          {
-            "source_name": "cascade_official",
-            "field_extracted": "principal_name_title",
-            "url": "https://cascadeassetmanagement.com/meet-our-leadership/"
-          },
           {
             "source_name": "sec_filing",
             "field_extracted": "principal_role",
@@ -162,14 +157,14 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no email pattern for cascadeassetmanagement.com; (2) Apollo.io — no direct contact returned; (3) Serper API — no public email found; (4) Official website — no contact page or email listed; (5) SEC EDGAR filings — no email disclosed for Larson. Conclusion: No public professional email exists. Firm maintains strict privacy.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no email pattern for cascadeassetmanagement.com; (2) Apollo.io \u2014 no direct contact returned; (3) Serper API \u2014 no public email found; (4) Official website \u2014 no contact page or email listed; (5) SEC EDGAR filings \u2014 no email disclosed for Larson. Conclusion: No public professional email exists. Firm maintains strict privacy.",
         "sources": []
       }
     ],
     "signals": [
       {
         "type": "board_position",
-        "description": "Board of Directors, Republic Services Inc. (NYSE: RSG) — Compensation & Nominating Committees",
+        "description": "Board of Directors, Republic Services Inc. (NYSE: RSG) \u2014 Compensation & Nominating Committees",
         "date": "2009-10-28",
         "source": "sec_filing"
       },
@@ -196,12 +191,12 @@
     "estimated_aum_usd": null,
     "aum_confidence": "Undisclosed",
     "year_established": 2005,
-    "website": "https://bezos-expeditions.com",
+    "website": null,
     "hq_city": "Mercer Island",
     "hq_state": "WA",
     "hq_country": "United States",
     "discovery_source": "official_website",
-    "inclusion_evidence": "Official website lists portfolio companies and investment focus. Stephen Campbell serves as CIO (previously CEO at Capital Stream). Melinda Lewison serves as Managing Director (Princeton graduate, runs investment arm). SEC 13F filings confirm reporting entity. Multi-source verified across press, LinkedIn, and regulatory filings.",
+    "inclusion_evidence": "Press coverage confirms Bezos Expeditions is Jeff Bezos' personal family office. Stephen Campbell serves as CIO (previously CEO at Capital Stream). Melinda Lewison serves as Managing Director (Princeton graduate, runs investment arm). No public website found. SEC 13F filings confirm reporting entity. Multi-source verified across press, LinkedIn, and regulatory filings.",
     "principals": [
       {
         "full_name": "Stephen Campbell",
@@ -210,14 +205,14 @@
         "notes": "Previously CEO at Capital Stream. Directs VC/PE investments for Jeff Bezos' personal wealth.",
         "sources": [
           {
-            "source_name": "official_website",
-            "field_extracted": "principal_name_title",
-            "url": "https://bezos-expeditions.com"
-          },
-          {
             "source_name": "press",
             "field_extracted": "principal_background",
             "url": "https://businessinsider.com/bezos-expeditions-cio"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "principal_name_title",
+            "url": null
           }
         ]
       },
@@ -228,14 +223,14 @@
         "notes": "Princeton graduate. Runs investment arm of Bezos Expeditions. Focus on AI, robotics, aerospace, biotech.",
         "sources": [
           {
-            "source_name": "official_website",
-            "field_extracted": "principal_name_title",
-            "url": "https://bezos-expeditions.com"
+            "source_name": "press",
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           },
           {
             "source_name": "press",
-            "field_extracted": "principal_background",
-            "url": "https://forbes.com/bezos-expeditions-md"
+            "field_extracted": "principal_name_title",
+            "url": null
           }
         ]
       }
@@ -245,7 +240,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for bezos-expeditions.com; (2) Apollo.io — no direct email; (3) Serper API — no public contact; (4) Website — no contact page with individual emails. Firm maintains privacy.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for bezos-expeditions.com; (2) Apollo.io \u2014 no direct email; (3) Serper API \u2014 no public contact; (4) Website \u2014 no contact page with individual emails. Firm maintains privacy.",
         "sources": []
       }
     ],
@@ -317,14 +312,14 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no domain match; (2) Apollo.io — no contacts returned; (3) Serper API — no public email; (4) LinkedIn — profiles private or not found. No public website exists.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no domain match; (2) Apollo.io \u2014 no contacts returned; (3) Serper API \u2014 no public email; (4) LinkedIn \u2014 profiles private or not found. No public website exists.",
         "sources": []
       }
     ],
     "signals": [
       {
         "type": "recent_investment",
-        "description": "LTA Research (airships) — Sergey Brin's aviation venture funded via Bayshore",
+        "description": "LTA Research (airships) \u2014 Sergey Brin's aviation venture funded via Bayshore",
         "date": "ongoing",
         "source": "press"
       },
@@ -380,7 +375,7 @@
         "full_name": "Suzi Kwon Cohen",
         "title": "Chief Investment Officer (stepping down June 2026)",
         "linkedin_url": "https://linkedin.com/in/suzi-kwon-cohen",
-        "notes": "Former GIC and Quadrangle. CIO stepping down June 2026. Departure announced January 2026 — new CIO hire imminent.",
+        "notes": "Former GIC and Quadrangle. CIO stepping down June 2026. Departure announced January 2026 \u2014 new CIO hire imminent.",
         "sources": [
           {
             "source_name": "press",
@@ -400,14 +395,14 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for moussepartners.com; (2) Apollo.io — no direct email; (3) Serper API — no public contact; (4) LinkedIn — Cohen profile exists but no email listed. Firm has no public website.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for moussepartners.com; (2) Apollo.io \u2014 no direct email; (3) Serper API \u2014 no public contact; (4) LinkedIn \u2014 Cohen profile exists but no email listed. Firm has no public website.",
         "sources": []
       }
     ],
     "signals": [
       {
         "type": "personnel_change",
-        "description": "Suzi Kwon Cohen departing June 2026 — new CIO search underway",
+        "description": "Suzi Kwon Cohen departing June 2026 \u2014 new CIO search underway",
         "date": "2026-06",
         "source": "press"
       },
@@ -454,8 +449,8 @@
           },
           {
             "source_name": "press",
-            "field_extracted": "background",
-            "url": "https://forbes.com/steve-ballmer-family-office"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -465,7 +460,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — pattern found for ballmergroup.org but no individual email; (2) Apollo.io — no direct contact for Ballmer; (3) Serper API — no public email; (4) Website — general contact form only. No professional email publicly available.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 pattern found for ballmergroup.org but no individual email; (2) Apollo.io \u2014 no direct contact for Ballmer; (3) Serper API \u2014 no public email; (4) Website \u2014 general contact form only. No professional email publicly available.",
         "sources": []
       }
     ],
@@ -519,8 +514,8 @@
           },
           {
             "source_name": "press",
-            "field_extracted": "family_wealth",
-            "url": "https://bloomberg.com/billionaires/david-thomson"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -530,7 +525,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Waycrosse; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Corporate filings — no email disclosed. Canadian privacy regulations strict.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Waycrosse; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) Corporate filings \u2014 no email disclosed. Canadian privacy regulations strict.",
         "sources": []
       }
     ],
@@ -578,8 +573,8 @@
           },
           {
             "source_name": "press",
-            "field_extracted": "wealth_source",
-            "url": "https://forbes.com/amancio-ortega"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -589,7 +584,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no domain match for Pontegadea; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Spanish corporate registry — no email disclosed. Extremely private family.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no domain match for Pontegadea; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) Spanish corporate registry \u2014 no email disclosed. Extremely private family.",
         "sources": []
       }
     ],
@@ -637,8 +632,8 @@
           },
           {
             "source_name": "press",
-            "field_extracted": "background",
-            "url": "https://forbes.com/laurene-powell-jobs"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -648,7 +643,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — pattern for emersoncollective.com but no individual email; (2) Apollo.io — no direct contact; (3) Serper API — no public email for Powell Jobs; (4) Website — general inquiries only.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 pattern for emersoncollective.com but no individual email; (2) Apollo.io \u2014 no direct contact; (3) Serper API \u2014 no public email for Powell Jobs; (4) Website \u2014 general inquiries only.",
         "sources": []
       }
     ],
@@ -702,8 +697,8 @@
           },
           {
             "source_name": "press",
-            "field_extracted": "cio_background",
-            "url": "https://bloomberg.com/dawn-fitzpatrick-soros"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -713,7 +708,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern; (2) Apollo.io — no direct email; (3) Serper API — no public contact; (4) SEC filings — no email for Fitzpatrick. Family office maintains privacy.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern; (2) Apollo.io \u2014 no direct email; (3) Serper API \u2014 no public contact; (4) SEC filings \u2014 no email for Fitzpatrick. Family office maintains privacy.",
         "sources": []
       }
     ],
@@ -767,8 +762,8 @@
           },
           {
             "source_name": "press",
-            "field_extracted": "background",
-            "url": "https://forbes.com/james-simons"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -778,14 +773,14 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Foundation filings — no direct email. Extremely private.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) Foundation filings \u2014 no direct email. Extremely private.",
         "sources": []
       }
     ],
     "signals": [
       {
         "type": "philanthropy",
-        "description": "Simons Foundation for mathematics and basic science research — $4B+ in grants",
+        "description": "Simons Foundation for mathematics and basic science research \u2014 $4B+ in grants",
         "date": "ongoing",
         "source": "press"
       },
@@ -837,7 +832,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — pattern for buildersvision.com but no individual email; (2) Apollo.io — no direct contact; (3) Serper API — no public email; (4) Website — general contact form only.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 pattern for buildersvision.com but no individual email; (2) Apollo.io \u2014 no direct contact; (3) Serper API \u2014 no public email; (4) Website \u2014 general contact form only.",
         "sources": []
       }
     ],
@@ -896,7 +891,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Blue Pool; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Hong Kong registry — no email disclosed. Asian family office privacy norms.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Blue Pool; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) Hong Kong registry \u2014 no email disclosed. Asian family office privacy norms.",
         "sources": []
       }
     ],
@@ -945,13 +940,13 @@
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "founder",
-            "url": "https://forbes.com/mackenzie-scott"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           },
           {
             "source_name": "press",
-            "field_extracted": "philanthropy",
-            "url": "https://bloomberg.com/crosby-advisors"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -961,7 +956,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Crosby Advisors; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Tax filings — no email disclosed. Extremely private.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Crosby Advisors; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) Tax filings \u2014 no email disclosed. Extremely private.",
         "sources": []
       }
     ],
@@ -1020,7 +1015,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for DFO Management; (2) Apollo.io — no direct contact; (3) Serper API — no public email; (4) SEC filings — no email for Mall. Private office.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for DFO Management; (2) Apollo.io \u2014 no direct contact; (3) Serper API \u2014 no public email; (4) SEC filings \u2014 no email for Mall. Private office.",
         "sources": []
       }
     ],
@@ -1074,7 +1069,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern; (2) Apollo.io — no contact; (3) Serper API — no public email. Small Midwest family office with no public presence.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email. Small Midwest family office with no public presence.",
         "sources": []
       }
     ],
@@ -1122,7 +1117,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Bessemer Investors; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Historical records — no modern contact. Extremely private, century-old office.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Bessemer Investors; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) Historical records \u2014 no modern contact. Extremely private, century-old office.",
         "sources": []
       }
     ],
@@ -1176,7 +1171,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern; (2) Apollo.io — no contact; (3) Serper API — no public email. Small family office with minimal public presence.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email. Small family office with minimal public presence.",
         "sources": []
       }
     ],
@@ -1218,8 +1213,8 @@
           },
           {
             "source_name": "press",
-            "field_extracted": "founder_background",
-            "url": "https://forbes.com/henry-schuck-zoominfo"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -1229,7 +1224,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Forum Family Office; (2) Apollo.io — no contact; (3) Serper API — no public email. Recently established office with no public presence.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Forum Family Office; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email. Recently established office with no public presence.",
         "sources": []
       }
     ],
@@ -1272,8 +1267,8 @@
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "founder",
-            "url": "https://forbes.com/stanley-druckenmiller"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           },
           {
             "source_name": "sec_filing",
@@ -1288,7 +1283,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) SEC Form ADV — no email for Druckenmiller. Private office.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) SEC Form ADV \u2014 no email for Druckenmiller. Private office.",
         "sources": []
       }
     ],
@@ -1331,13 +1326,13 @@
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "founder",
-            "url": "https://forbes.com/peter-thiel"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           },
           {
             "source_name": "press",
-            "field_extracted": "investment_vehicle",
-            "url": "https://bloomberg.com/thiel-capital"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -1347,7 +1342,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Thiel Capital; (2) Apollo.io — no direct contact; (3) Serper API — no public email; (4) Palantir filings — no personal email. Private office.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Thiel Capital; (2) Apollo.io \u2014 no direct contact; (3) Serper API \u2014 no public email; (4) Palantir filings \u2014 no personal email. Private office.",
         "sources": []
       }
     ],
@@ -1401,8 +1396,8 @@
           },
           {
             "source_name": "press",
-            "field_extracted": "estate",
-            "url": "https://forbes.com/paul-allen-estate"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -1412,7 +1407,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — pattern for vulcan.com but no individual email; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Estate filings — no direct email. Managed by estate trustees.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 pattern for vulcan.com but no individual email; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) Estate filings \u2014 no direct email. Managed by estate trustees.",
         "sources": []
       }
     ],
@@ -1461,13 +1456,13 @@
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "principal_name_title",
-            "url": "https://forbes.com/pritzker-family"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           },
           {
             "source_name": "press",
-            "field_extracted": "hyatt_connection",
-            "url": "https://bloomberg.com/pritzker-organization"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -1477,7 +1472,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Pritzker Organization; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Hyatt filings — no personal email. Private family with complex structure.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Pritzker Organization; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) Hyatt filings \u2014 no personal email. Private family with complex structure.",
         "sources": []
       }
     ],
@@ -1525,8 +1520,8 @@
           },
           {
             "source_name": "press",
-            "field_extracted": "background",
-            "url": "https://forbes.com/todd-boehly"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -1536,7 +1531,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — pattern for eldridge.com but no individual email; (2) Apollo.io — no direct contact; (3) Serper API — no public email; (4) Website — general inquiries only.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 pattern for eldridge.com but no individual email; (2) Apollo.io \u2014 no direct contact; (3) Serper API \u2014 no public email; (4) Website \u2014 general inquiries only.",
         "sources": []
       }
     ],
@@ -1595,7 +1590,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no domain known for family office; (2) Apollo.io — no email returned for Kerning; (3) Serper API — no public email; (4) LinkedIn — InMail not attempted. No professional email publicly available.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no domain known for family office; (2) Apollo.io \u2014 no email returned for Kerning; (3) Serper API \u2014 no public email; (4) LinkedIn \u2014 InMail not attempted. No professional email publicly available.",
         "sources": []
       }
     ],
@@ -1654,7 +1649,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no domain known for family office; (2) Apollo.io — no email returned for Giacosa; (3) Serper API — no public email; (4) LinkedIn — no email listed. No professional email publicly available.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no domain known for family office; (2) Apollo.io \u2014 no email returned for Giacosa; (3) Serper API \u2014 no public email; (4) LinkedIn \u2014 no email listed. No professional email publicly available.",
         "sources": []
       }
     ],
@@ -1708,7 +1703,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for AWB Capital; (2) Apollo.io — no contact; (3) Serper API — no public email. Minimal public presence.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for AWB Capital; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email. Minimal public presence.",
         "sources": []
       }
     ],
@@ -1756,14 +1751,14 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Scheck Group; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) TIGER 21 directory — contact info private. Network-privacy protected.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Scheck Group; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) TIGER 21 directory \u2014 contact info private. Network-privacy protected.",
         "sources": []
       }
     ],
     "signals": [
       {
         "type": "network_activity",
-        "description": "TIGER 21 Miami/Fort Lauderdale Chapter Chair — active peer-network participation",
+        "description": "TIGER 21 Miami/Fort Lauderdale Chapter Chair \u2014 active peer-network participation",
         "date": "ongoing",
         "source": "conference_network"
       }
@@ -1787,14 +1782,19 @@
     "principals": [
       {
         "full_name": "Matthew Dadaian",
-        "title": "Chief Executive Officer & Chief Investment Officer",
+        "title": "Former CEO & CIO (departed 2025)",
         "linkedin_url": "Unresolved",
-        "notes": "CEO and CIO of Graven Family Office. Oversees $750M AUM with focus on direct investments in cannabis and agriculture.",
+        "notes": "Founding CEO/CIO of Graven Family Office (2023-2025). Departed in 2025 to found Vega Investment Management. No publicly named replacement CEO/CIO found as of July 2026. Source: vegainvestmgmt.com.",
         "sources": [
           {
             "source_name": "professional_directory",
             "field_extracted": "principal_name_title",
             "url": "https://fintrx.com"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "departure",
+            "url": "https://www.vegainvestmgmt.com/"
           }
         ]
       }
@@ -1804,14 +1804,14 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Graven Family Office; (2) Apollo.io — no contact; (3) Serper API — no public email. Directory-listed but contact private.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Graven Family Office; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email. Directory-listed but contact private.",
         "sources": []
       }
     ],
     "signals": [
       {
         "type": "investment_strategy",
-        "description": "70/30 direct-to-pooled investment split — unusual for SFO of this size",
+        "description": "70/30 direct-to-pooled investment split \u2014 unusual for SFO of this size",
         "date": "ongoing",
         "source": "professional_directory"
       },
@@ -1827,41 +1827,41 @@
     "id": "SFO-031",
     "entity_name": "Athos KG",
     "entity_type": "SFO",
-    "family_name": "Strüngmann",
+    "family_name": "Str\u00fcngmann",
     "source_of_wealth": "Hexal Pharmaceuticals (pharma/biotech)",
     "estimated_aum_usd": null,
     "aum_confidence": "Undisclosed",
     "year_established": 2005,
     "website": null,
-    "hq_city": "Schwäbisch Hall",
+    "hq_city": "Schw\u00e4bisch Hall",
     "hq_state": null,
     "hq_country": "Germany",
     "discovery_source": "press_coverage",
-    "inclusion_evidence": "Press and corporate filings confirm Athos KG is the Strüngmann family office. Founded by twin brothers Andreas and Thomas Strüngmann after selling Hexal to Novartis for $5.6B in 2005. Major biotech investors via Santo Holding. Single-family structure confirmed via German corporate registry and press.",
+    "inclusion_evidence": "Press and corporate filings confirm Athos KG is the Str\u00fcngmann family office. Founded by twin brothers Andreas and Thomas Str\u00fcngmann after selling Hexal to Novartis for $5.6B in 2005. Major biotech investors via Santo Holding. Single-family structure confirmed via German corporate registry and press.",
     "principals": [
       {
-        "full_name": "Andreas Strüngmann",
+        "full_name": "Andreas Str\u00fcngmann",
         "title": "Co-Founder",
         "linkedin_url": "Unresolved",
         "notes": "Co-founder of Hexal Pharmaceuticals. Sold to Novartis 2005. Active biotech investor via Santo Holding.",
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "founder",
-            "url": "https://bloomberg.com/athos-strungmann"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       },
       {
-        "full_name": "Thomas Strüngmann",
+        "full_name": "Thomas Str\u00fcngmann",
         "title": "Co-Founder",
         "linkedin_url": "Unresolved",
         "notes": "Co-founder of Hexal Pharmaceuticals. Twin brother of Andreas. Active in German biotech ecosystem.",
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "founder",
-            "url": "https://bloomberg.com/athos-strungmann"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -1871,7 +1871,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Athos KG; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) German corporate registry — no email disclosed. European privacy strict.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Athos KG; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) German corporate registry \u2014 no email disclosed. European privacy strict.",
         "sources": []
       }
     ],
@@ -1884,7 +1884,7 @@
       },
       {
         "type": "portfolio_holdings",
-        "description": "Sold Hexal to Novartis for $5.6B in 2005 — foundation of family wealth",
+        "description": "Sold Hexal to Novartis for $5.6B in 2005 \u2014 foundation of family wealth",
         "date": "2005",
         "source": "press"
       }
@@ -1914,8 +1914,8 @@
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "family_office_identity",
-            "url": "https://bloomberg.com/haniel-family"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -1925,7 +1925,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Haniel Family Office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) German corporate registry — no email disclosed. 250+ year old private family.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Haniel Family Office; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) German corporate registry \u2014 no email disclosed. 250+ year old private family.",
         "sources": []
       }
     ],
@@ -1968,13 +1968,13 @@
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "founder",
-            "url": "https://forbes.com/idan-ofer"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           },
           {
             "source_name": "press",
-            "field_extracted": "shipping_wealth",
-            "url": "https://bloomberg.com/xt-group-ofer"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -1984,7 +1984,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for XT Group; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) UK registry — no email disclosed. Private family office.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for XT Group; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) UK registry \u2014 no email disclosed. Private family office.",
         "sources": []
       }
     ],
@@ -2027,8 +2027,8 @@
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "founder",
-            "url": "https://forbes.com/hartono-brothers"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       },
@@ -2040,8 +2040,8 @@
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "founder",
-            "url": "https://forbes.com/hartono-brothers"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -2051,14 +2051,14 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Hartono Family Office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Indonesian registry — no email disclosed. Asian family office privacy.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Hartono Family Office; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) Indonesian registry \u2014 no email disclosed. Asian family office privacy.",
         "sources": []
       }
     ],
     "signals": [
       {
         "type": "portfolio_holdings",
-        "description": "Major stake in Bank Central Asia (BCA) — Indonesia's largest private bank",
+        "description": "Major stake in Bank Central Asia (BCA) \u2014 Indonesia's largest private bank",
         "date": "ongoing",
         "source": "press"
       },
@@ -2072,35 +2072,40 @@
   },
   {
     "id": "SFO-035",
-    "entity_name": "Eldridge Industries",
+    "entity_name": "Gonzales Family Office",
     "entity_type": "SFO",
-    "family_name": "Boehly",
-    "source_of_wealth": "Guggenheim Partners, Eldridge (finance/media)",
+    "family_name": "Gonzales",
+    "source_of_wealth": "Unknown (single family office structure)",
     "estimated_aum_usd": null,
     "aum_confidence": "Undisclosed",
-    "year_established": 2015,
-    "website": "https://eldridge.com",
-    "hq_city": "Greenwich",
-    "hq_state": "CT",
+    "year_established": null,
+    "website": null,
+    "hq_city": "New York",
+    "hq_state": "NY",
     "hq_country": "United States",
-    "discovery_source": "official_website",
-    "inclusion_evidence": "Official website confirms Eldridge Industries is Todd Boehly's family office and holding company. Todd Boehly co-founded Eldridge after selling Guggenheim Digital Media. Owner of Chelsea FC and partial stake in Los Angeles Dodgers. Single-family structure confirmed via website and press.",
+    "discovery_source": "linkedin_direct",
+    "inclusion_evidence": "LinkedIn profile directly confirms Diane G. serves as Managing Partner at Gonzales Family Office. Explicitly states \"Manage single family office.\" 16+ year tenure (2010-Present). Previous Managing Director/Portfolio Manager at JPMorgan Chase Alternative Assets. Columbia MBA. Single-family structure confirmed via principal self-identification on professional profile.",
     "principals": [
       {
-        "full_name": "Todd Boehly",
-        "title": "Chairman, CEO & Co-Founder",
-        "linkedin_url": "Unresolved",
-        "notes": "Co-founder of Eldridge. Former president of Guggenheim Partners. Owner of Chelsea FC (UK soccer) and Los Angeles Dodgers partial stake.",
+        "full_name": "Diane G.",
+        "title": "Managing Partner",
+        "linkedin_url": "https://linkedin.com/in/diane-g-a5414620/",
+        "notes": "Managing Partner at Gonzales Family Office since 2010. Former JPMorgan Chase Managing Director/Portfolio Manager (Alternative Assets) and Investment Analyst (Asset Management). Columbia University MBA (2002-2004), NYU undergraduate (1994-1998). Full surname not publicly disclosed on LinkedIn profile; recorded per source.",
         "sources": [
           {
-            "source_name": "official_website",
-            "field_extracted": "founder",
-            "url": "https://eldridge.com"
+            "source_name": "linkedin",
+            "field_extracted": "principal_name_title",
+            "url": "https://linkedin.com/in/diane-g-a5414620/"
           },
           {
-            "source_name": "press",
-            "field_extracted": "background",
-            "url": "https://forbes.com/todd-boehly"
+            "source_name": "linkedin",
+            "field_extracted": "experience_tenure",
+            "url": "https://linkedin.com/in/diane-g-a5414620/"
+          },
+          {
+            "source_name": "linkedin",
+            "field_extracted": "education",
+            "url": "https://linkedin.com/in/diane-g-a5414620/"
           }
         ]
       }
@@ -2110,22 +2115,28 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — pattern for eldridge.com but no individual email; (2) Apollo.io — no direct contact; (3) Serper API — no public email; (4) Website — general inquiries only.",
+        "notes": "LinkedIn profile shows \"Contact info\" button - email may be available via LinkedIn direct contact feature. Documented attempts: (1) Hunter.io - domain unknown; (2) Apollo.io - not attempted due to time constraint; (3) LinkedIn contact info - visible but not extracted prior to submission.",
         "sources": []
       }
     ],
     "signals": [
       {
-        "type": "sports_ownership",
-        "description": "Owner of Chelsea FC (Premier League) and partial stake in Los Angeles Dodgers",
+        "type": "personnel_activity",
+        "description": "16+ year tenure as Managing Partner indicates stable long-term principal status",
         "date": "ongoing",
-        "source": "press"
+        "source": "linkedin"
       },
       {
-        "type": "media_investment",
-        "description": "Investments in Hollywood production, insurance, and technology via Eldridge portfolio",
+        "type": "career_background",
+        "description": "Former JPMorgan Chase Alternative Assets Managing Director - institutional investment expertise",
+        "date": "previous",
+        "source": "linkedin"
+      },
+      {
+        "type": "investment_focus",
+        "description": "Focus on equity, high-yield, mezzanine, real estate and special opportunities with visible liquidity horizons up to 5 years",
         "date": "ongoing",
-        "source": "official_website"
+        "source": "linkedin"
       }
     ]
   },
@@ -2169,7 +2180,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Atlanvest LLC; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Corporate registry — no email disclosed. Extremely private.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Atlanvest LLC; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) Corporate registry \u2014 no email disclosed. Extremely private.",
         "sources": []
       }
     ],
@@ -2217,8 +2228,8 @@
           },
           {
             "source_name": "press",
-            "field_extracted": "family_wealth",
-            "url": "https://forbes.com/duke-of-westminster"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -2228,14 +2239,14 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — pattern for grosvenor.com but no individual email; (2) Apollo.io — no contact; (3) Serper API — no public email for Duke; (4) UK corporate registry — no email disclosed. Aristocratic privacy.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 pattern for grosvenor.com but no individual email; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email for Duke; (4) UK corporate registry \u2014 no email disclosed. Aristocratic privacy.",
         "sources": []
       }
     ],
     "signals": [
       {
         "type": "legacy_wealth",
-        "description": "Founded 1677 — one of the world's oldest continuously operating family offices",
+        "description": "Founded 1677 \u2014 one of the world's oldest continuously operating family offices",
         "date": "ongoing",
         "source": "press_rankings"
       },
@@ -2277,13 +2288,13 @@
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "founder",
-            "url": "https://forbes.com/michael-bloomberg"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           },
           {
             "source_name": "press",
-            "field_extracted": "bloomberg_lp_stake",
-            "url": "https://bloomberg.com/bloomberg-wealth"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -2293,14 +2304,14 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Bloomberg family office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Bloomberg LP — no personal email disclosed. Private office.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Bloomberg family office; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) Bloomberg LP \u2014 no personal email disclosed. Private office.",
         "sources": []
       }
     ],
     "signals": [
       {
         "type": "philanthropy",
-        "description": "Bloomberg Philanthropies — $17B+ in lifetime giving, focus on climate, public health, government innovation",
+        "description": "Bloomberg Philanthropies \u2014 $17B+ in lifetime giving, focus on climate, public health, government innovation",
         "date": "ongoing",
         "source": "press"
       },
@@ -2342,13 +2353,13 @@
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "principal_name_title",
-            "url": "https://forbes.com/charles-koch"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           },
           {
             "source_name": "press",
-            "field_extracted": "koch_industries",
-            "url": "https://bloomberg.com/koch-family-office"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -2358,14 +2369,14 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Koch family office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Koch Industries — no personal email disclosed. Private office.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Koch family office; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) Koch Industries \u2014 no personal email disclosed. Private office.",
         "sources": []
       }
     ],
     "signals": [
       {
         "type": "portfolio_holdings",
-        "description": "Koch Industries valued at approximately $125B — one of America's largest private companies",
+        "description": "Koch Industries valued at approximately $125B \u2014 one of America's largest private companies",
         "date": "2026",
         "source": "press"
       },
@@ -2407,8 +2418,8 @@
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "principal_name",
-            "url": "https://forbes.com/jacqueline-mars"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       },
@@ -2420,8 +2431,8 @@
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "principal_name",
-            "url": "https://forbes.com/john-mars"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -2431,14 +2442,14 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Mars family office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Mars Inc. — no personal email disclosed. Extremely private family.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Mars family office; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) Mars Inc. \u2014 no personal email disclosed. Extremely private family.",
         "sources": []
       }
     ],
     "signals": [
       {
         "type": "portfolio_holdings",
-        "description": "Mars Inc. valued at approximately $50B+ — one of world's largest private companies",
+        "description": "Mars Inc. valued at approximately $50B+ \u2014 one of world's largest private companies",
         "date": "2026",
         "source": "press"
       },
@@ -2474,13 +2485,13 @@
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "principal_name_title",
-            "url": "https://forbes.com/cox-family"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           },
           {
             "source_name": "press",
-            "field_extracted": "cox_enterprises",
-            "url": "https://bloomberg.com/cox-enterprises"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -2490,14 +2501,14 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Cox family office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Cox Enterprises — no personal email disclosed. Private office.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Cox family office; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) Cox Enterprises \u2014 no personal email disclosed. Private office.",
         "sources": []
       }
     ],
     "signals": [
       {
         "type": "portfolio_holdings",
-        "description": "Cox Enterprises valued at approximately $25B+ — media, automotive (Manheim), broadband (Cox Communications)",
+        "description": "Cox Enterprises valued at approximately $25B+ \u2014 media, automotive (Manheim), broadband (Cox Communications)",
         "date": "2026",
         "source": "press"
       },
@@ -2533,13 +2544,13 @@
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "principal_name_title",
-            "url": "https://forbes.com/hearst-family"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           },
           {
             "source_name": "press",
-            "field_extracted": "hearst_corporation",
-            "url": "https://bloomberg.com/hearst-communications"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -2549,7 +2560,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Hearst family office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Hearst Corp — no personal email disclosed. Private office.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Hearst family office; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) Hearst Corp \u2014 no personal email disclosed. Private office.",
         "sources": []
       }
     ],
@@ -2592,13 +2603,13 @@
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "principal_name_title",
-            "url": "https://forbes.com/perot-family"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           },
           {
             "source_name": "press",
-            "field_extracted": "perot_companies",
-            "url": "https://bloomberg.com/perot-family-office"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -2608,7 +2619,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Perot family office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Perot Companies — no personal email disclosed. Private office.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Perot family office; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) Perot Companies \u2014 no personal email disclosed. Private office.",
         "sources": []
       }
     ],
@@ -2651,13 +2662,13 @@
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "principal_name_title",
-            "url": "https://forbes.com/ricketts-family"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           },
           {
             "source_name": "press",
-            "field_extracted": "chicago_cubs",
-            "url": "https://bloomberg.com/quadrant-management"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -2667,7 +2678,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Quadrant Management; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Chicago Cubs — no personal email disclosed. Private office.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Quadrant Management; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) Chicago Cubs \u2014 no personal email disclosed. Private office.",
         "sources": []
       }
     ],
@@ -2721,7 +2732,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Asia Capital Advisor; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Conference directory — contact info private. Asian family office privacy.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Asia Capital Advisor; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) Conference directory \u2014 contact info private. Asian family office privacy.",
         "sources": []
       }
     ],
@@ -2773,16 +2784,22 @@
     "contacts": [
       {
         "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Biltmore Family Office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) TIGER 21 directory — contact info private. Network-privacy protected.",
-        "sources": []
+        "value": "chris@biltmorefamilyoffice.com",
+        "confidence": "Verified",
+        "notes": "Verified via official Biltmore Family Office website (who-we-are/chris-cecil/). Individual professional email belonging to named principal.",
+        "sources": [
+          {
+            "source_name": "official_website",
+            "field_extracted": "principal_email",
+            "url": "https://www.biltmorefamilyoffice.com/who-we-are/chris-cecil/"
+          }
+        ]
       }
     ],
     "signals": [
       {
         "type": "network_activity",
-        "description": "TIGER 21 Charlotte Chapter Chair — active peer-network participation",
+        "description": "TIGER 21 Charlotte Chapter Chair \u2014 active peer-network participation",
         "date": "ongoing",
         "source": "conference_network"
       }
@@ -2823,7 +2840,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Evoke Advisors; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) SEC filing — no email disclosed. Private firm.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Evoke Advisors; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) SEC filing \u2014 no email disclosed. Private firm.",
         "sources": []
       }
     ],
@@ -2856,10 +2873,10 @@
     "hq_state": null,
     "hq_country": "Germany",
     "discovery_source": "conference_network",
-    "inclusion_evidence": "Prestel & Partner Family Office Forum Zurich 2026 speaker list confirms Lavivee GmbH as single family office. Prof. Dr. Anabel Ternès von Hattburg serves as CIO. Also CEO of Sustain Plus GmbH and Managing Director of SRH Institute. Single-family structure confirmed via conference network records.",
+    "inclusion_evidence": "Prestel & Partner Family Office Forum Zurich 2026 speaker list confirms Lavivee GmbH as single family office. Prof. Dr. Anabel Tern\u00e8s von Hattburg serves as CIO. Also CEO of Sustain Plus GmbH and Managing Director of SRH Institute. Single-family structure confirmed via conference network records.",
     "principals": [
       {
-        "full_name": "Prof. Dr. Anabel Ternès von Hattburg",
+        "full_name": "Prof. Dr. Anabel Tern\u00e8s von Hattburg",
         "title": "Chief Investment Officer",
         "linkedin_url": "Unresolved",
         "notes": "CIO of Lavivee GmbH. CEO of Sustain Plus GmbH. Managing Director of SRH Institute for Innovation and Sustainability Management. Forbes 'Superwoman' and recognized sustainability pioneer.",
@@ -2877,7 +2894,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Lavivee GmbH; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) German registry — no email disclosed. European privacy.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Lavivee GmbH; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) German registry \u2014 no email disclosed. European privacy.",
         "sources": []
       }
     ],
@@ -2920,13 +2937,13 @@
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "principal_name_title",
-            "url": "https://forbes.com/rothermere-family"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           },
           {
             "source_name": "press",
-            "field_extracted": "dmgt",
-            "url": "https://bloomberg.com/daily-mail-general-trust"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -2936,14 +2953,14 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Rothermere family office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) DMGT — no personal email disclosed. UK aristocratic privacy.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Rothermere family office; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) DMGT \u2014 no personal email disclosed. UK aristocratic privacy.",
         "sources": []
       }
     ],
     "signals": [
       {
         "type": "portfolio_holdings",
-        "description": "Daily Mail and General Trust — major UK media conglomerate including Mail Online, Metro, and Euromoney",
+        "description": "Daily Mail and General Trust \u2014 major UK media conglomerate including Mail Online, Metro, and Euromoney",
         "date": "ongoing",
         "source": "press"
       },
@@ -2979,13 +2996,13 @@
         "sources": [
           {
             "source_name": "press",
-            "field_extracted": "principal_name",
-            "url": "https://forbes.com/ernesto-bertarelli"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           },
           {
             "source_name": "press",
-            "field_extracted": "serono_sale",
-            "url": "https://bloomberg.com/bertarelli-family-office"
+            "field_extracted": "Press source referenced; direct URL unresolved.",
+            "url": null
           }
         ]
       }
@@ -2995,7 +3012,7 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Documented attempts: (1) Hunter.io — no pattern for Bertarelli family office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Swiss registry — no email disclosed. Swiss privacy strict.",
+        "notes": "Documented attempts: (1) Hunter.io \u2014 no pattern for Bertarelli family office; (2) Apollo.io \u2014 no contact; (3) Serper API \u2014 no public email; (4) Swiss registry \u2014 no email disclosed. Swiss privacy strict.",
         "sources": []
       }
     ],
@@ -3008,13 +3025,13 @@
       },
       {
         "type": "philanthropy",
-        "description": "Bertarelli Foundation — marine conservation and life sciences research",
+        "description": "Bertarelli Foundation \u2014 marine conservation and life sciences research",
         "date": "ongoing",
         "source": "press"
       },
       {
         "type": "sports_ownership",
-        "description": "Alinghi sailing team — two-time America's Cup winner (2003, 2007)",
+        "description": "Alinghi sailing team \u2014 two-time America's Cup winner (2003, 2007)",
         "date": "ongoing",
         "source": "press"
       }

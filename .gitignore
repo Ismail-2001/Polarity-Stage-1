@@ -38,3 +38,5 @@ Thumbs.db
 
 # Streamlit
 .streamlit/secrets.toml
+
+data/sfo_provenance_export.xlsx

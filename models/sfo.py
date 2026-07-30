@@ -146,6 +146,7 @@ class SFOEntity(BaseModel):
 
     family_name: Optional[str] = None
     source_of_wealth: Optional[str] = None
+    cik: Optional[str] = None
     estimated_aum_usd: Optional[float] = None
     aum_confidence: AumConfidence = AumConfidence.UNKNOWN
     year_established: Optional[int] = None

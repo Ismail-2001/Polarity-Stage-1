@@ -1,9 +1,8 @@
 [
   {
-    "id": "SFO-001",
     "entity_name": "EMFO, LLC",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001859434",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -19,22 +18,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.411312+00:00",
-    "updated_at": "2026-07-30 09:44:15.411323+00:00"
+    "id": "SFO-001"
   },
   {
-    "id": "SFO-002",
     "entity_name": "Longboat Family Office LP",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001878856",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -50,22 +43,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.411568+00:00",
-    "updated_at": "2026-07-30 09:44:15.411575+00:00"
+    "id": "SFO-002"
   },
   {
-    "id": "SFO-003",
     "entity_name": "Duquesne Family Office LLC",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001536411",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -81,22 +68,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.411754+00:00",
-    "updated_at": "2026-07-30 09:44:15.411759+00:00"
+    "id": "SFO-003"
   },
   {
-    "id": "SFO-004",
     "entity_name": "Kopp Family Office, LLC",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001683689",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -112,22 +93,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.411891+00:00",
-    "updated_at": "2026-07-30 09:44:15.411897+00:00"
+    "id": "SFO-004"
   },
   {
-    "id": "SFO-005",
     "entity_name": "PATHSTONE FAMILY OFFICE, LLC",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001511137",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -143,22 +118,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.412071+00:00",
-    "updated_at": "2026-07-30 09:44:15.412076+00:00"
+    "id": "SFO-005"
   },
   {
-    "id": "SFO-006",
     "entity_name": "Wilshire Private Markets Family Office Fund II, L.P.",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001634667",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -174,22 +143,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.412231+00:00",
-    "updated_at": "2026-07-30 09:44:15.412234+00:00"
+    "id": "SFO-006"
   },
   {
-    "id": "SFO-007",
     "entity_name": "Pinnacle Family Office Investments L.P.",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001542604",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -205,22 +168,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.412380+00:00",
-    "updated_at": "2026-07-30 09:44:15.412385+00:00"
+    "id": "SFO-007"
   },
   {
-    "id": "SFO-008",
     "entity_name": "Wilshire Private Markets Real Estate Family Office Fund I, L.P.",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001581864",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -236,22 +193,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.412558+00:00",
-    "updated_at": "2026-07-30 09:44:15.412561+00:00"
+    "id": "SFO-008"
   },
   {
-    "id": "SFO-009",
     "entity_name": "Wilshire Private Markets Family Office Fund IV, L.P.",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001784999",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -267,22 +218,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.412732+00:00",
-    "updated_at": "2026-07-30 09:44:15.412735+00:00"
+    "id": "SFO-009"
   },
   {
-    "id": "SFO-010",
     "entity_name": "Wilshire Private Markets Family Office Fund III, L.P.",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001807659",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -298,22 +243,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.412879+00:00",
-    "updated_at": "2026-07-30 09:44:15.412882+00:00"
+    "id": "SFO-010"
   },
   {
-    "id": "SFO-011",
     "entity_name": "Wilshire Private Markets Family Office Fund I, L.P.",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001566927",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -329,22 +268,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.413009+00:00",
-    "updated_at": "2026-07-30 09:44:15.413012+00:00"
+    "id": "SFO-011"
   },
   {
-    "id": "SFO-012",
     "entity_name": "Wells Fargo Family Office Fund FW, LLC",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001507396",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -360,22 +293,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.413170+00:00",
-    "updated_at": "2026-07-30 09:44:15.413175+00:00"
+    "id": "SFO-012"
   },
   {
-    "id": "SFO-013",
     "entity_name": "Wells Fargo Family Office Fund I, LLC",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001507397",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -391,22 +318,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.413319+00:00",
-    "updated_at": "2026-07-30 09:44:15.413323+00:00"
+    "id": "SFO-013"
   },
   {
-    "id": "SFO-014",
     "entity_name": "Wells Fargo Family Office Master Fund, LLC",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001507398",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -422,22 +343,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.413505+00:00",
-    "updated_at": "2026-07-30 09:44:15.413510+00:00"
+    "id": "SFO-014"
   },
   {
-    "id": "SFO-015",
     "entity_name": "HMC SFO LP",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001129170",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -453,22 +368,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.413674+00:00",
-    "updated_at": "2026-07-30 09:44:15.413678+00:00"
+    "id": "SFO-015"
   },
   {
-    "id": "SFO-016",
     "entity_name": "HOST SFO GP LLC",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001489927",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -484,22 +393,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.413840+00:00",
-    "updated_at": "2026-07-30 09:44:15.413844+00:00"
+    "id": "SFO-016"
   },
   {
-    "id": "SFO-017",
     "entity_name": "PennTex SFO I, LP",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001791905",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -515,22 +418,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.413968+00:00",
-    "updated_at": "2026-07-30 09:44:15.413971+00:00"
+    "id": "SFO-017"
   },
   {
-    "id": "SFO-018",
     "entity_name": "West Bond (SFO), LLC",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001657668",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -546,53 +443,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.414068+00:00",
-    "updated_at": "2026-07-30 09:44:15.414069+00:00"
+    "id": "SFO-018"
   },
   {
-    "id": "SFO-019",
-    "entity_name": "SFO Hotel Investment Fund LLC",
-    "entity_type": "SFO",
-    "also_known_as": null,
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "SEATTLE",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "sources": [],
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.414154+00:00",
-    "updated_at": "2026-07-30 09:44:15.414158+00:00"
-  },
-  {
-    "id": "SFO-020",
     "entity_name": "SFO REIT, Inc.",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001566004",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -608,22 +468,41 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.414250+00:00",
-    "updated_at": "2026-07-30 09:44:15.414251+00:00"
+    "id": "SFO-019"
   },
   {
-    "id": "SFO-021",
+    "entity_name": "SFO Hotel Investment Fund LLC",
+    "entity_type": "SFO",
+    "cik": "0001510134",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "SEATTLE",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-020"
+  },
+  {
     "entity_name": "S.F. Family Holdings, Ltd.",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001433020",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -639,22 +518,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.414340+00:00",
-    "updated_at": "2026-07-30 09:44:15.414342+00:00"
+    "id": "SFO-021"
   },
   {
-    "id": "SFO-022",
     "entity_name": "DOBRINSKY FAMILY HOLDINGS LP",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001134002",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -670,22 +543,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.414423+00:00",
-    "updated_at": "2026-07-30 09:44:15.414426+00:00"
+    "id": "SFO-022"
   },
   {
-    "id": "SFO-023",
     "entity_name": "FARM FAMILY HOLDINGS INC",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001013564",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -701,22 +568,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.414525+00:00",
-    "updated_at": "2026-07-30 09:44:15.414527+00:00"
+    "id": "SFO-023"
   },
   {
-    "id": "SFO-024",
     "entity_name": "Standish Family Holdings, LLC",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001644343",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -732,22 +593,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.414613+00:00",
-    "updated_at": "2026-07-30 09:44:15.414615+00:00"
+    "id": "SFO-024"
   },
   {
-    "id": "SFO-025",
     "entity_name": "Canarick Family Holdings LLC",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001666724",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -763,22 +618,16 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.414702+00:00",
-    "updated_at": "2026-07-30 09:44:15.414704+00:00"
+    "id": "SFO-025"
   },
   {
-    "id": "SFO-026",
     "entity_name": "CAGLE FAMILY HOLDINGS LLC",
     "entity_type": "SFO",
-    "also_known_as": null,
+    "cik": "0001146005",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -794,22 +643,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.414807+00:00",
-    "updated_at": "2026-07-30 09:44:15.414810+00:00"
+    "id": "SFO-026"
   },
   {
-    "id": "SFO-027",
     "entity_name": "Archegos Capital Management",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -825,22 +667,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.414891+00:00",
-    "updated_at": "2026-07-30 09:44:15.414893+00:00"
+    "id": "SFO-027"
   },
   {
-    "id": "SFO-028",
     "entity_name": "Ballmer Group",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -856,22 +691,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.414984+00:00",
-    "updated_at": "2026-07-30 09:44:15.414987+00:00"
+    "id": "SFO-028"
   },
   {
-    "id": "SFO-029",
     "entity_name": "Bayshore Global Management",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -887,22 +715,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.415074+00:00",
-    "updated_at": "2026-07-30 09:44:15.415076+00:00"
+    "id": "SFO-029"
   },
   {
-    "id": "SFO-030",
     "entity_name": "Bessemer Trust",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -918,22 +739,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.415160+00:00",
-    "updated_at": "2026-07-30 09:44:15.415162+00:00"
+    "id": "SFO-030"
   },
   {
-    "id": "SFO-031",
     "entity_name": "Bezos Expeditions",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -949,22 +763,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.415304+00:00",
-    "updated_at": "2026-07-30 09:44:15.415306+00:00"
+    "id": "SFO-031"
   },
   {
-    "id": "SFO-032",
     "entity_name": "Cascade Investment",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -980,22 +787,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.415435+00:00",
-    "updated_at": "2026-07-30 09:44:15.415438+00:00"
+    "id": "SFO-032"
   },
   {
-    "id": "SFO-033",
     "entity_name": "Cresset",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1011,22 +811,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.415568+00:00",
-    "updated_at": "2026-07-30 09:44:15.415571+00:00"
+    "id": "SFO-033"
   },
   {
-    "id": "SFO-034",
     "entity_name": "DFO Management",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1042,22 +835,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.415709+00:00",
-    "updated_at": "2026-07-30 09:44:15.415713+00:00"
+    "id": "SFO-034"
   },
   {
-    "id": "SFO-035",
     "entity_name": "Dubai Holding",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1073,22 +859,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.415834+00:00",
-    "updated_at": "2026-07-30 09:44:15.415837+00:00"
+    "id": "SFO-035"
   },
   {
-    "id": "SFO-036",
     "entity_name": "Edipresse",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1104,22 +883,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.415967+00:00",
-    "updated_at": "2026-07-30 09:44:15.415970+00:00"
+    "id": "SFO-036"
   },
   {
-    "id": "SFO-037",
     "entity_name": "Emerson Collective",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1135,22 +907,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.416083+00:00",
-    "updated_at": "2026-07-30 09:44:15.416086+00:00"
+    "id": "SFO-037"
   },
   {
-    "id": "SFO-038",
     "entity_name": "ICONIQ Capital",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1166,22 +931,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.416195+00:00",
-    "updated_at": "2026-07-30 09:44:15.416198+00:00"
+    "id": "SFO-038"
   },
   {
-    "id": "SFO-039",
     "entity_name": "Kirkbi",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1197,22 +955,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.416327+00:00",
-    "updated_at": "2026-07-30 09:44:15.416332+00:00"
+    "id": "SFO-039"
   },
   {
-    "id": "SFO-040",
     "entity_name": "Mayfair Verm\u00f6gensverwaltung",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1228,22 +979,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.416453+00:00",
-    "updated_at": "2026-07-30 09:44:15.416458+00:00"
+    "id": "SFO-040"
   },
   {
-    "id": "SFO-041",
     "entity_name": "Mousse Partners",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1259,22 +1003,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.416592+00:00",
-    "updated_at": "2026-07-30 09:44:15.416594+00:00"
+    "id": "SFO-041"
   },
   {
-    "id": "SFO-042",
     "entity_name": "Robert Wood Johnson Foundation",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1290,22 +1027,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.416728+00:00",
-    "updated_at": "2026-07-30 09:44:15.416732+00:00"
+    "id": "SFO-042"
   },
   {
-    "id": "SFO-043",
     "entity_name": "Soros Fund Management",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1321,22 +1051,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.416863+00:00",
-    "updated_at": "2026-07-30 09:44:15.416866+00:00"
+    "id": "SFO-043"
   },
   {
-    "id": "SFO-044",
     "entity_name": "Spell Capital Partners",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1352,22 +1075,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.417013+00:00",
-    "updated_at": "2026-07-30 09:44:15.417017+00:00"
+    "id": "SFO-044"
   },
   {
-    "id": "SFO-045",
     "entity_name": "Thiel Capital",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1383,22 +1099,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.417191+00:00",
-    "updated_at": "2026-07-30 09:44:15.417202+00:00"
+    "id": "SFO-045"
   },
   {
-    "id": "SFO-046",
     "entity_name": "Vulcan Inc.",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1414,22 +1123,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.417359+00:00",
-    "updated_at": "2026-07-30 09:44:15.417362+00:00"
+    "id": "SFO-046"
   },
   {
-    "id": "SFO-047",
     "entity_name": "Whittier Trust Company",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1445,22 +1147,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.417558+00:00",
-    "updated_at": "2026-07-30 09:44:15.417562+00:00"
+    "id": "SFO-047"
   },
   {
-    "id": "SFO-048",
     "entity_name": "Willett Advisors",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1476,22 +1171,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.417706+00:00",
-    "updated_at": "2026-07-30 09:44:15.417711+00:00"
+    "id": "SFO-048"
   },
   {
-    "id": "SFO-049",
     "entity_name": "Winklevoss Capital Management",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1507,22 +1195,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.417825+00:00",
-    "updated_at": "2026-07-30 09:44:15.417827+00:00"
+    "id": "SFO-049"
   },
   {
-    "id": "SFO-050",
     "entity_name": "HMS Management",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1538,22 +1219,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via web directory listing. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.417954+00:00",
-    "updated_at": "2026-07-30 09:44:15.417957+00:00"
+    "id": "SFO-050"
   },
   {
-    "id": "SFO-051",
     "entity_name": "Royal Group",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1569,22 +1243,15 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via web directory listing. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.418064+00:00",
-    "updated_at": "2026-07-30 09:44:15.418067+00:00"
+    "id": "SFO-051"
   },
   {
-    "id": "SFO-052",
     "entity_name": "Walton Enterprises",
     "entity_type": "SFO",
-    "also_known_as": null,
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
@@ -1600,15 +1267,10 @@
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "sources": [],
         "notes": "Discovered via web directory listing. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "last_enriched_at": null,
-    "sources": [],
-    "audit_log": [],
-    "created_at": "2026-07-30 09:44:15.418171+00:00",
-    "updated_at": "2026-07-30 09:44:15.418175+00:00"
+    "id": "SFO-052"
   }
 ]

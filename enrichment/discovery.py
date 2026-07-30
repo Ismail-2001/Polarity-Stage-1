@@ -237,6 +237,7 @@ def run_discovery(max_candidates: int = 50) -> list[dict]:
         candidates.append({
             "entity_name": auth_name,
             "entity_type": "SFO",
+            "cik": cik,
             "family_name": None,
             "source_of_wealth": None,
             "estimated_aum_usd": aum,

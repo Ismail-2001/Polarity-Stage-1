@@ -126,24 +126,33 @@ class EnrichmentOrchestrator:
                    f"{len(data.get('emails', []))} emails")
 
     def _step_sec_enrich(self, entity: SFOEntity) -> None:
-        if not entity.family_name and not entity.entity_name:
-            return
         entity.log("SEC enrichment: multi-strategy lookup")
-        aum = self.sec.extract_aum(
-            entity_name=entity.entity_name,
-            family_name=entity.family_name,
-        )
+        cik = entity.cik
+        if not cik:
+            entity.log("SEC: No CIK carried from discovery — trying name-based resolution")
+            if not entity.family_name and not entity.entity_name:
+                return
+            cik = self.sec.lookup_cik(self.sec._generate_name_variants(
+                entity.family_name or "", entity.entity_name,
+            ))
+        if cik:
+            aum = self.sec._extract_aum_from_facts(cik) or self.sec.extract_aum_from_adv(cik) or self.sec._extract_aum_from_13f(cik)
+        else:
+            aum = None
         if aum is not None:
             entity.estimated_aum_usd = aum
             entity.aum_confidence = AumConfidence.CONFIRMED
+            entity.cik = cik or entity.cik
             entity.add_source(EnrichmentSource(
                 source_name="sec_edgar",
-                url=f"https://www.sec.gov/cgi-bin/browse-edgar?CIK={entity.entity_name}",
+                url=f"https://www.sec.gov/cgi-bin/browse-edgar?CIK={cik}",
                 field_extracted="aum",
             ))
             entity.log(f"AUM extracted from SEC: ${aum:,.0f}")
+        elif cik:
+            entity.log(f"SEC: CIK {cik} found but AUM extraction returned None")
         else:
-            entity.log("SEC: No AUM found (no CIK or no filing data)")
+            entity.log("SEC: No CIK found — cannot extract AUM")
 
     def _step_principal_search(self, entity: SFOEntity) -> None:
         for principal in entity.principals:

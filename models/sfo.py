@@ -29,6 +29,7 @@ class AumConfidence(str, Enum):
     ESTIMATED = "Estimated"
     UNRESOLVED = "Unresolved"
     UNKNOWN = "Unknown"
+    UNDISCLOSED = "Undisclosed"
 
 
 class EntityType(str, Enum):
@@ -109,7 +110,7 @@ class Principal(BaseModel):
 
     @validator("linkedin_url")
     def validate_linkedin(cls, v):  # noqa: N805
-        if v is not None and not re.match(r"^https?:\/\/(www\.)?linkedin\.com\/in\/[a-zA-Z0-9_-]+\/?$", v):
+        if v is not None and v != UNRESOLVED_SENTINEL and not re.match(r"^https?:\/\/(www\.)?linkedin\.com\/in\/[a-zA-Z0-9_-]+\/?$", v):
             raise ValueError(
                 f"Invalid LinkedIn profile URL: {v}. "
                 "Must be a direct individual profile (linkedin.com/in/...)."
@@ -121,6 +122,18 @@ class Principal(BaseModel):
         if not v.strip():
             raise ValueError("full_name must not be empty")
         return v.strip()
+
+
+# ---------------------------------------------------------------------------
+# Signal (contextual intelligence signal)
+# ---------------------------------------------------------------------------
+
+
+class Signal(BaseModel):
+    type: str
+    description: str
+    date: str
+    source: str
 
 
 # ---------------------------------------------------------------------------
@@ -152,9 +165,11 @@ class SFOEntity(BaseModel):
     hq_city: str | None = None
     hq_country: str | None = "United States"
     discovery_source: str | None = None
+    inclusion_evidence: str | None = None
 
     principals: list[Principal] = Field(default_factory=list)
     contacts: list[ContactMethod] = Field(default_factory=list)
+    signals: list[Signal] = Field(default_factory=list)
 
     enrichment_status: EnrichmentStatus = EnrichmentStatus.PENDING
     last_enriched_at: datetime | None = None

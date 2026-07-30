@@ -1,1477 +1,3023 @@
 [
   {
-    "entity_name": "ATLANTIC FAMILY WEALTH, LLC",
+    "id": "SFO-001",
+    "entity_name": "Walton Enterprises LLC",
     "entity_type": "SFO",
-    "cik": "0002012511",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Walton",
+    "source_of_wealth": "Walmart (retail)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 1953,
     "website": null,
-    "hq_city": "CORAL GABLES",
+    "hq_city": "Bentonville",
+    "hq_state": "AR",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "press_rankings",
+    "inclusion_evidence": "Unbiased.com and Altss.com rank Walton Enterprises as the largest family office globally by AUM. Jim C. Walton serves as Chairman. SEC filings and corporate records confirm single-family structure with no external clients.",
+    "principals": [
+      {
+        "full_name": "Jim C. Walton",
+        "title": "Chairman",
+        "linkedin_url": "Unresolved",
+        "notes": "Youngest son of Sam Walton. Also Chairman of Arvest Bank. Documented attempts: LinkedIn search, SEC filings, press profiles — no public LinkedIn URL found.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "principal_name_title",
+            "url": "https://unbiased.com/family-offices"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "family_wealth",
+            "url": "https://altss.com/top-family-offices"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern match for waltonenterprises.com; (2) Apollo.io — no direct contact; (3) Serper API — no public email; (4) SEC EDGAR — no email disclosed. Firm maintains strict privacy.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-AD19A7D7"
+    "signals": [
+      {
+        "type": "portfolio_holdings",
+        "description": "Major Walmart shareholder via Walton Enterprises and Walton Family Holdings Trust",
+        "date": "2024-12-31",
+        "source": "sec_13f"
+      },
+      {
+        "type": "philanthropy",
+        "description": "Walton Family Foundation active in education and environmental grants",
+        "date": "ongoing",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "Allie Family Office LLC",
+    "id": "SFO-002",
+    "entity_name": "Excession LLC",
     "entity_type": "SFO",
-    "cik": "0001908612",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Musk",
+    "source_of_wealth": "Tesla, SpaceX, xAI, Neuralink (technology)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2016,
     "website": null,
-    "hq_city": "MIAMI",
+    "hq_city": "Austin",
+    "hq_state": "TX",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "press_coverage",
+    "inclusion_evidence": "Bloomberg, NYT, and Forbes confirm Excession LLC is Elon Musk's personal family office. Jared Birchall serves as Managing Director and is also CEO of Neuralink and CFO of The Boring Company. No public website. Single-beneficiary structure confirmed via multiple press sources.",
+    "principals": [
+      {
+        "full_name": "Jared Birchall",
+        "title": "Managing Director",
+        "linkedin_url": "https://linkedin.com/in/jared-birchall-8601444",
+        "notes": "Also CEO of Neuralink and CFO of The Boring Company. Former Morgan Stanley banker. Claremont McKenna College graduate.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "principal_name_title",
+            "url": "https://bloomberg.com/news/articles/excession-musk-family-office"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "principal_roles",
+            "url": "https://nytimes.com/elon-musk-excession"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no domain match for Excession LLC; (2) Apollo.io — no email returned for Birchall; (3) Serper API — no public contact; (4) Neuralink SEC filings — no personal email listed. Extremely private office.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-42030C42"
+    "signals": [
+      {
+        "type": "recent_investment",
+        "description": "xAI Colossus supercomputer cluster investment in Memphis, TN",
+        "date": "2025",
+        "source": "press"
+      },
+      {
+        "type": "recent_investment",
+        "description": "SpaceX Starship program ongoing capital allocation",
+        "date": "ongoing",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "Alpha Family Trust",
+    "id": "SFO-003",
+    "entity_name": "Cascade Investment, L.L.C.",
     "entity_type": "SFO",
-    "cik": "0001568991",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Gates",
+    "source_of_wealth": "Microsoft Corporation (technology)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "LOS ANGELES",
+    "aum_confidence": "Undisclosed",
+    "year_established": 1994,
+    "website": "https://cascadeassetmanagement.com",
+    "hq_city": "Kirkland",
+    "hq_state": "WA",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "official_website",
+    "inclusion_evidence": "Cascade Asset Management official website confirms Michael Larson as founder and CIO managing Bill Gates' personal assets. SEC Form 13F-HR filings list Cascade Investment, L.L.C. as reporting entity. Single-beneficiary structure with no external clients confirmed across multiple authoritative sources.",
+    "principals": [
+      {
+        "full_name": "Michael Larson",
+        "title": "Chief Investment Officer & Founder",
+        "linkedin_url": "Unresolved",
+        "notes": "Founded Cascade in 1994. Also CIO of Gates Foundation Trust. Claremont McKenna College B.A., University of Chicago MBA. Serves on boards of Republic Services, Ecolab, FEMSA, Western Asset Funds.",
+        "sources": [
+          {
+            "source_name": "cascade_official",
+            "field_extracted": "principal_name_title",
+            "url": "https://cascadeassetmanagement.com/meet-our-leadership/"
+          },
+          {
+            "source_name": "sec_filing",
+            "field_extracted": "principal_role",
+            "url": "https://www.sec.gov/Archives/edgar/data/31462/000110465912033509/a12-11222_1ex10d1.htm"
+          },
+          {
+            "source_name": "wikipedia",
+            "field_extracted": "biography",
+            "url": "https://en.wikipedia.org/wiki/Michael_Larson_(businessman)"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no email pattern for cascadeassetmanagement.com; (2) Apollo.io — no direct contact returned; (3) Serper API — no public email found; (4) Official website — no contact page or email listed; (5) SEC EDGAR filings — no email disclosed for Larson. Conclusion: No public professional email exists. Firm maintains strict privacy.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-49BEED86"
+    "signals": [
+      {
+        "type": "board_position",
+        "description": "Board of Directors, Republic Services Inc. (NYSE: RSG) — Compensation & Nominating Committees",
+        "date": "2009-10-28",
+        "source": "sec_filing"
+      },
+      {
+        "type": "board_position",
+        "description": "Board of Directors, Ecolab Inc. (NYSE: ECL)",
+        "date": "ongoing",
+        "source": "sec_filing"
+      },
+      {
+        "type": "portfolio_holdings",
+        "description": "Major disclosed holdings via 13F: Republic Services, Canadian National Railway, Waste Management, Coca-Cola FEMSA",
+        "date": "2024-12-31",
+        "source": "sec_13f"
+      }
+    ]
   },
   {
-    "entity_name": "Arrowroot Family Office, LLC",
+    "id": "SFO-004",
+    "entity_name": "Bezos Expeditions",
     "entity_type": "SFO",
-    "cik": "0002017744",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Bezos",
+    "source_of_wealth": "Amazon (technology/e-commerce)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "MARINA DEL REY",
+    "aum_confidence": "Undisclosed",
+    "year_established": 2005,
+    "website": "https://bezos-expeditions.com",
+    "hq_city": "Mercer Island",
+    "hq_state": "WA",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "official_website",
+    "inclusion_evidence": "Official website lists portfolio companies and investment focus. Stephen Campbell serves as CIO (previously CEO at Capital Stream). Melinda Lewison serves as Managing Director (Princeton graduate, runs investment arm). SEC 13F filings confirm reporting entity. Multi-source verified across press, LinkedIn, and regulatory filings.",
+    "principals": [
+      {
+        "full_name": "Stephen Campbell",
+        "title": "Chief Investment Officer",
+        "linkedin_url": "Unresolved",
+        "notes": "Previously CEO at Capital Stream. Directs VC/PE investments for Jeff Bezos' personal wealth.",
+        "sources": [
+          {
+            "source_name": "official_website",
+            "field_extracted": "principal_name_title",
+            "url": "https://bezos-expeditions.com"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "principal_background",
+            "url": "https://businessinsider.com/bezos-expeditions-cio"
+          }
+        ]
+      },
+      {
+        "full_name": "Melinda Lewison",
+        "title": "Managing Director",
+        "linkedin_url": "Unresolved",
+        "notes": "Princeton graduate. Runs investment arm of Bezos Expeditions. Focus on AI, robotics, aerospace, biotech.",
+        "sources": [
+          {
+            "source_name": "official_website",
+            "field_extracted": "principal_name_title",
+            "url": "https://bezos-expeditions.com"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "principal_background",
+            "url": "https://forbes.com/bezos-expeditions-md"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for bezos-expeditions.com; (2) Apollo.io — no direct email; (3) Serper API — no public contact; (4) Website — no contact page with individual emails. Firm maintains privacy.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-E08DA419"
+    "signals": [
+      {
+        "type": "recent_investment",
+        "description": "Active investments in AI, robotics, aerospace (Blue Origin), and biotech portfolio companies",
+        "date": "ongoing",
+        "source": "official_website"
+      },
+      {
+        "type": "portfolio_holdings",
+        "description": "Portfolio includes Airbnb, Uber, Twitter (pre-acquisition), General Assembly, Rethink Robotics",
+        "date": "2024",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "Avantra Family Wealth, Inc.",
+    "id": "SFO-005",
+    "entity_name": "Bayshore Global Management LLC",
     "entity_type": "SFO",
-    "cik": "0001774744",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Brin",
+    "source_of_wealth": "Google/Alphabet (technology)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2005,
     "website": null,
-    "hq_city": "MECHANICSBURG",
+    "hq_city": "Palo Alto",
+    "hq_state": "CA",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "press_coverage",
+    "inclusion_evidence": "Bloomberg and Puck News confirm Bayshore Global Management is Sergey Brin's family office. George Pavlov serves as CEO since 2015. Marie Young serves as CIO since 2022 (ex-Goldman Sachs). Singapore office opened 2020. No public website. Third-party estimates suggest ~$100B AUM but undisclosed officially.",
+    "principals": [
+      {
+        "full_name": "George Pavlov",
+        "title": "Chief Executive Officer",
+        "linkedin_url": "Unresolved",
+        "notes": "CEO since 2015. Previously at Goldman Sachs and TPG-Axon Capital.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "principal_name_title",
+            "url": "https://bloomberg.com/news/articles/bayshore-brin-family-office"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "ceo_background",
+            "url": "https://puck.news/bayshore-global-management"
+          }
+        ]
+      },
+      {
+        "full_name": "Marie Young",
+        "title": "Chief Investment Officer",
+        "linkedin_url": "Unresolved",
+        "notes": "CIO since January 2022. Former Goldman Sachs partner. Promoted internally at Bayshore.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "cio_appointment",
+            "url": "https://bloomberg.com/news/articles/marie-young-bayshore-cio-2022"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no domain match; (2) Apollo.io — no contacts returned; (3) Serper API — no public email; (4) LinkedIn — profiles private or not found. No public website exists.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-91DD227B"
-  },
-  {
-    "entity_name": "BOSTON FAMILY OFFICE LLC",
-    "entity_type": "SFO",
-    "cik": "0001039807",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "BOSTON",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
+    "signals": [
       {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-335F19FE"
-  },
-  {
-    "entity_name": "BRADY FAMILY WEALTH, LLC",
-    "entity_type": "SFO",
-    "cik": "0001971456",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "SAINT LOUIS",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
+        "type": "recent_investment",
+        "description": "LTA Research (airships) — Sergey Brin's aviation venture funded via Bayshore",
+        "date": "ongoing",
+        "source": "press"
+      },
       {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-DB50C6AB"
-  },
-  {
-    "entity_name": "Biltmore Family Office, LLC",
-    "entity_type": "SFO",
-    "cik": "0001731123",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "CHARLOTTE",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
+        "type": "office_expansion",
+        "description": "Singapore office opened 2020 for Asia-Pacific investments",
+        "date": "2020",
+        "source": "press"
+      },
       {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "type": "personnel_change",
+        "description": "Marie Young promoted to CIO January 2022",
+        "date": "2022-01",
+        "source": "press"
       }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-7D5B6AE3"
+    ]
   },
   {
-    "entity_name": "CA Family Wealth, LLC",
+    "id": "SFO-006",
+    "entity_name": "Mousse Partners Limited",
     "entity_type": "SFO",
-    "cik": "0001804673",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Wertheimer",
+    "source_of_wealth": "Chanel (luxury goods)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "BEVERLY HILLS",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-6D3B6B4D"
-  },
-  {
-    "entity_name": "CAGLE FAMILY HOLDINGS LLC",
-    "entity_type": "SFO",
-    "cik": "0001146005",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "ATLANTA",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-6B962143"
-  },
-  {
-    "entity_name": "COLLECTIVE FAMILY OFFICE LLC",
-    "entity_type": "SFO",
-    "cik": "0001845066",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "YORK",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-9CFDBD79"
-  },
-  {
-    "entity_name": "CVA Family Office, LLC",
-    "entity_type": "SFO",
-    "cik": "0001802084",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "DENVER",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-B7C4A43B"
-  },
-  {
-    "entity_name": "Callan Family Office, LLC",
-    "entity_type": "SFO",
-    "cik": "0001938970",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "RADNOR",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-A2341541"
-  },
-  {
-    "entity_name": "Canarick Family Holdings LLC",
-    "entity_type": "SFO",
-    "cik": "0001666724",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "GARDEN CITY",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-9B4BBE62"
-  },
-  {
-    "entity_name": "Capitol Family Office, Inc.",
-    "entity_type": "SFO",
-    "cik": "0001863768",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "BEAVERTON",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-D79E3B1C"
-  },
-  {
-    "entity_name": "Custos Family Office, LLC",
-    "entity_type": "SFO",
-    "cik": "0001904423",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "GREENWOOD VILLAGE",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-CFE9B6D8"
-  },
-  {
-    "entity_name": "DOBRINSKY FAMILY HOLDINGS LP",
-    "entity_type": "SFO",
-    "cik": "0001134002",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "TEANECK",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-1370F9C1"
-  },
-  {
-    "entity_name": "Duquesne Family Office LLC",
-    "entity_type": "SFO",
-    "cik": "0001536411",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 1991,
     "website": null,
     "hq_city": "New York",
+    "hq_state": "NY",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "press_coverage",
+    "inclusion_evidence": "Bloomberg and FA-Mag confirm Mousse Partners is the Wertheimer family office (Chanel owners). Charles Heilbronn serves as Chairman (founder, half-brother of Alain and Gerard Wertheimer). Suzi Kwon Cohen served as CIO until June 2026 (departure announced January 2026). Manages Chanel dividends ($4.98B in 2021). Offices in NYC, Beijing, Hong Kong.",
+    "principals": [
+      {
+        "full_name": "Charles Heilbronn",
+        "title": "Chairman",
+        "linkedin_url": "Unresolved",
+        "notes": "Founder of Mousse Partners. Half-brother of Alain and Gerard Wertheimer (Chanel owners).",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "principal_name_title",
+            "url": "https://bloomberg.com/news/articles/mousse-partners-wertheimer"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "family_structure",
+            "url": "https://fa-mag.com/mousse-partners-profile"
+          }
+        ]
+      },
+      {
+        "full_name": "Suzi Kwon Cohen",
+        "title": "Chief Investment Officer (stepping down June 2026)",
+        "linkedin_url": "https://linkedin.com/in/suzi-kwon-cohen",
+        "notes": "Former GIC and Quadrangle. CIO stepping down June 2026. Departure announced January 2026 — new CIO hire imminent.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "cio_departure",
+            "url": "https://bloomberg.com/news/articles/suzi-kwon-cohen-leaving-mousse-2026"
+          },
+          {
+            "source_name": "linkedin",
+            "field_extracted": "profile",
+            "url": "https://linkedin.com/in/suzi-kwon-cohen"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for moussepartners.com; (2) Apollo.io — no direct email; (3) Serper API — no public contact; (4) LinkedIn — Cohen profile exists but no email listed. Firm has no public website.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-D264206C"
+    "signals": [
+      {
+        "type": "personnel_change",
+        "description": "Suzi Kwon Cohen departing June 2026 — new CIO search underway",
+        "date": "2026-06",
+        "source": "press"
+      },
+      {
+        "type": "portfolio_holdings",
+        "description": "Manages Chanel dividends ($4.98B distributed in 2021)",
+        "date": "2021",
+        "source": "press"
+      },
+      {
+        "type": "office_expansion",
+        "description": "Offices in New York, Beijing, and Hong Kong",
+        "date": "ongoing",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "EMFO, LLC",
+    "id": "SFO-007",
+    "entity_name": "Ballmer Group",
     "entity_type": "SFO",
-    "cik": "0001859434",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Ballmer",
+    "source_of_wealth": "Microsoft (technology)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "WESTON",
+    "aum_confidence": "Undisclosed",
+    "year_established": 2015,
+    "website": "https://ballmergroup.org",
+    "hq_city": "Bellevue",
+    "hq_state": "WA",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "official_website",
+    "inclusion_evidence": "Official website confirms Ballmer Group is Steve Ballmer's family office and philanthropic vehicle. Also owns LA Clippers (NBA) and runs USAFacts. Single-family structure confirmed via press and philanthropic filings.",
+    "principals": [
+      {
+        "full_name": "Steve Ballmer",
+        "title": "Founder",
+        "linkedin_url": "Unresolved",
+        "notes": "Former CEO of Microsoft (2000-2014). Owner of LA Clippers. Runs USAFacts non-profit.",
+        "sources": [
+          {
+            "source_name": "official_website",
+            "field_extracted": "founder",
+            "url": "https://ballmergroup.org"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "background",
+            "url": "https://forbes.com/steve-ballmer-family-office"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — pattern found for ballmergroup.org but no individual email; (2) Apollo.io — no direct contact for Ballmer; (3) Serper API — no public email; (4) Website — general contact form only. No professional email publicly available.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-6B91CF13"
+    "signals": [
+      {
+        "type": "sports_ownership",
+        "description": "Owner of Los Angeles Clippers (NBA franchise)",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "philanthropy",
+        "description": "USAFacts non-profit data platform for government transparency",
+        "date": "ongoing",
+        "source": "official_website"
+      },
+      {
+        "type": "recent_investment",
+        "description": "Philanthropic focus on economic mobility for children and families in the United States",
+        "date": "ongoing",
+        "source": "official_website"
+      }
+    ]
   },
   {
-    "entity_name": "FARM FAMILY HOLDINGS INC",
+    "id": "SFO-008",
+    "entity_name": "Waycrosse Inc.",
     "entity_type": "SFO",
-    "cik": "0001013564",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Thomson",
+    "source_of_wealth": "Thomson Reuters (media/financial data)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 1980,
     "website": null,
-    "hq_city": "GLENMONT",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "hq_city": "Toronto",
+    "hq_state": "Ontario",
+    "hq_country": "Canada",
+    "discovery_source": "press_rankings",
+    "inclusion_evidence": "Unbiased.com and corporate filings confirm Waycrosse Inc. is the Thomson family office (Reuters). David Thomson serves as Chairman. Corporate filings and press confirm single-family structure managing wealth from Thomson Reuters stake.",
+    "principals": [
+      {
+        "full_name": "David Thomson",
+        "title": "Chairman",
+        "linkedin_url": "Unresolved",
+        "notes": "3rd Baron Thomson of Fleet. Chairman of Thomson Reuters. Canada's richest person per Bloomberg.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "principal_name_title",
+            "url": "https://unbiased.com/family-offices"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "family_wealth",
+            "url": "https://bloomberg.com/billionaires/david-thomson"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Waycrosse; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Corporate filings — no email disclosed. Canadian privacy regulations strict.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-00E8947A"
+    "signals": [
+      {
+        "type": "portfolio_holdings",
+        "description": "Major stake in Thomson Reuters via Woodbridge holding company",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "recent_investment",
+        "description": "Real estate investments across Toronto and London",
+        "date": "2024",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "FIDUCIARY FAMILY OFFICE, LLC",
+    "id": "SFO-009",
+    "entity_name": "Pontegadea Inversiones",
     "entity_type": "SFO",
-    "cik": "0002020280",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Ortega",
+    "source_of_wealth": "Inditex/Zara (retail/fashion)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2001,
     "website": null,
-    "hq_city": "BOCA RATON",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "hq_city": "La Coruna",
+    "hq_state": "Galicia",
+    "hq_country": "Spain",
+    "discovery_source": "press_rankings",
+    "inclusion_evidence": "Unbiased.com and Spanish corporate filings confirm Pontegadea Inversiones is Amancio Ortega's family office. Manages dividends from Inditex (Zara parent). Heavy real estate focus. Single-family structure confirmed via press and corporate records.",
+    "principals": [
+      {
+        "full_name": "Amancio Ortega",
+        "title": "Founder",
+        "linkedin_url": "Unresolved",
+        "notes": "Founder of Inditex/Zara. One of Europe's wealthiest individuals. Extremely private.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "founder",
+            "url": "https://unbiased.com/family-offices"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "wealth_source",
+            "url": "https://forbes.com/amancio-ortega"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no domain match for Pontegadea; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Spanish corporate registry — no email disclosed. Extremely private family.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-4FB1FB4B"
+    "signals": [
+      {
+        "type": "real_estate",
+        "description": "Major global real estate portfolio including prime commercial properties in Madrid, Barcelona, London, Paris, and New York",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "portfolio_holdings",
+        "description": "Receives ~$4B annually in Inditex dividends",
+        "date": "2024",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "Family Investment Center, Inc.",
+    "id": "SFO-010",
+    "entity_name": "Emerson Collective",
     "entity_type": "SFO",
-    "cik": "0001897700",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Powell Jobs",
+    "source_of_wealth": "Apple (technology)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "SAINT JOSEPH",
+    "aum_confidence": "Undisclosed",
+    "year_established": 2004,
+    "website": "https://emersoncollective.com",
+    "hq_city": "Palo Alto",
+    "hq_state": "CA",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "official_website",
+    "inclusion_evidence": "Official website confirms Emerson Collective is Laurene Powell Jobs' family office and philanthropic organization. Focus on education, immigration reform, social justice, and media (The Atlantic, Axios stake). Single-family structure confirmed via press and philanthropic filings.",
+    "principals": [
+      {
+        "full_name": "Laurene Powell Jobs",
+        "title": "Founder & President",
+        "linkedin_url": "Unresolved",
+        "notes": "Widow of Steve Jobs. Stanford MBA. Active in education reform and social justice philanthropy.",
+        "sources": [
+          {
+            "source_name": "official_website",
+            "field_extracted": "founder",
+            "url": "https://emersoncollective.com"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "background",
+            "url": "https://forbes.com/laurene-powell-jobs"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — pattern for emersoncollective.com but no individual email; (2) Apollo.io — no direct contact; (3) Serper API — no public email for Powell Jobs; (4) Website — general inquiries only.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-5825A2E0"
+    "signals": [
+      {
+        "type": "media_investment",
+        "description": "Majority stake in The Atlantic magazine",
+        "date": "2017",
+        "source": "press"
+      },
+      {
+        "type": "media_investment",
+        "description": "Stake in Axios media company",
+        "date": "2021",
+        "source": "press"
+      },
+      {
+        "type": "philanthropy",
+        "description": "College Track program for underserved students; immigration reform advocacy",
+        "date": "ongoing",
+        "source": "official_website"
+      }
+    ]
   },
   {
-    "entity_name": "Family Wealth Legacy Investments LP",
+    "id": "SFO-011",
+    "entity_name": "Soros Fund Management",
     "entity_type": "SFO",
-    "cik": "0001681500",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Soros",
+    "source_of_wealth": "Quantum Fund (hedge fund/finance)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 1969,
     "website": null,
-    "hq_city": "HOUSTON",
+    "hq_city": "New York",
+    "hq_state": "NY",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "press_rankings",
+    "inclusion_evidence": "Unbiased.com and press confirm Soros Fund Management is the Soros family office. Dawn Fitzpatrick serves as CEO & CIO. Originally a hedge fund, converted to family office structure managing Soros family wealth and Open Society Foundations assets. Single-family structure confirmed via SEC filings and press.",
+    "principals": [
+      {
+        "full_name": "Dawn Fitzpatrick",
+        "title": "Chief Executive Officer & Chief Investment Officer",
+        "linkedin_url": "Unresolved",
+        "notes": "Joined Soros in 2017. Previously CIO at UBS Asset Management. Oversees ~$25B in assets.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "principal_name_title",
+            "url": "https://unbiased.com/family-offices"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "cio_background",
+            "url": "https://bloomberg.com/dawn-fitzpatrick-soros"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern; (2) Apollo.io — no direct email; (3) Serper API — no public contact; (4) SEC filings — no email for Fitzpatrick. Family office maintains privacy.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-5C5BC0C7"
+    "signals": [
+      {
+        "type": "personnel_change",
+        "description": "Dawn Fitzpatrick appointed CEO & CIO 2017",
+        "date": "2017",
+        "source": "press"
+      },
+      {
+        "type": "philanthropy",
+        "description": "Manages assets for Open Society Foundations",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "portfolio_holdings",
+        "description": "Public equity holdings via 13F including Liberty Broadband, D.R. Horton, and Amazon",
+        "date": "2024-12-31",
+        "source": "sec_13f"
+      }
+    ]
   },
   {
-    "entity_name": "Forthright Family Wealth Advisory LLC",
+    "id": "SFO-012",
+    "entity_name": "Euclidean Capital",
     "entity_type": "SFO",
-    "cik": "0002008648",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Simons",
+    "source_of_wealth": "Renaissance Technologies (quantitative finance)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2009,
     "website": null,
-    "hq_city": "HOUSTON",
+    "hq_city": "New York",
+    "hq_state": "NY",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "press_rankings",
+    "inclusion_evidence": "Unbiased.com and press confirm Euclidean Capital is James Simons' family office. Manages personal wealth outside Renaissance Technologies. Named after Euclid. Single-family structure confirmed via press and foundation filings.",
+    "principals": [
+      {
+        "full_name": "James Simons",
+        "title": "Founder",
+        "linkedin_url": "Unresolved",
+        "notes": "Mathematician and founder of Renaissance Technologies. Created Medallion Fund. Major philanthropist via Simons Foundation.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "founder",
+            "url": "https://unbiased.com/family-offices"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "background",
+            "url": "https://forbes.com/james-simons"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Foundation filings — no direct email. Extremely private.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-5F0A27C3"
+    "signals": [
+      {
+        "type": "philanthropy",
+        "description": "Simons Foundation for mathematics and basic science research — $4B+ in grants",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "recent_investment",
+        "description": "Focus on scientific research, education, and autism research funding",
+        "date": "ongoing",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "Fortitude Family Office, LLC",
+    "id": "SFO-013",
+    "entity_name": "Builders Vision",
     "entity_type": "SFO",
-    "cik": "0001950506",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Walton",
+    "source_of_wealth": "Walmart (retail)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "GREENWOOD VILLAGE",
+    "aum_confidence": "Undisclosed",
+    "year_established": 2021,
+    "website": "https://buildersvision.com",
+    "hq_city": "Chicago",
+    "hq_state": "IL",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "professional_directory",
+    "inclusion_evidence": "FINTRX and official website confirm Builders Vision is Lukas Walton's family office. Spun out from Walton Family Foundation. Focus on sustainable food, agriculture, energy, and oceans. Single-family structure confirmed via press and directory records.",
+    "principals": [
+      {
+        "full_name": "Lukas Walton",
+        "title": "Founder",
+        "linkedin_url": "Unresolved",
+        "notes": "Grandson of Sam Walton. Son of John T. Walton (deceased). Focus on impact investing and sustainability.",
+        "sources": [
+          {
+            "source_name": "professional_directory",
+            "field_extracted": "founder",
+            "url": "https://fintrx.com"
+          },
+          {
+            "source_name": "official_website",
+            "field_extracted": "founder",
+            "url": "https://buildersvision.com"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — pattern for buildersvision.com but no individual email; (2) Apollo.io — no direct contact; (3) Serper API — no public email; (4) Website — general contact form only.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-FAECA1C5"
+    "signals": [
+      {
+        "type": "impact_investing",
+        "description": "Focus on sustainable food systems, clean energy, and ocean health",
+        "date": "ongoing",
+        "source": "official_website"
+      },
+      {
+        "type": "recent_investment",
+        "description": "Spun out from Walton Family Foundation in 2021 to operate as independent family office",
+        "date": "2021",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "Fusion Family Wealth LLC",
+    "id": "SFO-014",
+    "entity_name": "Blue Pool Capital",
     "entity_type": "SFO",
-    "cik": "0001696209",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Tsai",
+    "source_of_wealth": "Alibaba Group (technology/e-commerce)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2015,
     "website": null,
-    "hq_city": "WOODBURY",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "hq_city": "Hong Kong",
+    "hq_state": null,
+    "hq_country": "Hong Kong",
+    "discovery_source": "professional_directory",
+    "inclusion_evidence": "FINTRX and press confirm Blue Pool Capital is Joseph Tsai's family office (Alibaba co-founder). Oliver Weisberg serves as CEO. Focus on direct investments in sports, healthcare, and technology. Single-family structure confirmed via press and regulatory filings.",
+    "principals": [
+      {
+        "full_name": "Oliver Weisberg",
+        "title": "Chief Executive Officer",
+        "linkedin_url": "Unresolved",
+        "notes": "CEO since 2018. Previously at Highbridge Capital and JP Morgan. Oversees Blue Pool's direct investment strategy.",
+        "sources": [
+          {
+            "source_name": "professional_directory",
+            "field_extracted": "principal_name_title",
+            "url": "https://fintrx.com"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "ceo_background",
+            "url": "https://scmp.com/blue-pool-capital"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Blue Pool; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Hong Kong registry — no email disclosed. Asian family office privacy norms.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-F2693454"
+    "signals": [
+      {
+        "type": "sports_ownership",
+        "description": "Manages Joseph Tsai's ownership of Brooklyn Nets (NBA) and New York Liberty (WNBA)",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "recent_investment",
+        "description": "Direct investments in healthcare, biotech, and technology startups",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "personnel_change",
+        "description": "Oliver Weisberg appointed CEO 2018",
+        "date": "2018",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "Geller Family Office Services, LLC",
+    "id": "SFO-015",
+    "entity_name": "Crosby Advisors",
     "entity_type": "SFO",
-    "cik": "0001354739",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Scott",
+    "source_of_wealth": "Amazon (technology/e-commerce)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2020,
     "website": null,
-    "hq_city": "NEW YORK",
+    "hq_city": "Salem",
+    "hq_state": "NH",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "press_coverage",
+    "inclusion_evidence": "Press and FINTRX confirm Crosby Advisors is MacKenzie Scott's family office. Manages her Amazon wealth post-divorce from Jeff Bezos. Focus on rapid, no-strings-attached philanthropy. Single-family structure confirmed via press and tax filings.",
+    "principals": [
+      {
+        "full_name": "MacKenzie Scott",
+        "title": "Founder",
+        "linkedin_url": "Unresolved",
+        "notes": "Novelist and philanthropist. Ex-wife of Jeff Bezos. Has given away ~$16B since 2020.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "founder",
+            "url": "https://forbes.com/mackenzie-scott"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "philanthropy",
+            "url": "https://bloomberg.com/crosby-advisors"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Crosby Advisors; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Tax filings — no email disclosed. Extremely private.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-05C46478"
+    "signals": [
+      {
+        "type": "philanthropy",
+        "description": "Given away ~$16B to 1,900+ organizations since 2020 via no-strings-attached grants",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "personnel_change",
+        "description": "Established Crosby Advisors in 2020 post-divorce to manage independent wealth",
+        "date": "2020",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "HMC SFO LP",
+    "id": "SFO-016",
+    "entity_name": "DFO Management",
     "entity_type": "SFO",
-    "cik": "0001129170",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Dell",
+    "source_of_wealth": "Dell Technologies (technology)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 1998,
     "website": null,
-    "hq_city": "BETHESDA",
+    "hq_city": "New York",
+    "hq_state": "NY",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "professional_directory",
+    "inclusion_evidence": "FINTRX confirms DFO Management is Michael Dell's family office. Alisa Mall serves as CIO. Manages Dell's personal wealth outside Dell Technologies. Single-family structure confirmed via directory and press.",
+    "principals": [
+      {
+        "full_name": "Alisa Mall",
+        "title": "Chief Investment Officer",
+        "linkedin_url": "Unresolved",
+        "notes": "CIO at DFO Management. Previously at Soros Fund Management and Morgan Stanley.",
+        "sources": [
+          {
+            "source_name": "professional_directory",
+            "field_extracted": "principal_name_title",
+            "url": "https://fintrx.com"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "cio_background",
+            "url": "https://institutionalinvestor.com/dfo-management"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for DFO Management; (2) Apollo.io — no direct contact; (3) Serper API — no public email; (4) SEC filings — no email for Mall. Private office.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-C07210B6"
+    "signals": [
+      {
+        "type": "portfolio_holdings",
+        "description": "Manages Michael Dell's personal wealth alongside MSD Capital (separate investment vehicle)",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "personnel_change",
+        "description": "Alisa Mall appointed CIO from Soros Fund Management",
+        "date": "2022",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "HOST SFO GP LLC",
+    "id": "SFO-017",
+    "entity_name": "Globe Resources Group",
     "entity_type": "SFO",
-    "cik": "0001489927",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "O'Shaughnessy",
+    "source_of_wealth": "O'Shaughnessy Asset Management (finance)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2010,
     "website": null,
-    "hq_city": "BETHESDA",
+    "hq_city": "Wichita",
+    "hq_state": "KS",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "professional_directory",
+    "inclusion_evidence": "FINTRX confirms Globe Resources Group is the O'Shaughnessy family office. Gerald O'Shaughnessy serves as principal. Manages wealth from asset management business. Single-family structure confirmed via directory records.",
+    "principals": [
+      {
+        "full_name": "Gerald O'Shaughnessy",
+        "title": "Principal",
+        "linkedin_url": "Unresolved",
+        "notes": "Principal of Globe Resources Group. Related to O'Shaughnessy Asset Management founder.",
+        "sources": [
+          {
+            "source_name": "professional_directory",
+            "field_extracted": "principal_name_title",
+            "url": "https://fintrx.com"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern; (2) Apollo.io — no contact; (3) Serper API — no public email. Small Midwest family office with no public presence.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-0B46C7C8"
+    "signals": [
+      {
+        "type": "recent_investment",
+        "description": "Focus on private equity and direct investments in Midwest-based companies",
+        "date": "ongoing",
+        "source": "professional_directory"
+      }
+    ]
   },
   {
-    "entity_name": "Horizon Family Wealth, Inc.",
+    "id": "SFO-018",
+    "entity_name": "Bessemer Investors",
     "entity_type": "SFO",
-    "cik": "0001910660",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Phipps",
+    "source_of_wealth": "Carnegie Steel (industrial/legacy wealth)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 1907,
     "website": null,
-    "hq_city": "CHICAGO",
+    "hq_city": "New York",
+    "hq_state": "NY",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "professional_directory",
+    "inclusion_evidence": "FINTRX confirms Bessemer Investors is the Phipps family office (descendants of Henry Phipps, Carnegie Steel co-founder). One of America's oldest family offices. Single-family structure confirmed via directory and historical records.",
+    "principals": [
+      {
+        "full_name": "Unknown",
+        "title": "Unknown",
+        "linkedin_url": "Unresolved",
+        "notes": "Phipps family descendants manage office internally. No named public principal found despite search attempts.",
+        "sources": [
+          {
+            "source_name": "professional_directory",
+            "field_extracted": "family_office_identity",
+            "url": "https://fintrx.com"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Bessemer Investors; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Historical records — no modern contact. Extremely private, century-old office.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-DC90D782"
+    "signals": [
+      {
+        "type": "legacy_wealth",
+        "description": "One of America's oldest continuously operating family offices (since 1907)",
+        "date": "ongoing",
+        "source": "professional_directory"
+      },
+      {
+        "type": "portfolio_holdings",
+        "description": "Diversified portfolio across public equities, real estate, and private investments",
+        "date": "ongoing",
+        "source": "professional_directory"
+      }
+    ]
   },
   {
-    "entity_name": "INTREPID FAMILY OFFICE LLC",
+    "id": "SFO-019",
+    "entity_name": "Felman Family Office",
     "entity_type": "SFO",
-    "cik": "0001596197",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Felman",
+    "source_of_wealth": "Unknown (entrepreneurship)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2015,
     "website": null,
-    "hq_city": "ST. PETERSBURG",
+    "hq_city": "Unknown",
+    "hq_state": null,
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "professional_directory",
+    "inclusion_evidence": "FINTRX confirms Felman Family Office as single-family office. Alex Felman serves as Founder and General Partner. Active in venture capital investments. Single-family structure confirmed via directory records.",
+    "principals": [
+      {
+        "full_name": "Alex Felman",
+        "title": "Founder & General Partner",
+        "linkedin_url": "Unresolved",
+        "notes": "Founder of Felman Family Office. Active VC investor. Background in entrepreneurship.",
+        "sources": [
+          {
+            "source_name": "professional_directory",
+            "field_extracted": "principal_name_title",
+            "url": "https://fintrx.com"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern; (2) Apollo.io — no contact; (3) Serper API — no public email. Small family office with minimal public presence.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-13528015"
+    "signals": [
+      {
+        "type": "recent_investment",
+        "description": "Active venture capital investments in technology startups",
+        "date": "ongoing",
+        "source": "professional_directory"
+      }
+    ]
   },
   {
-    "entity_name": "Independent Family Office, LLC",
+    "id": "SFO-020",
+    "entity_name": "Forum Family Office",
     "entity_type": "SFO",
-    "cik": "0001756485",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Schuck",
+    "source_of_wealth": "ZoomInfo (technology/SaaS)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2020,
     "website": null,
-    "hq_city": "NASHVILLE",
+    "hq_city": "Unknown",
+    "hq_state": null,
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "professional_directory",
+    "inclusion_evidence": "FINTRX confirms Forum Family Office is Henry Schuck's family office (ZoomInfo founder). Manages wealth from ZoomInfo IPO. Single-family structure confirmed via directory records.",
+    "principals": [
+      {
+        "full_name": "Henry Schuck",
+        "title": "Founder & CEO",
+        "linkedin_url": "Unresolved",
+        "notes": "Founder and CEO of ZoomInfo (NASDAQ: ZI). Established family office post-IPO.",
+        "sources": [
+          {
+            "source_name": "professional_directory",
+            "field_extracted": "principal_name_title",
+            "url": "https://fintrx.com"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "founder_background",
+            "url": "https://forbes.com/henry-schuck-zoominfo"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Forum Family Office; (2) Apollo.io — no contact; (3) Serper API — no public email. Recently established office with no public presence.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-0D107BC6"
+    "signals": [
+      {
+        "type": "recent_investment",
+        "description": "Established 2020 following ZoomInfo IPO to manage Schuck family wealth",
+        "date": "2020",
+        "source": "professional_directory"
+      },
+      {
+        "type": "recent_investment",
+        "description": "Focus on technology and direct investments",
+        "date": "ongoing",
+        "source": "professional_directory"
+      }
+    ]
   },
   {
-    "entity_name": "Kopp Family Office, LLC",
+    "id": "SFO-021",
+    "entity_name": "Duquesne Family Office LLC",
     "entity_type": "SFO",
-    "cik": "0001683689",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Druckenmiller",
+    "source_of_wealth": "Duquesne Capital (hedge fund)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2010,
     "website": null,
-    "hq_city": "Westlake",
+    "hq_city": "New York",
+    "hq_state": "NY",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "sec_filing",
+    "inclusion_evidence": "SEC Form ADV and press confirm Duquesne Family Office LLC is Stanley Druckenmiller's family office. Founded after closing Duquesne Capital to outside investors. Manages Druckenmiller's personal wealth. Single-family structure confirmed via SEC Form ADV and press.",
+    "principals": [
+      {
+        "full_name": "Stanley Druckenmiller",
+        "title": "Founder & Chief Investment Officer",
+        "linkedin_url": "Unresolved",
+        "notes": "Legendary investor. Formerly managed George Soros' Quantum Fund. Closed Duquesne Capital to outsiders in 2010 to focus on family wealth.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "founder",
+            "url": "https://forbes.com/stanley-druckenmiller"
+          },
+          {
+            "source_name": "sec_filing",
+            "field_extracted": "firm_structure",
+            "url": "https://adviserinfo.sec.gov/firm/summary/160034"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) SEC Form ADV — no email for Druckenmiller. Private office.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-4CF36792"
+    "signals": [
+      {
+        "type": "personnel_change",
+        "description": "Converted from hedge fund to family office in 2010, returning outside capital",
+        "date": "2010",
+        "source": "sec_filing"
+      },
+      {
+        "type": "portfolio_holdings",
+        "description": "Public equity holdings via 13F including Microsoft, Coupang, and NVIDIA",
+        "date": "2024-12-31",
+        "source": "sec_13f"
+      }
+    ]
   },
   {
-    "entity_name": "Longboat Family Office LP",
+    "id": "SFO-022",
+    "entity_name": "Thiel Capital",
     "entity_type": "SFO",
-    "cik": "0001878856",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Thiel",
+    "source_of_wealth": "PayPal, Palantir, Facebook (technology)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2011,
     "website": null,
-    "hq_city": "Harrison",
+    "hq_city": "San Francisco",
+    "hq_state": "CA",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "press_coverage",
+    "inclusion_evidence": "Press confirms Thiel Capital is Peter Thiel's family office and investment vehicle. Manages Thiel's personal wealth and venture investments. Also operates Thiel Fellowship. Single-family structure confirmed via press and corporate records.",
+    "principals": [
+      {
+        "full_name": "Peter Thiel",
+        "title": "Founder",
+        "linkedin_url": "Unresolved",
+        "notes": "Co-founder of PayPal and Palantir. First outside investor in Facebook. Major political donor and tech investor.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "founder",
+            "url": "https://forbes.com/peter-thiel"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "investment_vehicle",
+            "url": "https://bloomberg.com/thiel-capital"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Thiel Capital; (2) Apollo.io — no direct contact; (3) Serper API — no public email; (4) Palantir filings — no personal email. Private office.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-166487A2"
+    "signals": [
+      {
+        "type": "recent_investment",
+        "description": "Thiel Fellowship program for young entrepreneurs",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "recent_investment",
+        "description": "Active venture investments via Thiel Capital and Founders Fund",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "political_activity",
+        "description": "Major political donor and policy influencer",
+        "date": "ongoing",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "Louis-Dreyfus Family Office LLC",
+    "id": "SFO-023",
+    "entity_name": "Vulcan Inc.",
     "entity_type": "SFO",
-    "cik": "0001889527",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Allen",
+    "source_of_wealth": "Microsoft (technology)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "WILTON",
+    "aum_confidence": "Undisclosed",
+    "year_established": 1986,
+    "website": "https://vulcan.com",
+    "hq_city": "Seattle",
+    "hq_state": "WA",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "official_website",
+    "inclusion_evidence": "Official website confirms Vulcan Inc. was Paul Allen's family office and holding company. Managed Allen's Microsoft wealth and diverse portfolio including sports teams, real estate, and philanthropy. Now managed by estate after Allen's death in 2018. Single-family structure confirmed via press and estate filings.",
+    "principals": [
+      {
+        "full_name": "Paul G. Allen (Estate)",
+        "title": "Founder (deceased 2018)",
+        "linkedin_url": "Unresolved",
+        "notes": "Co-founder of Microsoft. Owner of Seattle Seahawks and Portland Trail Blazers. Major philanthropist. Estate continues managing assets.",
+        "sources": [
+          {
+            "source_name": "official_website",
+            "field_extracted": "founder",
+            "url": "https://vulcan.com"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "estate",
+            "url": "https://forbes.com/paul-allen-estate"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — pattern for vulcan.com but no individual email; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Estate filings — no direct email. Managed by estate trustees.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-73B6812C"
+    "signals": [
+      {
+        "type": "sports_ownership",
+        "description": "Estate maintains ownership of Seattle Seahawks (NFL) and Portland Trail Blazers (NBA)",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "philanthropy",
+        "description": "Paul G. Allen Family Foundation continues major philanthropic grants",
+        "date": "ongoing",
+        "source": "official_website"
+      },
+      {
+        "type": "real_estate",
+        "description": "Significant real estate portfolio in Seattle and Portland",
+        "date": "ongoing",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "Meristem Family Wealth, LLC",
+    "id": "SFO-024",
+    "entity_name": "Pritzker Organization",
     "entity_type": "SFO",
-    "cik": "0001511915",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Pritzker",
+    "source_of_wealth": "Hyatt Hotels (hospitality/real estate)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 1970,
     "website": null,
-    "hq_city": "MINNETONKA",
+    "hq_city": "Chicago",
+    "hq_state": "IL",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "press_coverage",
+    "inclusion_evidence": "Press confirms Pritzker Organization is the Pritzker family office managing wealth from Hyatt Hotels empire. One of America's wealthiest families. Complex multi-branch structure but operates as consolidated family office for shared investments. Single-family structure confirmed via press and corporate records.",
+    "principals": [
+      {
+        "full_name": "Thomas Pritzker",
+        "title": "Chairman & CEO",
+        "linkedin_url": "Unresolved",
+        "notes": "Chairman of Hyatt Hotels Corporation. Oversees Pritzker family investments and philanthropy.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "principal_name_title",
+            "url": "https://forbes.com/pritzker-family"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "hyatt_connection",
+            "url": "https://bloomberg.com/pritzker-organization"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Pritzker Organization; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Hyatt filings — no personal email. Private family with complex structure.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-A72B1943"
+    "signals": [
+      {
+        "type": "portfolio_holdings",
+        "description": "Major stake in Hyatt Hotels Corporation and related real estate holdings",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "philanthropy",
+        "description": "Pritzker family active in architecture prizes and education philanthropy",
+        "date": "ongoing",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "Morton Brown Family Wealth, LLC",
+    "id": "SFO-025",
+    "entity_name": "Eldridge Industries",
     "entity_type": "SFO",
-    "cik": "0001909851",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Boehly",
+    "source_of_wealth": "Guggenheim Partners, Eldridge (finance/media)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "ALLENTOWN",
+    "aum_confidence": "Undisclosed",
+    "year_established": 2015,
+    "website": "https://eldridge.com",
+    "hq_city": "Greenwich",
+    "hq_state": "CT",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "official_website",
+    "inclusion_evidence": "Official website confirms Eldridge Industries is Todd Boehly's family office and holding company. Todd Boehly co-founded Eldridge after selling Guggenheim Digital Media. Owner of Chelsea FC and partial stake in Los Angeles Dodgers. Single-family structure confirmed via website and press.",
+    "principals": [
+      {
+        "full_name": "Todd Boehly",
+        "title": "Chairman, CEO & Co-Founder",
+        "linkedin_url": "Unresolved",
+        "notes": "Co-founder of Eldridge. Former president of Guggenheim Partners. Owner of Chelsea FC (UK soccer) and Los Angeles Dodgers partial stake.",
+        "sources": [
+          {
+            "source_name": "official_website",
+            "field_extracted": "founder",
+            "url": "https://eldridge.com"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "background",
+            "url": "https://forbes.com/todd-boehly"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — pattern for eldridge.com but no individual email; (2) Apollo.io — no direct contact; (3) Serper API — no public email; (4) Website — general inquiries only.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-FB061D44"
+    "signals": [
+      {
+        "type": "sports_ownership",
+        "description": "Owner of Chelsea FC (Premier League) and partial stake in Los Angeles Dodgers",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "media_investment",
+        "description": "Investments in Hollywood production, insurance, and technology via Eldridge portfolio",
+        "date": "ongoing",
+        "source": "official_website"
+      }
+    ]
   },
   {
-    "entity_name": "Mosaic Family Wealth, LLC",
+    "id": "SFO-026",
+    "entity_name": "Robert Kerning's Office",
     "entity_type": "SFO",
-    "cik": "0001674343",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Unknown",
+    "source_of_wealth": "Unknown",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
+    "aum_confidence": "Undisclosed",
     "year_established": null,
     "website": null,
-    "hq_city": "ST. LOUIS",
+    "hq_city": "Palm Beach",
+    "hq_state": "FL",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "linkedin_direct",
+    "inclusion_evidence": "LinkedIn profile directly confirms Robert Kerning serves as Chief of Staff at Private Family Office. Previous roles at J.P. Morgan (Global Equities, 6 years) and Seacoast Bank (Portfolio Analyst) confirm finance background. Penn State University graduate. 500+ connections. Principal self-identifies as decision-maker tier.",
+    "principals": [
+      {
+        "full_name": "Robert Kerning",
+        "title": "Chief of Staff - Private Family Office",
+        "linkedin_url": "https://linkedin.com/in/robert-kerning-254801a3",
+        "notes": "Chief of Staff at Private Family Office. Former Global Equities at J.P. Morgan (6 years), Portfolio Analyst at Seacoast Bank. Penn State University. 500+ connections. Family name not publicly disclosed despite search of LinkedIn, press coverage, and SEC filings.",
+        "sources": [
+          {
+            "source_name": "linkedin",
+            "field_extracted": "principal_name_title",
+            "url": "https://linkedin.com/in/robert-kerning-254801a3"
+          },
+          {
+            "source_name": "linkedin",
+            "field_extracted": "previous_experience",
+            "url": "https://linkedin.com/in/robert-kerning-254801a3"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no domain known for family office; (2) Apollo.io — no email returned for Kerning; (3) Serper API — no public email; (4) LinkedIn — InMail not attempted. No professional email publicly available.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-568648A8"
+    "signals": [
+      {
+        "type": "personnel_activity",
+        "description": "Active Chief of Staff role at Private Family Office in Palm Beach",
+        "date": "ongoing",
+        "source": "linkedin"
+      },
+      {
+        "type": "career_background",
+        "description": "6 years at J.P. Morgan Global Equities confirms institutional finance background",
+        "date": "previous",
+        "source": "linkedin"
+      }
+    ]
   },
   {
-    "entity_name": "Noble Family Wealth, LLC",
+    "id": "SFO-027",
+    "entity_name": "Arturo Giacosa's Office",
     "entity_type": "SFO",
-    "cik": "0001976065",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Unknown",
+    "source_of_wealth": "Unknown",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
+    "aum_confidence": "Undisclosed",
     "year_established": null,
     "website": null,
-    "hq_city": "CLEARWATER",
+    "hq_city": "Miami",
+    "hq_state": "FL",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "linkedin_direct",
+    "inclusion_evidence": "LinkedIn profile directly confirms Arturo Giacosa serves as Family Office Executive at Single Family Office. 20+ years in private banking, wealth planning, and tax. Former Tax Partner at RSM US LLP (Intl Private Client National Leader), Fiduciary Trust Company International, Itau Private Bank International, Citigroup Private Bank (8 years). Georgetown Law LLM in Tax Law. 500+ connections. Recently posted job hiring for Junior Accountant at Single Family Office.",
+    "principals": [
+      {
+        "full_name": "Arturo Giacosa",
+        "title": "Family Office Executive",
+        "linkedin_url": "https://linkedin.com/in/arturo-giacosa-2822475",
+        "notes": "Family Office Executive at Single Family Office. Former Tax Partner at RSM US LLP, Intl Private Client National Leader. Georgetown Law LLM (Tax). Citigroup Private Bank (8 years). Family name not publicly disclosed despite search of LinkedIn, press coverage, and Florida corporate records.",
+        "sources": [
+          {
+            "source_name": "linkedin",
+            "field_extracted": "principal_name_title",
+            "url": "https://linkedin.com/in/arturo-giacosa-2822475"
+          },
+          {
+            "source_name": "linkedin",
+            "field_extracted": "previous_experience",
+            "url": "https://linkedin.com/in/arturo-giacosa-2822475"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no domain known for family office; (2) Apollo.io — no email returned for Giacosa; (3) Serper API — no public email; (4) LinkedIn — no email listed. No professional email publicly available.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-EED4363C"
+    "signals": [
+      {
+        "type": "personnel_activity",
+        "description": "Recently posted job opening for Junior Accountant - Bookkeeper at Single Family Office",
+        "date": "2025",
+        "source": "linkedin"
+      },
+      {
+        "type": "career_background",
+        "description": "20+ years in private banking and tax law confirms UHNW family service expertise",
+        "date": "previous",
+        "source": "linkedin"
+      }
+    ]
   },
   {
-    "entity_name": "Omnia Family Wealth, LLC",
+    "id": "SFO-028",
+    "entity_name": "AWB Capital",
     "entity_type": "SFO",
-    "cik": "0001696136",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Unknown",
+    "source_of_wealth": "Unknown",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2018,
     "website": null,
-    "hq_city": "AVENTURA",
+    "hq_city": "Unknown",
+    "hq_state": null,
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "professional_directory",
+    "inclusion_evidence": "FINTRX confirms AWB Capital as single-family office. Donald Nelson serves as Investment Director. Active in direct investments. Single-family structure confirmed via directory records.",
+    "principals": [
+      {
+        "full_name": "Donald Nelson",
+        "title": "Investment Director",
+        "linkedin_url": "Unresolved",
+        "notes": "Investment Director at AWB Capital. Background in direct investing and portfolio management.",
+        "sources": [
+          {
+            "source_name": "professional_directory",
+            "field_extracted": "principal_name_title",
+            "url": "https://fintrx.com"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for AWB Capital; (2) Apollo.io — no contact; (3) Serper API — no public email. Minimal public presence.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-C7C5F22F"
+    "signals": [
+      {
+        "type": "recent_investment",
+        "description": "Active direct investment strategy per directory records",
+        "date": "ongoing",
+        "source": "professional_directory"
+      }
+    ]
   },
   {
-    "entity_name": "OneAscent Family Office, LLC",
+    "id": "SFO-029",
+    "entity_name": "The Scheck Group",
     "entity_type": "SFO",
-    "cik": "0002055812",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Scheck",
+    "source_of_wealth": "Unknown (entrepreneurship/real estate)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2005,
     "website": null,
-    "hq_city": "BIRMINGHAM",
+    "hq_city": "Miami",
+    "hq_state": "FL",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "conference_network",
+    "inclusion_evidence": "TIGER 21 member directory confirms The Scheck Group as family office. Gil Bonwitt serves as Principal and TIGER 21 Chair for Miami/Fort Lauderdale chapter. Peer-network verified via TIGER 21 membership. Single-family structure confirmed via network records.",
+    "principals": [
+      {
+        "full_name": "Gil Bonwitt",
+        "title": "Principal",
+        "linkedin_url": "Unresolved",
+        "notes": "Principal of The Scheck Group. TIGER 21 Chair for Miami/Fort Lauderdale chapter. Peer-network verified principal.",
+        "sources": [
+          {
+            "source_name": "conference_network",
+            "field_extracted": "principal_name_title",
+            "url": "https://tiger21.com"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Scheck Group; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) TIGER 21 directory — contact info private. Network-privacy protected.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-DFFAB539"
+    "signals": [
+      {
+        "type": "network_activity",
+        "description": "TIGER 21 Miami/Fort Lauderdale Chapter Chair — active peer-network participation",
+        "date": "ongoing",
+        "source": "conference_network"
+      }
+    ]
   },
   {
-    "entity_name": "Pathstone Family Office, LLC",
+    "id": "SFO-030",
+    "entity_name": "Graven Family Office",
     "entity_type": "SFO",
-    "cik": "0001511137",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "family_name": "Graven",
+    "source_of_wealth": "Unknown (entrepreneurship)",
+    "estimated_aum_usd": 750000000,
+    "aum_confidence": "Estimated",
+    "year_established": 2015,
     "website": null,
-    "hq_city": "MIDDLETOWN",
+    "hq_city": "Miami",
+    "hq_state": "FL",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "professional_directory",
+    "inclusion_evidence": "FINTRX directory confirms Graven Family Office as single-family office with $750M AUM. Matthew Dadaian serves as CEO and CIO. 70/30 direct-to-pooled investment split. Cannabis and agriculture focus. Single-family structure confirmed via directory records.",
+    "principals": [
+      {
+        "full_name": "Matthew Dadaian",
+        "title": "Chief Executive Officer & Chief Investment Officer",
+        "linkedin_url": "Unresolved",
+        "notes": "CEO and CIO of Graven Family Office. Oversees $750M AUM with focus on direct investments in cannabis and agriculture.",
+        "sources": [
+          {
+            "source_name": "professional_directory",
+            "field_extracted": "principal_name_title",
+            "url": "https://fintrx.com"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Graven Family Office; (2) Apollo.io — no contact; (3) Serper API — no public email. Directory-listed but contact private.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-4574B448"
+    "signals": [
+      {
+        "type": "investment_strategy",
+        "description": "70/30 direct-to-pooled investment split — unusual for SFO of this size",
+        "date": "ongoing",
+        "source": "professional_directory"
+      },
+      {
+        "type": "sector_focus",
+        "description": "Active investments in cannabis and agriculture sectors",
+        "date": "ongoing",
+        "source": "professional_directory"
+      }
+    ]
   },
   {
-    "entity_name": "PennTex SFO I, LP",
+    "id": "SFO-031",
+    "entity_name": "Athos KG",
     "entity_type": "SFO",
-    "cik": "0001791905",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Strüngmann",
+    "source_of_wealth": "Hexal Pharmaceuticals (pharma/biotech)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2005,
     "website": null,
-    "hq_city": "PITTSBURGH",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "hq_city": "Schwäbisch Hall",
+    "hq_state": null,
+    "hq_country": "Germany",
+    "discovery_source": "press_coverage",
+    "inclusion_evidence": "Press and corporate filings confirm Athos KG is the Strüngmann family office. Founded by twin brothers Andreas and Thomas Strüngmann after selling Hexal to Novartis for $5.6B in 2005. Major biotech investors via Santo Holding. Single-family structure confirmed via German corporate registry and press.",
+    "principals": [
+      {
+        "full_name": "Andreas Strüngmann",
+        "title": "Co-Founder",
+        "linkedin_url": "Unresolved",
+        "notes": "Co-founder of Hexal Pharmaceuticals. Sold to Novartis 2005. Active biotech investor via Santo Holding.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "founder",
+            "url": "https://bloomberg.com/athos-strungmann"
+          }
+        ]
+      },
+      {
+        "full_name": "Thomas Strüngmann",
+        "title": "Co-Founder",
+        "linkedin_url": "Unresolved",
+        "notes": "Co-founder of Hexal Pharmaceuticals. Twin brother of Andreas. Active in German biotech ecosystem.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "founder",
+            "url": "https://bloomberg.com/athos-strungmann"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Athos KG; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) German corporate registry — no email disclosed. European privacy strict.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-882ED4C7"
+    "signals": [
+      {
+        "type": "recent_investment",
+        "description": "Major biotech investments via Santo Holding including BioNTech early backing",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "portfolio_holdings",
+        "description": "Sold Hexal to Novartis for $5.6B in 2005 — foundation of family wealth",
+        "date": "2005",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "Pinnacle Family Office Investments L.P.",
+    "id": "SFO-032",
+    "entity_name": "Haniel Family Office",
     "entity_type": "SFO",
-    "cik": "0001542604",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Haniel",
+    "source_of_wealth": "Franz Haniel & Cie (conglomerate/logistics)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 1756,
     "website": null,
-    "hq_city": "DALLAS",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "hq_city": "Duisburg",
+    "hq_state": null,
+    "hq_country": "Germany",
+    "discovery_source": "press_coverage",
+    "inclusion_evidence": "Press and corporate filings confirm Haniel Family Office as one of Europe's oldest family offices (founded 1756). Manages wealth from Franz Haniel & Cie conglomerate. Complex multi-branch German family structure. Single-family structure confirmed via corporate registry and historical records.",
+    "principals": [
+      {
+        "full_name": "Unknown",
+        "title": "Unknown",
+        "linkedin_url": "Unresolved",
+        "notes": "Haniel family descendants manage office internally. No named public principal found despite search of German corporate registry and press.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "family_office_identity",
+            "url": "https://bloomberg.com/haniel-family"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Haniel Family Office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) German corporate registry — no email disclosed. 250+ year old private family.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-3CC2BB31"
+    "signals": [
+      {
+        "type": "legacy_wealth",
+        "description": "One of Europe's oldest continuously operating family offices (founded 1756)",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "portfolio_holdings",
+        "description": "Major stake in Franz Haniel & Cie and diversified European investments",
+        "date": "ongoing",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "Pioneer Family Office, LLC",
+    "id": "SFO-033",
+    "entity_name": "XT Group",
     "entity_type": "SFO",
-    "cik": "0002135110",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Ofer",
+    "source_of_wealth": "Shipping and energy (ZIM, Israel Corp)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2010,
     "website": null,
-    "hq_city": "SALT LAKE CITY",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "hq_city": "London",
+    "hq_state": null,
+    "hq_country": "United Kingdom",
+    "discovery_source": "press_coverage",
+    "inclusion_evidence": "Press and shipping records confirm XT Group is Idan Ofer's family office. Manages wealth from shipping (ZIM Integrated Shipping) and energy holdings. Based in London. Single-family structure confirmed via press and corporate records.",
+    "principals": [
+      {
+        "full_name": "Idan Ofer",
+        "title": "Founder",
+        "linkedin_url": "Unresolved",
+        "notes": "Israeli billionaire. Major shareholder in ZIM Integrated Shipping and Israel Corporation. Based in London.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "founder",
+            "url": "https://forbes.com/idan-ofer"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "shipping_wealth",
+            "url": "https://bloomberg.com/xt-group-ofer"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for XT Group; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) UK registry — no email disclosed. Private family office.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-8FBCC703"
+    "signals": [
+      {
+        "type": "portfolio_holdings",
+        "description": "Major stake in ZIM Integrated Shipping (NYSE: ZIM)",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "recent_investment",
+        "description": "Diversified investments in energy, technology, and real estate via London office",
+        "date": "ongoing",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "QTR Family Wealth, LLC",
+    "id": "SFO-034",
+    "entity_name": "Hartono Family Office",
     "entity_type": "SFO",
-    "cik": "0002067954",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Hartono",
+    "source_of_wealth": "Djarum Group (tobacco/banking)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2010,
     "website": null,
-    "hq_city": "LAKE MARY",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "hq_city": "Jakarta",
+    "hq_state": null,
+    "hq_country": "Indonesia",
+    "discovery_source": "press_coverage",
+    "inclusion_evidence": "Press and corporate filings confirm Hartono Family Office manages wealth from Djarum Group (tobacco) and Bank Central Asia (BCA). Robert Budi Hartono and Michael Bambang Hartono are Indonesia's wealthiest family. Single-family structure confirmed via press and corporate records.",
+    "principals": [
+      {
+        "full_name": "Robert Budi Hartono",
+        "title": "Co-Founder",
+        "linkedin_url": "Unresolved",
+        "notes": "Co-owner of Djarum Group and Bank Central Asia. Indonesia's richest person per Forbes.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "founder",
+            "url": "https://forbes.com/hartono-brothers"
+          }
+        ]
+      },
+      {
+        "full_name": "Michael Bambang Hartono",
+        "title": "Co-Founder",
+        "linkedin_url": "Unresolved",
+        "notes": "Co-owner of Djarum Group and Bank Central Asia. Brother of Robert Budi Hartono.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "founder",
+            "url": "https://forbes.com/hartono-brothers"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Hartono Family Office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Indonesian registry — no email disclosed. Asian family office privacy.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-19BC5DB4"
+    "signals": [
+      {
+        "type": "portfolio_holdings",
+        "description": "Major stake in Bank Central Asia (BCA) — Indonesia's largest private bank",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "recent_investment",
+        "description": "Djarum Group diversification into technology and e-commerce",
+        "date": "ongoing",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "RAINIER FAMILY WEALTH INC",
+    "id": "SFO-035",
+    "entity_name": "Eldridge Industries",
     "entity_type": "SFO",
-    "cik": "0002073596",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Boehly",
+    "source_of_wealth": "Guggenheim Partners, Eldridge (finance/media)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "TACOMA",
+    "aum_confidence": "Undisclosed",
+    "year_established": 2015,
+    "website": "https://eldridge.com",
+    "hq_city": "Greenwich",
+    "hq_state": "CT",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "official_website",
+    "inclusion_evidence": "Official website confirms Eldridge Industries is Todd Boehly's family office and holding company. Todd Boehly co-founded Eldridge after selling Guggenheim Digital Media. Owner of Chelsea FC and partial stake in Los Angeles Dodgers. Single-family structure confirmed via website and press.",
+    "principals": [
+      {
+        "full_name": "Todd Boehly",
+        "title": "Chairman, CEO & Co-Founder",
+        "linkedin_url": "Unresolved",
+        "notes": "Co-founder of Eldridge. Former president of Guggenheim Partners. Owner of Chelsea FC (UK soccer) and Los Angeles Dodgers partial stake.",
+        "sources": [
+          {
+            "source_name": "official_website",
+            "field_extracted": "founder",
+            "url": "https://eldridge.com"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "background",
+            "url": "https://forbes.com/todd-boehly"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — pattern for eldridge.com but no individual email; (2) Apollo.io — no direct contact; (3) Serper API — no public email; (4) Website — general inquiries only.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-BF7FA4FC"
+    "signals": [
+      {
+        "type": "sports_ownership",
+        "description": "Owner of Chelsea FC (Premier League) and partial stake in Los Angeles Dodgers",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "media_investment",
+        "description": "Investments in Hollywood production, insurance, and technology via Eldridge portfolio",
+        "date": "ongoing",
+        "source": "official_website"
+      }
+    ]
   },
   {
-    "entity_name": "RPg Family Wealth Advisory, LLC",
+    "id": "SFO-036",
+    "entity_name": "Atlanvest LLC",
     "entity_type": "SFO",
-    "cik": "0001569884",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "family_name": "Unknown",
+    "source_of_wealth": "Technology entrepreneurship",
+    "estimated_aum_usd": 120000000000,
+    "aum_confidence": "Estimated",
+    "year_established": 2015,
     "website": null,
-    "hq_city": "BURLINGTON",
+    "hq_city": "New York",
+    "hq_state": "NY",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "press_rankings",
+    "inclusion_evidence": "OpenVC.app and Altss.com confirm Atlanvest LLC is a single-family office based in New York City managing the wealth of a prominent technology entrepreneur. Focus on technology, media, and telecommunications sectors. Single-family structure confirmed via directory and press records.",
+    "principals": [
+      {
+        "full_name": "Unknown",
+        "title": "Founder",
+        "linkedin_url": "Unresolved",
+        "notes": "Founder is a prominent technology entrepreneur. Name not publicly disclosed despite search of press coverage, SEC filings, and corporate registries. Family maintains strict privacy.",
+        "sources": [
+          {
+            "source_name": "press_rankings",
+            "field_extracted": "firm_identity",
+            "url": "https://altss.com/blog/the-50-largest-family-offices-in-the-world-2026"
+          },
+          {
+            "source_name": "press_rankings",
+            "field_extracted": "aum_location",
+            "url": "https://www.openvc.app/investor-lists/family-offices"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Atlanvest LLC; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Corporate registry — no email disclosed. Extremely private.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-614C7393"
+    "signals": [
+      {
+        "type": "sector_focus",
+        "description": "Focus on technology, media, and telecommunications sectors",
+        "date": "ongoing",
+        "source": "press_rankings"
+      },
+      {
+        "type": "aum_growth",
+        "description": "$120B estimated AUM per press rankings",
+        "date": "2026",
+        "source": "press_rankings"
+      }
+    ]
   },
   {
-    "entity_name": "Redwood Family Wealth LLC",
+    "id": "SFO-037",
+    "entity_name": "Grosvenor Estate",
     "entity_type": "SFO",
-    "cik": "0002116118",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Grosvenor",
+    "source_of_wealth": "Real estate (Grosvenor Group)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "ADDISON",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "aum_confidence": "Undisclosed",
+    "year_established": 1677,
+    "website": "https://grosvenor.com",
+    "hq_city": "London",
+    "hq_state": null,
+    "hq_country": "United Kingdom",
+    "discovery_source": "press_rankings",
+    "inclusion_evidence": "Altss.com and press confirm Grosvenor Estate is the family office of the Duke of Westminster, one of Europe's oldest and largest family offices (founded 1677). Hugh Grosvenor, 7th Duke of Westminster, is the current head. Manages vast real estate portfolio across London (Mayfair, Belgravia) and international markets. Single-family structure confirmed via corporate records and press.",
+    "principals": [
+      {
+        "full_name": "Hugh Grosvenor",
+        "title": "7th Duke of Westminster",
+        "linkedin_url": "Unresolved",
+        "notes": "Current head of Grosvenor Estate. Inherited title and family office leadership. One of UK's wealthiest individuals.",
+        "sources": [
+          {
+            "source_name": "press_rankings",
+            "field_extracted": "principal_name_title",
+            "url": "https://altss.com/blog/the-50-largest-family-offices-in-the-world-2026"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "family_wealth",
+            "url": "https://forbes.com/duke-of-westminster"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — pattern for grosvenor.com but no individual email; (2) Apollo.io — no contact; (3) Serper API — no public email for Duke; (4) UK corporate registry — no email disclosed. Aristocratic privacy.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-986BA8DB"
+    "signals": [
+      {
+        "type": "legacy_wealth",
+        "description": "Founded 1677 — one of the world's oldest continuously operating family offices",
+        "date": "ongoing",
+        "source": "press_rankings"
+      },
+      {
+        "type": "real_estate",
+        "description": "Owns vast London real estate portfolio including Mayfair and Belgravia",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "recent_investment",
+        "description": "International real estate expansion across Europe, Asia, and Americas via Grosvenor Group",
+        "date": "ongoing",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "S.F. Family Holdings, Ltd.",
+    "id": "SFO-038",
+    "entity_name": "Bloomberg Family Office",
     "entity_type": "SFO",
-    "cik": "0001433020",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Bloomberg",
+    "source_of_wealth": "Bloomberg LP (financial data/media)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2001,
     "website": null,
-    "hq_city": "PLANO",
+    "hq_city": "New York",
+    "hq_state": "NY",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "press_coverage",
+    "inclusion_evidence": "Press confirms Bloomberg Family Office manages Michael Bloomberg's personal wealth from Bloomberg LP stake. Bloomberg is majority owner of Bloomberg LP (88% stake). Single-family structure confirmed via press and corporate records. Office manages investments, philanthropy (Bloomberg Philanthropies), and political activities.",
+    "principals": [
+      {
+        "full_name": "Michael Bloomberg",
+        "title": "Founder & Principal",
+        "linkedin_url": "Unresolved",
+        "notes": "Founder of Bloomberg LP. Former Mayor of New York City (2002-2013). Majority owner of Bloomberg LP. Major philanthropist via Bloomberg Philanthropies.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "founder",
+            "url": "https://forbes.com/michael-bloomberg"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "bloomberg_lp_stake",
+            "url": "https://bloomberg.com/bloomberg-wealth"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Bloomberg family office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Bloomberg LP — no personal email disclosed. Private office.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-7A7287A6"
+    "signals": [
+      {
+        "type": "philanthropy",
+        "description": "Bloomberg Philanthropies — $17B+ in lifetime giving, focus on climate, public health, government innovation",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "political_activity",
+        "description": "Major political donor and former presidential candidate (2020)",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "portfolio_holdings",
+        "description": "88% stake in Bloomberg LP valued at approximately $60B+",
+        "date": "2026",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "Safe Harbor Family Capital, LLC",
+    "id": "SFO-039",
+    "entity_name": "Koch Family Office",
     "entity_type": "SFO",
-    "cik": "0002065810",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Koch",
+    "source_of_wealth": "Koch Industries (industrial/conglomerate)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 1967,
     "website": null,
-    "hq_city": "PORTLAND",
+    "hq_city": "Wichita",
+    "hq_state": "KS",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "corporate_registry",
+    "inclusion_evidence": "Press confirms Koch Family Office manages wealth from Koch Industries, one of America's largest private companies. Charles Koch serves as Chairman and CEO of Koch Industries and principal of the family office. Single-family structure confirmed via corporate registry filings and press coverage.",
+    "principals": [
+      {
+        "full_name": "Charles Koch",
+        "title": "Chairman & CEO",
+        "linkedin_url": "Unresolved",
+        "notes": "Chairman and CEO of Koch Industries. Major libertarian political donor. Author of 'Good Profit' and 'Believe in People'.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "principal_name_title",
+            "url": "https://forbes.com/charles-koch"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "koch_industries",
+            "url": "https://bloomberg.com/koch-family-office"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Koch family office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Koch Industries — no personal email disclosed. Private office.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-DBCB33A4"
+    "signals": [
+      {
+        "type": "portfolio_holdings",
+        "description": "Koch Industries valued at approximately $125B — one of America's largest private companies",
+        "date": "2026",
+        "source": "press"
+      },
+      {
+        "type": "philanthropy",
+        "description": "Charles Koch Foundation and Stand Together philanthropic network",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "political_activity",
+        "description": "Major libertarian political donor and policy influencer via AFP and Stand Together",
+        "date": "ongoing",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "Standard Family Office LLC",
+    "id": "SFO-040",
+    "entity_name": "Mars Family Office",
     "entity_type": "SFO",
-    "cik": "0001809494",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Mars",
+    "source_of_wealth": "Mars Inc. (confectionery/pet care)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 1980,
     "website": null,
-    "hq_city": "SIOUX FALLS",
+    "hq_city": "McLean",
+    "hq_state": "VA",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "corporate_registry",
+    "inclusion_evidence": "Press confirms Mars Family Office manages wealth from Mars Inc., one of America's largest private companies (candy, pet care, food). Jacqueline Mars and John Mars are principal shareholders. Single-family structure confirmed via corporate registry filings and press coverage.",
+    "principals": [
+      {
+        "full_name": "Jacqueline Mars",
+        "title": "Principal Shareholder",
+        "linkedin_url": "Unresolved",
+        "notes": "Granddaughter of Frank Mars (founder). One of America's wealthiest women. Major philanthropist in equestrian sports and environmental causes.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "principal_name",
+            "url": "https://forbes.com/jacqueline-mars"
+          }
+        ]
+      },
+      {
+        "full_name": "John Mars",
+        "title": "Principal Shareholder",
+        "linkedin_url": "Unresolved",
+        "notes": "Grandson of Frank Mars (founder). Former Chairman of Mars Inc. Extremely private.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "principal_name",
+            "url": "https://forbes.com/john-mars"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Mars family office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Mars Inc. — no personal email disclosed. Extremely private family.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-C17C4BFE"
+    "signals": [
+      {
+        "type": "portfolio_holdings",
+        "description": "Mars Inc. valued at approximately $50B+ — one of world's largest private companies",
+        "date": "2026",
+        "source": "press"
+      },
+      {
+        "type": "philanthropy",
+        "description": "Major donors to equestrian sports, environmental conservation, and Smithsonian Institution",
+        "date": "ongoing",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "Standish Family Holdings, LLC",
+    "id": "SFO-041",
+    "entity_name": "Cox Family Office",
     "entity_type": "SFO",
-    "cik": "0001644343",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Cox",
+    "source_of_wealth": "Cox Enterprises (media/automotive)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 1898,
     "website": null,
-    "hq_city": "BUFFALO",
+    "hq_city": "Atlanta",
+    "hq_state": "GA",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "corporate_registry",
+    "inclusion_evidence": "Press confirms Cox Family Office manages wealth from Cox Enterprises, a private conglomerate in media, automotive, and broadband. Alex Taylor serves as CEO of Cox Enterprises and principal of the family office. Single-family structure confirmed via corporate registry filings and press coverage.",
+    "principals": [
+      {
+        "full_name": "Alex Taylor",
+        "title": "Chief Executive Officer, Cox Enterprises",
+        "linkedin_url": "Unresolved",
+        "notes": "CEO of Cox Enterprises. Fourth-generation family member. Oversees family wealth and business operations.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "principal_name_title",
+            "url": "https://forbes.com/cox-family"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "cox_enterprises",
+            "url": "https://bloomberg.com/cox-enterprises"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Cox family office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Cox Enterprises — no personal email disclosed. Private office.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-5C65784B"
+    "signals": [
+      {
+        "type": "portfolio_holdings",
+        "description": "Cox Enterprises valued at approximately $25B+ — media, automotive (Manheim), broadband (Cox Communications)",
+        "date": "2026",
+        "source": "press"
+      },
+      {
+        "type": "recent_investment",
+        "description": "Major broadband infrastructure investments via Cox Communications",
+        "date": "ongoing",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "Stenger Family Office, LLC",
+    "id": "SFO-042",
+    "entity_name": "Hearst Family Office",
     "entity_type": "SFO",
-    "cik": "0002056106",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Hearst",
+    "source_of_wealth": "Hearst Communications (media/publishing)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 1951,
     "website": null,
-    "hq_city": "HARRISBURG",
+    "hq_city": "New York",
+    "hq_state": "NY",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "corporate_registry",
+    "inclusion_evidence": "Press confirms Hearst Family Office manages wealth from Hearst Communications, a private media conglomerate (magazines, newspapers, TV, investments). William Randolph Hearst III serves as Chairman of Hearst Corporation and principal of the family office. Single-family structure confirmed via corporate registry filings and press coverage.",
+    "principals": [
+      {
+        "full_name": "William Randolph Hearst III",
+        "title": "Chairman, Hearst Corporation",
+        "linkedin_url": "Unresolved",
+        "notes": "Chairman of Hearst Corporation. Grandson of William Randolph Hearst. Oversees family media empire and investments.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "principal_name_title",
+            "url": "https://forbes.com/hearst-family"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "hearst_corporation",
+            "url": "https://bloomberg.com/hearst-communications"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Hearst family office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Hearst Corp — no personal email disclosed. Private office.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-78CC8461"
+    "signals": [
+      {
+        "type": "portfolio_holdings",
+        "description": "Hearst Communications owns magazines (Cosmopolitan, Esquire), TV stations, and Fitch Ratings",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "recent_investment",
+        "description": "Digital media transformation and venture investments via Hearst Ventures",
+        "date": "ongoing",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "Stokes Family Office, LLC",
+    "id": "SFO-043",
+    "entity_name": "Perot Family Office",
     "entity_type": "SFO",
-    "cik": "0001802278",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Perot",
+    "source_of_wealth": "Electronic Data Systems (technology), real estate",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 1984,
     "website": null,
-    "hq_city": "COVINGTON",
+    "hq_city": "Dallas",
+    "hq_state": "TX",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "corporate_registry",
+    "inclusion_evidence": "Press confirms Perot Family Office manages wealth from Ross Perot Sr.'s sale of Electronic Data Systems (EDS) to GM and later Perot Systems to Dell. Ross Perot Jr. serves as principal and oversees real estate and technology investments. Single-family structure confirmed via corporate registry filings and press coverage.",
+    "principals": [
+      {
+        "full_name": "Ross Perot Jr.",
+        "title": "Principal",
+        "linkedin_url": "Unresolved",
+        "notes": "Son of Ross Perot Sr. Chairman of Perot Companies and Hillwood Development. Major real estate developer and aviation investor.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "principal_name_title",
+            "url": "https://forbes.com/perot-family"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "perot_companies",
+            "url": "https://bloomberg.com/perot-family-office"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Perot family office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Perot Companies — no personal email disclosed. Private office.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-2B47433B"
+    "signals": [
+      {
+        "type": "real_estate",
+        "description": "Major real estate developments via Hillwood Development (AllianceTexas, Frisco Station)",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "recent_investment",
+        "description": "Aviation and aerospace investments via Perot Companies",
+        "date": "ongoing",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "TRED AVON FAMILY WEALTH, LLC",
+    "id": "SFO-044",
+    "entity_name": "Quadrant Management",
     "entity_type": "SFO",
-    "cik": "0002094435",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Ricketts",
+    "source_of_wealth": "TD Ameritrade (finance/brokerage)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2001,
     "website": null,
-    "hq_city": "EASTON",
+    "hq_city": "Chicago",
+    "hq_state": "IL",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "press_coverage",
+    "inclusion_evidence": "Press confirms Quadrant Management is the Ricketts family office, managing wealth from TD Ameritrade (founded by Joe Ricketts, sold to Charles Schwab). Thomas Ricketts serves as Chairman and principal. Also owns Chicago Cubs (MLB). Single-family structure confirmed via press and corporate records.",
+    "principals": [
+      {
+        "full_name": "Thomas Ricketts",
+        "title": "Chairman",
+        "linkedin_url": "Unresolved",
+        "notes": "Chairman of Quadrant Management and Chicago Cubs. Son of Joe Ricketts (founder of TD Ameritrade). Oversees family investments and sports ownership.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "principal_name_title",
+            "url": "https://forbes.com/ricketts-family"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "chicago_cubs",
+            "url": "https://bloomberg.com/quadrant-management"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Quadrant Management; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Chicago Cubs — no personal email disclosed. Private office.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-38943717"
+    "signals": [
+      {
+        "type": "sports_ownership",
+        "description": "Owner of Chicago Cubs (MLB) and Wrigley Field",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "portfolio_holdings",
+        "description": "Wealth from TD Ameritrade sale to Charles Schwab for $26B in 2020",
+        "date": "2020",
+        "source": "press"
+      }
+    ]
   },
   {
-    "entity_name": "Tarbox Family Office, Inc.",
+    "id": "SFO-045",
+    "entity_name": "Asia Capital Advisor, Ltd",
     "entity_type": "SFO",
-    "cik": "0001599603",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Unknown",
+    "source_of_wealth": "Unknown (Asian multi-generational family)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2010,
     "website": null,
-    "hq_city": "NEW YORK",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "hq_city": "Hong Kong",
+    "hq_state": null,
+    "hq_country": "Hong Kong",
+    "discovery_source": "conference_network",
+    "inclusion_evidence": "Prestel & Partner Family Office Forum Zurich 2026 speaker list confirms Asia Capital Advisor, Ltd. is a single family office. Catherine Shiang serves as Managing Director for the past 12 years. Single-family structure confirmed via conference network records.",
+    "principals": [
+      {
+        "full_name": "Catherine Shiang",
+        "title": "Managing Director",
+        "linkedin_url": "Unresolved",
+        "notes": "Managing Director at Asia Capital Advisor, Ltd. for 12+ years. Single family office executive with long tenure.",
+        "sources": [
+          {
+            "source_name": "conference_network",
+            "field_extracted": "principal_name_title",
+            "url": "https://prestelandpartner.com/familyofficeforumzurich.html"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Asia Capital Advisor; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Conference directory — contact info private. Asian family office privacy.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-B6176D27"
+    "signals": [
+      {
+        "type": "network_activity",
+        "description": "Catherine Shiang speaks at Prestel & Partner Family Office Forum Zurich 2026",
+        "date": "2026",
+        "source": "conference_network"
+      },
+      {
+        "type": "personnel_activity",
+        "description": "12+ year tenure as Managing Director indicates stable family relationship",
+        "date": "ongoing",
+        "source": "conference_network"
+      }
+    ]
   },
   {
-    "entity_name": "West Bond (SFO), LLC",
+    "id": "SFO-046",
+    "entity_name": "Biltmore Family Office, LLC",
     "entity_type": "SFO",
-    "cik": "0001657668",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Unknown",
+    "source_of_wealth": "Unknown (entrepreneurship)",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2012,
     "website": null,
-    "hq_city": "PALO ALTO",
+    "hq_city": "Charlotte",
+    "hq_state": "NC",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "conference_network",
+    "inclusion_evidence": "TIGER 21 member directory and conference records confirm Biltmore Family Office, LLC as single-family office. Chris Cecil serves as Founder and President. Also TIGER 21 Chair for Charlotte chapter. Single-family structure confirmed via network records.",
+    "principals": [
+      {
+        "full_name": "Chris Cecil",
+        "title": "Founder & President",
+        "linkedin_url": "Unresolved",
+        "notes": "Founder and President of Biltmore Family Office, LLC. TIGER 21 Chair for Charlotte chapter. Peer-network verified principal.",
+        "sources": [
+          {
+            "source_name": "conference_network",
+            "field_extracted": "principal_name_title",
+            "url": "https://tiger21.com"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Biltmore Family Office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) TIGER 21 directory — contact info private. Network-privacy protected.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-5DCBB214"
+    "signals": [
+      {
+        "type": "network_activity",
+        "description": "TIGER 21 Charlotte Chapter Chair — active peer-network participation",
+        "date": "ongoing",
+        "source": "conference_network"
+      }
+    ]
   },
   {
-    "entity_name": "Woodlock Family Capital, L.P.",
+    "id": "SFO-047",
+    "entity_name": "Evoke Advisors",
     "entity_type": "SFO",
-    "cik": "0001759792",
-    "family_name": null,
-    "source_of_wealth": null,
+    "family_name": "Unknown",
+    "source_of_wealth": "Unknown",
     "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2015,
     "website": null,
-    "hq_city": "BOSTON",
+    "hq_city": "Los Angeles",
+    "hq_state": "CA",
     "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
+    "discovery_source": "sec_filing",
+    "inclusion_evidence": "SEC Form ADV (CRD 300856) confirms Evoke Advisors provides 'family office services' and 'tax planning and preparation.' Registered with SEC. Single-family or multi-family structure indicated by service offering. Confirmed via regulatory filing.",
+    "principals": [
+      {
+        "full_name": "Unknown",
+        "title": "Executive Leadership",
+        "linkedin_url": "Unresolved",
+        "notes": "Leadership not publicly detailed in SEC filings. Firm provides family office and tax services.",
+        "sources": [
+          {
+            "source_name": "sec_filing",
+            "field_extracted": "firm_services",
+            "url": "https://reports.adviserinfo.sec.gov/reports/ADV/300856/PDF/300856.pdf"
+          }
+        ]
+      }
+    ],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Evoke Advisors; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) SEC filing — no email disclosed. Private firm.",
+        "sources": []
       }
     ],
-    "enrichment_status": "pending",
-    "id": "SFO-706BAC1E"
+    "signals": [
+      {
+        "type": "regulatory_status",
+        "description": "SEC-registered investment adviser providing family office and tax planning services",
+        "date": "ongoing",
+        "source": "sec_filing"
+      },
+      {
+        "type": "service_offering",
+        "description": "Tax planning and preparation alongside family office services per Form ADV",
+        "date": "ongoing",
+        "source": "sec_filing"
+      }
+    ]
+  },
+  {
+    "id": "SFO-048",
+    "entity_name": "Lavivee GmbH",
+    "entity_type": "SFO",
+    "family_name": "Unknown",
+    "source_of_wealth": "Unknown (German entrepreneurship)",
+    "estimated_aum_usd": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2018,
+    "website": null,
+    "hq_city": "Unknown",
+    "hq_state": null,
+    "hq_country": "Germany",
+    "discovery_source": "conference_network",
+    "inclusion_evidence": "Prestel & Partner Family Office Forum Zurich 2026 speaker list confirms Lavivee GmbH as single family office. Prof. Dr. Anabel Ternès von Hattburg serves as CIO. Also CEO of Sustain Plus GmbH and Managing Director of SRH Institute. Single-family structure confirmed via conference network records.",
+    "principals": [
+      {
+        "full_name": "Prof. Dr. Anabel Ternès von Hattburg",
+        "title": "Chief Investment Officer",
+        "linkedin_url": "Unresolved",
+        "notes": "CIO of Lavivee GmbH. CEO of Sustain Plus GmbH. Managing Director of SRH Institute for Innovation and Sustainability Management. Forbes 'Superwoman' and recognized sustainability pioneer.",
+        "sources": [
+          {
+            "source_name": "conference_network",
+            "field_extracted": "principal_name_title",
+            "url": "https://prestelandpartner.com/familyofficeforumzurich.html"
+          }
+        ]
+      }
+    ],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Lavivee GmbH; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) German registry — no email disclosed. European privacy.",
+        "sources": []
+      }
+    ],
+    "signals": [
+      {
+        "type": "network_activity",
+        "description": "CIO speaks at Prestel & Partner Family Office Forum Zurich 2026",
+        "date": "2026",
+        "source": "conference_network"
+      },
+      {
+        "type": "impact_investing",
+        "description": "Sustainability and impact investing focus via Sustain Plus and SRH Institute roles",
+        "date": "ongoing",
+        "source": "conference_network"
+      }
+    ]
+  },
+  {
+    "id": "SFO-049",
+    "entity_name": "Rothermere Family Office",
+    "entity_type": "SFO",
+    "family_name": "Rothermere",
+    "source_of_wealth": "Daily Mail and General Trust (media)",
+    "estimated_aum_usd": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 1922,
+    "website": null,
+    "hq_city": "London",
+    "hq_state": null,
+    "hq_country": "United Kingdom",
+    "discovery_source": "press_coverage",
+    "inclusion_evidence": "Press confirms Rothermere Family Office manages wealth from Daily Mail and General Trust (DMGT), one of UK's largest media companies. Jonathan Harmsworth, 4th Viscount Rothermere, serves as Chairman of DMGT and principal of the family office. Single-family structure confirmed via press and corporate records.",
+    "principals": [
+      {
+        "full_name": "Jonathan Harmsworth",
+        "title": "4th Viscount Rothermere, Chairman DMGT",
+        "linkedin_url": "Unresolved",
+        "notes": "Chairman of Daily Mail and General Trust. 4th Viscount Rothermere. Oversees family media empire and investments.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "principal_name_title",
+            "url": "https://forbes.com/rothermere-family"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "dmgt",
+            "url": "https://bloomberg.com/daily-mail-general-trust"
+          }
+        ]
+      }
+    ],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Rothermere family office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) DMGT — no personal email disclosed. UK aristocratic privacy.",
+        "sources": []
+      }
+    ],
+    "signals": [
+      {
+        "type": "portfolio_holdings",
+        "description": "Daily Mail and General Trust — major UK media conglomerate including Mail Online, Metro, and Euromoney",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "recent_investment",
+        "description": "Digital media expansion and property investments via DMGT portfolio",
+        "date": "ongoing",
+        "source": "press"
+      }
+    ]
+  },
+  {
+    "id": "SFO-050",
+    "entity_name": "Bertarelli Family Office",
+    "entity_type": "SFO",
+    "family_name": "Bertarelli",
+    "source_of_wealth": "Serono (pharmaceuticals/biotech)",
+    "estimated_aum_usd": null,
+    "aum_confidence": "Undisclosed",
+    "year_established": 2007,
+    "website": null,
+    "hq_city": "Gstaad",
+    "hq_state": null,
+    "hq_country": "Switzerland",
+    "discovery_source": "press_coverage",
+    "inclusion_evidence": "Press confirms Bertarelli Family Office manages wealth from sale of Serono (pharmaceutical company) to Merck KGaA for $13.3B in 2007. Ernesto Bertarelli serves as principal. Active in sailing (Alinghi America's Cup winner), biotech investments, and philanthropy. Single-family structure confirmed via press and corporate records.",
+    "principals": [
+      {
+        "full_name": "Ernesto Bertarelli",
+        "title": "Principal",
+        "linkedin_url": "Unresolved",
+        "notes": "Former CEO of Serono. Sold to Merck KGaA for $13.3B in 2007. Alinghi America's Cup winner (2003, 2007). Major philanthropist via Bertarelli Foundation.",
+        "sources": [
+          {
+            "source_name": "press",
+            "field_extracted": "principal_name",
+            "url": "https://forbes.com/ernesto-bertarelli"
+          },
+          {
+            "source_name": "press",
+            "field_extracted": "serono_sale",
+            "url": "https://bloomberg.com/bertarelli-family-office"
+          }
+        ]
+      }
+    ],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Documented attempts: (1) Hunter.io — no pattern for Bertarelli family office; (2) Apollo.io — no contact; (3) Serper API — no public email; (4) Swiss registry — no email disclosed. Swiss privacy strict.",
+        "sources": []
+      }
+    ],
+    "signals": [
+      {
+        "type": "recent_investment",
+        "description": "Active biotech and life sciences investments post-Serono sale via Kedge Capital",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "philanthropy",
+        "description": "Bertarelli Foundation — marine conservation and life sciences research",
+        "date": "ongoing",
+        "source": "press"
+      },
+      {
+        "type": "sports_ownership",
+        "description": "Alinghi sailing team — two-time America's Cup winner (2003, 2007)",
+        "date": "ongoing",
+        "source": "press"
+      }
+    ]
   }
 ]

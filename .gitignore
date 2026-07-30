@@ -21,6 +21,7 @@ data/export.json
 data/chromadb/
 data/demo_export.csv
 data/intelligence_report.md
+data/manual_aum.json
 
 # Audit logs
 audit/runs/

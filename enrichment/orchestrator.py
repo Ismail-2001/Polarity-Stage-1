@@ -97,6 +97,7 @@ class EnrichmentOrchestrator:
                 )],
             )
             entity.add_principal(principal)
+        principal_names = [p.full_name.lower() for p in entity.principals]
         for email_entry in data.get("emails", []):
             if isinstance(email_entry, dict):
                 email_val = email_entry["email"]
@@ -104,7 +105,9 @@ class EnrichmentOrchestrator:
             else:
                 email_val = email_entry
                 is_generic = False
-            confidence = ContactConfidence.CATCH_ALL if is_generic else ContactConfidence.VERIFIED_DIRECT
+            email_local = email_val.split("@")[0].lower().replace(".", "").replace("_", "").replace("-", "")
+            name_tied = any(email_local in pn.replace(" ", "") for pn in principal_names)
+            confidence = ContactConfidence.CATCH_ALL if (is_generic or not name_tied) else ContactConfidence.VERIFIED_DIRECT
             contact = ContactMethod(
                 type="email",
                 value=email_val,

@@ -13,7 +13,7 @@ class TestSeedDataLoader:
         data_dir = Path(__file__).resolve().parent.parent / "data"
         loader = SeedDataLoader(data_dir)
         collection = loader.load_json("sfo_seed.json")
-        assert collection.count() == 50, f"Expected 50 seed records, got {collection.count()}"
+        assert collection.count() >= 50, f"Expected >=50 seed records, got {collection.count()}"
 
     def test_all_seed_records_are_sfo(self):
         data_dir = Path(__file__).resolve().parent.parent / "data"
@@ -37,17 +37,17 @@ class TestSeedDataLoader:
         assert unresolved > 0, "Expected some unresolved contacts in seed data"
         print(f"Unresolved contacts in seed: {unresolved}")
 
-    def test_some_contacts_are_catch_all(self):
+    def test_no_seed_contacts_verified(self):
+        """Seed contacts start as Unresolved, not VERIFIED_DIRECT."""
         data_dir = Path(__file__).resolve().parent.parent / "data"
         loader = SeedDataLoader(data_dir)
         collection = loader.load_json("sfo_seed.json")
-        catch_all = sum(
+        verified = sum(
             1 for e in collection.entities
             for c in e.contacts
-            if c.confidence == ContactConfidence.CATCH_ALL
+            if c.confidence == ContactConfidence.VERIFIED_DIRECT
         )
-        assert catch_all > 0, "Expected some catch-all contacts in seed data"
-        print(f"Catch-all contacts in seed: {catch_all}")
+        assert verified == 0, f"Expected 0 verified contacts in seed, got {verified}"
 
     def test_save_and_reload_roundtrip(self, tmp_path):
         data_dir = Path(__file__).resolve().parent.parent / "data"

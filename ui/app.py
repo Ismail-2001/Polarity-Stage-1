@@ -7,12 +7,16 @@ Operates in two modes:
 
 from __future__ import annotations
 
+import html
 import json
+import logging
 import os
+import re
 import sys
 import time
 from pathlib import Path
 
+import pandas as pd
 import streamlit as st
 
 # ── Preamble: add project root to sys.path so imports work when run directly ──
@@ -47,12 +51,172 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+# ── Design System CSS ────────────────────────────────────────────────────────
+_CUSTOM_CSS = """
+<style>
+/* ── Design Tokens ────────────────────────────────────────────────────────── */
+:root {
+    --color-bg-primary: #0f172a;
+    --color-bg-secondary: #1e293b;
+    --color-bg-tertiary: #334155;
+    --color-border: rgba(255,255,255,0.06);
+    --color-border-hover: rgba(255,255,255,0.12);
+    --color-text-primary: #f1f5f9;
+    --color-text-secondary: #94a3b8;
+    --color-text-muted: #64748b;
+    --color-accent-green: #10b981;
+    --color-accent-amber: #f59e0b;
+    --color-accent-red: #ef4444;
+    --color-accent-blue: #3b82f6;
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ── Typography ───────────────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6, .stMarkdown h1, .stMarkdown h2, .stMarkdown h3 {
+    font-family: var(--font-sans) !important;
+    color: var(--color-text-primary) !important;
+    letter-spacing: -0.01em;
+}
+
+/* ── Cards ────────────────────────────────────────────────────────────────── */
+.entity-card {
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    background: var(--color-bg-secondary);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.entity-card:hover {
+    border-color: var(--color-border-hover);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* ── Confidence Indicators ────────────────────────────────────────────────── */
+.confidence-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+.confidence-dot--verified { background: var(--color-accent-green); }
+.confidence-dot--catchall { background: var(--color-accent-amber); }
+.confidence-dot--unresolved { background: var(--color-accent-red); }
+.confidence-dot--unverified { background: var(--color-text-muted); }
+
+.confidence-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    font-size: 0.85em;
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+    background: rgba(255,255,255,0.05);
+}
+.confidence-badge--verified { color: var(--color-accent-green); }
+.confidence-badge--catchall { color: var(--color-accent-amber); }
+.confidence-badge--unresolved { color: var(--color-accent-red); }
+.confidence-badge--unverified { color: var(--color-text-muted); }
+
+/* ── Chips ────────────────────────────────────────────────────────────────── */
+[data-testid="stVerticalBlockBorderWrapper"][key="chip_container"] button {
+    background: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border-hover);
+    color: var(--color-text-secondary);
+    border-radius: 20px;
+    font-size: 0.85em;
+    transition: all 0.15s ease;
+}
+[data-testid="stVerticalBlockBorderWrapper"][key="chip_container"] button:hover {
+    border-color: var(--color-accent-blue);
+    color: var(--color-text-primary);
+    background: rgba(59,130,246,0.1);
+}
+
+/* ── KPI Cards ────────────────────────────────────────────────────────────── */
+.kpi-value {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    line-height: 1.2;
+}
+.kpi-label {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 2px;
+}
+
+/* ── Sidebar ──────────────────────────────────────────────────────────────── */
+[data-testid="stSidebar"] {
+    border-right: 1px solid var(--color-border);
+}
+[data-testid="stSidebar"] .stMarkdown p {
+    color: var(--color-text-secondary);
+}
+
+/* ── Focus States (Accessibility) ─────────────────────────────────────────── */
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--color-accent-blue);
+    outline-offset: 2px;
+}
+.stButton > button:focus-visible {
+    outline: 2px solid var(--color-accent-blue);
+    outline-offset: 2px;
+}
+
+/* ── Expander Styling ─────────────────────────────────────────────────────── */
+.streamlit-expanderHeader {
+    font-weight: 600 !important;
+    color: var(--color-text-primary) !important;
+}
+
+/* ── Divider ──────────────────────────────────────────────────────────────── */
+hr {
+    border: none;
+    border-top: 1px solid var(--color-border);
+    margin: var(--spacing-md) 0;
+}
+
+/* ── Match Highlight ──────────────────────────────────────────────────────── */
+mark {
+    background: rgba(59,130,246,0.3);
+    color: var(--color-text-primary);
+    border-radius: 2px;
+    padding: 0 2px;
+}
+
+/* ── Print Styles ─────────────────────────────────────────────────────────── */
+@media print {
+    .stDeployButton, header[data-testid="stHeader"], [data-testid="stToolbar"],
+    [data-testid="stSidebar"], .stButton { display: none !important; }
+    .stApp { margin: 0; padding: 0; }
+    body { background: white; color: black; }
+}
+</style>
+"""
+st.markdown(_CUSTOM_CSS, unsafe_allow_html=True)
+
 # ── Constants ────────────────────────────────────────────────────────────────
 
 API_BASE = os.getenv("FO_API_BASE", "http://localhost:8000")
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 ENRICHED_PATH = DATA_DIR / "sfo_enriched.json"
 SEED_PATH = DATA_DIR / "sfo_seed.json"
+
+logger = logging.getLogger("fo_ui")
 
 CONFIDENCE_COLORS: dict[str, str] = {
     "Verified Direct Work Email": "#1a7f37",
@@ -84,13 +248,26 @@ if "pipeline_running" not in st.session_state:
 
 
 def _confidence_badge(confidence: str) -> str:
-    color = CONFIDENCE_COLORS.get(confidence, "#656d76")
-    return f'<span style="color:{color};font-weight:bold;">{confidence}</span>'
+    safe = html.escape(confidence)
+    css_map = {
+        "Verified Direct Work Email": "verified",
+        "Verified": "verified",
+        "Catch-all / Generic Inbox": "catchall",
+        "Unresolved": "unresolved",
+    }
+    variant = css_map.get(confidence, "unverified")
+    return f'<span class="confidence-badge confidence-badge--{variant}">{safe}</span>'
 
 
 def _confidence_dot(confidence: str) -> str:
-    color = CONFIDENCE_COLORS.get(confidence, "#656d76")
-    return f'<span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:{color};margin-right:4px;vertical-align:middle;"></span>'
+    css_map = {
+        "Verified Direct Work Email": "verified",
+        "Verified": "verified",
+        "Catch-all / Generic Inbox": "catchall",
+        "Unresolved": "unresolved",
+    }
+    variant = css_map.get(confidence, "unverified")
+    return f'<span class="confidence-dot confidence-dot--{variant}" title="{html.escape(confidence)}"></span>'
 
 
 def _get_entity_confidence(entity: dict) -> str:
@@ -116,6 +293,7 @@ def _call_api(method: str, path: str, **kwargs) -> dict | None:
     except requests.ConnectionError:
         return None
     except Exception:
+        logger.exception("API request failed: %s %s", method, path)
         return None
 
 
@@ -147,6 +325,7 @@ def _build_local_rag(data: list[dict]):
         engine.index_collection(collection)
         return engine
     except Exception:
+        logger.exception("Failed to build local RAG engine")
         return None
 
 
@@ -173,7 +352,16 @@ def _init_standalone():
 
 # ── Sidebar ──────────────────────────────────────────────────────────────────
 
-st.sidebar.title("🏦 FO Intelligence")
+st.sidebar.markdown(
+    '<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px;">'
+    '<span style="font-size:1.6rem;">🏦</span>'
+    '<span style="font-size:1.1rem;font-weight:700;color:var(--color-text-primary);letter-spacing:-0.02em;">'
+    "FO Intelligence</span>"
+    "</div>"
+    '<p style="font-size:0.75rem;color:var(--color-text-muted);margin:0 0 8px 0;">'
+    "Family Office Discovery & Intelligence</p>",
+    unsafe_allow_html=True,
+)
 st.sidebar.markdown("---")
 
 # Mode indicator
@@ -260,14 +448,23 @@ if data:
     st.sidebar.metric("Unresolved Contacts", unresolved, delta_color="inverse")
     st.sidebar.metric("Verified Contacts", verified)
 
-st.sidebar.markdown("---")
-st.sidebar.markdown(
-    "**Confidence Legend**\n\n"
-    "🟢 Verified Direct Work Email\n\n"
-    "🟡 Catch-all / Generic Inbox\n\n"
-    "🔴 Unresolved\n\n"
-    "⚪ Unverified"
-)
+with st.sidebar.expander("Confidence Legend", expanded=False):
+    st.markdown(
+        '<span class="confidence-dot confidence-dot--verified"></span> Verified Direct Work Email  ',
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        '<span class="confidence-dot confidence-dot--catchall"></span> Catch-all / Generic Inbox  ',
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        '<span class="confidence-dot confidence-dot--unresolved"></span> Unresolved  ',
+        unsafe_allow_html=True,
+    )
+    st.markdown(
+        '<span class="confidence-dot confidence-dot--unverified"></span> Unverified  ',
+        unsafe_allow_html=True,
+    )
 
 # ── Main ─────────────────────────────────────────────────────────────────────
 
@@ -318,18 +515,19 @@ with tab1:
 
     # Example query chips
     st.markdown("**Try these:**")
-    chip_cols = st.columns(4)
-    example_queries = [
-        "Cascade Investment Gates",
-        "sports ownership family office",
-        "family offices in London",
-        "cannabis agriculture investment",
-    ]
-    for i, eq in enumerate(example_queries):
-        with chip_cols[i]:
-            if st.button(eq, key=f"chip_{i}", use_container_width=True):
-                query = eq
-                st.rerun()
+    with st.container(key="chip_container"):
+        chip_cols = st.columns(4)
+        example_queries = [
+            "Cascade Investment Gates",
+            "sports ownership family office",
+            "family offices in London",
+            "cannabis agriculture investment",
+        ]
+        for i, eq in enumerate(example_queries):
+            with chip_cols[i]:
+                if st.button(eq, key=f"chip_{i}", use_container_width=True):
+                    query = eq
+                    st.rerun()
 
     if query:
         results = []
@@ -345,6 +543,7 @@ with tab1:
                 results = resp.get("results", [])
                 guardrail_notes = resp.get("guardrail_notes", [])
             except Exception as e:
+                logger.exception("RAG query failed")
                 st.error(f"Query error: {e}")
 
         for note in guardrail_notes:
@@ -391,14 +590,52 @@ with tab2:
         col_filter, col_spacer = st.columns([2, 1])
         with col_filter:
             search_filter = st.text_input("Filter by name", placeholder="Type to filter...")
+
+        def _highlight_match(text: str, query: str) -> str:
+            if not query:
+                return html.escape(text)
+            safe = html.escape(text)
+            pattern = re.escape(html.escape(query))
+            return re.sub(pattern, lambda m: f"<mark>{m.group(0)}</mark>", safe, flags=re.IGNORECASE)
+
         filtered = (
             [e for e in entities if search_filter.lower() in e.get("entity_name", "").lower()]
             if search_filter
             else entities
         )
-        st.markdown(f"**{len(filtered)}** entities")
 
-        for ent in filtered:
+        PAGE_SIZE = 10
+        total_pages = max(1, -(-len(filtered) // PAGE_SIZE))
+        if "entity_page" not in st.session_state:
+            st.session_state.entity_page = 1
+        if st.session_state.entity_page > total_pages:
+            st.session_state.entity_page = total_pages
+
+        col_count, col_page = st.columns([3, 2])
+        with col_count:
+            st.markdown(f"**{len(filtered)}** entities · page **{st.session_state.entity_page}/{total_pages}**")
+        with col_page:
+            page_cols = st.columns([1, 1, 1])
+            with page_cols[0]:
+                if st.button("Prev", disabled=st.session_state.entity_page <= 1, use_container_width=True):
+                    st.session_state.entity_page -= 1
+                    st.rerun()
+            with page_cols[1]:
+                st.number_input(
+                    "Page", min_value=1, max_value=total_pages,
+                    value=st.session_state.entity_page, key="page_input",
+                    label_visibility="collapsed",
+                    on_change=lambda: st.session_state.update(entity_page=st.session_state.page_input),
+                )
+            with page_cols[2]:
+                if st.button("Next", disabled=st.session_state.entity_page >= total_pages, use_container_width=True):
+                    st.session_state.entity_page += 1
+                    st.rerun()
+
+        start = (st.session_state.entity_page - 1) * PAGE_SIZE
+        page_entities = filtered[start : start + PAGE_SIZE]
+
+        for ent in page_entities:
             name = ent.get("entity_name", "Unknown")
             etype = ent.get("entity_type", "SFO")
             conf = _get_entity_confidence(ent)
@@ -409,50 +646,51 @@ with tab2:
             hq = ent.get("hq_city", "") or ""
             country = ent.get("hq_country", "") or ""
 
-            preview_parts = [f"{dot}**{name}**"]
+            highlighted_name = _highlight_match(name, search_filter)
+            preview_parts = [f"{dot}**{highlighted_name}**"]
             if family:
-                preview_parts.append(f"Family: {family}")
+                preview_parts.append(f"Family: {html.escape(family)}")
             if hq:
-                preview_parts.append(f"HQ: {hq}, {country}")
+                preview_parts.append(f"HQ: {html.escape(hq)}, {html.escape(country)}")
             preview_parts.append(f"AUM: {aum_str}")
-            preview_parts.append(f"Confidence: {conf}")
+            preview_parts.append(f"Confidence: {html.escape(conf)}")
 
             with st.expander(" · ".join(preview_parts), expanded=False):
                 col_a, col_b = st.columns(2)
                 with col_a:
                     st.markdown(f"**Entity ID:** `{ent.get('id', 'N/A')}`")
-                    st.markdown(f"**Type:** {etype}")
-                    st.markdown(f"**Family:** {family or 'N/A'}")
-                    st.markdown(f"**Source of Wealth:** {ent.get('source_of_wealth') or 'N/A'}")
-                    st.markdown(f"**Year Established:** {ent.get('year_established') or 'N/A'}")
+                    st.markdown(f"**Type:** {html.escape(etype)}")
+                    st.markdown(f"**Family:** {html.escape(family) or 'N/A'}")
+                    st.markdown(f"**Source of Wealth:** {html.escape(ent.get('source_of_wealth') or 'N/A')}")
+                    st.markdown(f"**Year Established:** {html.escape(str(ent.get('year_established') or 'N/A'))}")
                     website = ent.get("website")
                     if website:
-                        st.markdown(f"**Website:** [{website}]({website})")
+                        st.markdown(f"**Website:** [{html.escape(website)}]({html.escape(website)})")
                     else:
                         st.markdown("**Website:** —")
                 with col_b:
                     principals = ent.get("principals", [])
                     st.markdown(f"**Principals ({len(principals)}):**")
                     for p in principals:
-                        st.markdown(f"- **{p.get('full_name', 'Unknown')}** — {p.get('title', '')}")
+                        st.markdown(f"- **{html.escape(p.get('full_name', 'Unknown'))}** — {html.escape(p.get('title', ''))}")
                     contacts = ent.get("contacts", [])
                     st.markdown(f"**Contacts ({len(contacts)}):**")
                     for c in contacts:
-                        cval = c.get("value", "Unresolved")
+                        cval = html.escape(c.get("value", "Unresolved"))
                         cconf = c.get("confidence", "Unverified")
                         cdot = _confidence_dot(cconf)
-                        st.markdown(f"  {cdot} {cval} ({cconf})", unsafe_allow_html=True)
+                        st.markdown(f"  {cdot} {cval} ({html.escape(cconf)})", unsafe_allow_html=True)
 
                 signals = ent.get("signals", [])
                 if signals:
                     st.markdown("**Signals:**")
                     for sig in signals:
-                        st.caption(f"• {sig.get('type', '')}: {sig.get('description', '')}")
+                        st.caption(f"• {html.escape(sig.get('type', ''))}: {html.escape(sig.get('description', ''))}")
 
                 inclusion = ent.get("inclusion_evidence")
                 if inclusion:
                     st.markdown("**Inclusion Evidence:**")
-                    st.caption(inclusion)
+                    st.caption(html.escape(inclusion))
 
 # =========================== TAB 3: Pipeline Results ==========================
 
@@ -487,7 +725,23 @@ with tab3:
         st.markdown("---")
 
         st.markdown("**Contact Confidence Distribution**")
-        import pandas as pd
+
+        total_contacts = verified + catch_all + unresolved
+        if total_contacts > 0:
+            v_pct = verified / total_contacts * 100
+            c_pct = catch_all / total_contacts * 100
+            u_pct = unresolved / total_contacts * 100
+            st.markdown(
+                f'<div style="display:flex;gap:24px;margin:8px 0;">'
+                f'<span style="color:var(--color-accent-green);font-weight:600;">'
+                f"Verified {verified} ({v_pct:.0f}%)</span>"
+                f'<span style="color:var(--color-accent-amber);font-weight:600;">'
+                f"Catch-all {catch_all} ({c_pct:.0f}%)</span>"
+                f'<span style="color:var(--color-accent-red);font-weight:600;">'
+                f"Unresolved {unresolved} ({u_pct:.0f}%)</span>"
+                f"</div>",
+                unsafe_allow_html=True,
+            )
 
         chart_data = pd.DataFrame({
             "Status": ["Verified", "Catch-all", "Unresolved"],
@@ -496,11 +750,39 @@ with tab3:
         st.bar_chart(chart_data.set_index("Status"))
 
         st.markdown("---")
-        st.download_button(
-            "📥 Download as JSON",
-            data=json.dumps(entities, indent=2, default=str),
-            file_name="sfo_export.json",
-            mime="application/json",
-        )
+        dl_cols = st.columns(2)
+        with dl_cols[0]:
+            st.download_button(
+                "📥 Download as JSON",
+                data=json.dumps(entities, indent=2, default=str),
+                file_name="sfo_export.json",
+                mime="application/json",
+                use_container_width=True,
+            )
+        with dl_cols[1]:
+            csv_df = pd.DataFrame([
+                {
+                    "id": e.get("id", ""),
+                    "entity_name": e.get("entity_name", ""),
+                    "entity_type": e.get("entity_type", ""),
+                    "family_name": e.get("family_name", ""),
+                    "hq_city": e.get("hq_city", ""),
+                    "hq_country": e.get("hq_country", ""),
+                    "estimated_aum_usd": e.get("estimated_aum_usd", ""),
+                    "source_of_wealth": e.get("source_of_wealth", ""),
+                    "contacts": "; ".join(
+                        f"{c.get('value','')} ({c.get('confidence','')})"
+                        for c in e.get("contacts", [])
+                    ),
+                }
+                for e in entities
+            ])
+            st.download_button(
+                "📥 Download as CSV",
+                data=csv_df.to_csv(index=False),
+                file_name="sfo_export.csv",
+                mime="text/csv",
+                use_container_width=True,
+            )
     else:
         st.info("No enriched data found. Run the pipeline first.")

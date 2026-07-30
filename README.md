@@ -1,40 +1,40 @@
 # Family Office Intelligence Pipeline & Micro-RAG
 
-A data product for discovering, enriching, and querying Single Family Office (SFO) intelligence from SEC EDGAR filings.
+A data product for discovering, enriching, and querying Single Family Office (SFO) intelligence — sourced from press rankings, directories, conference networks, corporate registries, and SEC Form ADV filings.
 
-## What this is
-
-A pipeline that takes 59 SEC-registered family offices and enriches them with AUM estimates, principals, source-of-wealth narratives, websites, and contact data. The enriched dataset is queryable via a RAG engine with honest-refusal guardrails — it tells you what it doesn't know instead of making things up.
-
-## Dataset (v2.0.0)
+## Dataset (v3.0.0)
 
 | Metric | Count | Coverage |
 |--------|-------|----------|
-| Total entities | 59 | 100% |
-| With principals | 56 | 95% |
-| With source of wealth | 55 | 93% |
-| With AUM | 45 | 76% |
-| With website | 40 | 68% |
-| With email | 36 | 61% |
-| With year established | 40 | 68% |
+| Total entities | 50 | 100% |
+| With principals | 48 | 96% |
+| With source of wealth | 44 | 88% |
+| With AUM | 2 | 4% |
+| With website | 15 | 30% |
+| With year established | 40 | 80% |
 
-All 59 entities are real SEC-registered family offices with verified CIK numbers. AUM data comes from 13F holdings estimates and manual curation. The dataset is committed to `data/sfo_enriched.json` with a versioned metadata header.
+All 50 entities are well-known megabillionaire family offices (Walton, Musk, Gates, Bezos, Buffett, Mars, Bloomberg, Koch, Hearst, Grosvenor, etc.) with manually curated data from secondary sources. Each entity carries **contextual intelligence signals** (sports ownership, philanthropy, portfolio holdings, M&A activity) and **inclusion evidence** — a provenance record documenting how and why the entity was included. The dataset is committed to `data/sfo_enriched.json` with a versioned metadata header.
+
+### Previous version
+
+v2.0.0 contained 59 entities discovered via SEC EDGAR EFTS with deterministic SHA256 IDs. The v3.0.0 migration replaced these entirely with 50 press-ranking/directory-sourced entities using sequential IDs (SFO-001 to SFO-050). See `data/sfo_seed_DEPRECATED_famous_names.json` for the very first prototype.
 
 ## What works
 
-- **Pipeline**: Loads seed data, applies manual overrides (AUM, principals, emails, SOW, websites), runs SEC enrichment, persists results. Runs in ~40 seconds for 59 entities.
+- **Pipeline**: Loads seed data, applies enrichment (classifier, website scrape, SEC EDGAR, web search), persists results. Runs in ~30 seconds for 50 entities.
 - **RAG engine**: ChromaDB (persistent) with in-memory fallback. TF-IDF scoring with field-aware boosting. Returns ranked results with similarity scores and guardrail notes.
 - **Guardrails**: Detects speculative language, flags unresolved contacts, demotes generic inboxes. Tells you what it doesn't know.
 - **API**: FastAPI with async pipeline execution (job ID + polling), paginated entity listing, health checks.
 - **CLI**: `pipeline`, `query`, `serve`, `export`, `validate` commands.
 - **Audit trail**: Structured JSONL logging of every API call, extraction, and failure.
-- **Tests**: 89 passing (models, classifier, RAG, API integration).
+- **Tests**: 67 passing (models, classifier, pipeline, RAG).
 
 ## What doesn't work (honest)
 
+- **SEC AUM extraction**: Irrelevant for 48/50 entities — megabillionaire family offices don't file with the SEC as registered investment advisers. AUM data is sourced from press rankings and directories instead.
 - **Website scraper**: Finds 0 principals on SFO websites. Family offices don't publish team directories. The scraper architecture is correct but the domain doesn't cooperate.
-- **Serper web search**: API key returns 403 (expired/over quota). Falls back to Hunter.io or "Unresolved".
-- **SEC AUM extraction**: XBRL returns 404 for all SFO CIKs. 13F XML extraction works for some entities. Most AUM comes from manual overrides.
+- **Email discovery**: Hunter.io yields no results — these families operate with extreme privacy. All contacts are tagged "Unresolved" with documented attempt trails.
+- **API tests**: 22 FastAPI integration tests hang due to fixture lifecycle issues not yet resolved.
 - **Streamlit UI**: Built and pinned but not verified on the current Python version. Use Docker for cloud deployment.
 
 ## Quick start
@@ -49,14 +49,14 @@ pip install -r requirements.txt
 python demo.py
 
 # Or query directly
-python cli.py query "Duquesne Family Office"
-python cli.py query "family offices in New York"
-python cli.py query "AUM over $1 billion"
+python cli.py query "Cascade Investment L.L.C."
+python cli.py query "family offices in London"
+python cli.py query "sports ownership"
 
 # Start the API server
 python cli.py serve
 
-# Run the pipeline (re-enriches all 59 entities)
+# Run the pipeline (re-enriches all 50 entities)
 python cli.py pipeline
 
 # Export to CSV
@@ -79,15 +79,17 @@ python cli.py export --format csv
 ## Architecture
 
 ```
-Seed (59 SEC SFOs) → Orchestrator → Manual Overrides → SEC Enrichment → Enriched JSON → RAG Engine → API/CLI
+Seed (50 curated SFOs) → Orchestrator → Overrides → Web/SEC Enrichment → Enriched JSON → RAG Engine → API/CLI
 ```
 
-- **Discovery**: SEC EDGAR EFTS API (533 CIKs filtered to 59 true SFOs)
-- **Enrichment**: Manual overrides (curated data) + automated SEC extraction (13F XML/HTML)
-- **Classification**: Regex-based MFO/VC/non-SFO detection
-- **Storage**: JSON files with versioned metadata header
-- **RAG**: ChromaDB persistent store, TF-IDF scoring, honest-refusal guardrails
-- **API**: FastAPI with async pipeline execution, CORS, structured errors
+Data sources:
+- **Press rankings**: Altss.com Largest Family Offices list, Forbes billionaires, Bloomberg wealth
+- **Directories**: OpenVC.app family office investor lists, TIGER 21 peer networks
+- **Conference networks**: Prestel & Partner Family Office Forum Zurich — speaker/attendee rosters
+- **Corporate registries**: SEC Form ADV, UK Companies House, Swiss commercial register
+- **SEC EDGAR**: Limited utility for megabillionaire FOs — used only for Form ADV-registered entities
+
+Each entity includes structured **signals** (contextual intelligence: sports ownership, legacy wealth, recent investments, impact investing) and **inclusion evidence** (provenance text documenting the source and rationale for inclusion).
 
 ## Project structure
 
@@ -106,7 +108,7 @@ Seed (59 SEC SFOs) → Orchestrator → Manual Overrides → SEC Enrichment → 
 │   └── web_search.py       # Serper.dev + Hunter.io fallback
 ├── models/                 # Pydantic domain models
 │   ├── pipeline.py         # PipelineResult, ExecutionStep
-│   └── sfo.py              # SFOEntity, Principal, ContactMethod
+│   └── sfo.py              # SFOEntity, Principal, ContactMethod, Signal
 ├── pipeline/               # Batch orchestration and JSON persistence
 ├── rag/                    # Micro-RAG engine and guardrails
 ├── tests/                  # 89 tests (models, classifier, RAG, API)
@@ -120,14 +122,14 @@ Seed (59 SEC SFOs) → Orchestrator → Manual Overrides → SEC Enrichment → 
 ## Running tests
 
 ```bash
-# All tests
-pytest tests/ -v
-
-# Fast unit tests only
-pytest tests/ -v -k "not Pipeline"
+# Fast unit tests (skip API — known hang issue)
+pytest tests/ -v -k "not test_api"
 
 # With coverage
-pytest tests/ --tb=short
+pytest tests/ --tb=short -k "not test_api"
+
+# All tests (API tests may hang indefinitely)
+pytest tests/ -v
 ```
 
 ## Configuration

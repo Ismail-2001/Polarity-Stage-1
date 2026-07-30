@@ -10,7 +10,8 @@ build/
 *.env.local
 
 # Data
-data/sfo_enriched.json
+# regenerable but we track it for reproducibility
+# data/sfo_enriched.json
 data/export.csv
 data/export.json
 data/chromadb/

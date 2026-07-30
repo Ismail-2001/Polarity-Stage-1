@@ -74,10 +74,13 @@ def _load_collection() -> SFOCollection:
     loader = get_loader()
     enriched = loader.data_dir / "sfo_enriched.json"
     seed = loader.data_dir / "sfo_seed.json"
+    deprecated = loader.data_dir / "sfo_seed_DEPRECATED_famous_names.json"
     if enriched.exists():
         return loader.load_json("sfo_enriched.json")
     if seed.exists():
         return loader.load_json("sfo_seed.json")
+    if deprecated.exists():
+        return loader.load_json("sfo_seed_DEPRECATED_famous_names.json")
     return SFOCollection()
 
 

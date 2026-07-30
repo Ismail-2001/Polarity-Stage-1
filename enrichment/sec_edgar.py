@@ -35,8 +35,7 @@ SEC_ARCHIVES = "https://www.sec.gov/Archives/edgar/data"
 
 USER_AGENT = (
     "FamilyOfficePipeline/1.0 (research; "
-    "contact@familyofficepipeline.dev; "
-    "https://github.com/anomalyco/fo-intelligence)"
+    "contact@familyofficepipeline.dev)"
 )
 
 HEADERS = {

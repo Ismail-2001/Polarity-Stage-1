@@ -1,10 +1,11 @@
 """SEC EDGAR IA bulk discovery — replaces the fabricated 50-entry seed list.
 
-Searches the SEC Elasticsearch Full-Text Search (EFTS) API for recent Form ADV
-filings mentioning "family office", extracts CIK numbers and entity names,
-then enriches each candidate with AUM data via the existing SECEdgarClient.
+Queries the SEC Elasticsearch Full-Text Search (EFTS) API for filings that
+mention "family office", extracts unique CIKs with family-office-like names,
+and enriches each candidate with HQ city and AUM via the existing client.
 
-Returns SFOEntity-compatible seed dicts sorted by AUM descending.
+The EFTS response stores ciks and display_names as parallel arrays; a single
+filing may list multiple filers (issuer + family office filing jointly).
 """
 
 from __future__ import annotations
@@ -17,29 +18,34 @@ from urllib.parse import urlencode
 import requests
 
 from audit import get_logger
-from enrichment.sec_edgar import SECEdgarClient, USER_AGENT, SEC_SUBMISSIONS
+from enrichment.sec_edgar import SECEdgarClient, SEC_SUBMISSIONS
 
 SEC_EFTS_URL = "https://efts.sec.gov/LATEST/search-index"
 
 SEC_HEADERS = {
-    "User-Agent": USER_AGENT,
+    "User-Agent": "FamilyOfficePipeline/1.0 (research; EFTS CIK discovery)",
     "Accept": "application/json",
     "Accept-Encoding": "gzip, deflate",
 }
 
-KNOWN_FAMILY_OFFICE_KEYWORDS = [
-    "family office",
-    "family investment",
-    "family capital",
-    "private family",
-    "single family office",
-    "multi family office",
+FAMILY_OFFICE_PATTERNS = [
+    re.compile(r"\b[Ff]amily\s*[Oo]ffice\b"),
+    re.compile(r"\bEMFO\b"),
+    re.compile(r"\bSFO\b"),
+    re.compile(r"\bFO[\s,.]", re.IGNORECASE),
+    re.compile(r"\bsingle\s*family\b"),
+    re.compile(r"\bmulti[- ]family\b"),
+    re.compile(r"\bfamily\s*investment\b"),
 ]
 
-SFO_SUFFIX_PATTERNS = [
-    re.compile(r"\bFamily\s*Office\b", re.IGNORECASE),
-    re.compile(r"\bFamily\s*Investment\b", re.IGNORECASE),
-    re.compile(r"\bFamily\s*Capital\b", re.IGNORECASE),
+EXCLUDE_PATTERNS = [
+    re.compile(r"\bETF\b", re.IGNORECASE),
+    re.compile(r"Mutual Fund", re.IGNORECASE),
+    re.compile(r"Index Fund", re.IGNORECASE),
+    re.compile(r"(?i)institute\b"),
+    re.compile(r"(?i)of america\b"),
+    re.compile(r"(?i)bank\b"),
+    re.compile(r"(?i)trust co\b"),
 ]
 
 
@@ -48,13 +54,7 @@ def _rate_limit() -> None:
 
 
 def _search_efts(query: str, start: int = 0, page_size: int = 100) -> Optional[dict]:
-    """Execute a SEC EFTS query and return the JSON response."""
-    params = {
-        "q": query,
-        "dateRange": "all",
-        "start": start,
-        "counts": min(page_size, 100),
-    }
+    params = {"q": query, "dateRange": "all", "start": str(start), "counts": str(min(page_size, 100))}
     url = f"{SEC_EFTS_URL}?{urlencode(params)}"
     _rate_limit()
     try:
@@ -65,88 +65,126 @@ def _search_efts(query: str, start: int = 0, page_size: int = 100) -> Optional[d
         return None
 
 
-def _extract_hit(hit: dict) -> Optional[dict]:
-    """Extract {cik, company_name, form_type, filing_date} from an EFTS hit."""
+def _extract_hits(hit: dict) -> list[dict]:
+    """Extract all {cik, display_name, biz_location} from a single EFTS hit.
+
+    ciks and display_names are parallel arrays that may hold multiple filers
+    for a single filing (e.g. issuer + family office 13G joint filers).
+    """
     src = hit.get("_source", {})
-    cik = src.get("cik")
-    if not cik:
-        return None
-    name = src.get("entity_name") or src.get("company_name") or ""
-    form = src.get("form") or src.get("form_type") or ""
-    fdate = src.get("file_date") or src.get("filing_date") or ""
-    return {
-        "cik": str(cik).zfill(10),
-        "company_name": name.strip(),
-        "form_type": form,
-        "filing_date": fdate,
-    }
+    ciks = src.get("ciks") or []
+    names = src.get("display_names") or []
+    biz = src.get("biz_locations") or []
+    bz = biz[0].strip() if biz else None
+    out = []
+    for i in range(len(ciks)):
+        cik = str(ciks[i]).zfill(10)
+        name = names[i].strip() if i < len(names) else ""
+        if cik and name:
+            out.append({"cik": cik, "display_name": name, "biz_location": bz})
+    return out
 
 
-def _is_sfo_candidate(name: str) -> bool:
-    """Heuristic check whether a company name suggests a family office."""
+def _parse_display_name(raw: str) -> str:
+    """Strip the trailing '  (CIK ##########)' suffix."""
+    m = re.match(r"^(.+?)\s{2,}\(CIK \d+\)", raw)
+    return m.group(1).strip() if m else raw.strip()
+
+
+def _is_sfo_name(name: str) -> bool:
     if not name:
         return False
-    lower = name.lower()
-    for kw in KNOWN_FAMILY_OFFICE_KEYWORDS:
-        if kw in lower:
-            return True
-    for pat in SFO_SUFFIX_PATTERNS:
-        if pat.search(name):
+    for p in EXCLUDE_PATTERNS:
+        if p.search(name):
+            return False
+    for p in FAMILY_OFFICE_PATTERNS:
+        if p.search(name):
             return True
     return False
 
 
+def _try_extract_aum(sec: SECEdgarClient, cik: str, entity_name: str) -> Optional[float]:
+    """Multi-strategy AUM extraction for a known CIK, returns None on failure."""
+    try:
+        aum = sec._extract_aum_from_facts(cik)
+        if aum is not None:
+            return aum
+    except Exception:
+        pass
+    try:
+        aum = sec.extract_aum_from_adv(cik)
+        if aum is not None:
+            return aum
+    except Exception:
+        pass
+    try:
+        aum = sec._extract_aum_from_13f(cik)
+        if aum is not None:
+            return aum
+    except Exception:
+        pass
+    return None
+
+
 def _extract_hq_from_submissions(cik: str) -> Optional[str]:
-    """Extract business city/state from SEC submissions address data."""
+    """Business city/state from SEC submissions address data."""
     url = SEC_SUBMISSIONS.format(cik)
     _rate_limit()
     try:
         resp = requests.get(url, headers=SEC_HEADERS, timeout=20)
         resp.raise_for_status()
         data = resp.json()
-        addresses = data.get("addresses", {})
-        business = addresses.get("business", {})
-        city = business.get("city", "") or ""
-        state = business.get("stateOrCountry", "") or ""
-        if city:
-            return f"{city}, {state}".strip(", ")
+        bus = data.get("addresses", {}).get("business", {})
+        city = bus.get("city", "") or ""
+        state = bus.get("stateOrCountry", "") or ""
+        return f"{city}, {state}".strip(", ") if city else None
     except (requests.RequestException, KeyError, ValueError):
-        pass
-    return None
+        return None
+
+
+def _submissions_name(cik: str) -> Optional[str]:
+    """Extract the entity name from SEC submissions data (authoritative source)."""
+    url = SEC_SUBMISSIONS.format(cik)
+    _rate_limit()
+    try:
+        resp = requests.get(url, headers=SEC_HEADERS, timeout=20)
+        resp.raise_for_status()
+        data = resp.json()
+        return (data.get("name") or "").strip() or None
+    except (requests.RequestException, KeyError, ValueError):
+        return None
 
 
 def run_discovery(max_candidates: int = 50) -> list[dict]:
-    """Discover SFO entities by querying SEC IA bulk filings.
+    """Discover SFO candidates from SEC EDGAR filings data.
 
-    Strategy:
-      1. Search EFTS for recent Form ADV filings mentioning "family office".
-      2. Deduplicate by CIK; retain company name and filing date.
-      3. For each candidate, extract AUM via SECEdgarClient.
-      4. Filter to AUM >= $100M (typical SFO threshold).
-      5. Attempt HQ city extraction from SEC submissions address.
-      6. Return SFOEntity-compatible seed dicts sorted by AUM descending.
+    Pipeline:
+      1. Search EFTS for "family office" across all filing forms.
+      2. Deduplicate by CIK; keep only entities with family-office-like names.
+      3. Retrieve submissions name (authoritative) and HQ city.
+      4. Attempt AUM extraction via XBRL facts / ADV HTML / 13F.
+      5. Return SFOEntity-compatible seed dicts sorted by AUM descending.
 
     Args:
-        max_candidates: Maximum number of entities to return (default 50).
+        max_candidates: Maximum entities to return (default 50).
 
     Returns:
-        List of dicts compatible with SFOEntity seed format.
+        List of SFOEntity-compatible seed dicts.
     """
     log = get_logger("discovery")
     sec = SECEdgarClient()
 
-    # Phase 1: Search EFTS for ADV filings mentioning family office
+    # Phase 1 — EFTS search across multiple query patterns
+    seen: set[str] = set()
+    raw: list[dict] = []
     queries = [
-        'form-type:"ADV" AND "family office"',
-        'form-type:"ADV" AND "Regulatory Assets Under Management"',
-        'form-type:"ADV" AND (LLC) AND "Regulatory Assets"',
+        '"family office"',
+        '"Family Office" LLC',
+        '"Family Office" LP',
+        '"FO" "family" AND 13F',
     ]
-
-    seen_ciks: set[str] = set()
-    raw_records: list[dict] = []
-
     for q in queries:
-        for start in range(0, max_candidates * 2, 100):
+        for start in range(0, 1000, 100):
             data = _search_efts(q, start=start, page_size=100)
             if not data:
                 break
@@ -154,43 +192,40 @@ def run_discovery(max_candidates: int = 50) -> list[dict]:
             if not hits:
                 break
             for hit in hits:
-                rec = _extract_hit(hit)
-                if rec and rec["cik"] not in seen_ciks:
-                    seen_ciks.add(rec["cik"])
-                    raw_records.append(rec)
+                for rec in _extract_hits(hit):
+                    if rec["cik"] not in seen:
+                        seen.add(rec["cik"])
+                        raw.append(rec)
             if len(hits) < 100:
                 break
+    log.log_api_call("sec_efts", status=200, detail=f"Found {len(raw)} unique CIKs across {len(queries)} queries")
 
-    log.log_api_call(
-        "sec_efts", status=200,
-        detail=f"Found {len(raw_records)} unique IA CIKs across {len(queries)} queries",
-    )
-
-    # Phase 2: Enrich with AUM via SECEdgarClient
+    # Phase 2 — filter to SFO-like names, enrich
     candidates: list[dict] = []
+    processed: set[str] = set()
 
-    for rec in raw_records:
+    for rec in raw:
         if len(candidates) >= max_candidates:
             break
 
         cik = rec["cik"]
-        company_name = rec["company_name"]
-
-        # Extract AUM using multi-strategy extractor
-        aum = sec.extract_aum(entity_name=company_name, family_name=None)
-        if aum is None or aum < 100_000_000:
+        clean_name = _parse_display_name(rec["display_name"])
+        if not _is_sfo_name(clean_name):
             continue
+        if cik in processed:
+            continue
+        processed.add(cik)
 
-        hq = _extract_hq_from_submissions(cik)
+        # Authoritative name from submissions data
+        auth_name = _submissions_name(cik) or clean_name
+        hq = _extract_hq_from_submissions(cik) or rec.get("biz_location")
+        aum = _try_extract_aum(sec, cik, auth_name)
+
         hq_city = hq.split(",")[0].strip() if hq else None
-        hq_country = "United States"
 
-        is_sfo = _is_sfo_candidate(company_name)
-        entity_type = "SFO" if is_sfo else "SFO"
-
-        candidate = {
-            "entity_name": company_name,
-            "entity_type": entity_type,
+        candidates.append({
+            "entity_name": auth_name,
+            "entity_type": "SFO",
             "family_name": None,
             "source_of_wealth": None,
             "estimated_aum_usd": aum,
@@ -198,41 +233,22 @@ def run_discovery(max_candidates: int = 50) -> list[dict]:
             "year_established": None,
             "website": None,
             "hq_city": hq_city,
-            "hq_country": hq_country,
+            "hq_country": "United States",
             "principals": [],
             "contacts": [
                 {
                     "type": "email",
                     "value": "Unresolved",
                     "confidence": "Unresolved",
-                    "notes": (
-                        "Discovered via SEC IA bulk report. "
-                        "Contact information pending enrichment."
-                    ),
+                    "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending.",
                 }
             ],
             "enrichment_status": "pending",
-        }
-        candidates.append(candidate)
+        })
 
-    # Phase 3: Sort by AUM descending
     candidates.sort(key=lambda x: x.get("estimated_aum_usd") or 0, reverse=True)
-
-    # Phase 4: Assign sequential SFO IDs
     for i, c in enumerate(candidates, start=1):
         c["id"] = f"SFO-{i:03d}"
 
-    log.log_api_call(
-        "discovery", status=200,
-        detail=f"Returning {len(candidates)} SFO candidates with AUM >= $100M",
-    )
-
+    log.log_api_call("discovery", status=200, detail=f"Returning {len(candidates)} SFO candidates")
     return candidates
-
-
-def run_discovery_bulk(
-    min_aum: float = 100_000_000,
-    max_results: int = 100,
-) -> list[dict]:
-    """Alias for run_discovery with explicit AUM threshold and result cap."""
-    return run_discovery(max_candidates=max_results)

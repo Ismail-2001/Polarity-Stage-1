@@ -4,7 +4,7 @@ A commercial-grade platform for Family Office discovery, enrichment, validation,
 
 ## Overview
 
-The pipeline processes 50 SFO (Single Family Office) entities through a multi-stage enrichment workflow: SEC EDGAR CIK lookup and AUM extraction, company website scraping with SSL fallback, Serper.dev web search for principal contacts, and MFO/VC classification. Enriched data is persisted to JSON and indexed into a ChromaDB-backed Micro-RAG engine, exposed through a FastAPI REST API with a Streamlit dashboard and a unified CLI interface.
+The pipeline processes 52 SFO (Single Family Office) entities through a multi-stage enrichment workflow: SEC EDGAR CIK lookup and AUM extraction, company website scraping with SSL fallback, Serper.dev web search for principal contacts, and MFO/VC classification. Enriched data is persisted to JSON and indexed into a ChromaDB-backed Micro-RAG engine, exposed through a FastAPI REST API with a Streamlit dashboard and a unified CLI interface. Discovery sources (SEC EFTS, Wikipedia, web directories) are kept independent to prevent any single source from dominating >50%.
 
 ![Architecture](docs/architecture.png)
 
@@ -165,11 +165,17 @@ docker-compose up --build
 1. Push to GitHub (already connected)
 2. Go to [share.streamlit.io](https://share.streamlit.io) → New app
 3. Point to `ui/app.py`
-4. Set `PYTHON_VERSION=3.11`
-5. Add the `requirements.txt` as the package file
+4. Python 3.11 pinned via `runtime.txt` (auto-detected)
+5. Use `requirements.txt` for packages
+
+### FastAPI (lightweight, no RAG)
+```bash
+# Deploy to Railway / Render / Fly.io as a standalone API
+python cli.py serve
+```
 
 ### Requirements
-- Python 3.11+
+- Python 3.11+ (3.15 beta works locally but Streamlit has no pre-built numpy wheels yet — use `runtime.txt` for cloud deploys)
 - `pip install -r requirements.txt`
 - Set `SERPER_API_KEY` in `.env` for full enrichment
 

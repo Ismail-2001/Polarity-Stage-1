@@ -1,19 +1,28 @@
 # Family Office Intelligence Pipeline & Micro-RAG
 
-A data product for discovering, enriching, and querying Single Family Office (SFO) intelligence — sourced from press rankings, directories, conference networks, corporate registries, and SEC Form ADV filings.
+A data product for discovering, enriching, and querying Single Family Office (SFO) intelligence — sourced from press rankings, directories, conference networks, corporate registries, LinkedIn, and SEC Form ADV filings.
 
 ## Dataset (v3.0.0)
 
 | Metric | Count | Coverage |
 |--------|-------|----------|
 | Total entities | 50 | 100% |
-| With principals | 48 | 96% |
+| With principals | 49 | 98% |
 | With source of wealth | 44 | 88% |
 | With AUM | 2 | 4% |
-| With website | 15 | 30% |
+| With website | 13 | 26% |
+| With verified email | 1 | 2% |
 | With year established | 40 | 80% |
 
-All 50 entities are well-known megabillionaire family offices (Walton, Musk, Gates, Bezos, Buffett, Mars, Bloomberg, Koch, Hearst, Grosvenor, etc.) with manually curated data from secondary sources. Each entity carries **contextual intelligence signals** (sports ownership, philanthropy, portfolio holdings, M&A activity) and **inclusion evidence** — a provenance record documenting how and why the entity was included. The dataset is committed to `data/sfo_enriched.json` with a versioned metadata header.
+All 50 entities are well-known megabillionaire family offices (Walton, Musk, Gates, Bezos, Buffett, Mars, Bloomberg, Koch, Hearst, Grosvenor, Gonzales, etc.) with manually curated data from secondary sources. Each entity carries **contextual intelligence signals** (sports ownership, philanthropy, portfolio holdings, M&A activity) and **inclusion evidence** — a provenance record documenting how and why the entity was included. The dataset is committed to `data/sfo_enriched.json` with a versioned metadata header.
+
+### Data integrity
+
+The dataset undergoes periodic integrity audits:
+- **Duplicate removal**: Identical entities are deduplicated (e.g., Eldridge Industries appeared twice as SFO-025 and SFO-035 — the duplicate was removed).
+- **URL verification**: Fabricated Forbes/Bloomberg URLs (e.g., `forbes.com/[name]`) are nullified with `"Press source referenced; direct URL unresolved."` — 43 source URLs corrected across ~25 entities.
+- **Website verification**: Cascade Investment and Bezos Expeditions websites are set to `null` — domains verified as non-resolvable or not belonging to the entity.
+- **Principal currency**: Stale principals are flagged (e.g., Matthew Dadaian at Graven Family Office departed 2025 to found Vega Investment Management).
 
 ### Previous version
 
@@ -27,13 +36,13 @@ v2.0.0 contained 59 entities discovered via SEC EDGAR EFTS with deterministic SH
 - **API**: FastAPI with async pipeline execution (job ID + polling), paginated entity listing, health checks.
 - **CLI**: `pipeline`, `query`, `serve`, `export`, `validate` commands.
 - **Audit trail**: Structured JSONL logging of every API call, extraction, and failure.
-- **Tests**: 67 passing (models, classifier, pipeline, RAG).
+- **Tests**: 67 passing (models, classifier, pipeline, RAG). 22 API integration tests excluded (known hang issue).
 
 ## What doesn't work (honest)
 
 - **SEC AUM extraction**: Irrelevant for 48/50 entities — megabillionaire family offices don't file with the SEC as registered investment advisers. AUM data is sourced from press rankings and directories instead.
 - **Website scraper**: Finds 0 principals on SFO websites. Family offices don't publish team directories. The scraper architecture is correct but the domain doesn't cooperate.
-- **Email discovery**: Hunter.io yields no results — these families operate with extreme privacy. All contacts are tagged "Unresolved" with documented attempt trails.
+- **Email discovery**: Hunter.io yields no results — these families operate with extreme privacy. One verified email exists (Biltmore Family Office, Chris Cecil) sourced from the official website. All other contacts are tagged "Unresolved" with documented attempt trails.
 - **API tests**: 22 FastAPI integration tests hang due to fixture lifecycle issues not yet resolved.
 - **Streamlit UI**: Built and pinned but not verified on the current Python version. Use Docker for cloud deployment.
 
@@ -84,8 +93,9 @@ Seed (50 curated SFOs) → Orchestrator → Overrides → Web/SEC Enrichment →
 
 Data sources:
 - **Press rankings**: Altss.com Largest Family Offices list, Forbes billionaires, Bloomberg wealth
-- **Directories**: OpenVC.app family office investor lists, TIGER 21 peer networks
+- **Directories**: OpenVC.app family office investor lists, TIGER 21 peer networks, FINTRX
 - **Conference networks**: Prestel & Partner Family Office Forum Zurich — speaker/attendee rosters
+- **LinkedIn**: Direct principal verification (Gonzales Family Office)
 - **Corporate registries**: SEC Form ADV, UK Companies House, Swiss commercial register
 - **SEC EDGAR**: Limited utility for megabillionaire FOs — used only for Form ADV-registered entities
 
@@ -98,7 +108,7 @@ Each entity includes structured **signals** (contextual intelligence: sports own
 ├── audit/                  # Structured JSONL audit logger
 ├── cli.py                  # Unified CLI (pipeline, query, serve, export, validate)
 ├── config/settings.py      # Environment-based configuration
-├── data/                   # Dataset (VERSION, seed, enriched, manual overrides)
+├── data/                   # Dataset (VERSION, seed, enriched)
 ├── demo.py                 # 30-second demo script
 ├── enrichment/             # Multi-source enrichment engine
 │   ├── classifier.py       # MFO/VC/non-SFO regex classifier
@@ -114,6 +124,7 @@ Each entity includes structured **signals** (contextual intelligence: sports own
 ├── tests/                  # 89 tests (models, classifier, RAG, API)
 ├── ui/                     # Streamlit dashboard
 ├── .github/workflows/ci.yml  # GitHub Actions CI
+├── .mailmap                # Git author mapping
 ├── Dockerfile              # Multi-stage builds (api, pipeline, ui)
 ├── docker-compose.yml      # Multi-service compose
 └── requirements.txt        # Pinned for Python 3.11

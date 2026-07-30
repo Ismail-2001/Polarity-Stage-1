@@ -681,7 +681,7 @@
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "http://ballmergroup.org",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -729,7 +729,7 @@
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "http://bessemertrust.com",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -753,7 +753,7 @@
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "https://www.bezosexpeditions.com/index.html",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -777,7 +777,7 @@
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "http://cascadeassetmanagement.com",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -825,7 +825,7 @@
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "http://www.dellfamilyoffice.com",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -849,7 +849,7 @@
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "https://dubaiholding.com/en",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -873,7 +873,7 @@
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "http://www.edipresse.com",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -897,7 +897,7 @@
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "https://emersoncollective.com",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -945,7 +945,7 @@
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "http://kirkbi.com",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -1200,77 +1200,5 @@
     ],
     "enrichment_status": "pending",
     "id": "SFO-049"
-  },
-  {
-    "entity_name": "HMS Management",
-    "entity_type": "SFO",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "web_directory",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via web directory listing. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-050"
-  },
-  {
-    "entity_name": "Royal Group",
-    "entity_type": "SFO",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "web_directory",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via web directory listing. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-051"
-  },
-  {
-    "entity_name": "Walton Enterprises",
-    "entity_type": "SFO",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "web_directory",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via web directory listing. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-052"
   }
 ]

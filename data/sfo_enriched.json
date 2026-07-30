@@ -25,19 +25,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:26:57.939564+00:00",
+    "last_enriched_at": "2026-07-30 10:44:43.336661+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:26:56.731408+00:00] Enrichment started",
-      "[2026-07-30T10:26:56.731484+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:26:57.939493+00:00] SEC: CIK 0001859434 found but AUM extraction returned None",
-      "[2026-07-30T10:26:57.939526+00:00] Running validation checks",
-      "[2026-07-30T10:26:57.939534+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:26:57.939552+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:26:57.939603+00:00] Enrichment completed"
+      "[2026-07-30T10:44:40.371354+00:00] Enrichment started",
+      "[2026-07-30T10:44:40.985888+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:44:43.336581+00:00] SEC: CIK 0001859434 found but AUM extraction returned None",
+      "[2026-07-30T10:44:43.336616+00:00] Running validation checks",
+      "[2026-07-30T10:44:43.336624+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:44:43.336652+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:44:43.336680+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.723638+00:00",
-    "updated_at": "2026-07-30 10:26:56.723644+00:00"
+    "created_at": "2026-07-30 10:44:40.359487+00:00",
+    "updated_at": "2026-07-30 10:44:40.359493+00:00"
   },
   {
     "id": "SFO-002",
@@ -65,19 +65,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:26:58.485219+00:00",
+    "last_enriched_at": "2026-07-30 10:44:44.729135+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:26:57.942579+00:00] Enrichment started",
-      "[2026-07-30T10:26:57.942647+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:26:58.485105+00:00] SEC: CIK 0001878856 found but AUM extraction returned None",
-      "[2026-07-30T10:26:58.485151+00:00] Running validation checks",
-      "[2026-07-30T10:26:58.485168+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:26:58.485198+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:26:58.485240+00:00] Enrichment completed"
+      "[2026-07-30T10:44:43.340400+00:00] Enrichment started",
+      "[2026-07-30T10:44:43.907123+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:44:44.728906+00:00] SEC: CIK 0001878856 found but AUM extraction returned None",
+      "[2026-07-30T10:44:44.728987+00:00] Running validation checks",
+      "[2026-07-30T10:44:44.729015+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:44:44.729085+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:44:44.729183+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.723733+00:00",
-    "updated_at": "2026-07-30 10:26:56.723735+00:00"
+    "created_at": "2026-07-30 10:44:40.359733+00:00",
+    "updated_at": "2026-07-30 10:44:40.359739+00:00"
   },
   {
     "id": "SFO-003",
@@ -105,19 +105,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:26:59.177907+00:00",
+    "last_enriched_at": "2026-07-30 10:44:46.294730+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:26:58.486618+00:00] Enrichment started",
-      "[2026-07-30T10:26:58.486686+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:26:59.177713+00:00] SEC: CIK 0001536411 found but AUM extraction returned None",
-      "[2026-07-30T10:26:59.177800+00:00] Running validation checks",
-      "[2026-07-30T10:26:59.177828+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:26:59.177875+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:26:59.177950+00:00] Enrichment completed"
+      "[2026-07-30T10:44:44.732040+00:00] Enrichment started",
+      "[2026-07-30T10:44:45.387158+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:44:46.294612+00:00] SEC: CIK 0001536411 found but AUM extraction returned None",
+      "[2026-07-30T10:44:46.294671+00:00] Running validation checks",
+      "[2026-07-30T10:44:46.294686+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:44:46.294715+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:44:46.294763+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.723801+00:00",
-    "updated_at": "2026-07-30 10:26:56.723802+00:00"
+    "created_at": "2026-07-30 10:44:40.360002+00:00",
+    "updated_at": "2026-07-30 10:44:40.360012+00:00"
   },
   {
     "id": "SFO-004",
@@ -145,19 +145,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:26:59.900169+00:00",
+    "last_enriched_at": "2026-07-30 10:44:47.960788+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:26:59.181261+00:00] Enrichment started",
-      "[2026-07-30T10:26:59.181424+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:26:59.900102+00:00] SEC: CIK 0001683689 found but AUM extraction returned None",
-      "[2026-07-30T10:26:59.900134+00:00] Running validation checks",
-      "[2026-07-30T10:26:59.900143+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:26:59.900158+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:26:59.900186+00:00] Enrichment completed"
+      "[2026-07-30T10:44:46.297859+00:00] Enrichment started",
+      "[2026-07-30T10:44:47.005565+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:44:47.960668+00:00] SEC: CIK 0001683689 found but AUM extraction returned None",
+      "[2026-07-30T10:44:47.960728+00:00] Running validation checks",
+      "[2026-07-30T10:44:47.960744+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:44:47.960773+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:44:47.960818+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.723862+00:00",
-    "updated_at": "2026-07-30 10:26:56.723863+00:00"
+    "created_at": "2026-07-30 10:44:40.360261+00:00",
+    "updated_at": "2026-07-30 10:44:40.360264+00:00"
   },
   {
     "id": "SFO-005",
@@ -185,19 +185,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:00.548228+00:00",
+    "last_enriched_at": "2026-07-30 10:44:49.608338+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:26:59.901398+00:00] Enrichment started",
-      "[2026-07-30T10:26:59.901444+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:00.548103+00:00] SEC: CIK 0001511137 found but AUM extraction returned None",
-      "[2026-07-30T10:27:00.548150+00:00] Running validation checks",
-      "[2026-07-30T10:27:00.548164+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:00.548212+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:00.548252+00:00] Enrichment completed"
+      "[2026-07-30T10:44:47.963538+00:00] Enrichment started",
+      "[2026-07-30T10:44:48.569475+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:44:49.608218+00:00] SEC: CIK 0001511137 found but AUM extraction returned None",
+      "[2026-07-30T10:44:49.608277+00:00] Running validation checks",
+      "[2026-07-30T10:44:49.608293+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:44:49.608322+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:44:49.608380+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.723939+00:00",
-    "updated_at": "2026-07-30 10:26:56.723940+00:00"
+    "created_at": "2026-07-30 10:44:40.360495+00:00",
+    "updated_at": "2026-07-30 10:44:40.360499+00:00"
   },
   {
     "id": "SFO-006",
@@ -225,19 +225,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:01.109494+00:00",
+    "last_enriched_at": "2026-07-30 10:44:51.041864+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:00.550027+00:00] Enrichment started",
-      "[2026-07-30T10:27:00.550131+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:01.109434+00:00] SEC: CIK 0001634667 found but AUM extraction returned None",
-      "[2026-07-30T10:27:01.109461+00:00] Running validation checks",
-      "[2026-07-30T10:27:01.109470+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:01.109484+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:01.109532+00:00] Enrichment completed"
+      "[2026-07-30T10:44:49.611126+00:00] Enrichment started",
+      "[2026-07-30T10:44:50.246157+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:44:51.041562+00:00] SEC: CIK 0001634667 found but AUM extraction returned None",
+      "[2026-07-30T10:44:51.041668+00:00] Running validation checks",
+      "[2026-07-30T10:44:51.041719+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:44:51.041797+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:44:51.041907+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.724020+00:00",
-    "updated_at": "2026-07-30 10:26:56.724021+00:00"
+    "created_at": "2026-07-30 10:44:40.360694+00:00",
+    "updated_at": "2026-07-30 10:44:40.360700+00:00"
   },
   {
     "id": "SFO-007",
@@ -265,19 +265,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:01.722200+00:00",
+    "last_enriched_at": "2026-07-30 10:44:52.504894+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:01.111025+00:00] Enrichment started",
-      "[2026-07-30T10:27:01.111106+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:01.722128+00:00] SEC: CIK 0001542604 found but AUM extraction returned None",
-      "[2026-07-30T10:27:01.722162+00:00] Running validation checks",
-      "[2026-07-30T10:27:01.722171+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:01.722189+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:01.722216+00:00] Enrichment completed"
+      "[2026-07-30T10:44:51.046064+00:00] Enrichment started",
+      "[2026-07-30T10:44:51.665413+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:44:52.504720+00:00] SEC: CIK 0001542604 found but AUM extraction returned None",
+      "[2026-07-30T10:44:52.504794+00:00] Running validation checks",
+      "[2026-07-30T10:44:52.504830+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:44:52.504871+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:44:52.504936+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.724094+00:00",
-    "updated_at": "2026-07-30 10:26:56.724096+00:00"
+    "created_at": "2026-07-30 10:44:40.360951+00:00",
+    "updated_at": "2026-07-30 10:44:40.360955+00:00"
   },
   {
     "id": "SFO-008",
@@ -305,19 +305,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:02.316098+00:00",
+    "last_enriched_at": "2026-07-30 10:44:54.093299+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:01.723460+00:00] Enrichment started",
-      "[2026-07-30T10:27:01.723527+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:02.315980+00:00] SEC: CIK 0001581864 found but AUM extraction returned None",
-      "[2026-07-30T10:27:02.316016+00:00] Running validation checks",
-      "[2026-07-30T10:27:02.316035+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:02.316079+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:02.316128+00:00] Enrichment completed"
+      "[2026-07-30T10:44:52.507519+00:00] Enrichment started",
+      "[2026-07-30T10:44:53.218310+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:44:54.093066+00:00] SEC: CIK 0001581864 found but AUM extraction returned None",
+      "[2026-07-30T10:44:54.093139+00:00] Running validation checks",
+      "[2026-07-30T10:44:54.093178+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:44:54.093256+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:44:54.093359+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.724168+00:00",
-    "updated_at": "2026-07-30 10:26:56.724170+00:00"
+    "created_at": "2026-07-30 10:44:40.361179+00:00",
+    "updated_at": "2026-07-30 10:44:40.361189+00:00"
   },
   {
     "id": "SFO-009",
@@ -345,19 +345,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:02.880304+00:00",
+    "last_enriched_at": "2026-07-30 10:44:55.561367+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:02.317512+00:00] Enrichment started",
-      "[2026-07-30T10:27:02.317577+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:02.880193+00:00] SEC: CIK 0001784999 found but AUM extraction returned None",
-      "[2026-07-30T10:27:02.880242+00:00] Running validation checks",
-      "[2026-07-30T10:27:02.880264+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:02.880287+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:02.880331+00:00] Enrichment completed"
+      "[2026-07-30T10:44:54.096355+00:00] Enrichment started",
+      "[2026-07-30T10:44:54.737321+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:44:55.561179+00:00] SEC: CIK 0001784999 found but AUM extraction returned None",
+      "[2026-07-30T10:44:55.561272+00:00] Running validation checks",
+      "[2026-07-30T10:44:55.561297+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:44:55.561341+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:44:55.561435+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.724242+00:00",
-    "updated_at": "2026-07-30 10:26:56.724243+00:00"
+    "created_at": "2026-07-30 10:44:40.361435+00:00",
+    "updated_at": "2026-07-30 10:44:40.361446+00:00"
   },
   {
     "id": "SFO-010",
@@ -385,19 +385,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:03.463643+00:00",
+    "last_enriched_at": "2026-07-30 10:44:56.995063+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:02.882067+00:00] Enrichment started",
-      "[2026-07-30T10:27:02.882162+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:03.463530+00:00] SEC: CIK 0001807659 found but AUM extraction returned None",
-      "[2026-07-30T10:27:03.463578+00:00] Running validation checks",
-      "[2026-07-30T10:27:03.463594+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:03.463622+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:03.463672+00:00] Enrichment completed"
+      "[2026-07-30T10:44:55.564259+00:00] Enrichment started",
+      "[2026-07-30T10:44:56.203521+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:44:56.994754+00:00] SEC: CIK 0001807659 found but AUM extraction returned None",
+      "[2026-07-30T10:44:56.994850+00:00] Running validation checks",
+      "[2026-07-30T10:44:56.994900+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:44:56.994957+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:44:56.995118+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.724313+00:00",
-    "updated_at": "2026-07-30 10:26:56.724314+00:00"
+    "created_at": "2026-07-30 10:44:40.361690+00:00",
+    "updated_at": "2026-07-30 10:44:40.361693+00:00"
   },
   {
     "id": "SFO-011",
@@ -425,19 +425,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:06.369235+00:00",
+    "last_enriched_at": "2026-07-30 10:45:00.370423+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:05.467857+00:00] Enrichment started",
-      "[2026-07-30T10:27:05.467978+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:06.369107+00:00] SEC: CIK 0001566927 found but AUM extraction returned None",
-      "[2026-07-30T10:27:06.369153+00:00] Running validation checks",
-      "[2026-07-30T10:27:06.369167+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:06.369201+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:06.369268+00:00] Enrichment completed"
+      "[2026-07-30T10:44:59.001482+00:00] Enrichment started",
+      "[2026-07-30T10:44:59.556580+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:45:00.370178+00:00] SEC: CIK 0001566927 found but AUM extraction returned None",
+      "[2026-07-30T10:45:00.370287+00:00] Running validation checks",
+      "[2026-07-30T10:45:00.370330+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:45:00.370388+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:45:00.370477+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.724383+00:00",
-    "updated_at": "2026-07-30 10:26:56.724386+00:00"
+    "created_at": "2026-07-30 10:44:40.361942+00:00",
+    "updated_at": "2026-07-30 10:44:40.361945+00:00"
   },
   {
     "id": "SFO-012",
@@ -465,19 +465,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:06.916951+00:00",
+    "last_enriched_at": "2026-07-30 10:45:01.938726+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:06.371057+00:00] Enrichment started",
-      "[2026-07-30T10:27:06.371122+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:06.916746+00:00] SEC: CIK 0001507396 found but AUM extraction returned None",
-      "[2026-07-30T10:27:06.916826+00:00] Running validation checks",
-      "[2026-07-30T10:27:06.916862+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:06.916919+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:06.917010+00:00] Enrichment completed"
+      "[2026-07-30T10:45:00.373336+00:00] Enrichment started",
+      "[2026-07-30T10:45:01.037037+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:45:01.938538+00:00] SEC: CIK 0001507396 found but AUM extraction returned None",
+      "[2026-07-30T10:45:01.938622+00:00] Running validation checks",
+      "[2026-07-30T10:45:01.938652+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:45:01.938693+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:45:01.938777+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.724453+00:00",
-    "updated_at": "2026-07-30 10:26:56.724454+00:00"
+    "created_at": "2026-07-30 10:44:40.362169+00:00",
+    "updated_at": "2026-07-30 10:44:40.362179+00:00"
   },
   {
     "id": "SFO-013",
@@ -505,19 +505,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:07.467432+00:00",
+    "last_enriched_at": "2026-07-30 10:45:03.435954+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:06.920701+00:00] Enrichment started",
-      "[2026-07-30T10:27:06.921236+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:07.467325+00:00] SEC: CIK 0001507397 found but AUM extraction returned None",
-      "[2026-07-30T10:27:07.467368+00:00] Running validation checks",
-      "[2026-07-30T10:27:07.467384+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:07.467411+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:07.467457+00:00] Enrichment completed"
+      "[2026-07-30T10:45:01.942466+00:00] Enrichment started",
+      "[2026-07-30T10:45:02.557840+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:45:03.435754+00:00] SEC: CIK 0001507397 found but AUM extraction returned None",
+      "[2026-07-30T10:45:03.435836+00:00] Running validation checks",
+      "[2026-07-30T10:45:03.435875+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:45:03.435926+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:45:03.436012+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.724522+00:00",
-    "updated_at": "2026-07-30 10:26:56.724524+00:00"
+    "created_at": "2026-07-30 10:44:40.362388+00:00",
+    "updated_at": "2026-07-30 10:44:40.362391+00:00"
   },
   {
     "id": "SFO-014",
@@ -545,19 +545,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:09.012985+00:00",
+    "last_enriched_at": "2026-07-30 10:45:04.843044+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:07.469021+00:00] Enrichment started",
-      "[2026-07-30T10:27:07.469108+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:09.012852+00:00] SEC: CIK 0001507398 found but AUM extraction returned None",
-      "[2026-07-30T10:27:09.012910+00:00] Running validation checks",
-      "[2026-07-30T10:27:09.012927+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:09.012955+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:09.013008+00:00] Enrichment completed"
+      "[2026-07-30T10:45:03.438646+00:00] Enrichment started",
+      "[2026-07-30T10:45:04.062308+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:45:04.842834+00:00] SEC: CIK 0001507398 found but AUM extraction returned None",
+      "[2026-07-30T10:45:04.842928+00:00] Running validation checks",
+      "[2026-07-30T10:45:04.842968+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:45:04.843015+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:45:04.843099+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.724590+00:00",
-    "updated_at": "2026-07-30 10:26:56.724591+00:00"
+    "created_at": "2026-07-30 10:44:40.362631+00:00",
+    "updated_at": "2026-07-30 10:44:40.362641+00:00"
   },
   {
     "id": "SFO-015",
@@ -585,19 +585,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:09.588573+00:00",
+    "last_enriched_at": "2026-07-30 10:45:06.370063+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:09.014584+00:00] Enrichment started",
-      "[2026-07-30T10:27:09.014636+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:09.588489+00:00] SEC: CIK 0001129170 found but AUM extraction returned None",
-      "[2026-07-30T10:27:09.588523+00:00] Running validation checks",
-      "[2026-07-30T10:27:09.588534+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:09.588553+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:09.588588+00:00] Enrichment completed"
+      "[2026-07-30T10:45:04.846038+00:00] Enrichment started",
+      "[2026-07-30T10:45:05.525310+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:45:06.369720+00:00] SEC: CIK 0001129170 found but AUM extraction returned None",
+      "[2026-07-30T10:45:06.369849+00:00] Running validation checks",
+      "[2026-07-30T10:45:06.369876+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:45:06.369922+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:45:06.370101+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.724662+00:00",
-    "updated_at": "2026-07-30 10:26:56.724663+00:00"
+    "created_at": "2026-07-30 10:44:40.362835+00:00",
+    "updated_at": "2026-07-30 10:44:40.362839+00:00"
   },
   {
     "id": "SFO-016",
@@ -625,19 +625,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:10.132784+00:00",
+    "last_enriched_at": "2026-07-30 10:45:07.788206+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:09.589699+00:00] Enrichment started",
-      "[2026-07-30T10:27:09.589750+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:10.132723+00:00] SEC: CIK 0001489927 found but AUM extraction returned None",
-      "[2026-07-30T10:27:10.132749+00:00] Running validation checks",
-      "[2026-07-30T10:27:10.132758+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:10.132774+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:10.132800+00:00] Enrichment completed"
+      "[2026-07-30T10:45:06.375112+00:00] Enrichment started",
+      "[2026-07-30T10:45:06.986495+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:45:07.787869+00:00] SEC: CIK 0001489927 found but AUM extraction returned None",
+      "[2026-07-30T10:45:07.788034+00:00] Running validation checks",
+      "[2026-07-30T10:45:07.788085+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:45:07.788160+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:45:07.788252+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.724730+00:00",
-    "updated_at": "2026-07-30 10:26:56.724733+00:00"
+    "created_at": "2026-07-30 10:44:40.363092+00:00",
+    "updated_at": "2026-07-30 10:44:40.363103+00:00"
   },
   {
     "id": "SFO-017",
@@ -665,19 +665,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:10.665119+00:00",
+    "last_enriched_at": "2026-07-30 10:45:09.287822+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:10.133901+00:00] Enrichment started",
-      "[2026-07-30T10:27:10.133951+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:10.665055+00:00] SEC: CIK 0001791905 found but AUM extraction returned None",
-      "[2026-07-30T10:27:10.665078+00:00] Running validation checks",
-      "[2026-07-30T10:27:10.665089+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:10.665107+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:10.665136+00:00] Enrichment completed"
+      "[2026-07-30T10:45:07.792349+00:00] Enrichment started",
+      "[2026-07-30T10:45:08.438361+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:45:09.287551+00:00] SEC: CIK 0001791905 found but AUM extraction returned None",
+      "[2026-07-30T10:45:09.287682+00:00] Running validation checks",
+      "[2026-07-30T10:45:09.287708+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:45:09.287758+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:45:09.287880+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.724801+00:00",
-    "updated_at": "2026-07-30 10:26:56.724802+00:00"
+    "created_at": "2026-07-30 10:44:40.363309+00:00",
+    "updated_at": "2026-07-30 10:44:40.363313+00:00"
   },
   {
     "id": "SFO-018",
@@ -705,19 +705,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:11.218465+00:00",
+    "last_enriched_at": "2026-07-30 10:45:10.744360+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:10.666343+00:00] Enrichment started",
-      "[2026-07-30T10:27:10.666394+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:11.218359+00:00] SEC: CIK 0001657668 found but AUM extraction returned None",
-      "[2026-07-30T10:27:11.218400+00:00] Running validation checks",
-      "[2026-07-30T10:27:11.218419+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:11.218446+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:11.218488+00:00] Enrichment completed"
+      "[2026-07-30T10:45:09.291440+00:00] Enrichment started",
+      "[2026-07-30T10:45:09.908979+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:45:10.744181+00:00] SEC: CIK 0001657668 found but AUM extraction returned None",
+      "[2026-07-30T10:45:10.744260+00:00] Running validation checks",
+      "[2026-07-30T10:45:10.744293+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:45:10.744335+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:45:10.744410+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.724876+00:00",
-    "updated_at": "2026-07-30 10:26:56.724877+00:00"
+    "created_at": "2026-07-30 10:44:40.363562+00:00",
+    "updated_at": "2026-07-30 10:44:40.363566+00:00"
   },
   {
     "id": "SFO-019",
@@ -745,19 +745,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:11.748736+00:00",
+    "last_enriched_at": "2026-07-30 10:45:12.229654+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:11.220100+00:00] Enrichment started",
-      "[2026-07-30T10:27:11.220150+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:11.748684+00:00] SEC: CIK 0001566004 found but AUM extraction returned None",
-      "[2026-07-30T10:27:11.748705+00:00] Running validation checks",
-      "[2026-07-30T10:27:11.748711+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:11.748724+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:11.748769+00:00] Enrichment completed"
+      "[2026-07-30T10:45:10.747106+00:00] Enrichment started",
+      "[2026-07-30T10:45:11.404579+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:45:12.229390+00:00] SEC: CIK 0001566004 found but AUM extraction returned None",
+      "[2026-07-30T10:45:12.229483+00:00] Running validation checks",
+      "[2026-07-30T10:45:12.229548+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:45:12.229602+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:45:12.229721+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.724939+00:00",
-    "updated_at": "2026-07-30 10:26:56.724940+00:00"
+    "created_at": "2026-07-30 10:44:40.363790+00:00",
+    "updated_at": "2026-07-30 10:44:40.363793+00:00"
   },
   {
     "id": "SFO-020",
@@ -785,19 +785,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:12.379571+00:00",
+    "last_enriched_at": "2026-07-30 10:45:13.637826+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:11.750286+00:00] Enrichment started",
-      "[2026-07-30T10:27:11.750436+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:12.379419+00:00] SEC: CIK 0001510134 found but AUM extraction returned None",
-      "[2026-07-30T10:27:12.379494+00:00] Running validation checks",
-      "[2026-07-30T10:27:12.379511+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:12.379545+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:12.379593+00:00] Enrichment completed"
+      "[2026-07-30T10:45:12.234610+00:00] Enrichment started",
+      "[2026-07-30T10:45:12.848842+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:45:13.637648+00:00] SEC: CIK 0001510134 found but AUM extraction returned None",
+      "[2026-07-30T10:45:13.637710+00:00] Running validation checks",
+      "[2026-07-30T10:45:13.637734+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:45:13.637804+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:45:13.637870+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.725020+00:00",
-    "updated_at": "2026-07-30 10:26:56.725021+00:00"
+    "created_at": "2026-07-30 10:44:40.363937+00:00",
+    "updated_at": "2026-07-30 10:44:40.363940+00:00"
   },
   {
     "id": "SFO-021",
@@ -825,19 +825,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:14.913469+00:00",
+    "last_enriched_at": "2026-07-30 10:45:17.106346+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:14.383168+00:00] Enrichment started",
-      "[2026-07-30T10:27:14.383235+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:14.913392+00:00] SEC: CIK 0001433020 found but AUM extraction returned None",
-      "[2026-07-30T10:27:14.913428+00:00] Running validation checks",
-      "[2026-07-30T10:27:14.913438+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:14.913458+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:14.913489+00:00] Enrichment completed"
+      "[2026-07-30T10:45:15.643620+00:00] Enrichment started",
+      "[2026-07-30T10:45:16.281538+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:45:17.106130+00:00] SEC: CIK 0001433020 found but AUM extraction returned None",
+      "[2026-07-30T10:45:17.106219+00:00] Running validation checks",
+      "[2026-07-30T10:45:17.106252+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:45:17.106306+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:45:17.106405+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.725085+00:00",
-    "updated_at": "2026-07-30 10:26:56.725086+00:00"
+    "created_at": "2026-07-30 10:44:40.364075+00:00",
+    "updated_at": "2026-07-30 10:44:40.364079+00:00"
   },
   {
     "id": "SFO-022",
@@ -865,19 +865,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:15.648332+00:00",
+    "last_enriched_at": "2026-07-30 10:45:18.521270+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:14.914892+00:00] Enrichment started",
-      "[2026-07-30T10:27:14.914942+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:15.648267+00:00] SEC: CIK 0001134002 found but AUM extraction returned None",
-      "[2026-07-30T10:27:15.648294+00:00] Running validation checks",
-      "[2026-07-30T10:27:15.648304+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:15.648321+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:15.648345+00:00] Enrichment completed"
+      "[2026-07-30T10:45:17.109242+00:00] Enrichment started",
+      "[2026-07-30T10:45:17.729517+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:45:18.521093+00:00] SEC: CIK 0001134002 found but AUM extraction returned None",
+      "[2026-07-30T10:45:18.521180+00:00] Running validation checks",
+      "[2026-07-30T10:45:18.521202+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:45:18.521242+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:45:18.521337+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.725153+00:00",
-    "updated_at": "2026-07-30 10:26:56.725155+00:00"
+    "created_at": "2026-07-30 10:44:40.364194+00:00",
+    "updated_at": "2026-07-30 10:44:40.364196+00:00"
   },
   {
     "id": "SFO-023",
@@ -905,19 +905,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:16.205545+00:00",
+    "last_enriched_at": "2026-07-30 10:45:19.960619+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:15.649782+00:00] Enrichment started",
-      "[2026-07-30T10:27:15.649856+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:16.205439+00:00] SEC: CIK 0001013564 found but AUM extraction returned None",
-      "[2026-07-30T10:27:16.205486+00:00] Running validation checks",
-      "[2026-07-30T10:27:16.205504+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:16.205528+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:16.205570+00:00] Enrichment completed"
+      "[2026-07-30T10:45:18.524314+00:00] Enrichment started",
+      "[2026-07-30T10:45:19.106515+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:45:19.960465+00:00] SEC: CIK 0001013564 found but AUM extraction returned None",
+      "[2026-07-30T10:45:19.960522+00:00] Running validation checks",
+      "[2026-07-30T10:45:19.960547+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:45:19.960592+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:45:19.960689+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.725224+00:00",
-    "updated_at": "2026-07-30 10:26:56.725225+00:00"
+    "created_at": "2026-07-30 10:44:40.364274+00:00",
+    "updated_at": "2026-07-30 10:44:40.364275+00:00"
   },
   {
     "id": "SFO-024",
@@ -945,19 +945,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:16.502065+00:00",
+    "last_enriched_at": "2026-07-30 10:45:21.391616+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:16.207039+00:00] Enrichment started",
-      "[2026-07-30T10:27:16.207100+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:16.501925+00:00] SEC: CIK 0001644343 found but AUM extraction returned None",
-      "[2026-07-30T10:27:16.501952+00:00] Running validation checks",
-      "[2026-07-30T10:27:16.501968+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:16.502051+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:16.502090+00:00] Enrichment completed"
+      "[2026-07-30T10:45:19.963838+00:00] Enrichment started",
+      "[2026-07-30T10:45:20.589941+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:45:21.391484+00:00] SEC: CIK 0001644343 found but AUM extraction returned None",
+      "[2026-07-30T10:45:21.391552+00:00] Running validation checks",
+      "[2026-07-30T10:45:21.391570+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:45:21.391601+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:45:21.391658+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.725293+00:00",
-    "updated_at": "2026-07-30 10:26:56.725295+00:00"
+    "created_at": "2026-07-30 10:44:40.364356+00:00",
+    "updated_at": "2026-07-30 10:44:40.364357+00:00"
   },
   {
     "id": "SFO-025",
@@ -985,19 +985,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:17.057378+00:00",
+    "last_enriched_at": "2026-07-30 10:45:22.796493+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:16.503785+00:00] Enrichment started",
-      "[2026-07-30T10:27:16.503841+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:17.056872+00:00] SEC: CIK 0001666724 found but AUM extraction returned None",
-      "[2026-07-30T10:27:17.057119+00:00] Running validation checks",
-      "[2026-07-30T10:27:17.057139+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:17.057168+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:17.057412+00:00] Enrichment completed"
+      "[2026-07-30T10:45:21.395430+00:00] Enrichment started",
+      "[2026-07-30T10:45:21.969973+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:45:22.796308+00:00] SEC: CIK 0001666724 found but AUM extraction returned None",
+      "[2026-07-30T10:45:22.796402+00:00] Running validation checks",
+      "[2026-07-30T10:45:22.796426+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:45:22.796472+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:45:22.796529+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.725366+00:00",
-    "updated_at": "2026-07-30 10:26:56.725367+00:00"
+    "created_at": "2026-07-30 10:44:40.364435+00:00",
+    "updated_at": "2026-07-30 10:44:40.364437+00:00"
   },
   {
     "id": "SFO-026",
@@ -1025,19 +1025,19 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:17.689824+00:00",
+    "last_enriched_at": "2026-07-30 10:45:24.307323+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:17.059375+00:00] Enrichment started",
-      "[2026-07-30T10:27:17.059455+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:17.689721+00:00] SEC: CIK 0001146005 found but AUM extraction returned None",
-      "[2026-07-30T10:27:17.689765+00:00] Running validation checks",
-      "[2026-07-30T10:27:17.689780+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:17.689804+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:17.689847+00:00] Enrichment completed"
+      "[2026-07-30T10:45:22.799481+00:00] Enrichment started",
+      "[2026-07-30T10:45:23.381836+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:45:24.307080+00:00] SEC: CIK 0001146005 found but AUM extraction returned None",
+      "[2026-07-30T10:45:24.307147+00:00] Running validation checks",
+      "[2026-07-30T10:45:24.307182+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:45:24.307282+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:45:24.307368+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.725436+00:00",
-    "updated_at": "2026-07-30 10:26:56.725437+00:00"
+    "created_at": "2026-07-30 10:44:40.364538+00:00",
+    "updated_at": "2026-07-30 10:44:40.364540+00:00"
   },
   {
     "id": "SFO-027",
@@ -1065,20 +1065,20 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:18.230912+00:00",
+    "last_enriched_at": "2026-07-30 10:45:25.719146+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:17.691850+00:00] Enrichment started",
-      "[2026-07-30T10:27:17.691934+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:17.691951+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:18.230848+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:18.230878+00:00] Running validation checks",
-      "[2026-07-30T10:27:18.230887+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:18.230902+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:18.230925+00:00] Enrichment completed"
+      "[2026-07-30T10:45:24.311499+00:00] Enrichment started",
+      "[2026-07-30T10:45:24.899119+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:45:24.899177+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:45:25.718968+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:45:25.719048+00:00] Running validation checks",
+      "[2026-07-30T10:45:25.719075+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:45:25.719114+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:45:25.719176+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.725509+00:00",
-    "updated_at": "2026-07-30 10:26:56.725510+00:00"
+    "created_at": "2026-07-30 10:44:40.364630+00:00",
+    "updated_at": "2026-07-30 10:44:40.364632+00:00"
   },
   {
     "id": "SFO-028",
@@ -1086,12 +1086,12 @@
     "entity_type": "SFO",
     "also_known_as": null,
     "family_name": null,
-    "source_of_wealth": null,
+    "source_of_wealth": "Close modal windowKevin BromerExecutive Director, Head of Technology & Data StrategyView on LinkedInKevin Bromer is the Executive Director, Head of Technology and Data Strategy, leading Ballmer Group\u2019s approach to increase economic mobility and drive social impact through data and technology. Kevin\u2019",
     "cik": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "http://ballmergroup.org",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -1106,20 +1106,22 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:19.138137+00:00",
+    "last_enriched_at": "2026-07-30 10:45:52.104751+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:18.232299+00:00] Enrichment started",
-      "[2026-07-30T10:27:18.232354+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:18.232374+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:19.138072+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:19.138102+00:00] Running validation checks",
-      "[2026-07-30T10:27:19.138112+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:19.138126+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:19.138151+00:00] Enrichment completed"
+      "[2026-07-30T10:45:25.723183+00:00] Enrichment started",
+      "[2026-07-30T10:45:25.723327+00:00] Scraping website: http://ballmergroup.org",
+      "[2026-07-30T10:45:51.288797+00:00] Website scrape complete: 0 principals, 0 emails",
+      "[2026-07-30T10:45:51.288844+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:45:51.288861+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:45:52.104633+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:45:52.104683+00:00] Running validation checks",
+      "[2026-07-30T10:45:52.104702+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:45:52.104733+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:45:52.104772+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.725578+00:00",
-    "updated_at": "2026-07-30 10:26:56.725579+00:00"
+    "created_at": "2026-07-30 10:44:40.364762+00:00",
+    "updated_at": "2026-07-30 10:44:40.364765+00:00"
   },
   {
     "id": "SFO-029",
@@ -1147,20 +1149,20 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:19.580943+00:00",
+    "last_enriched_at": "2026-07-30 10:45:53.085460+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:19.139693+00:00] Enrichment started",
-      "[2026-07-30T10:27:19.139770+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:19.139790+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:19.580878+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:19.580909+00:00] Running validation checks",
-      "[2026-07-30T10:27:19.580917+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:19.580932+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:19.580956+00:00] Enrichment completed"
+      "[2026-07-30T10:45:52.107895+00:00] Enrichment started",
+      "[2026-07-30T10:45:52.682223+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:45:52.682258+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:45:53.085340+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:45:53.085400+00:00] Running validation checks",
+      "[2026-07-30T10:45:53.085417+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:45:53.085444+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:45:53.085484+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.725644+00:00",
-    "updated_at": "2026-07-30 10:26:56.725646+00:00"
+    "created_at": "2026-07-30 10:44:40.364858+00:00",
+    "updated_at": "2026-07-30 10:44:40.364859+00:00"
   },
   {
     "id": "SFO-030",
@@ -1168,12 +1170,12 @@
     "entity_type": "SFO",
     "also_known_as": null,
     "family_name": null,
-    "source_of_wealth": null,
+    "source_of_wealth": "The Bessemer experienceRelationships that lastAlways on your sideDeep family office expertiseWhat we do for youManaging your financial lifeWealth planningInvestment managementFamily office servicesWhat makes us differentPeace of mindKey factsOur leadersInsights & EducationInsightsFinancial Education",
     "cik": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "http://bessemertrust.com",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -1188,20 +1190,22 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:20.440212+00:00",
+    "last_enriched_at": "2026-07-30 10:46:20.673288+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:19.582508+00:00] Enrichment started",
-      "[2026-07-30T10:27:19.582575+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:19.582594+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:20.440100+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:20.440152+00:00] Running validation checks",
-      "[2026-07-30T10:27:20.440167+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:20.440195+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:20.440234+00:00] Enrichment completed"
+      "[2026-07-30T10:45:53.088932+00:00] Enrichment started",
+      "[2026-07-30T10:45:53.089096+00:00] Scraping website: http://bessemertrust.com",
+      "[2026-07-30T10:46:19.846217+00:00] Website scrape complete: 0 principals, 0 emails",
+      "[2026-07-30T10:46:19.846283+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:46:19.846300+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:46:20.673152+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:46:20.673213+00:00] Running validation checks",
+      "[2026-07-30T10:46:20.673229+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:46:20.673269+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:46:20.673312+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.725717+00:00",
-    "updated_at": "2026-07-30 10:26:56.725718+00:00"
+    "created_at": "2026-07-30 10:44:40.364938+00:00",
+    "updated_at": "2026-07-30 10:44:40.364940+00:00"
   },
   {
     "id": "SFO-031",
@@ -1214,7 +1218,7 @@
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "https://www.bezosexpeditions.com/index.html",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -1229,20 +1233,22 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:22.866024+00:00",
+    "last_enriched_at": "2026-07-30 10:46:41.446900+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:22.444547+00:00] Enrichment started",
-      "[2026-07-30T10:27:22.444616+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:22.444637+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:22.865950+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:22.865979+00:00] Running validation checks",
-      "[2026-07-30T10:27:22.865989+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:22.866009+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:22.866045+00:00] Enrichment completed"
+      "[2026-07-30T10:46:22.681246+00:00] Enrichment started",
+      "[2026-07-30T10:46:22.681411+00:00] Scraping website: https://www.bezosexpeditions.com/index.html",
+      "[2026-07-30T10:46:41.039676+00:00] Website scrape complete: 0 principals, 0 emails",
+      "[2026-07-30T10:46:41.039729+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:46:41.039763+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:46:41.446782+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:46:41.446840+00:00] Running validation checks",
+      "[2026-07-30T10:46:41.446856+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:46:41.446884+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:46:41.446929+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.725783+00:00",
-    "updated_at": "2026-07-30 10:26:56.725784+00:00"
+    "created_at": "2026-07-30 10:44:40.365024+00:00",
+    "updated_at": "2026-07-30 10:44:40.365026+00:00"
   },
   {
     "id": "SFO-032",
@@ -1250,12 +1256,12 @@
     "entity_type": "SFO",
     "also_known_as": null,
     "family_name": null,
-    "source_of_wealth": null,
+    "source_of_wealth": "Founded in 1994, Cascade applies a fundamental, long horizon investment approach across asset classes and geographies.While Cascade manages the assets of the Trust, which funds the Gates Foundation, neither Cascade nor the Trust play a role in the grantmaking or operations of the foundation. Additio",
     "cik": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "http://cascadeassetmanagement.com",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -1270,20 +1276,22 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:23.725376+00:00",
+    "last_enriched_at": "2026-07-30 10:47:07.900210+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:22.867899+00:00] Enrichment started",
-      "[2026-07-30T10:27:22.867978+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:22.867998+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:23.725323+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:23.725348+00:00] Running validation checks",
-      "[2026-07-30T10:27:23.725354+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:23.725370+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:23.725385+00:00] Enrichment completed"
+      "[2026-07-30T10:46:41.450524+00:00] Enrichment started",
+      "[2026-07-30T10:46:41.450681+00:00] Scraping website: http://cascadeassetmanagement.com",
+      "[2026-07-30T10:47:06.877098+00:00] Website scrape complete: 0 principals, 0 emails",
+      "[2026-07-30T10:47:06.877128+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:47:06.877137+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:47:07.900044+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:47:07.900119+00:00] Running validation checks",
+      "[2026-07-30T10:47:07.900144+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:47:07.900184+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:47:07.900245+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.725851+00:00",
-    "updated_at": "2026-07-30 10:26:56.725853+00:00"
+    "created_at": "2026-07-30 10:44:40.365103+00:00",
+    "updated_at": "2026-07-30 10:44:40.365104+00:00"
   },
   {
     "id": "SFO-033",
@@ -1311,20 +1319,20 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:24.135086+00:00",
+    "last_enriched_at": "2026-07-30 10:47:09.448526+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:23.727027+00:00] Enrichment started",
-      "[2026-07-30T10:27:23.727075+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:23.727090+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:24.135021+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:24.135051+00:00] Running validation checks",
-      "[2026-07-30T10:27:24.135061+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:24.135076+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:24.135098+00:00] Enrichment completed"
+      "[2026-07-30T10:47:07.904828+00:00] Enrichment started",
+      "[2026-07-30T10:47:08.918545+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:47:08.918600+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:47:09.448337+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:47:09.448426+00:00] Running validation checks",
+      "[2026-07-30T10:47:09.448457+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:47:09.448500+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:47:09.448560+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.725921+00:00",
-    "updated_at": "2026-07-30 10:26:56.725922+00:00"
+    "created_at": "2026-07-30 10:44:40.365182+00:00",
+    "updated_at": "2026-07-30 10:44:40.365183+00:00"
   },
   {
     "id": "SFO-034",
@@ -1337,7 +1345,7 @@
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "http://www.dellfamilyoffice.com",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -1352,20 +1360,22 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:24.568805+00:00",
+    "last_enriched_at": "2026-07-30 10:47:44.670924+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:24.136648+00:00] Enrichment started",
-      "[2026-07-30T10:27:24.136690+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:24.136703+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:24.568731+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:24.568778+00:00] Running validation checks",
-      "[2026-07-30T10:27:24.568784+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:24.568797+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:24.568818+00:00] Enrichment completed"
+      "[2026-07-30T10:47:09.452100+00:00] Enrichment started",
+      "[2026-07-30T10:47:09.452218+00:00] Scraping website: http://www.dellfamilyoffice.com",
+      "[2026-07-30T10:47:44.008286+00:00] Website scrape complete: 0 principals, 0 emails",
+      "[2026-07-30T10:47:44.008392+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:47:44.008435+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:47:44.670806+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:47:44.670864+00:00] Running validation checks",
+      "[2026-07-30T10:47:44.670881+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:47:44.670909+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:47:44.670949+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.725979+00:00",
-    "updated_at": "2026-07-30 10:26:56.725980+00:00"
+    "created_at": "2026-07-30 10:44:40.365255+00:00",
+    "updated_at": "2026-07-30 10:44:40.365256+00:00"
   },
   {
     "id": "SFO-035",
@@ -1373,12 +1383,12 @@
     "entity_type": "SFO",
     "also_known_as": null,
     "family_name": null,
-    "source_of_wealth": null,
+    "source_of_wealth": "1997Jumeirah Beach Hotel Opens establishing Dubai's first five-star hospitality chain.Establishing Dubai's first five-star hospitality chain. Jumeirah Beach Hotel officially opened its doors in November 1997, heralding the creation of Dubai's very first international luxury hospitality chain. Its cu",
     "cik": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "https://dubaiholding.com/en",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -1393,20 +1403,22 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:24.981467+00:00",
+    "last_enriched_at": "2026-07-30 10:48:10.346938+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:24.570566+00:00] Enrichment started",
-      "[2026-07-30T10:27:24.570616+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:24.570630+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:24.981404+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:24.981435+00:00] Running validation checks",
-      "[2026-07-30T10:27:24.981444+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:24.981458+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:24.981479+00:00] Enrichment completed"
+      "[2026-07-30T10:47:44.675658+00:00] Enrichment started",
+      "[2026-07-30T10:47:44.675803+00:00] Scraping website: https://dubaiholding.com/en",
+      "[2026-07-30T10:48:09.946530+00:00] Website scrape complete: 0 principals, 0 emails",
+      "[2026-07-30T10:48:09.946565+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:48:09.946575+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:48:10.346837+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:48:10.346883+00:00] Running validation checks",
+      "[2026-07-30T10:48:10.346900+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:48:10.346923+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:48:10.346955+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.726035+00:00",
-    "updated_at": "2026-07-30 10:26:56.726036+00:00"
+    "created_at": "2026-07-30 10:44:40.365424+00:00",
+    "updated_at": "2026-07-30 10:44:40.365427+00:00"
   },
   {
     "id": "SFO-036",
@@ -1414,12 +1426,12 @@
     "entity_type": "SFO",
     "also_known_as": null,
     "family_name": null,
-    "source_of_wealth": null,
+    "source_of_wealth": "HomeGroupPresentationHistoryManagement boardMichel Lamuni\u00e8reMichel PreiswerkPhilippe GrossPierre Lamuni\u00e8reS\u00e9bastien Lamuni\u00e8reMediaEdipresse Mediain AsiaGMT PublishingDigital venturesKapawQoQaReal estatePresentationProjectsContactfrenEdipresse GroupEdipresse Group is a family business headquartered i",
     "cik": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "http://www.edipresse.com",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -1434,20 +1446,22 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:25.393287+00:00",
+    "last_enriched_at": "2026-07-30 10:48:29.996591+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:24.983152+00:00] Enrichment started",
-      "[2026-07-30T10:27:24.983192+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:24.983202+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:25.393074+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:25.393132+00:00] Running validation checks",
-      "[2026-07-30T10:27:25.393152+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:25.393265+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:25.393310+00:00] Enrichment completed"
+      "[2026-07-30T10:48:10.349454+00:00] Enrichment started",
+      "[2026-07-30T10:48:10.349534+00:00] Scraping website: http://www.edipresse.com",
+      "[2026-07-30T10:48:29.582911+00:00] Website scrape complete: 0 principals, 0 emails",
+      "[2026-07-30T10:48:29.582963+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:48:29.582980+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:48:29.996474+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:48:29.996530+00:00] Running validation checks",
+      "[2026-07-30T10:48:29.996547+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:48:29.996575+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:48:29.996616+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.726090+00:00",
-    "updated_at": "2026-07-30 10:26:56.726091+00:00"
+    "created_at": "2026-07-30 10:44:40.365576+00:00",
+    "updated_at": "2026-07-30 10:44:40.365578+00:00"
   },
   {
     "id": "SFO-037",
@@ -1455,12 +1469,12 @@
     "entity_type": "SFO",
     "also_known_as": null,
     "family_name": null,
-    "source_of_wealth": null,
+    "source_of_wealth": "Laurene Powell JobsFounder and PresidentFlav AbellanaManager, FP&A, FinanceJesse AdornoDirector, IT Projects, Information TechnologyCarlos AgostaSenior IT Support Engineer, Information TechnologyRahul AjmeraOperations AnalystGeorge AlbrechtSenior CRM Developer, Information TechnologyLimantis Alcanta",
     "cik": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "https://emersoncollective.com",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -1472,23 +1486,40 @@
         "confidence": "Unresolved",
         "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
+      },
+      {
+        "type": "email",
+        "value": "info@emersoncollective.com",
+        "confidence": "Catch-all / Generic Inbox",
+        "sources": [
+          {
+            "source_name": "company_site",
+            "url": "https://emersoncollective.com",
+            "retrieved_at": "2026-07-30 10:48:47.979233+00:00",
+            "field_extracted": "email",
+            "raw_snippet": null
+          }
+        ],
+        "notes": null
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:25.817799+00:00",
+    "last_enriched_at": "2026-07-30 10:48:48.448784+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:25.395972+00:00] Enrichment started",
-      "[2026-07-30T10:27:25.396055+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:25.396081+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:25.817723+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:25.817755+00:00] Running validation checks",
-      "[2026-07-30T10:27:25.817764+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:25.817790+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:25.817812+00:00] Enrichment completed"
+      "[2026-07-30T10:48:30.000458+00:00] Enrichment started",
+      "[2026-07-30T10:48:30.000575+00:00] Scraping website: https://emersoncollective.com",
+      "[2026-07-30T10:48:47.979408+00:00] Website scrape complete: 0 principals, 1 emails",
+      "[2026-07-30T10:48:47.979441+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:48:47.979452+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:48:48.448694+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:48:48.448736+00:00] Running validation checks",
+      "[2026-07-30T10:48:48.448749+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:48:48.448772+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:48:48.448802+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.726145+00:00",
-    "updated_at": "2026-07-30 10:26:56.726146+00:00"
+    "created_at": "2026-07-30 10:44:40.365793+00:00",
+    "updated_at": "2026-07-30 10:48:47.979384+00:00"
   },
   {
     "id": "SFO-038",
@@ -1516,20 +1547,20 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:26.722932+00:00",
+    "last_enriched_at": "2026-07-30 10:48:50.009966+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:25.819362+00:00] Enrichment started",
-      "[2026-07-30T10:27:25.819411+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:25.819423+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:26.722840+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:26.722886+00:00] Running validation checks",
-      "[2026-07-30T10:27:26.722898+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:26.722921+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:26.722950+00:00] Enrichment completed"
+      "[2026-07-30T10:48:48.451820+00:00] Enrichment started",
+      "[2026-07-30T10:48:49.086428+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:48:49.086478+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:48:50.009854+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:48:50.009909+00:00] Running validation checks",
+      "[2026-07-30T10:48:50.009924+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:48:50.009950+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:48:50.009989+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.726199+00:00",
-    "updated_at": "2026-07-30 10:26:56.726200+00:00"
+    "created_at": "2026-07-30 10:44:40.365933+00:00",
+    "updated_at": "2026-07-30 10:44:40.365936+00:00"
   },
   {
     "id": "SFO-039",
@@ -1537,12 +1568,12 @@
     "entity_type": "SFO",
     "also_known_as": null,
     "family_name": null,
-    "source_of_wealth": null,
+    "source_of_wealth": "KIRKBI is the holding company of the LEGO Group and other companies owned by the Kirk Kristiansen family. We develop and own businesses that help build a better future for children around the world.Driving impact through three business areasKIRKBI reinvests proceeds from the LEGO Group and other act",
     "cik": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "http://kirkbi.com",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -1554,23 +1585,40 @@
         "confidence": "Unresolved",
         "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
+      },
+      {
+        "type": "email",
+        "value": "kirkbi@kirkbi.com",
+        "confidence": "Catch-all / Generic Inbox",
+        "sources": [
+          {
+            "source_name": "company_site",
+            "url": "http://kirkbi.com",
+            "retrieved_at": "2026-07-30 10:49:10.961145+00:00",
+            "field_extracted": "email",
+            "raw_snippet": null
+          }
+        ],
+        "notes": null
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:27.134832+00:00",
+    "last_enriched_at": "2026-07-30 10:49:11.396747+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:26.725313+00:00] Enrichment started",
-      "[2026-07-30T10:27:26.725389+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:26.725417+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:27.134769+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:27.134798+00:00] Running validation checks",
-      "[2026-07-30T10:27:27.134808+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:27.134822+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:27.134847+00:00] Enrichment completed"
+      "[2026-07-30T10:48:50.012967+00:00] Enrichment started",
+      "[2026-07-30T10:48:50.013047+00:00] Scraping website: http://kirkbi.com",
+      "[2026-07-30T10:49:10.961280+00:00] Website scrape complete: 0 principals, 1 emails",
+      "[2026-07-30T10:49:10.961309+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:49:10.961318+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:49:11.396642+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:49:11.396686+00:00] Running validation checks",
+      "[2026-07-30T10:49:11.396703+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:49:11.396730+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:49:11.396766+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.726254+00:00",
-    "updated_at": "2026-07-30 10:26:56.726255+00:00"
+    "created_at": "2026-07-30 10:44:40.366062+00:00",
+    "updated_at": "2026-07-30 10:49:10.961258+00:00"
   },
   {
     "id": "SFO-040",
@@ -1598,20 +1646,20 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:27.567831+00:00",
+    "last_enriched_at": "2026-07-30 10:49:12.732418+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:27.136997+00:00] Enrichment started",
-      "[2026-07-30T10:27:27.137106+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:27.137131+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:27.567783+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:27.567806+00:00] Running validation checks",
-      "[2026-07-30T10:27:27.567812+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:27.567824+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:27.567843+00:00] Enrichment completed"
+      "[2026-07-30T10:49:11.399136+00:00] Enrichment started",
+      "[2026-07-30T10:49:12.249875+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:49:12.249926+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:49:12.732282+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:49:12.732347+00:00] Running validation checks",
+      "[2026-07-30T10:49:12.732370+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:49:12.732405+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:49:12.732444+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.726308+00:00",
-    "updated_at": "2026-07-30 10:26:56.726310+00:00"
+    "created_at": "2026-07-30 10:44:40.366206+00:00",
+    "updated_at": "2026-07-30 10:44:40.366209+00:00"
   },
   {
     "id": "SFO-041",
@@ -1624,7 +1672,7 @@
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "http://moussepartners.com",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -1639,20 +1687,31 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:30.011031+00:00",
-    "sources": [],
-    "audit_log": [
-      "[2026-07-30T10:27:29.571805+00:00] Enrichment started",
-      "[2026-07-30T10:27:29.571874+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:29.571896+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:30.010951+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:30.010995+00:00] Running validation checks",
-      "[2026-07-30T10:27:30.011005+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:30.011020+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:30.011046+00:00] Enrichment completed"
+    "last_enriched_at": "2026-07-30 10:49:47.522736+00:00",
+    "sources": [
+      {
+        "source_name": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Mousse_Partners",
+        "retrieved_at": "2026-07-30 10:49:15.565070+00:00",
+        "field_extracted": "website",
+        "raw_snippet": null
+      }
     ],
-    "created_at": "2026-07-30 10:26:56.726363+00:00",
-    "updated_at": "2026-07-30 10:26:56.726364+00:00"
+    "audit_log": [
+      "[2026-07-30T10:49:14.738129+00:00] Enrichment started",
+      "[2026-07-30T10:49:15.565124+00:00] Website discovered via Wikipedia: http://moussepartners.com",
+      "[2026-07-30T10:49:15.565170+00:00] Scraping website: http://moussepartners.com",
+      "[2026-07-30T10:49:46.862822+00:00] Website scrape complete: 0 principals, 0 emails",
+      "[2026-07-30T10:49:46.862920+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:49:46.862940+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:49:47.522540+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:49:47.522634+00:00] Running validation checks",
+      "[2026-07-30T10:49:47.522668+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:49:47.522713+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:49:47.522775+00:00] Enrichment completed"
+    ],
+    "created_at": "2026-07-30 10:44:40.366333+00:00",
+    "updated_at": "2026-07-30 10:49:15.565112+00:00"
   },
   {
     "id": "SFO-042",
@@ -1660,12 +1719,12 @@
     "entity_type": "SFO",
     "also_known_as": null,
     "family_name": null,
-    "source_of_wealth": null,
+    "source_of_wealth": "TRY RWJF ANSWERS: Ask questions in your own words and get summarized research findings and actionable insights.CloseTaking bold leaps to transform health in our lifetimeMembers of the TreeFolks team in Austin, Texas, admiring and discussing the different types of trees at a nursery. Photo by Arazell",
     "cik": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "http://www.rwjf.org",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -1680,20 +1739,31 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:30.506932+00:00",
-    "sources": [],
-    "audit_log": [
-      "[2026-07-30T10:27:30.012927+00:00] Enrichment started",
-      "[2026-07-30T10:27:30.012985+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:30.012995+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:30.506833+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:30.506878+00:00] Running validation checks",
-      "[2026-07-30T10:27:30.506893+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:30.506916+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:30.506953+00:00] Enrichment completed"
+    "last_enriched_at": "2026-07-30 10:50:10.572964+00:00",
+    "sources": [
+      {
+        "source_name": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Robert_Wood_Johnson_Foundation",
+        "retrieved_at": "2026-07-30 10:49:48.870290+00:00",
+        "field_extracted": "website",
+        "raw_snippet": null
+      }
     ],
-    "created_at": "2026-07-30 10:26:56.726419+00:00",
-    "updated_at": "2026-07-30 10:26:56.726420+00:00"
+    "audit_log": [
+      "[2026-07-30T10:49:47.526762+00:00] Enrichment started",
+      "[2026-07-30T10:49:48.870327+00:00] Website discovered via Wikipedia: http://www.rwjf.org",
+      "[2026-07-30T10:49:48.870356+00:00] Scraping website: http://www.rwjf.org",
+      "[2026-07-30T10:50:10.145989+00:00] Website scrape complete: 0 principals, 0 emails",
+      "[2026-07-30T10:50:10.146023+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:50:10.146034+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:50:10.572860+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:50:10.572910+00:00] Running validation checks",
+      "[2026-07-30T10:50:10.572925+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:50:10.572950+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:50:10.572989+00:00] Enrichment completed"
+    ],
+    "created_at": "2026-07-30 10:44:40.366460+00:00",
+    "updated_at": "2026-07-30 10:49:48.870319+00:00"
   },
   {
     "id": "SFO-043",
@@ -1701,12 +1771,12 @@
     "entity_type": "SFO",
     "also_known_as": null,
     "family_name": null,
-    "source_of_wealth": null,
+    "source_of_wealth": "Soros Fund Management (\u201cSFM\u201d)\u00a0has recently become\u00a0aware of\u00a0fraudulent activity\u00a0involving individuals and groups falsely claiming to be\u00a0affiliated\u00a0with\u00a0SFM\u00a0on social media platforms,\u00a0email and\u00a0messaging applications, and fraudulent websites. The deceptive conduct includes impersonating SFM employees,",
     "cik": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "http://sorosfundmgmt.com",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -1721,20 +1791,31 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:31.025445+00:00",
-    "sources": [],
-    "audit_log": [
-      "[2026-07-30T10:27:30.509171+00:00] Enrichment started",
-      "[2026-07-30T10:27:30.509256+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:30.509272+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:31.025242+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:31.025350+00:00] Running validation checks",
-      "[2026-07-30T10:27:31.025384+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:31.025426+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:31.025475+00:00] Enrichment completed"
+    "last_enriched_at": "2026-07-30 10:50:32.640928+00:00",
+    "sources": [
+      {
+        "source_name": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Soros_Fund_Management",
+        "retrieved_at": "2026-07-30 10:50:11.833528+00:00",
+        "field_extracted": "website",
+        "raw_snippet": null
+      }
     ],
-    "created_at": "2026-07-30 10:26:56.727219+00:00",
-    "updated_at": "2026-07-30 10:26:56.727222+00:00"
+    "audit_log": [
+      "[2026-07-30T10:50:10.576397+00:00] Enrichment started",
+      "[2026-07-30T10:50:11.833582+00:00] Website discovered via Wikipedia: http://sorosfundmgmt.com",
+      "[2026-07-30T10:50:11.833625+00:00] Scraping website: http://sorosfundmgmt.com",
+      "[2026-07-30T10:50:32.235408+00:00] Website scrape complete: 0 principals, 0 emails",
+      "[2026-07-30T10:50:32.235443+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:50:32.235453+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:50:32.640809+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:50:32.640864+00:00] Running validation checks",
+      "[2026-07-30T10:50:32.640880+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:50:32.640913+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:50:32.640956+00:00] Enrichment completed"
+    ],
+    "created_at": "2026-07-30 10:44:40.366587+00:00",
+    "updated_at": "2026-07-30 10:50:11.833569+00:00"
   },
   {
     "id": "SFO-044",
@@ -1742,12 +1823,12 @@
     "entity_type": "SFO",
     "also_known_as": null,
     "family_name": null,
-    "source_of_wealth": null,
+    "source_of_wealth": "Spell Capital has over 38 years of successful investment experience. The principals of Spell Capital Partners are widely regarded as accomplished, experienced professionals with diverse backgrounds and successful investment track records. Currently, the firm manages over $1.0 billion of capital (AUM",
     "cik": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "http://www.spellcapital.com",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -1759,23 +1840,184 @@
         "confidence": "Unresolved",
         "sources": [],
         "notes": "Discovered via Wikipedia. Enrichment pending."
+      },
+      {
+        "type": "email",
+        "value": "info@spellcapital.com",
+        "confidence": "Catch-all / Generic Inbox",
+        "sources": [
+          {
+            "source_name": "company_site",
+            "url": "http://www.spellcapital.com",
+            "retrieved_at": "2026-07-30 10:51:06.445130+00:00",
+            "field_extracted": "email",
+            "raw_snippet": null
+          }
+        ],
+        "notes": null
+      },
+      {
+        "type": "email",
+        "value": "bill@spellcapital.com",
+        "confidence": "Catch-all / Generic Inbox",
+        "sources": [
+          {
+            "source_name": "company_site",
+            "url": "http://www.spellcapital.com",
+            "retrieved_at": "2026-07-30 10:51:06.445300+00:00",
+            "field_extracted": "email",
+            "raw_snippet": null
+          }
+        ],
+        "notes": null
+      },
+      {
+        "type": "email",
+        "value": "harry@spellcapital.com",
+        "confidence": "Catch-all / Generic Inbox",
+        "sources": [
+          {
+            "source_name": "company_site",
+            "url": "http://www.spellcapital.com",
+            "retrieved_at": "2026-07-30 10:51:06.445392+00:00",
+            "field_extracted": "email",
+            "raw_snippet": null
+          }
+        ],
+        "notes": null
+      },
+      {
+        "type": "email",
+        "value": "andrea@spellcapital.com",
+        "confidence": "Catch-all / Generic Inbox",
+        "sources": [
+          {
+            "source_name": "company_site",
+            "url": "http://www.spellcapital.com",
+            "retrieved_at": "2026-07-30 10:51:06.445470+00:00",
+            "field_extracted": "email",
+            "raw_snippet": null
+          }
+        ],
+        "notes": null
+      },
+      {
+        "type": "email",
+        "value": "jim@spellcapital.com",
+        "confidence": "Catch-all / Generic Inbox",
+        "sources": [
+          {
+            "source_name": "company_site",
+            "url": "http://www.spellcapital.com",
+            "retrieved_at": "2026-07-30 10:51:06.445540+00:00",
+            "field_extracted": "email",
+            "raw_snippet": null
+          }
+        ],
+        "notes": null
+      },
+      {
+        "type": "email",
+        "value": "heather@spellcapital.com",
+        "confidence": "Catch-all / Generic Inbox",
+        "sources": [
+          {
+            "source_name": "company_site",
+            "url": "http://www.spellcapital.com",
+            "retrieved_at": "2026-07-30 10:51:06.445605+00:00",
+            "field_extracted": "email",
+            "raw_snippet": null
+          }
+        ],
+        "notes": null
+      },
+      {
+        "type": "email",
+        "value": "brent@spellcapital.com",
+        "confidence": "Catch-all / Generic Inbox",
+        "sources": [
+          {
+            "source_name": "company_site",
+            "url": "http://www.spellcapital.com",
+            "retrieved_at": "2026-07-30 10:51:06.445671+00:00",
+            "field_extracted": "email",
+            "raw_snippet": null
+          }
+        ],
+        "notes": null
+      },
+      {
+        "type": "email",
+        "value": "liz@spellcapital.com",
+        "confidence": "Catch-all / Generic Inbox",
+        "sources": [
+          {
+            "source_name": "company_site",
+            "url": "http://www.spellcapital.com",
+            "retrieved_at": "2026-07-30 10:51:06.445736+00:00",
+            "field_extracted": "email",
+            "raw_snippet": null
+          }
+        ],
+        "notes": null
+      },
+      {
+        "type": "email",
+        "value": "jean@spellcapital.com",
+        "confidence": "Catch-all / Generic Inbox",
+        "sources": [
+          {
+            "source_name": "company_site",
+            "url": "http://www.spellcapital.com",
+            "retrieved_at": "2026-07-30 10:51:06.445801+00:00",
+            "field_extracted": "email",
+            "raw_snippet": null
+          }
+        ],
+        "notes": null
+      },
+      {
+        "type": "email",
+        "value": "paulp@spellcapital.com",
+        "confidence": "Catch-all / Generic Inbox",
+        "sources": [
+          {
+            "source_name": "company_site",
+            "url": "http://www.spellcapital.com",
+            "retrieved_at": "2026-07-30 10:51:06.445867+00:00",
+            "field_extracted": "email",
+            "raw_snippet": null
+          }
+        ],
+        "notes": null
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:31.560552+00:00",
-    "sources": [],
-    "audit_log": [
-      "[2026-07-30T10:27:31.030624+00:00] Enrichment started",
-      "[2026-07-30T10:27:31.030806+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:31.030836+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:31.560489+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:31.560519+00:00] Running validation checks",
-      "[2026-07-30T10:27:31.560528+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:31.560542+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:31.560568+00:00] Enrichment completed"
+    "last_enriched_at": "2026-07-30 10:51:06.895227+00:00",
+    "sources": [
+      {
+        "source_name": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Spell_Capital_Partners",
+        "retrieved_at": "2026-07-30 10:50:33.521011+00:00",
+        "field_extracted": "website",
+        "raw_snippet": null
+      }
     ],
-    "created_at": "2026-07-30 10:26:56.727295+00:00",
-    "updated_at": "2026-07-30 10:26:56.727297+00:00"
+    "audit_log": [
+      "[2026-07-30T10:50:32.644178+00:00] Enrichment started",
+      "[2026-07-30T10:50:33.521056+00:00] Website discovered via Wikipedia: http://www.spellcapital.com",
+      "[2026-07-30T10:50:33.521094+00:00] Scraping website: http://www.spellcapital.com",
+      "[2026-07-30T10:51:06.445930+00:00] Website scrape complete: 0 principals, 10 emails",
+      "[2026-07-30T10:51:06.445964+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:51:06.445978+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:51:06.895101+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:51:06.895158+00:00] Running validation checks",
+      "[2026-07-30T10:51:06.895175+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:51:06.895212+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:51:06.895257+00:00] Enrichment completed"
+    ],
+    "created_at": "2026-07-30 10:44:40.366757+00:00",
+    "updated_at": "2026-07-30 10:51:06.445912+00:00"
   },
   {
     "id": "SFO-045",
@@ -1788,7 +2030,7 @@
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "https://thielcapital.com/",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -1803,20 +2045,31 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:32.682082+00:00",
-    "sources": [],
-    "audit_log": [
-      "[2026-07-30T10:27:31.562388+00:00] Enrichment started",
-      "[2026-07-30T10:27:31.562457+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:31.562483+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:32.682016+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:32.682048+00:00] Running validation checks",
-      "[2026-07-30T10:27:32.682057+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:32.682072+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:32.682097+00:00] Enrichment completed"
+    "last_enriched_at": "2026-07-30 10:51:30.295704+00:00",
+    "sources": [
+      {
+        "source_name": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Thiel_Capital",
+        "retrieved_at": "2026-07-30 10:51:08.281824+00:00",
+        "field_extracted": "website",
+        "raw_snippet": null
+      }
     ],
-    "created_at": "2026-07-30 10:26:56.727359+00:00",
-    "updated_at": "2026-07-30 10:26:56.727360+00:00"
+    "audit_log": [
+      "[2026-07-30T10:51:06.898523+00:00] Enrichment started",
+      "[2026-07-30T10:51:08.281880+00:00] Website discovered via Wikipedia: https://thielcapital.com/",
+      "[2026-07-30T10:51:08.281925+00:00] Scraping website: https://thielcapital.com/",
+      "[2026-07-30T10:51:29.430651+00:00] Website scrape complete: 0 principals, 0 emails",
+      "[2026-07-30T10:51:29.430698+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:51:29.430716+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:51:30.295638+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:51:30.295670+00:00] Running validation checks",
+      "[2026-07-30T10:51:30.295679+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:51:30.295695+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:51:30.295721+00:00] Enrichment completed"
+    ],
+    "created_at": "2026-07-30 10:44:40.366846+00:00",
+    "updated_at": "2026-07-30 10:51:08.281868+00:00"
   },
   {
     "id": "SFO-046",
@@ -1844,20 +2097,20 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:33.586426+00:00",
+    "last_enriched_at": "2026-07-30 10:51:31.829543+00:00",
     "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:32.683864+00:00] Enrichment started",
-      "[2026-07-30T10:27:32.683910+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:32.683923+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:33.586289+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:33.586349+00:00] Running validation checks",
-      "[2026-07-30T10:27:33.586366+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:33.586403+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:33.586454+00:00] Enrichment completed"
+      "[2026-07-30T10:51:30.297709+00:00] Enrichment started",
+      "[2026-07-30T10:51:30.975593+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:51:30.975644+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:51:31.829436+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:51:31.829487+00:00] Running validation checks",
+      "[2026-07-30T10:51:31.829504+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:51:31.829530+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:51:31.829573+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.727418+00:00",
-    "updated_at": "2026-07-30 10:26:56.727419+00:00"
+    "created_at": "2026-07-30 10:44:40.366922+00:00",
+    "updated_at": "2026-07-30 10:44:40.366924+00:00"
   },
   {
     "id": "SFO-047",
@@ -1865,12 +2118,12 @@
     "entity_type": "SFO",
     "also_known_as": null,
     "family_name": null,
-    "source_of_wealth": null,
+    "source_of_wealth": "Our ServicesInvestment ManagementFamily OfficeTrust ServicesPhilanthropyReal EstateThe Nevada AdvantageAboutAbout UsOur LegacyCommunity InvolvementOur LeadershipFAQsNews & InsightsVideo GalleryContactContact UsStaff DirectoryOur OfficesCareersOur ServicesInvestment ManagementFamily OfficeTrust Servi",
     "cik": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "https://www.whittiertrust.com",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -1885,20 +2138,31 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:34.034346+00:00",
-    "sources": [],
-    "audit_log": [
-      "[2026-07-30T10:27:33.588916+00:00] Enrichment started",
-      "[2026-07-30T10:27:33.588984+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:33.589001+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:34.034283+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:34.034313+00:00] Running validation checks",
-      "[2026-07-30T10:27:34.034322+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:34.034336+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:34.034361+00:00] Enrichment completed"
+    "last_enriched_at": "2026-07-30 10:51:57.801543+00:00",
+    "sources": [
+      {
+        "source_name": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Whittier_Trust_Company",
+        "retrieved_at": "2026-07-30 10:51:32.719920+00:00",
+        "field_extracted": "website",
+        "raw_snippet": null
+      }
     ],
-    "created_at": "2026-07-30 10:26:56.727475+00:00",
-    "updated_at": "2026-07-30 10:26:56.727477+00:00"
+    "audit_log": [
+      "[2026-07-30T10:51:31.832887+00:00] Enrichment started",
+      "[2026-07-30T10:51:32.719981+00:00] Website discovered via Wikipedia: https://www.whittiertrust.com",
+      "[2026-07-30T10:51:32.720028+00:00] Scraping website: https://www.whittiertrust.com",
+      "[2026-07-30T10:51:57.175646+00:00] Website scrape complete: 0 principals, 0 emails",
+      "[2026-07-30T10:51:57.175679+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:51:57.175691+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:51:57.801458+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:51:57.801499+00:00] Running validation checks",
+      "[2026-07-30T10:51:57.801512+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:51:57.801532+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:51:57.801560+00:00] Enrichment completed"
+    ],
+    "created_at": "2026-07-30 10:44:40.367004+00:00",
+    "updated_at": "2026-07-30 10:51:32.719969+00:00"
   },
   {
     "id": "SFO-048",
@@ -1911,7 +2175,7 @@
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "http://willettadvisors.com",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -1926,20 +2190,31 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:34.492965+00:00",
-    "sources": [],
-    "audit_log": [
-      "[2026-07-30T10:27:34.036574+00:00] Enrichment started",
-      "[2026-07-30T10:27:34.036695+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:34.036723+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:34.492902+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:34.492932+00:00] Running validation checks",
-      "[2026-07-30T10:27:34.492941+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:34.492956+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:34.492981+00:00] Enrichment completed"
+    "last_enriched_at": "2026-07-30 10:52:35.973072+00:00",
+    "sources": [
+      {
+        "source_name": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Willett_Advisors",
+        "retrieved_at": "2026-07-30 10:51:59.680308+00:00",
+        "field_extracted": "website",
+        "raw_snippet": null
+      }
     ],
-    "created_at": "2026-07-30 10:26:56.727533+00:00",
-    "updated_at": "2026-07-30 10:26:56.727534+00:00"
+    "audit_log": [
+      "[2026-07-30T10:51:57.804298+00:00] Enrichment started",
+      "[2026-07-30T10:51:59.680364+00:00] Website discovered via Wikipedia: http://willettadvisors.com",
+      "[2026-07-30T10:51:59.680406+00:00] Scraping website: http://willettadvisors.com",
+      "[2026-07-30T10:52:35.541679+00:00] Website scrape complete: 0 principals, 0 emails",
+      "[2026-07-30T10:52:35.541764+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:52:35.541811+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:52:35.972958+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:52:35.973007+00:00] Running validation checks",
+      "[2026-07-30T10:52:35.973024+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:52:35.973052+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:52:35.973097+00:00] Enrichment completed"
+    ],
+    "created_at": "2026-07-30 10:44:40.367079+00:00",
+    "updated_at": "2026-07-30 10:51:59.680352+00:00"
   },
   {
     "id": "SFO-049",
@@ -1947,12 +2222,12 @@
     "entity_type": "SFO",
     "also_known_as": null,
     "family_name": null,
-    "source_of_wealth": null,
+    "source_of_wealth": "2003HarvardConnection, later rebranded to ConnectU, is founded by Cameron, Tyler, and their classmate Divya Narendra. Facebook launches one year later at Harvard University.2008Cameron, Tyler, and Divya reach a settlement with Facebook, receiving $65 million in cash and Facebook stock.2012Cameron an",
     "cik": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
-    "website": null,
+    "website": "http://winklevosscapital.com",
     "hq_city": null,
     "hq_country": null,
     "discovery_source": "wikipedia",
@@ -1967,142 +2242,30 @@
       }
     ],
     "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:34.924588+00:00",
-    "sources": [],
-    "audit_log": [
-      "[2026-07-30T10:27:34.494246+00:00] Enrichment started",
-      "[2026-07-30T10:27:34.494302+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:34.494314+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:34.924523+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:34.924555+00:00] Running validation checks",
-      "[2026-07-30T10:27:34.924564+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:34.924578+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:34.924606+00:00] Enrichment completed"
-    ],
-    "created_at": "2026-07-30 10:26:56.727609+00:00",
-    "updated_at": "2026-07-30 10:26:56.727611+00:00"
-  },
-  {
-    "id": "SFO-050",
-    "entity_name": "HMS Management",
-    "entity_type": "SFO",
-    "also_known_as": null,
-    "family_name": null,
-    "source_of_wealth": null,
-    "cik": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "web_directory",
-    "principals": [],
-    "contacts": [
+    "last_enriched_at": "2026-07-30 10:53:02.344914+00:00",
+    "sources": [
       {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "sources": [],
-        "notes": "Discovered via web directory listing. Enrichment pending."
+        "source_name": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Winklevoss_Capital_Management",
+        "retrieved_at": "2026-07-30 10:52:36.862679+00:00",
+        "field_extracted": "website",
+        "raw_snippet": null
       }
     ],
-    "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:35.329669+00:00",
-    "sources": [],
     "audit_log": [
-      "[2026-07-30T10:27:34.926014+00:00] Enrichment started",
-      "[2026-07-30T10:27:34.926072+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:34.926086+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:35.329600+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:35.329632+00:00] Running validation checks",
-      "[2026-07-30T10:27:35.329642+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:35.329659+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:35.329685+00:00] Enrichment completed"
+      "[2026-07-30T10:52:35.975816+00:00] Enrichment started",
+      "[2026-07-30T10:52:36.862721+00:00] Website discovered via Wikipedia: http://winklevosscapital.com",
+      "[2026-07-30T10:52:36.862753+00:00] Scraping website: http://winklevosscapital.com",
+      "[2026-07-30T10:53:01.725836+00:00] Website scrape complete: 0 principals, 0 emails",
+      "[2026-07-30T10:53:01.725869+00:00] SEC enrichment: multi-strategy lookup",
+      "[2026-07-30T10:53:01.725880+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
+      "[2026-07-30T10:53:02.344819+00:00] SEC: No CIK found \u2014 cannot extract AUM",
+      "[2026-07-30T10:53:02.344862+00:00] Running validation checks",
+      "[2026-07-30T10:53:02.344876+00:00] WARNING: No principals identified for this entity",
+      "[2026-07-30T10:53:02.344900+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
+      "[2026-07-30T10:53:02.344932+00:00] Enrichment completed"
     ],
-    "created_at": "2026-07-30 10:26:56.727693+00:00",
-    "updated_at": "2026-07-30 10:26:56.727695+00:00"
-  },
-  {
-    "id": "SFO-051",
-    "entity_name": "Royal Group",
-    "entity_type": "SFO",
-    "also_known_as": null,
-    "family_name": null,
-    "source_of_wealth": null,
-    "cik": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "web_directory",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "sources": [],
-        "notes": "Discovered via web directory listing. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:38.305452+00:00",
-    "sources": [],
-    "audit_log": [
-      "[2026-07-30T10:27:37.333436+00:00] Enrichment started",
-      "[2026-07-30T10:27:37.333482+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:37.333496+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:38.305380+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:38.305413+00:00] Running validation checks",
-      "[2026-07-30T10:27:38.305424+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:38.305442+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:38.305469+00:00] Enrichment completed"
-    ],
-    "created_at": "2026-07-30 10:26:56.727752+00:00",
-    "updated_at": "2026-07-30 10:26:56.727753+00:00"
-  },
-  {
-    "id": "SFO-052",
-    "entity_name": "Walton Enterprises",
-    "entity_type": "SFO",
-    "also_known_as": null,
-    "family_name": null,
-    "source_of_wealth": null,
-    "cik": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "web_directory",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "sources": [],
-        "notes": "Discovered via web directory listing. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "completed",
-    "last_enriched_at": "2026-07-30 10:27:38.759231+00:00",
-    "sources": [],
-    "audit_log": [
-      "[2026-07-30T10:27:38.307515+00:00] Enrichment started",
-      "[2026-07-30T10:27:38.307606+00:00] SEC enrichment: multi-strategy lookup",
-      "[2026-07-30T10:27:38.307628+00:00] SEC: No CIK carried from discovery \u2014 trying name-based resolution",
-      "[2026-07-30T10:27:38.759165+00:00] SEC: No CIK found \u2014 cannot extract AUM",
-      "[2026-07-30T10:27:38.759197+00:00] Running validation checks",
-      "[2026-07-30T10:27:38.759206+00:00] WARNING: No principals identified for this entity",
-      "[2026-07-30T10:27:38.759221+00:00] Validation: 1 unresolved contact(s) \u2014 honest refusal preserved",
-      "[2026-07-30T10:27:38.759248+00:00] Enrichment completed"
-    ],
-    "created_at": "2026-07-30 10:26:56.727818+00:00",
-    "updated_at": "2026-07-30 10:26:56.727819+00:00"
+    "created_at": "2026-07-30 10:44:40.367156+00:00",
+    "updated_at": "2026-07-30 10:52:36.862713+00:00"
   }
 ]

@@ -10,6 +10,7 @@ multi-source discovery requirement (principle 4).
 from __future__ import annotations
 
 import re
+import time
 from typing import Optional
 
 import requests
@@ -25,6 +26,16 @@ HEADERS = {
     "User-Agent": "FamilyOfficePipeline/1.0 (research; Wikipedia list parsing)",
     "Accept": "application/json",
 }
+
+_LAST_WIKI_REQUEST = 0.0
+
+
+def _rate_limit_wiki() -> None:
+    global _LAST_WIKI_REQUEST
+    elapsed = time.time() - _LAST_WIKI_REQUEST
+    if elapsed < 1.0:
+        time.sleep(1.0 - elapsed)
+    _LAST_WIKI_REQUEST = time.time()
 
 # Entities that appear in the section but are not family offices
 EXCLUDED_ENTITIES = {
@@ -97,6 +108,49 @@ def _parse_bullet_list(wikitext: str, section_title: str) -> list[str]:
     return entities
 
 
+def _extract_wikipedia_website(entity_name: str) -> Optional[str]:
+    """Extract website URL from a Wikipedia entity's rendered infobox HTML."""
+    _rate_limit_wiki()
+    params = {
+        "action": "parse",
+        "page": entity_name,
+        "prop": "text",
+        "format": "json",
+        "formatversion": "2",
+    }
+    try:
+        resp = requests.get(WIKIPEDIA_API, params=params, headers=HEADERS, timeout=15)
+        resp.raise_for_status()
+        data = resp.json()
+        if "error" in data:
+            return None
+        html = data.get("parse", {}).get("text")
+        if not html:
+            return None
+    except (requests.RequestException, KeyError, ValueError):
+        return None
+    # Find the infobox table and extract the "Website" row
+    import re as _re
+    # Look for <th scope="row" class="infobox-label">Website</th>
+    # followed by <td class="infobox-data"><a...>url</a></td> or plain text
+    m = _re.search(
+        r'<th[^>]*>Website</th>\s*<td[^>]*class="infobox-data"[^>]*>(.*?)</td>',
+        html, _re.IGNORECASE | _re.DOTALL,
+    )
+    if not m:
+        return None
+    cell = m.group(1)
+    # Extract href from anchor tag, or plain text URL
+    url_m = _re.search(r'href="(https?://[^"]+)"', cell)
+    if url_m:
+        return url_m.group(1)
+    # Plain text URL
+    url_m = _re.search(r'(https?://[^\s<]+)', cell)
+    if url_m:
+        return url_m.group(1).rstrip(".")
+    return None
+
+
 def run_wikipedia_discovery(max_candidates: int = 50) -> list[dict]:
     """Discover SFO candidates from Wikipedia's ''Family office'' page.
 
@@ -117,6 +171,7 @@ def run_wikipedia_discovery(max_candidates: int = 50) -> list[dict]:
     for name in names:
         if len(candidates) >= max_candidates:
             break
+        website = _extract_wikipedia_website(name)
         candidates.append({
             "entity_name": name,
             "entity_type": "SFO",
@@ -125,7 +180,7 @@ def run_wikipedia_discovery(max_candidates: int = 50) -> list[dict]:
             "estimated_aum_usd": None,
             "aum_confidence": AumConfidence.UNRESOLVED.value,
             "year_established": None,
-            "website": None,
+            "website": website,
             "hq_city": None,
             "hq_country": None,
             "discovery_source": "wikipedia",

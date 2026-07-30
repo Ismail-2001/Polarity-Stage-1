@@ -16,6 +16,7 @@ from typing import Optional
 from audit import get_logger
 from config.settings import settings
 from enrichment.classifier import classify_entity
+from enrichment.discovery_wikipedia import _extract_wikipedia_website
 from enrichment.sec_edgar import SECEdgarClient
 from enrichment.site_scraper import SiteScraper
 from enrichment.web_search import WebSearchClient
@@ -47,6 +48,9 @@ class EnrichmentOrchestrator:
 
         # --- Step 0: Entity type classification ---
         self._step_classify(entity)
+
+        # --- Step 0a: Discover website via Wikipedia if missing ---
+        self._step_wikipedia_website(entity)
 
         # --- Step 1: Website scrape ---
         if entity.website and settings.enable_web_enrichment:
@@ -82,6 +86,19 @@ class EnrichmentOrchestrator:
                 f"— review recommended."
             )
             entity.entity_type = result
+
+    def _step_wikipedia_website(self, entity: SFOEntity) -> None:
+        if entity.website:
+            return
+        url = _extract_wikipedia_website(entity.entity_name)
+        if url:
+            entity.website = url
+            entity.add_source(EnrichmentSource(
+                source_name="wikipedia",
+                field_extracted="website",
+                url=f"https://en.wikipedia.org/wiki/{entity.entity_name.replace(' ', '_')}",
+            ))
+            entity.log(f"Website discovered via Wikipedia: {url}")
 
     def _step_website_scrape(self, entity: SFOEntity) -> None:
         entity.log(f"Scraping website: {entity.website}")

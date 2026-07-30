@@ -1,6 +1,5 @@
 """FastAPI request/response schemas — Pydantic V1 compatible."""
 
-from typing import Optional, List
 
 from pydantic import BaseModel, Field
 
@@ -18,19 +17,31 @@ class StatusResponse(BaseModel):
 class PipelineRunResponse(BaseModel):
     pipeline_id: str
     status: str
+    message: str = ""
+
+
+class PipelineJobStatus(BaseModel):
+    job_id: str
+    status: str = "pending"
     total_records: int = 0
     succeeded: int = 0
     failed: int = 0
     unresolved_contacts: int = 0
     indexed_entities: int = 0
     steps: list[dict] = Field(default_factory=list)
-    error: Optional[str] = None
+    error: str | None = None
+    started_at: str | None = None
+    completed_at: str | None = None
+
+    class Config:
+        # Allow datetime objects to be coerced to strings
+        json_encoders = {}
 
 
 class QueryRequest(BaseModel):
     query: str
     n_results: int = Field(default=5, ge=1, le=20)
-    min_confidence: Optional[str] = Field(
+    min_confidence: str | None = Field(
         default=None,
         description="Filter: 'verified_direct' excludes entities with unresolved AUM",
     )
@@ -57,8 +68,8 @@ class QueryResultItem(BaseModel):
 class QueryResponse(BaseModel):
     query: str
     result_count: int = 0
-    results: List[QueryResultItem] = Field(default_factory=list)
-    guardrail_notes: List[str] = Field(default_factory=list)
+    results: list[QueryResultItem] = Field(default_factory=list)
+    guardrail_notes: list[str] = Field(default_factory=list)
 
 
 class IndexResponse(BaseModel):
@@ -82,10 +93,10 @@ class PaginatedEntitiesResponse(BaseModel):
     limit: int
     offset: int
     count: int
-    results: List[EntityListItem]
+    results: list[EntityListItem]
 
 
 class ErrorResponse(BaseModel):
     error: str
-    detail: Optional[str] = None
+    detail: str | None = None
     code: str = "internal_error"

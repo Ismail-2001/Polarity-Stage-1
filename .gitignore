@@ -4,6 +4,10 @@ __pycache__/
 *.egg-info/
 dist/
 build/
+.pytest_cache/
+
+# Temp files
+sec_family_offices*.json
 
 # Environment
 .env
@@ -15,6 +19,8 @@ build/
 data/export.csv
 data/export.json
 data/chromadb/
+data/demo_export.csv
+data/intelligence_report.md
 
 # Audit logs
 audit/runs/

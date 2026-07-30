@@ -8,19 +8,16 @@ Design: clean separation — swap the store backend without changing query logic
 
 from __future__ import annotations
 
-import json
 import math
 import re
 from pathlib import Path
-from typing import Any, Optional
 
 from config.settings import settings
 from models.sfo import (
-    SFOCollection,
-    SFOEntity,
     AumConfidence,
     ContactConfidence,
-    EnrichmentStatus,
+    SFOCollection,
+    SFOEntity,
 )
 from rag.guardrails import GuardrailLayer
 
@@ -68,6 +65,8 @@ def _entity_to_document(entity: SFOEntity) -> tuple[str, dict, str]:
     lines.append(f"HQ: {entity.hq_city or 'N/A'}, {entity.hq_country or 'N/A'}")
     lines.append(f"Website: {entity.website or 'N/A'}")
     lines.append(f"Year Est: {entity.year_established or 'N/A'}")
+    if entity.last_verified_at:
+        lines.append(f"Last Verified: {entity.last_verified_at.strftime('%Y-%m-%d')}")
 
     for p in entity.principals:
         lines.append(f"Principal: {p.full_name} ({p.title or 'N/A'})")
@@ -96,6 +95,7 @@ def _entity_to_document(entity: SFOEntity) -> tuple[str, dict, str]:
             1 for c in entity.contacts if c.confidence == ContactConfidence.VERIFIED_DIRECT
         ),
         "principal_count": len(entity.principals),
+        "last_verified_at": entity.last_verified_at.isoformat() if entity.last_verified_at else "",
     }
     return document, metadata, entity.id
 
@@ -119,7 +119,7 @@ class _InMemoryStore:
     def count(self) -> int:
         return len(self._docs)
 
-    def get(self, ids: Optional[list[str]] = None, limit: int = 50, offset: int = 0):
+    def get(self, ids: list[str] | None = None, limit: int = 50, offset: int = 0):
         if ids:
             result_ids = [i for i in ids if i in self._docs]
         else:
@@ -133,7 +133,6 @@ class _InMemoryStore:
 
     def query(self, query_text: str, n_results: int = 5):
         """TF-IDF-like keyword retrieval with field-aware boosting."""
-        import math
         query_lower = query_text.lower()
         query_terms = re.findall(r'\w+', query_lower)
         query_term_set = set(query_terms)
@@ -150,7 +149,7 @@ class _InMemoryStore:
             doc_lower = doc.lower()
             meta = self._metadatas.get(eid, {})
             entity_name = (meta.get("entity_name", "") or "").lower()
-            aum = meta.get("aum", 0)
+            meta.get("aum", 0)
 
             score = 0.0
             for qt, weight in idf.items():
@@ -227,7 +226,7 @@ class _InMemoryStore:
 class MicroRAGEngine:
     """Retrieval engine with ChromaDB backend (or in-memory fallback)."""
 
-    def __init__(self, persist_dir: Optional[Path] = None):
+    def __init__(self, persist_dir: Path | None = None):
         self._persist_dir = persist_dir or settings.resolved_chroma_dir
         self._guardrails = GuardrailLayer()
 
@@ -278,7 +277,7 @@ class MicroRAGEngine:
         self,
         query_text: str,
         n_results: int = 5,
-        min_confidence: Optional[AumConfidence] = None,
+        min_confidence: AumConfidence | None = None,
     ) -> dict:
         """Query the SFO knowledge base with guardrail enforcement.
 
@@ -313,13 +312,12 @@ class MicroRAGEngine:
                 guardrail_notes.append(unresolved_warning)
 
             # Confidence filter
-            if min_confidence and meta.get("aum_confidence") == "Unresolved":
-                if min_confidence == AumConfidence.CONFIRMED:
-                    guardrail_notes.append(
-                        f"⚠ {meta.get('entity_name', 'Unknown')}: AUM is Unresolved — "
-                        "skipped due to VERIFIED_DIRECT confidence filter."
-                    )
-                    continue
+            if min_confidence and meta.get("aum_confidence") == "Unresolved" and min_confidence == AumConfidence.CONFIRMED:
+                guardrail_notes.append(
+                    f"⚠ {meta.get('entity_name', 'Unknown')}: AUM is Unresolved — "
+                    "skipped due to VERIFIED_DIRECT confidence filter."
+                )
+                continue
 
             results.append({
                 "id": eid,
@@ -356,7 +354,7 @@ class MicroRAGEngine:
             "guardrail_notes": guardrail_notes,
         }
 
-    def get_entity(self, entity_id: str) -> Optional[dict]:
+    def get_entity(self, entity_id: str) -> dict | None:
         if HAS_CHROMA:
             raw = self._collection.get(ids=[entity_id])
         else:

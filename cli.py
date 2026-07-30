@@ -23,7 +23,7 @@ _project_root = Path(__file__).resolve().parent
 if str(_project_root) not in sys.path:
     sys.path.insert(0, str(_project_root))
 
-from config.settings import settings
+from config.settings import settings  # noqa: E402
 
 
 def cmd_pipeline(args: argparse.Namespace) -> None:
@@ -59,8 +59,8 @@ def cmd_pipeline(args: argparse.Namespace) -> None:
 
 def cmd_query(args: argparse.Namespace) -> None:
     """Query the RAG system."""
-    from rag.engine import MicroRAGEngine
     from pipeline.loader import SeedDataLoader
+    from rag.engine import MicroRAGEngine
 
     rag = MicroRAGEngine()
     if rag.count() == 0:
@@ -196,8 +196,8 @@ def cmd_discover(args: argparse.Namespace) -> None:
 
 def cmd_validate(args: argparse.Namespace) -> None:
     """Validate dataset integrity."""
-    from pipeline.loader import SeedDataLoader
     from models.sfo import AumConfidence
+    from pipeline.loader import SeedDataLoader
 
     loader = SeedDataLoader(settings.resolved_data_dir)
     enriched_path = loader.data_dir / "sfo_enriched.json"
@@ -240,9 +240,8 @@ def cmd_validate(args: argparse.Namespace) -> None:
 
         # 5. LinkedIn validation
         for p in entity.principals:
-            if p.linkedin_url:
-                if not re.match(r"^https?:\/\/(www\.)?linkedin\.com\/in\/[a-zA-Z0-9_-]+\/?$", p.linkedin_url):
-                    errors.append(f"[FAIL] {eid} {ename}: Invalid LinkedIn URL for {p.full_name}: {p.linkedin_url}")
+            if p.linkedin_url and not re.match(r"^https?:\/\/(www\.)?linkedin\.com\/in\/[a-zA-Z0-9_-]+\/?$", p.linkedin_url):
+                errors.append(f"[FAIL] {eid} {ename}: Invalid LinkedIn URL for {p.full_name}: {p.linkedin_url}")
 
         # 6. AUM confidence consistency
         if entity.aum_confidence.value == AumConfidence.CONFIRMED.value and not entity.estimated_aum_usd:

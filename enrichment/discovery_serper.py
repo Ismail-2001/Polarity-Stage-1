@@ -10,7 +10,6 @@ This is independent from SEC EFTS (filing text search) and Wikipedia
 from __future__ import annotations
 
 import re
-from typing import Optional
 
 from audit import get_logger
 from enrichment.web_search import WebSearchClient

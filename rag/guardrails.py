@@ -10,9 +10,6 @@ Enforces honest-refusal rules:
 from __future__ import annotations
 
 import re
-from typing import Optional
-
-from models.sfo import ContactConfidence
 
 # Phrases that trigger guardrail warnings
 HALLUCINATION_PATTERNS = [
@@ -48,7 +45,7 @@ class GuardrailLayer:
 
         return result
 
-    def check_hallucination(self, text: str) -> Optional[str]:
+    def check_hallucination(self, text: str) -> str | None:
         """Check if text contains speculative language — return warning if so."""
         for phrase in HALLUCINATION_PATTERNS:
             if phrase.lower() in text.lower():

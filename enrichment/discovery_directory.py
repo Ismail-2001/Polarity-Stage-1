@@ -11,7 +11,6 @@ Currently uses:
 from __future__ import annotations
 
 import re
-from typing import Optional
 
 import requests
 
@@ -68,9 +67,7 @@ def _is_sfo_name(name: str) -> bool:
     if len(name.split()) < 2:
         return False
     has_sfo_keyword = any(kw in low for kw in SFO_KEYWORDS)
-    if not has_sfo_keyword:
-        return False
-    return True
+    return has_sfo_keyword
 
 
 def run_directory_discovery(max_candidates: int = 50) -> list[dict]:

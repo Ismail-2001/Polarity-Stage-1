@@ -29,6 +29,9 @@ line-ending = "auto"
 testpaths = ["tests"]
 python_files = ["test_*.py"]
 filterwarnings = ["ignore::DeprecationWarning"]
+markers = [
+    "slow: Integration tests that run the real pipeline against SEC EDGAR (40-50s)",
+]
 
 [tool.setuptools.packages.find]
 include = ["models*", "pipeline*", "enrichment*", "rag*", "api*", "ui*", "audit*", "config*"]

@@ -12,13 +12,12 @@ from __future__ import annotations
 
 import re
 import time
-from typing import Optional
 from urllib.parse import urlencode
 
 import requests
 
 from audit import get_logger
-from enrichment.sec_edgar import SECEdgarClient, SEC_SUBMISSIONS
+from enrichment.sec_edgar import SEC_SUBMISSIONS, SECEdgarClient
 from models.sfo import AumConfidence
 
 SEC_EFTS_URL = "https://efts.sec.gov/LATEST/search-index"
@@ -55,7 +54,7 @@ def _rate_limit() -> None:
     time.sleep(0.15)
 
 
-def _search_efts(query: str, start: int = 0, page_size: int = 100) -> Optional[dict]:
+def _search_efts(query: str, start: int = 0, page_size: int = 100) -> dict | None:
     params = {"q": query, "dateRange": "all", "start": str(start), "counts": str(min(page_size, 100))}
     url = f"{SEC_EFTS_URL}?{urlencode(params)}"
     _rate_limit()
@@ -99,13 +98,10 @@ def _is_sfo_name(name: str) -> bool:
     for p in EXCLUDE_PATTERNS:
         if p.search(name):
             return False
-    for p in FAMILY_OFFICE_PATTERNS:
-        if p.search(name):
-            return True
-    return False
+    return any(p.search(name) for p in FAMILY_OFFICE_PATTERNS)
 
 
-def _try_extract_aum(sec: SECEdgarClient, cik: str, entity_name: str) -> Optional[float]:
+def _try_extract_aum(sec: SECEdgarClient, cik: str, entity_name: str) -> float | None:
     """Multi-strategy AUM extraction for a known CIK, returns None on failure."""
     try:
         aum = sec._extract_aum_from_facts(cik)
@@ -128,7 +124,7 @@ def _try_extract_aum(sec: SECEdgarClient, cik: str, entity_name: str) -> Optiona
     return None
 
 
-def _extract_hq_from_submissions(cik: str) -> Optional[str]:
+def _extract_hq_from_submissions(cik: str) -> str | None:
     """Business city/state from SEC submissions address data."""
     url = SEC_SUBMISSIONS.format(cik)
     _rate_limit()
@@ -144,7 +140,7 @@ def _extract_hq_from_submissions(cik: str) -> Optional[str]:
         return None
 
 
-def _submissions_name(cik: str) -> Optional[str]:
+def _submissions_name(cik: str) -> str | None:
     """Extract the entity name from SEC submissions data (authoritative source)."""
     url = SEC_SUBMISSIONS.format(cik)
     _rate_limit()

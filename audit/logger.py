@@ -7,7 +7,6 @@ import logging
 import sys
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Optional
 
 
 class AuditLogger:
@@ -20,7 +19,7 @@ class AuditLogger:
         audit.log_failure("serper", error="Rate limited", entity="ABC")
     """
 
-    def __init__(self, run_name: str, log_dir: Optional[Path] = None):
+    def __init__(self, run_name: str, log_dir: Path | None = None):
         if log_dir is None:
             log_dir = Path("audit") / "runs"
         self.run_name = run_name
@@ -107,7 +106,7 @@ class AuditLogger:
 # Module-level default
 # ---------------------------------------------------------------------------
 
-_default_logger: Optional[AuditLogger] = None
+_default_logger: AuditLogger | None = None
 
 
 def get_logger(run_name: str = "default") -> AuditLogger:

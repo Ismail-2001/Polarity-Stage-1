@@ -1,5 +1,13 @@
-from .sfo import SFOEntity, Principal, ContactMethod, ContactConfidence, AumConfidence, EnrichmentSource, SFOCollection
-from .pipeline import PipelineResult, PipelineStatus, ExecutionStep
+from .pipeline import ExecutionStep, PipelineResult, PipelineStatus
+from .sfo import (
+    AumConfidence,
+    ContactConfidence,
+    ContactMethod,
+    EnrichmentSource,
+    Principal,
+    SFOCollection,
+    SFOEntity,
+)
 
 __all__ = [
     "SFOEntity",

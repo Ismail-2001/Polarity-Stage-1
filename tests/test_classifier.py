@@ -1,10 +1,9 @@
 """Tests for the SFO/MFO/VC entity-type classifier."""
 
-import pytest
 
 from enrichment.classifier import (
-    MFO_TRIGGERS,
     MFO_NAME_HINTS,
+    MFO_TRIGGERS,
     VC_NAME_HINTS,
     VC_TRIGGERS,
     classify_entity,

@@ -9,7 +9,7 @@ from audit import AuditLogger
 from config.settings import settings
 from enrichment.orchestrator import EnrichmentOrchestrator
 from models.pipeline import ExecutionStep, PipelineResult, PipelineStatus
-from models.sfo import ContactConfidence, SFOCollection
+from models.sfo import SFOCollection
 from pipeline.loader import SeedDataLoader
 
 

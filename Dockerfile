@@ -21,7 +21,7 @@ CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "8000"]
 # ── Stage 3: Pipeline runner ─────────────────────────────────────────────────
 FROM base AS pipeline
 COPY . .
-CMD ["python", "run_pipeline.py"]
+CMD ["python", "cli.py", "pipeline"]
 
 # ── Stage 4: Streamlit UI ────────────────────────────────────────────────────
 FROM base AS ui

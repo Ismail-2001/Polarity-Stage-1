@@ -13,7 +13,6 @@ from models.sfo import (
 )
 from rag.guardrails import GuardrailLayer
 
-
 # ===================================================================
 # SFOEntity
 # ===================================================================
@@ -91,6 +90,25 @@ class TestSFOEntity:
         )
         assert e.estimated_aum_usd == 1_000_000_000.0
         assert e.aum_confidence == AumConfidence.CONFIRMED
+
+    def test_deterministic_id(self):
+        """Same entity_name produces same ID across instances."""
+        e1 = SFOEntity(entity_name="Test Family Office")
+        e2 = SFOEntity(entity_name="Test Family Office")
+        assert e1.id == e2.id
+        assert e1.id.startswith("SFO-")
+
+    def test_different_names_different_ids(self):
+        e1 = SFOEntity(entity_name="Alpha Family Office")
+        e2 = SFOEntity(entity_name="Beta Family Office")
+        assert e1.id != e2.id
+
+    def test_last_verified_at_field(self):
+        from datetime import datetime, timezone
+        e = SFOEntity(entity_name="Test")
+        assert e.last_verified_at is None
+        e.last_verified_at = datetime.now(timezone.utc)
+        assert e.last_verified_at is not None
 
 
 # ===================================================================

@@ -16,8 +16,6 @@ from __future__ import annotations
 import json
 import re
 import time
-from typing import Optional
-from urllib.parse import urljoin
 
 import requests
 from bs4 import BeautifulSoup
@@ -35,7 +33,7 @@ SEC_ARCHIVES = "https://www.sec.gov/Archives/edgar/data"
 
 USER_AGENT = (
     "FamilyOfficePipeline/1.0 (research; "
-    "contact@familyofficepipeline.dev)"
+    "IsmailSajid_ismailsajid0617@gmail.com)"
 )
 
 HEADERS = {
@@ -63,7 +61,7 @@ class SECEdgarClient:
             time.sleep(min_interval - elapsed)
         self._last_request = time.time()
 
-    def _req(self, url: str, timeout: int = 20) -> Optional[requests.Response]:
+    def _req(self, url: str, timeout: int = 20) -> requests.Response | None:
         self._rate_limit()
         try:
             resp = self._session.get(url, timeout=timeout)
@@ -75,7 +73,7 @@ class SECEdgarClient:
 
     # ── CIK: multi-variant resolution ────────────────────────────────────
 
-    def lookup_cik(self, name_variants: list[str]) -> Optional[str]:
+    def lookup_cik(self, name_variants: list[str]) -> str | None:
         """Try multiple name variants and return the first CIK found.
 
         For a family office named "Smith Family Office", try:
@@ -88,7 +86,7 @@ class SECEdgarClient:
                 return cik
         return None
 
-    def _lookup_cik_single(self, company_name: str) -> Optional[str]:
+    def _lookup_cik_single(self, company_name: str) -> str | None:
         """Resolve a single company name to its CIK."""
         self._rate_limit()
         params = {"company": company_name, "action": "getcompany"}
@@ -131,7 +129,7 @@ class SECEdgarClient:
 
     # ── Submissions JSON API ─────────────────────────────────────────────
 
-    def get_submissions(self, cik: str) -> Optional[dict]:
+    def get_submissions(self, cik: str) -> dict | None:
         """Fetch the SEC submissions JSON for a CIK."""
         url = SEC_SUBMISSIONS.format(cik)
         resp = self._req(url)
@@ -142,7 +140,7 @@ class SECEdgarClient:
                 self._log.log_failure("sec_edgar", error=f"JSON decode: {e}", entity=cik)
         return None
 
-    def get_company_facts(self, cik: str) -> Optional[dict]:
+    def get_company_facts(self, cik: str) -> dict | None:
         """Fetch XBRL company facts JSON (contains structured AUM data)."""
         url = SEC_COMPANY_FACTS.format(cik)
         resp = self._req(url)
@@ -155,7 +153,7 @@ class SECEdgarClient:
 
     # ── AUM extraction (multi-strategy) ──────────────────────────────────
 
-    def extract_aum(self, entity_name: str, family_name: Optional[str] = None) -> Optional[float]:
+    def extract_aum(self, entity_name: str, family_name: str | None = None) -> float | None:
         """Multi-strategy AUM extraction.
 
         Strategy 1: XBRL company facts (most reliable)
@@ -188,7 +186,7 @@ class SECEdgarClient:
 
         return None
 
-    def _extract_aum_from_facts(self, cik: str) -> Optional[float]:
+    def _extract_aum_from_facts(self, cik: str) -> float | None:
         """Extract AUM from XBRL company facts JSON (Item 5.B of Form ADV)."""
         facts = self.get_company_facts(cik)
         if not facts:
@@ -219,7 +217,7 @@ class SECEdgarClient:
             pass
         return None
 
-    def extract_aum_from_adv(self, cik: str) -> Optional[float]:
+    def extract_aum_from_adv(self, cik: str) -> float | None:
         """Extract AUM from Form ADV Part 1 filing via HTML scraping."""
         filings = self._search_filings(cik, form_type="ADV")
         if not filings:
@@ -266,8 +264,12 @@ class SECEdgarClient:
             pass
         return None
 
-    def _extract_aum_from_13f(self, cik: str) -> Optional[float]:
-        """Estimate AUM from the most recent 13F filing total value."""
+    def _extract_aum_from_13f(self, cik: str) -> float | None:
+        """Estimate AUM from the most recent 13F filing total value.
+
+        Fetches the XML summary table (infotable.xml) which has a structured
+        <totalValue> tag, or falls back to the HTML index page.
+        """
         filings = self._search_filings(cik, form_type="13F-HR")
         if not filings:
             return None
@@ -275,10 +277,34 @@ class SECEdgarClient:
         accession = latest.get("accession", "")
         if not accession:
             return None
-        # 13F summary page
+        acc_no_dashes = accession.replace("-", "")
+
+        # Strategy 1: Try the XML infotable summary (structured data)
+        xml_url = (
+            f"{SEC_ARCHIVES}/{int(cik)}/"
+            f"{acc_no_dashes}/{accession}-infotable.xml"
+        )
+        self._rate_limit()
+        try:
+            resp = self._session.get(xml_url, timeout=20)
+            if resp.status_code == 200:
+                # Look for <totalValue> tag in XML
+                m = re.search(r"<totalValue[^>]*>\s*([0-9,]+)\s*</totalValue>", resp.text, re.IGNORECASE)
+                if m:
+                    amount = float(m.group(1).replace(",", ""))
+                    if amount > 0:
+                        self._log.log_extraction(
+                            source="sec_edgar_13f_xml", field="aum",
+                            value=str(amount), entity=cik, source_url=xml_url,
+                        )
+                        return amount
+        except requests.RequestException:
+            pass
+
+        # Strategy 2: HTML index page (original approach, improved regex)
         doc_url = (
             f"{SEC_ARCHIVES}/{int(cik)}/"
-            f"{accession.replace('-', '')}/{accession}-index.html"
+            f"{acc_no_dashes}/{accession}-index.html"
         )
         self._rate_limit()
         try:
@@ -286,21 +312,30 @@ class SECEdgarClient:
             resp.raise_for_status()
             soup = BeautifulSoup(resp.text, "html.parser")
             text = soup.get_text()
-            # Look for "Total" or "Value" followed by a dollar amount
-            m = re.search(
+            # Multiple patterns for 13F total value
+            patterns = [
+                r"(?:Total\s+Value|Aggregate\s+Amount|Grand\s+Total)[:\s]*\$?([0-9,]+(?:\.[0-9]+)?)\s*(million|billion|M|B|thousand|K)?",
                 r"(?:Total|Value|Sum)[:\s]*\$?([0-9,]+(?:\.[0-9]+)?)\s*(million|billion|M|B|thousand|K)?",
-                text, re.IGNORECASE,
-            )
-            if m:
-                amount = float(m.group(1).replace(",", ""))
-                unit = (m.group(2) or "").lower()
-                if unit in ("billion", "b"):
-                    amount *= 1_000_000_000
-                elif unit in ("million", "m"):
-                    amount *= 1_000_000
-                elif unit in ("thousand", "k"):
-                    amount *= 1_000
-                return amount
+                # Table row pattern: "Total" in one cell, "$X,XXX" in next cell
+                r"Total[^$]*?\$\s*([0-9,]+(?:\.[0-9]+)?)\s*(million|billion|M|B|thousand|K)?",
+            ]
+            for pat in patterns:
+                m = re.search(pat, text, re.IGNORECASE)
+                if m:
+                    amount = float(m.group(1).replace(",", ""))
+                    unit = (m.group(2) or "").lower()
+                    if unit in ("billion", "b"):
+                        amount *= 1_000_000_000
+                    elif unit in ("million", "m"):
+                        amount *= 1_000_000
+                    elif unit in ("thousand", "k"):
+                        amount *= 1_000
+                    if amount > 0:
+                        self._log.log_extraction(
+                            source="sec_edgar_13f_html", field="aum",
+                            value=str(amount), entity=cik, source_url=doc_url,
+                        )
+                        return amount
         except requests.RequestException:
             pass
         return None

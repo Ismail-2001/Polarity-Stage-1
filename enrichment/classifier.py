@@ -8,13 +8,13 @@ Rules:
   3. If entity is a registered investment adviser with >15 clients → MFO
   4. If entity name contains "Ventures", "Capital", "Partners" and
      describes raising external capital → VC
-  5. Otherwise, default to SFO classification
+  5. If entity name contains "REIT", "Fund", "Trust" in non-family context → exclude
+  6. Otherwise, default to SFO classification
 """
 
 from __future__ import annotations
 
 import re
-from typing import Optional
 
 from models.sfo import EntityType, SFOEntity
 
@@ -49,11 +49,25 @@ VC_NAME_HINTS = re.compile(
     re.IGNORECASE,
 )
 
+# ── Name patterns that are NOT true SFOs ─────────────────────────────────────
+
+NON_SFO_NAME_PATTERNS = re.compile(
+    r"\b("
+    r"reit|real\s+estate\s+investment\s+trust|"
+    r"mutual\s+fund|exchange.traded|etf|"
+    r"bank\s+of|trust\s+company|savings|credit\s+union|"
+    r"insurance|annuity|"
+    r"fund\s+of\s+funds|"
+    r"securities\s+inc|securities\s+llc|securities\s+group"
+    r")\b",
+    re.IGNORECASE,
+)
+
 
 # ── Classification logic ─────────────────────────────────────────────────────
 
 
-def classify_entity(entity: SFOEntity, website_text: Optional[str] = None) -> EntityType:
+def classify_entity(entity: SFOEntity, website_text: str | None = None) -> EntityType:
     """Determine the entity type based on name, website content, and existing metadata.
 
     Args:
@@ -92,6 +106,12 @@ def classify_entity(entity: SFOEntity, website_text: Optional[str] = None) -> En
             for kw in ["venture", "vc", "fund", "capital investments", "startup"]
         ):
             return EntityType.VC
+
+    # ── Check for non-SFO name patterns ──
+    # Only flag if the name doesn't also contain "family" (family + bank = likely SFO)
+    if NON_SFO_NAME_PATTERNS.search(name) and "family" not in name.lower():
+        entity.log(f"CLASSIFIER: Name '{name}' matches non-SFO pattern — flagging for review")
+        return EntityType.UNKNOWN
 
     # ── Default: SFO ──
     return EntityType.SFO

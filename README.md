@@ -1,183 +1,166 @@
 # Family Office Intelligence Pipeline & Micro-RAG
 
-A commercial-grade platform for Family Office discovery, enrichment, validation, and semantic query against SEC filings, company websites, and web search results.
+A data product for discovering, enriching, and querying Single Family Office (SFO) intelligence from SEC EDGAR filings.
 
-## Overview
+## What this is
 
-The pipeline processes 52 SFO (Single Family Office) entities through a multi-stage enrichment workflow: SEC EDGAR CIK lookup and AUM extraction, company website scraping with SSL fallback, Serper.dev web search for principal contacts, and MFO/VC classification. Enriched data is persisted to JSON and indexed into a ChromaDB-backed Micro-RAG engine, exposed through a FastAPI REST API with a Streamlit dashboard and a unified CLI interface. Discovery sources (SEC EFTS, Wikipedia, web directories) are kept independent to prevent any single source from dominating >50%.
+A pipeline that takes 59 SEC-registered family offices and enriches them with AUM estimates, principals, source-of-wealth narratives, websites, and contact data. The enriched dataset is queryable via a RAG engine with honest-refusal guardrails — it tells you what it doesn't know instead of making things up.
 
-![Architecture](docs/architecture.png)
+## Dataset (v2.0.0)
 
-## Features
+| Metric | Count | Coverage |
+|--------|-------|----------|
+| Total entities | 59 | 100% |
+| With principals | 56 | 95% |
+| With source of wealth | 55 | 93% |
+| With AUM | 45 | 76% |
+| With website | 40 | 68% |
+| With email | 36 | 61% |
+| With year established | 40 | 68% |
 
-| Module | Capability |
-|--------|-----------|
-| **SEC EDGAR** | Structured XBRL extraction plus Form ADV HTML fallback; rate-limited at 10 req/s |
-| **Site Scraper** | Multi-page discovery (`/team`, `/about`, `/leadership`), SSL auto-fallback, exponential backoff retry |
-| **Web Search** | Serper.dev wrapper: principal email discovery and LinkedIn profile search; graceful degradation when no API key configured |
-| **Classifier** | Regex-based MFO/VC detection; flags non-SFO entities during enrichment |
-| **Micro-RAG** | ChromaDB persistent store with in-memory fallback; TF-IDF scoring with field-aware boosting; honest-refusal guardrails |
-| **FastAPI** | 6 endpoints: health, pipeline, query, entities CRUD, indexing |
-| **Streamlit** | Interactive dashboard with semantic query, entity browser, and pipeline monitor |
-| **CLI** | 6 commands: `pipeline`, `query`, `serve`, `ui`, `export`, `validate` |
-| **Audit** | Structured JSONL logging of every API call, extraction, and failure |
+All 59 entities are real SEC-registered family offices with verified CIK numbers. AUM data comes from 13F holdings estimates and manual curation. The dataset is committed to `data/sfo_enriched.json` with a versioned metadata header.
 
-## Quick Start
+## What works
+
+- **Pipeline**: Loads seed data, applies manual overrides (AUM, principals, emails, SOW, websites), runs SEC enrichment, persists results. Runs in ~40 seconds for 59 entities.
+- **RAG engine**: ChromaDB (persistent) with in-memory fallback. TF-IDF scoring with field-aware boosting. Returns ranked results with similarity scores and guardrail notes.
+- **Guardrails**: Detects speculative language, flags unresolved contacts, demotes generic inboxes. Tells you what it doesn't know.
+- **API**: FastAPI with async pipeline execution (job ID + polling), paginated entity listing, health checks.
+- **CLI**: `pipeline`, `query`, `serve`, `export`, `validate` commands.
+- **Audit trail**: Structured JSONL logging of every API call, extraction, and failure.
+- **Tests**: 89 passing (models, classifier, RAG, API integration).
+
+## What doesn't work (honest)
+
+- **Website scraper**: Finds 0 principals on SFO websites. Family offices don't publish team directories. The scraper architecture is correct but the domain doesn't cooperate.
+- **Serper web search**: API key returns 403 (expired/over quota). Falls back to Hunter.io or "Unresolved".
+- **SEC AUM extraction**: XBRL returns 404 for all SFO CIKs. 13F XML extraction works for some entities. Most AUM comes from manual overrides.
+- **Streamlit UI**: Built and pinned but not verified on the current Python version. Use Docker for cloud deployment.
+
+## Quick start
 
 ```bash
-# Clone the repository
+# Clone and install
 git clone https://github.com/Ismail-2001/Polarity-Stage-1.git
 cd Polarity-Stage-1
-
-# Install dependencies
 pip install -r requirements.txt
 
-# Copy environment template and add your API keys
-cp .env.example .env
-# Edit .env — set SERPER_API_KEY to enable web enrichment
+# See the dataset in action (30 seconds)
+python demo.py
 
-# Run the full enrichment pipeline (50 entities, ~23 min with SEC+web enrichment)
-python cli.py pipeline
+# Or query directly
+python cli.py query "Duquesne Family Office"
+python cli.py query "family offices in New York"
+python cli.py query "AUM over $1 billion"
 
 # Start the API server
-python cli.py serve            # defaults to 0.0.0.0:8000
+python cli.py serve
 
-# Or query directly from the CLI
-python cli.py query "technology family office"
+# Run the pipeline (re-enriches all 59 entities)
+python cli.py pipeline
 
-# Launch the Streamlit dashboard (requires streamlit installed)
-python cli.py ui
-
-# Export enriched data
+# Export to CSV
 python cli.py export --format csv
-python cli.py export --format json
 ```
 
-## API Reference
-
-All endpoints return JSON. The API runs on `http://localhost:8000` by default.
+## API endpoints
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | `GET` | `/` | Health check with dataset statistics |
-| `GET` | `/status` | Alias for root endpoint |
-| `POST` | `/pipeline/run` | Execute enrichment pipeline on seed dataset |
+| `GET` | `/health` | Deep health check (data dir, RAG, API keys) |
+| `POST` | `/pipeline/run` | Start pipeline (async — returns job ID) |
+| `GET` | `/pipeline/status/{job_id}` | Poll pipeline job status |
 | `POST` | `/query` | Semantic RAG query with guardrails |
-| `GET` | `/entities` | Paginated, sortable entity list |
+| `GET` | `/entities` | Paginated entity list |
 | `GET` | `/entities/{entity_id}` | Single entity detail |
-| `POST` | `/index` | Re-index dataset into RAG engine |
+| `POST` | `/index` | Re-index dataset into RAG |
 
-The `/query` endpoint accepts a JSON body with `query` (string), `n_results` (int, 1–20), and optional `min_confidence` (`verified_direct`).
-
-## Technology Stack
-
-| Component | Technology |
-|-----------|-----------|
-| Domain models | Pydantic v1 API (pydantic 1.10.x) |
-| Enrichment | `requests` + `BeautifulSoup4` + regex |
-| RAG engine | ChromaDB (persistent) / in-memory fallback; TF-IDF scoring |
-| API framework | FastAPI 0.104.x with auto-generated OpenAPI docs |
-| Dashboard | Streamlit 1.36.x |
-| CLI | `argparse` with structured audit integration |
-| Configuration | `python-dotenv` with `.env` auto-loading |
-| Containerization | Docker multi-stage builds with `docker-compose` |
-| Testing | `pytest` — 84 tests (75 fast + 9 pipeline) |
-| CI config | `pyproject.toml` with Ruff linting rules |
-
-## Project Structure
+## Architecture
 
 ```
-Polarity-Stage-1/
-├── api/                    # FastAPI backend — 6 endpoints
+Seed (59 SEC SFOs) → Orchestrator → Manual Overrides → SEC Enrichment → Enriched JSON → RAG Engine → API/CLI
+```
+
+- **Discovery**: SEC EDGAR EFTS API (533 CIKs filtered to 59 true SFOs)
+- **Enrichment**: Manual overrides (curated data) + automated SEC extraction (13F XML/HTML)
+- **Classification**: Regex-based MFO/VC/non-SFO detection
+- **Storage**: JSON files with versioned metadata header
+- **RAG**: ChromaDB persistent store, TF-IDF scoring, honest-refusal guardrails
+- **API**: FastAPI with async pipeline execution, CORS, structured errors
+
+## Project structure
+
+```
+├── api/                    # FastAPI backend (async pipeline, health, query, entities)
 ├── audit/                  # Structured JSONL audit logger
-├── cli.py                  # Unified CLI (pipeline, query, serve, ui, export, validate)
-├── config/
-│   └── settings.py         # Application configuration from env vars
+├── cli.py                  # Unified CLI (pipeline, query, serve, export, validate)
+├── config/settings.py      # Environment-based configuration
+├── data/                   # Dataset (VERSION, seed, enriched, manual overrides)
+├── demo.py                 # 30-second demo script
 ├── enrichment/             # Multi-source enrichment engine
-│   ├── classifier.py       # MFO/VC regex classifier
+│   ├── classifier.py       # MFO/VC/non-SFO regex classifier
 │   ├── orchestrator.py     # Per-entity enrichment pipeline
-│   ├── sec_edgar.py        # SEC EDGAR XBRL + ADV AUM extractor
-│   ├── site_scraper.py     # Website scraper with SSL fallback
-│   └── web_search.py       # Serper.dev email + LinkedIn search
+│   ├── sec_edgar.py        # SEC EDGAR XBRL + 13F AUM extractor
+│   ├── site_scraper.py     # Website scraper with link-based discovery
+│   └── web_search.py       # Serper.dev + Hunter.io fallback
 ├── models/                 # Pydantic domain models
-│   ├── pipeline.py         # PipelineResult, ExecutionStep, PipelineStatus
-│   └── sfo.py              # SFOEntity, Principal, ContactMethod, GuardrailLayer
+│   ├── pipeline.py         # PipelineResult, ExecutionStep
+│   └── sfo.py              # SFOEntity, Principal, ContactMethod
 ├── pipeline/               # Batch orchestration and JSON persistence
-├── rag/                    # Micro-RAG engine and hallucination guardrails
-├── ui/                     # Streamlit dashboard (3 tabs)
-├── tests/                  # Full test suite (classifier, models, RAG, API)
-├── data/                   # Seed data (committed) + generated outputs (gitignored)
-├── docker-compose.yml      # Multi-service compose (api, ui, pipeline)
-├── Dockerfile              # Multi-stage builds for api, pipeline, ui
-├── requirements.txt        # Pinned versions for Streamlit Cloud
-├── .env.example            # Environment variable template
-├── pyproject.toml          # Project config + Ruff linting
-└── README.md               # You are here
+├── rag/                    # Micro-RAG engine and guardrails
+├── tests/                  # 89 tests (models, classifier, RAG, API)
+├── ui/                     # Streamlit dashboard
+├── .github/workflows/ci.yml  # GitHub Actions CI
+├── Dockerfile              # Multi-stage builds (api, pipeline, ui)
+├── docker-compose.yml      # Multi-service compose
+└── requirements.txt        # Pinned for Python 3.11
+```
+
+## Running tests
+
+```bash
+# All tests
+pytest tests/ -v
+
+# Fast unit tests only
+pytest tests/ -v -k "not Pipeline"
+
+# With coverage
+pytest tests/ --tb=short
 ```
 
 ## Configuration
 
-All configuration lives in `.env` (root) or environment variables. See `.env.example` for the full template. Key variables:
+All configuration via `.env` or environment variables. See `.env.example`.
 
 ```bash
-# API keys (required for enrichment depth)
-SERPER_API_KEY=           # Serper.dev — free tier: 2500 queries/month
-OPENAI_API_KEY=           # Optional — for LLM-enhanced features
-
-# Feature flags
-ENABLE_SEC_ENRICHMENT=true
-ENABLE_WEB_ENRICHMENT=true
-
-# Pipeline tuning
-REQUEST_DELAY_SEC=1.5     # Delay between HTTP requests
-MAX_RETRIES=3             # Retries per failed HTTP call
-SEC_RATE_LIMIT_PER_SEC=10 # SEC EDGAR fair-access limit
+FO_DATA_DIR=data                    # Data directory
+ENABLE_SEC_ENRICHMENT=true          # SEC EDGAR enrichment
+ENABLE_WEB_ENRICHMENT=true          # Web scraping + search
+REQUEST_DELAY_SEC=1.5               # HTTP request delay
+SEC_RATE_LIMIT_PER_SEC=10           # SEC fair-access limit
+SERPER_API_KEY=                     # Serper.dev (optional)
+HUNTER_API_KEY=                     # Hunter.io (optional)
 ```
-
-## Testing
-
-```bash
-# Run all tests
-pytest tests/ -v
-
-# Run fast unit tests only (exclude pipeline)
-pytest tests/ -v -k "not Pipeline"
-
-# Run a single test file
-pytest tests/test_rag.py -v
-```
-
-Test coverage spans the classifier (pattern matching, SFO purity validation), domain models (validation, confidence downgrading, audit logging), Micro-RAG (indexing, querying, guardrails, deduplication), and API endpoints (CRUD, error handling, CORS, pagination, sorting).
 
 ## Deployment
 
-### Local Development
-```bash
-python cli.py serve
-```
-
-### Docker Compose
+**Docker** (recommended):
 ```bash
 docker-compose up --build
 ```
 
-### Streamlit Cloud
-1. Push to GitHub (already connected)
-2. Go to [share.streamlit.io](https://share.streamlit.io) → New app
+**Streamlit Cloud**:
+1. Push to GitHub
+2. Go to share.streamlit.io → New app
 3. Point to `ui/app.py`
-4. Python 3.11 pinned via `runtime.txt` (auto-detected)
-5. Use `requirements.txt` for packages
+4. Python 3.11 via `runtime.txt`
 
-### FastAPI (lightweight, no RAG)
+**FastAPI** (Railway/Render/Fly.io):
 ```bash
-# Deploy to Railway / Render / Fly.io as a standalone API
 python cli.py serve
 ```
-
-### Requirements
-- Python 3.11+ (3.15 beta works locally but Streamlit has no pre-built numpy wheels yet — use `runtime.txt` for cloud deploys)
-- `pip install -r requirements.txt`
-- Set `SERPER_API_KEY` in `.env` for full enrichment
 
 ## License
 

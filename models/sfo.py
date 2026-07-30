@@ -4,15 +4,14 @@ Uses Pydantic V1 API for Python 3.15-beta compatibility.
 Supports "Unresolved" as a sentinel email value for honestly undocumented contacts.
 """
 
-from datetime import datetime, timezone
+import hashlib
+import re
+from datetime import datetime
 from enum import Enum
-from typing import Optional, List
-from uuid import uuid4
 
-from pydantic import BaseModel, Field, validator, root_validator
+from pydantic import BaseModel, Field, root_validator, validator
 
 from config.settings import utcnow
-
 
 # ---------------------------------------------------------------------------
 # Enums
@@ -53,17 +52,15 @@ class EnrichmentStatus(str, Enum):
 
 class EnrichmentSource(BaseModel):
     source_name: str
-    url: Optional[str] = None
+    url: str | None = None
     retrieved_at: datetime = Field(default_factory=utcnow)
     field_extracted: str
-    raw_snippet: Optional[str] = None
+    raw_snippet: str | None = None
 
 
 # ---------------------------------------------------------------------------
 # Contact
 # ---------------------------------------------------------------------------
-
-import re
 
 EMAIL_PATTERN = re.compile(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$")
 GENERIC_MAILBOXES = {"info", "contact", "investments", "support", "hello", "admin", "team", "enquiries", "office"}
@@ -74,11 +71,11 @@ class ContactMethod(BaseModel):
     type: str = "email"
     value: str
     confidence: ContactConfidence = ContactConfidence.UNVERIFIED
-    sources: List[EnrichmentSource] = Field(default_factory=list)
-    notes: Optional[str] = None
+    sources: list[EnrichmentSource] = Field(default_factory=list)
+    notes: str | None = None
 
     @root_validator(pre=False)
-    def validate_and_tag_email(cls, values):
+    def validate_and_tag_email(cls, values):  # noqa: N805
         vtype = values.get("type")
         vval = values.get("value")
         confidence = values.get("confidence")
@@ -105,23 +102,22 @@ class ContactMethod(BaseModel):
 
 class Principal(BaseModel):
     full_name: str
-    title: Optional[str] = None
-    linkedin_url: Optional[str] = None
-    notes: Optional[str] = None
-    sources: List[EnrichmentSource] = Field(default_factory=list)
+    title: str | None = None
+    linkedin_url: str | None = None
+    notes: str | None = None
+    sources: list[EnrichmentSource] = Field(default_factory=list)
 
     @validator("linkedin_url")
-    def validate_linkedin(cls, v):
-        if v is not None:
-            if not re.match(r"^https?:\/\/(www\.)?linkedin\.com\/in\/[a-zA-Z0-9_-]+\/?$", v):
-                raise ValueError(
-                    f"Invalid LinkedIn profile URL: {v}. "
-                    "Must be a direct individual profile (linkedin.com/in/...)."
-                )
+    def validate_linkedin(cls, v):  # noqa: N805
+        if v is not None and not re.match(r"^https?:\/\/(www\.)?linkedin\.com\/in\/[a-zA-Z0-9_-]+\/?$", v):
+            raise ValueError(
+                f"Invalid LinkedIn profile URL: {v}. "
+                "Must be a direct individual profile (linkedin.com/in/...)."
+            )
         return v
 
     @validator("full_name")
-    def name_not_empty(cls, v):
+    def name_not_empty(cls, v):  # noqa: N805
         if not v.strip():
             raise ValueError("full_name must not be empty")
         return v.strip()
@@ -134,49 +130,55 @@ class Principal(BaseModel):
 SFO_ID_PREFIX = "SFO"
 
 
-def _next_id() -> str:
-    return f"{SFO_ID_PREFIX}-{uuid4().hex[:8].upper()}"
+def _make_deterministic_id(entity_name: str) -> str:
+    """Generate a deterministic ID from entity name (SHA256 hex, first 8 chars)."""
+    digest = hashlib.sha256(entity_name.lower().strip().encode()).hexdigest()
+    return f"{SFO_ID_PREFIX}-{digest[:8].upper()}"
 
 
 class SFOEntity(BaseModel):
-    id: str = Field(default_factory=_next_id)
+    id: str = Field(default="")
     entity_name: str
     entity_type: EntityType = EntityType.SFO
-    also_known_as: Optional[str] = None
+    also_known_as: str | None = None
 
-    family_name: Optional[str] = None
-    source_of_wealth: Optional[str] = None
-    cik: Optional[str] = None
-    estimated_aum_usd: Optional[float] = None
+    family_name: str | None = None
+    source_of_wealth: str | None = None
+    cik: str | None = None
+    estimated_aum_usd: float | None = None
     aum_confidence: AumConfidence = AumConfidence.UNKNOWN
-    year_established: Optional[int] = None
-    website: Optional[str] = None
-    hq_city: Optional[str] = None
-    hq_country: Optional[str] = "United States"
-    discovery_source: Optional[str] = None
+    year_established: int | None = None
+    website: str | None = None
+    hq_city: str | None = None
+    hq_country: str | None = "United States"
+    discovery_source: str | None = None
 
-    principals: List[Principal] = Field(default_factory=list)
-    contacts: List[ContactMethod] = Field(default_factory=list)
+    principals: list[Principal] = Field(default_factory=list)
+    contacts: list[ContactMethod] = Field(default_factory=list)
 
     enrichment_status: EnrichmentStatus = EnrichmentStatus.PENDING
-    last_enriched_at: Optional[datetime] = None
-    sources: List[EnrichmentSource] = Field(default_factory=list)
-    audit_log: List[str] = Field(default_factory=list)
+    last_enriched_at: datetime | None = None
+    last_verified_at: datetime | None = None
+    sources: list[EnrichmentSource] = Field(default_factory=list)
+    audit_log: list[str] = Field(default_factory=list)
 
     created_at: datetime = Field(default_factory=utcnow)
     updated_at: datetime = Field(default_factory=utcnow)
 
     @validator("website")
-    def validate_website(cls, v):
+    def validate_website(cls, v):  # noqa: N805
         if v is not None and not v.startswith("http"):
             raise ValueError(f"Website must start with http(s): {v}")
         return v
 
     @root_validator(pre=False)
-    def require_entity_name(cls, values):
+    def require_entity_name(cls, values):  # noqa: N805
         name = values.get("entity_name")
         if not name or not str(name).strip():
             raise ValueError("entity_name is required")
+        # Generate deterministic ID from entity name if not already set
+        if not values.get("id"):
+            values["id"] = _make_deterministic_id(name)
         return values
 
     def add_principal(self, principal: Principal) -> None:
@@ -211,7 +213,7 @@ class SFOEntity(BaseModel):
 
 
 class SFOCollection(BaseModel):
-    entities: List[SFOEntity] = Field(default_factory=list)
+    entities: list[SFOEntity] = Field(default_factory=list)
 
     def add(self, entity: SFOEntity) -> None:
         self.entities.append(entity)

@@ -30,9 +30,8 @@ except ImportError:
     pass
 
 try:
+    from models.sfo import SFOCollection
     from rag.engine import MicroRAGEngine
-    from pipeline.loader import SeedDataLoader
-    from models.sfo import SFOCollection, ContactConfidence
 
     _HAS_RAG = True
 except ImportError:

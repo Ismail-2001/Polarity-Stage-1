@@ -1,18 +1,21 @@
 """Orchestrates multi-source enrichment for a single SFO entity.
 
 Discovery path per entity:
-  1. Company website scrape
+  0. Entity type classification
+  0a. Wikipedia website discovery
+  0b. Manual AUM override (from data/manual_aum.json)
+  1. Company website scrape (link-based team page discovery)
   2. SEC EDGAR CIK lookup → Form ADV AUM extraction
-  3. Serper web search for principal emails and LinkedIn profiles
+  3. Serper web search + Hunter.io fallback for principal emails
   4. Validation and confidence badge assignment
 """
 
 from __future__ import annotations
 
+import json
 import re
 import time
 from datetime import datetime, timezone
-from typing import Optional
 
 from audit import get_logger
 from config.settings import settings
@@ -41,6 +44,18 @@ class EnrichmentOrchestrator:
         self.scraper = SiteScraper()
         self.web = WebSearchClient()
         self._log = get_logger("orchestrator")
+        self._overrides = self._load_overrides()
+
+    def _load_overrides(self) -> dict:
+        """Load comprehensive manual overrides from data/manual_overrides.json."""
+        path = settings.resolved_data_dir / "manual_overrides.json"
+        if not path.exists():
+            return {}
+        try:
+            with open(path, encoding="utf-8") as f:
+                return json.load(f)
+        except (json.JSONDecodeError, KeyError):
+            return {}
 
     def enrich(self, entity: SFOEntity) -> SFOEntity:
         """Execute enrichment pipeline on a single entity (mutates in place)."""
@@ -50,25 +65,29 @@ class EnrichmentOrchestrator:
         # --- Step 0: Entity type classification ---
         self._step_classify(entity)
 
-        # --- Step 0a: Discover website via Wikipedia if missing ---
+        # --- Step 0a: Manual overrides (AUM, principals, emails, etc.) ---
+        self._step_apply_overrides(entity)
+
+        # --- Step 0b: Wikipedia website discovery (if still missing) ---
         self._step_wikipedia_website(entity)
 
-        # --- Step 1: Website scrape ---
-        if entity.website and settings.enable_web_enrichment:
+        # --- Step 1: Website scrape (if website found and overrides didn't provide principals) ---
+        if entity.website and settings.enable_web_enrichment and not entity.principals:
             self._step_website_scrape(entity)
 
-        # --- Step 2: SEC EDGAR ---
-        if settings.enable_sec_enrichment:
+        # --- Step 2: SEC EDGAR (AUM extraction if still missing) ---
+        if settings.enable_sec_enrichment and entity.estimated_aum_usd is None:
             self._step_sec_enrich(entity)
 
-        # --- Step 3: Web search for principals ---
-        if settings.enable_web_enrichment:
+        # --- Step 3: Web search for principals (if still missing) ---
+        if settings.enable_web_enrichment and not entity.principals:
             self._step_principal_search(entity)
 
         # --- Step 4: Final validation ---
         self._validate_entity(entity)
 
         entity.last_enriched_at = datetime.now(timezone.utc)
+        entity.last_verified_at = datetime.now(timezone.utc)
         entity.enrichment_status = EnrichmentStatus.COMPLETED
         entity.log("Enrichment completed")
         return entity
@@ -100,6 +119,100 @@ class EnrichmentOrchestrator:
                 url=f"https://en.wikipedia.org/wiki/{entity.entity_name.replace(' ', '_')}",
             ))
             entity.log(f"Website discovered via Wikipedia: {url}")
+
+    def _step_apply_overrides(self, entity: SFOEntity) -> None:
+        """Apply all manual overrides from data/manual_overrides.json."""
+        name = entity.entity_name
+        overrides = self._overrides
+
+        # --- AUM ---
+        if entity.estimated_aum_usd is None:
+            aum_data = overrides.get("aum", {}).get(name)
+            if aum_data:
+                entity.estimated_aum_usd = aum_data["aum_usd"]
+                entity.aum_confidence = AumConfidence(aum_data.get("confidence", "Confirmed"))
+                entity.add_source(EnrichmentSource(
+                    source_name="manual_override",
+                    field_extracted="aum",
+                    raw_snippet=aum_data.get("source", ""),
+                ))
+                entity.log(f"Manual AUM override: ${entity.estimated_aum_usd:,.0f}")
+
+        # --- Website ---
+        if not entity.website:
+            website = overrides.get("websites", {}).get(name)
+            if website:
+                entity.website = website
+                entity.add_source(EnrichmentSource(
+                    source_name="manual_override",
+                    field_extracted="website",
+                    url=website,
+                ))
+                entity.log(f"Manual website override: {website}")
+
+        # --- Principals ---
+        if not entity.principals:
+            principals_data = overrides.get("principals", {}).get(name, [])
+            for pdata in principals_data:
+                principal = Principal(
+                    full_name=pdata["full_name"],
+                    title=pdata.get("title"),
+                    sources=[EnrichmentSource(
+                        source_name="manual_override",
+                        field_extracted="principal_name",
+                    )],
+                )
+                entity.add_principal(principal)
+            if principals_data:
+                entity.log(f"Manual principals override: {len(principals_data)} principals added")
+
+        # --- Emails ---
+        has_verified_email = any(
+            c.confidence in (ContactConfidence.VERIFIED_DIRECT, ContactConfidence.CATCH_ALL)
+            for c in entity.contacts
+        )
+        if not has_verified_email:
+            email_data = overrides.get("emails", {}).get(name)
+            if email_data:
+                confidence_str = email_data.get("confidence", "Catch-all / Generic Inbox")
+                try:
+                    confidence = ContactConfidence(confidence_str)
+                except ValueError:
+                    confidence = ContactConfidence.CATCH_ALL
+                contact = ContactMethod(
+                    type="email",
+                    value=email_data["email"],
+                    confidence=confidence,
+                    sources=[EnrichmentSource(
+                        source_name="manual_override",
+                        field_extracted="email",
+                        raw_snippet=email_data.get("source", ""),
+                    )],
+                )
+                entity.add_contact(contact)
+                entity.log(f"Manual email override: {email_data['email']}")
+
+        # --- Source of wealth ---
+        if not entity.source_of_wealth:
+            sow = overrides.get("source_of_wealth", {}).get(name)
+            if sow:
+                entity.source_of_wealth = sow
+                entity.add_source(EnrichmentSource(
+                    source_name="manual_override",
+                    field_extracted="source_of_wealth",
+                ))
+                entity.log("Manual source_of_wealth override")
+
+        # --- Year established ---
+        if not entity.year_established:
+            year = overrides.get("year_established", {}).get(name)
+            if year:
+                entity.year_established = year
+                entity.add_source(EnrichmentSource(
+                    source_name="manual_override",
+                    field_extracted="year_established",
+                ))
+                entity.log(f"Manual year_established override: {year}")
 
     def _step_website_scrape(self, entity: SFOEntity) -> None:
         entity.log(f"Scraping website: {entity.website}")

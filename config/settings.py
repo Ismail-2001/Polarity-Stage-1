@@ -19,12 +19,13 @@ def utcnow() -> datetime:
 class Settings:
     # Paths
     project_root: Path = Path(__file__).resolve().parent.parent
-    data_dir: Path = field(default_factory=lambda: Path(os.getenv("FO_DATA_DIR", "data")))
-    chroma_persist_dir: Path = field(default_factory=lambda: Path(os.getenv("CHROMA_PERSIST_DIR", "data/chromadb")))
+    data_dir: Path = field(default_factory=lambda: Path(os.getenv("FO_DATA_DIR") or "data"))
+    chroma_persist_dir: Path = field(default_factory=lambda: Path(os.getenv("CHROMA_PERSIST_DIR") or "data/chromadb"))
 
     # API keys
     serper_api_key: str = os.getenv("SERPER_API_KEY", "")
     openai_api_key: str = os.getenv("OPENAI_API_KEY", "")
+    hunter_api_key: str = os.getenv("HUNTER_API_KEY", "")
 
     # Pipeline control
     pipeline_batch_size: int = int(os.getenv("PIPELINE_BATCH_SIZE", "10"))

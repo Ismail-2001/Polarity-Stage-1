@@ -3,8 +3,6 @@
 import tempfile
 from pathlib import Path
 
-import pytest
-
 from models.sfo import (
     AumConfidence,
     ContactConfidence,

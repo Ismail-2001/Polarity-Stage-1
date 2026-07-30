@@ -11,7 +11,6 @@ from __future__ import annotations
 
 import re
 import time
-from typing import Optional
 
 import requests
 
@@ -43,7 +42,7 @@ EXCLUDED_ENTITIES = {
 }
 
 
-def _fetch_wikitext(page_title: str) -> Optional[str]:
+def _fetch_wikitext(page_title: str) -> str | None:
     """Fetch raw wikitext for a given Wikipedia page."""
     params = {
         "action": "parse",
@@ -108,7 +107,7 @@ def _parse_bullet_list(wikitext: str, section_title: str) -> list[str]:
     return entities
 
 
-def _extract_wikipedia_website(entity_name: str) -> Optional[str]:
+def _extract_wikipedia_website(entity_name: str) -> str | None:
     """Extract website URL from a Wikipedia entity's rendered infobox HTML."""
     _rate_limit_wiki()
     params = {

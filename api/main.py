@@ -2,7 +2,9 @@
 
 Endpoints:
   GET  /                    Health check with detailed stats
-  POST /pipeline/run        Execute enrichment pipeline
+  GET  /health              Deep health check (DB, RAG, data)
+  POST /pipeline/run        Execute enrichment pipeline (async)
+  GET  /pipeline/status/{id} Poll pipeline job status
   POST /query               Semantic RAG query
   GET  /entities            Paginated entity list
   GET  /entities/{id}       Single entity detail
@@ -11,8 +13,7 @@ Endpoints:
 
 from __future__ import annotations
 
-import json
-from pathlib import Path
+import threading
 
 from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
@@ -23,11 +24,13 @@ from api.schemas import (
     ErrorResponse,
     IndexResponse,
     PaginatedEntitiesResponse,
+    PipelineJobStatus,
     PipelineRunResponse,
     QueryRequest,
     QueryResponse,
     StatusResponse,
 )
+from config.settings import utcnow
 from models.sfo import AumConfidence, ContactConfidence, SFOCollection
 from pipeline.loader import SeedDataLoader
 from pipeline.orchestrator import PipelineOrchestrator
@@ -53,6 +56,13 @@ app.add_middleware(
 
 _rag: MicroRAGEngine | None = None
 _loader: SeedDataLoader | None = None
+
+# ---------------------------------------------------------------------------
+# Pipeline job store (in-memory, async execution)
+# ---------------------------------------------------------------------------
+
+_jobs: dict[str, PipelineJobStatus] = {}
+_jobs_lock = threading.Lock()
 
 
 def get_rag() -> MicroRAGEngine:
@@ -99,6 +109,47 @@ def _coll_stats(collection: SFOCollection) -> dict:
     }
 
 
+def _run_pipeline_job(job_id: str) -> None:
+    """Background thread: run pipeline + index RAG, update job status."""
+    with _jobs_lock:
+        _jobs[job_id].status = "running"
+        _jobs[job_id].started_at = utcnow().isoformat()
+
+    result = None
+    try:
+        loader = get_loader()
+        orchestrator = PipelineOrchestrator(loader)
+        result = orchestrator.run()
+
+        with _jobs_lock:
+            job = _jobs[job_id]
+            job.status = result.status.value
+            job.total_records = result.total_records
+            job.succeeded = result.succeeded
+            job.failed = result.failed
+            job.unresolved_contacts = result.unresolved_contacts
+            job.steps = [s.dict() for s in result.steps]
+
+        try:
+            collection = _load_collection()
+            rag = get_rag()
+            indexed = rag.index_collection(collection)
+            with _jobs_lock:
+                _jobs[job_id].indexed_entities = indexed
+        except Exception:
+            pass
+
+        with _jobs_lock:
+            _jobs[job_id].completed_at = utcnow().isoformat()
+    except Exception as e:
+        with _jobs_lock:
+            _jobs[job_id].status = "failed"
+            _jobs[job_id].error = str(e)
+            _jobs[job_id].completed_at = utcnow().isoformat()
+            if result is not None:
+                _jobs[job_id].steps = [s.dict() for s in result.steps]
+
+
 # ---------------------------------------------------------------------------
 # Global exception handler
 # ---------------------------------------------------------------------------
@@ -134,6 +185,38 @@ async def root():
     )
 
 
+@app.get("/health")
+async def health_check():
+    """Deep health check: verifies data dir, RAG engine, and API key config."""
+    from config.settings import settings
+    checks = {}
+
+    # Data directory
+    data_dir = settings.resolved_data_dir
+    checks["data_dir"] = {"status": "ok" if data_dir.exists() else "error", "path": str(data_dir)}
+
+    # Seed file
+    seed_path = data_dir / "sfo_seed.json"
+    checks["seed_file"] = {"status": "ok" if seed_path.exists() else "missing"}
+
+    # Enriched file
+    enriched_path = data_dir / "sfo_enriched.json"
+    checks["enriched_file"] = {"status": "ok" if enriched_path.exists() else "missing"}
+
+    # RAG engine
+    rag = get_rag()
+    checks["rag_engine"] = {"status": "ok", "indexed_entities": rag.count()}
+
+    # API keys
+    checks["api_keys"] = {
+        "serper": "configured" if settings.serper_api_key else "missing",
+        "hunter": "configured" if settings.hunter_api_key else "missing",
+    }
+
+    all_ok = all(c.get("status") == "ok" for c in checks.values())
+    return {"status": "healthy" if all_ok else "degraded", "checks": checks}
+
+
 @app.get("/status", response_model=StatusResponse)
 async def status():
     """System status endpoint."""
@@ -142,29 +225,31 @@ async def status():
 
 @app.post("/pipeline/run", response_model=PipelineRunResponse)
 async def run_pipeline():
-    """Execute the full enrichment pipeline over the seed dataset."""
-    try:
-        loader = get_loader()
-        orchestrator = PipelineOrchestrator(loader)
-        result = orchestrator.run()
+    """Execute the full enrichment pipeline (async — returns job ID immediately)."""
+    job_id = f"JOB-{utcnow().strftime('%Y%m%d-%H%M%S')}"
+    job = PipelineJobStatus(job_id=job_id, status="pending")
 
-        collection = _load_collection()
-        rag = get_rag()
-        indexed = rag.index_collection(collection)
+    with _jobs_lock:
+        _jobs[job_id] = job
 
-        return PipelineRunResponse(
-            pipeline_id=result.pipeline_id,
-            status=result.status.value,
-            total_records=result.total_records,
-            succeeded=result.succeeded,
-            failed=result.failed,
-            unresolved_contacts=result.unresolved_contacts,
-            indexed_entities=indexed,
-            steps=[s.dict() for s in result.steps],
-            error=result.error,
-        )
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+    thread = threading.Thread(target=_run_pipeline_job, args=(job_id,), daemon=True)
+    thread.start()
+
+    return PipelineRunResponse(
+        pipeline_id=job_id,
+        status="pending",
+        message="Pipeline started. Poll /pipeline/status/{job_id} for progress.",
+    )
+
+
+@app.get("/pipeline/status/{job_id}", response_model=PipelineJobStatus)
+async def pipeline_status(job_id: str):
+    """Poll pipeline job status."""
+    with _jobs_lock:
+        job = _jobs.get(job_id)
+    if job is None:
+        raise HTTPException(status_code=404, detail=f"Job {job_id} not found")
+    return job
 
 
 @app.post("/query", response_model=QueryResponse)

@@ -4,7 +4,8 @@ Production features:
   - Exponential backoff retry (3 attempts)
   - SSL error recovery (auto-fallback to verify=False)
   - HTTPS → HTTP scheme fallback
-  - Multi-page discovery (/team, /about, /leadership)
+  - Link-based team page discovery (parses homepage for team/people/about links)
+  - Sitemap.xml fallback for team page discovery
   - Rate-limit compliant
 """
 
@@ -12,8 +13,6 @@ from __future__ import annotations
 
 import re
 import time
-import ssl
-from typing import Optional
 from urllib.parse import urljoin, urlparse
 
 import requests
@@ -31,11 +30,22 @@ HEADERS = {
     "Accept-Language": "en-US,en;q=0.5",
 }
 
-# Pages to probe for team/leadership content
-TEAM_PATH_CANDIDATES = [
-    "/team", "/about", "/leadership", "/our-team", "/about-us",
-    "/management", "/people", "/who-we-are", "/company",
-]
+# Keywords that indicate a team/leadership/people page in link text or URL
+TEAM_LINK_KEYWORDS = re.compile(
+    r"(team|people|leadership|leaders|our\s+team|about\s+us|who\s+we\s+are|"
+    r"management|executives|staff|personnel|biographies|bios|meet\s+the|"
+    r"our\s+people|our\s+leaders|governance|board|advisors|principals)",
+    re.IGNORECASE,
+)
+
+# Keywords to EXCLUDE from team page discovery (blog, press, legal, etc.)
+EXCLUDE_LINK_KEYWORDS = re.compile(
+    r"(blog|press|news|media|careers|jobs|legal|privacy|terms|contact|"
+    r"login|sign|register|subscribe|newsletter|faq|help|support|"
+    r"investors|portfolio|fund|performance|returns|strategies|"
+    r"insights|research|market|analysis)",
+    re.IGNORECASE,
+)
 
 GENERIC_MAILBOXES = {
     "info", "contact", "investments", "support", "hello",
@@ -50,7 +60,7 @@ WEALTH_KEYWORDS = [
 
 
 class SiteScraper:
-    """Production-grade company website scraper with resilience."""
+    """Production-grade company website scraper with link-based discovery."""
 
     def __init__(self):
         self._log = get_logger("site_scraper")
@@ -79,7 +89,7 @@ class SiteScraper:
     # Fetch with multi-strategy resilience
     # ------------------------------------------------------------------
 
-    def fetch_page(self, url: str, timeout: int = 15) -> Optional[BeautifulSoup]:
+    def fetch_page(self, url: str, timeout: int = 15) -> BeautifulSoup | None:
         """Fetch a URL with SSL fallback and retry support."""
         time.sleep(settings.request_delay_sec)
         strategies = [
@@ -139,21 +149,112 @@ class SiteScraper:
         return None
 
     # ------------------------------------------------------------------
-    # Multi-page discovery
+    # Link-based team page discovery
     # ------------------------------------------------------------------
 
-    def _discover_pages(self, base_url: str) -> list[BeautifulSoup]:
-        """Fetch the homepage + team-relevant subpages."""
-        soups = []
-        homepage = self.fetch_page(base_url, timeout=20)
-        if homepage:
-            soups.append(("home", homepage))
+    def _discover_team_links(self, homepage: BeautifulSoup, base_url: str) -> list[str]:
+        """Parse homepage links to find team/leadership/people pages."""
+        parsed_base = urlparse(base_url)
+        base_domain = parsed_base.netloc
+        discovered = []
+
+        for a_tag in homepage.find_all("a", href=True):
+            href = a_tag["href"].strip()
+            link_text = a_tag.get_text(strip=True).lower()
+
+            # Skip anchors, javascript, mailto, tel
+            if href.startswith(("#", "javascript:", "mailto:", "tel:")):
+                continue
+
+            # Resolve relative URLs
+            full_url = urljoin(base_url, href)
+            parsed = urlparse(full_url)
+
+            # Stay on same domain
+            if parsed.netloc and parsed.netloc != base_domain:
+                continue
+
+            # Skip external domains
+            if not parsed.netloc:
+                full_url = f"{parsed_base.scheme}://{base_domain}{parsed.path}"
+                parsed = urlparse(full_url)
+
+            path = parsed.path.lower().rstrip("/")
+
+            # Skip static assets
+            if any(ext in path for ext in (".jpg", ".png", ".gif", ".pdf", ".css", ".js", ".svg")):
+                continue
+
+            # Score this link for team-page likelihood
+            score = 0
+
+            # Check URL path for team keywords
+            if TEAM_LINK_KEYWORDS.search(path):
+                score += 2
+
+            # Check link text for team keywords
+            if TEAM_LINK_KEYWORDS.search(link_text):
+                score += 2
+
+            # Penalize excluded keywords
+            if EXCLUDE_LINK_KEYWORDS.search(path) or EXCLUDE_LINK_KEYWORDS.search(link_text):
+                score -= 3
+
+            if score > 0:
+                # Normalize: keep only scheme + netloc + path
+                clean_url = f"{parsed.scheme}://{parsed.netloc}{parsed.path}"
+                if clean_url not in discovered:
+                    discovered.append(clean_url)
+
+        return discovered[:8]  # Cap at 8 team pages
+
+    def _discover_from_sitemap(self, base_url: str) -> list[str]:
+        """Try sitemap.xml as fallback for team page discovery."""
         parsed = urlparse(base_url)
-        for path in TEAM_PATH_CANDIDATES:
-            candidate = f"{parsed.scheme}://{parsed.netloc}{path}"
-            soup = self.fetch_page(candidate, timeout=10)
+        sitemap_url = f"{parsed.scheme}://{parsed.netloc}/sitemap.xml"
+        try:
+            resp = self._session.get(sitemap_url, timeout=10, verify=True)
+            resp.raise_for_status()
+            # Parse sitemap XML (simple text extraction, not full XML parser)
+            text = resp.text
+            team_urls = []
+            for m in re.finditer(r"<loc>(https?://[^<]+)</loc>", text, re.IGNORECASE):
+                url = m.group(1)
+                if TEAM_LINK_KEYWORDS.search(url):
+                    team_urls.append(url)
+            return team_urls[:5]
+        except Exception:
+            return []
+
+    # ------------------------------------------------------------------
+    # Multi-page discovery (link-based + sitemap fallback)
+    # ------------------------------------------------------------------
+
+    def _discover_pages(self, base_url: str) -> list[tuple[str, BeautifulSoup]]:
+        """Fetch homepage, discover team pages from links, fetch them."""
+        soups = []
+
+        # Step 1: Fetch homepage
+        homepage = self.fetch_page(base_url, timeout=20)
+        if not homepage:
+            return soups
+
+        soups.append(("home", homepage))
+
+        # Step 2: Discover team pages from homepage links
+        team_links = self._discover_team_links(homepage, base_url)
+
+        # Step 3: Fallback to sitemap if no team links found on homepage
+        if not team_links:
+            team_links = self._discover_from_sitemap(base_url)
+
+        # Step 4: Fetch discovered team pages
+        for link in team_links:
+            soup = self.fetch_page(link, timeout=10)
             if soup:
-                soups.append((path, soup))
+                parsed = urlparse(link)
+                soups.append((parsed.path, soup))
+
         return soups
 
     # ------------------------------------------------------------------
@@ -231,15 +332,14 @@ class SiteScraper:
     # Wealth narrative extraction
     # ------------------------------------------------------------------
 
-    def extract_wealth_narrative(self, soups: list[tuple[str, BeautifulSoup]]) -> Optional[str]:
+    def extract_wealth_narrative(self, soups: list[tuple[str, BeautifulSoup]]) -> str | None:
         """Extract source-of-wealth narrative from about/mission content."""
         best = ""
         for _, soup in soups:
             for tag in soup.find_all(["p", "div", "section", "article"]):
                 text = tag.get_text(strip=True)
-                if any(kw in text.lower() for kw in WEALTH_KEYWORDS):
-                    if len(text) > len(best):
-                        best = text[:500]
+                if any(kw in text.lower() for kw in WEALTH_KEYWORDS) and len(text) > len(best):
+                    best = text[:500]
         return best if best else None
 
     # ------------------------------------------------------------------
@@ -247,7 +347,7 @@ class SiteScraper:
     # ------------------------------------------------------------------
 
     def enrich_website(self, url: str) -> dict:
-        """Full website enrichment with multi-page discovery."""
+        """Full website enrichment with link-based team page discovery."""
         # Normalize URL
         if not url.startswith("http"):
             url = "https://" + url

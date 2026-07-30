@@ -1,15 +1,15 @@
 [
   {
-    "entity_name": "EMFO, LLC",
+    "entity_name": "ATLANTIC FAMILY WEALTH, LLC",
     "entity_type": "SFO",
-    "cik": "0001859434",
+    "cik": "0002012511",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": "WESTON",
+    "hq_city": "CORAL GABLES",
     "hq_country": "United States",
     "discovery_source": "sec_efts",
     "principals": [],
@@ -22,19 +22,19 @@
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-001"
+    "id": "SFO-AD19A7D7"
   },
   {
-    "entity_name": "Longboat Family Office LP",
+    "entity_name": "Allie Family Office LLC",
     "entity_type": "SFO",
-    "cik": "0001878856",
+    "cik": "0001908612",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": "HARRISON",
+    "hq_city": "MIAMI",
     "hq_country": "United States",
     "discovery_source": "sec_efts",
     "principals": [],
@@ -47,19 +47,19 @@
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-002"
+    "id": "SFO-42030C42"
   },
   {
-    "entity_name": "Duquesne Family Office LLC",
+    "entity_name": "Alpha Family Trust",
     "entity_type": "SFO",
-    "cik": "0001536411",
+    "cik": "0001568991",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": "NEW YORK",
+    "hq_city": "LOS ANGELES",
     "hq_country": "United States",
     "discovery_source": "sec_efts",
     "principals": [],
@@ -72,19 +72,19 @@
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-003"
+    "id": "SFO-49BEED86"
   },
   {
-    "entity_name": "Kopp Family Office, LLC",
+    "entity_name": "Arrowroot Family Office, LLC",
     "entity_type": "SFO",
-    "cik": "0001683689",
+    "cik": "0002017744",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": "MINNETONKA",
+    "hq_city": "MARINA DEL REY",
     "hq_country": "United States",
     "discovery_source": "sec_efts",
     "principals": [],
@@ -97,19 +97,19 @@
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-004"
+    "id": "SFO-E08DA419"
   },
   {
-    "entity_name": "PATHSTONE FAMILY OFFICE, LLC",
+    "entity_name": "Avantra Family Wealth, Inc.",
     "entity_type": "SFO",
-    "cik": "0001511137",
+    "cik": "0001774744",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": "ENGLEWOOD",
+    "hq_city": "MECHANICSBURG",
     "hq_country": "United States",
     "discovery_source": "sec_efts",
     "principals": [],
@@ -122,19 +122,19 @@
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-005"
+    "id": "SFO-91DD227B"
   },
   {
-    "entity_name": "Wilshire Private Markets Family Office Fund II, L.P.",
+    "entity_name": "BOSTON FAMILY OFFICE LLC",
     "entity_type": "SFO",
-    "cik": "0001634667",
+    "cik": "0001039807",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": "SANTA MONICA",
+    "hq_city": "BOSTON",
     "hq_country": "United States",
     "discovery_source": "sec_efts",
     "principals": [],
@@ -147,19 +147,19 @@
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-006"
+    "id": "SFO-335F19FE"
   },
   {
-    "entity_name": "Pinnacle Family Office Investments L.P.",
+    "entity_name": "BRADY FAMILY WEALTH, LLC",
     "entity_type": "SFO",
-    "cik": "0001542604",
+    "cik": "0001971456",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": "DALLAS",
+    "hq_city": "SAINT LOUIS",
     "hq_country": "United States",
     "discovery_source": "sec_efts",
     "principals": [],
@@ -172,19 +172,19 @@
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-007"
+    "id": "SFO-DB50C6AB"
   },
   {
-    "entity_name": "Wilshire Private Markets Real Estate Family Office Fund I, L.P.",
+    "entity_name": "Biltmore Family Office, LLC",
     "entity_type": "SFO",
-    "cik": "0001581864",
+    "cik": "0001731123",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": "SANTA MONICA",
+    "hq_city": "CHARLOTTE",
     "hq_country": "United States",
     "discovery_source": "sec_efts",
     "principals": [],
@@ -197,19 +197,19 @@
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-008"
+    "id": "SFO-7D5B6AE3"
   },
   {
-    "entity_name": "Wilshire Private Markets Family Office Fund IV, L.P.",
+    "entity_name": "CA Family Wealth, LLC",
     "entity_type": "SFO",
-    "cik": "0001784999",
+    "cik": "0001804673",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": "SANTA MONICA",
+    "hq_city": "BEVERLY HILLS",
     "hq_country": "United States",
     "discovery_source": "sec_efts",
     "principals": [],
@@ -222,407 +222,7 @@
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-009"
-  },
-  {
-    "entity_name": "Wilshire Private Markets Family Office Fund III, L.P.",
-    "entity_type": "SFO",
-    "cik": "0001807659",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "SANTA MONICA",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-010"
-  },
-  {
-    "entity_name": "Wilshire Private Markets Family Office Fund I, L.P.",
-    "entity_type": "SFO",
-    "cik": "0001566927",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "SANTA MONICA",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-011"
-  },
-  {
-    "entity_name": "Wells Fargo Family Office Fund FW, LLC",
-    "entity_type": "SFO",
-    "cik": "0001507396",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "SAN FRANCISCO",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-012"
-  },
-  {
-    "entity_name": "Wells Fargo Family Office Fund I, LLC",
-    "entity_type": "SFO",
-    "cik": "0001507397",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "SAN FRANCISCO",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-013"
-  },
-  {
-    "entity_name": "Wells Fargo Family Office Master Fund, LLC",
-    "entity_type": "SFO",
-    "cik": "0001507398",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "SAN FRANCISCO",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-014"
-  },
-  {
-    "entity_name": "HMC SFO LP",
-    "entity_type": "SFO",
-    "cik": "0001129170",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "BETHESDA",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-015"
-  },
-  {
-    "entity_name": "HOST SFO GP LLC",
-    "entity_type": "SFO",
-    "cik": "0001489927",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "BETHESDA",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-016"
-  },
-  {
-    "entity_name": "PennTex SFO I, LP",
-    "entity_type": "SFO",
-    "cik": "0001791905",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "PITTSBURGH",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-017"
-  },
-  {
-    "entity_name": "West Bond (SFO), LLC",
-    "entity_type": "SFO",
-    "cik": "0001657668",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "PALO ALTO",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-018"
-  },
-  {
-    "entity_name": "SFO REIT, Inc.",
-    "entity_type": "SFO",
-    "cik": "0001566004",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "SAN ANTONIO",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-019"
-  },
-  {
-    "entity_name": "SFO Hotel Investment Fund LLC",
-    "entity_type": "SFO",
-    "cik": "0001510134",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "SEATTLE",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-020"
-  },
-  {
-    "entity_name": "S.F. Family Holdings, Ltd.",
-    "entity_type": "SFO",
-    "cik": "0001433020",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "PLANO",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-021"
-  },
-  {
-    "entity_name": "DOBRINSKY FAMILY HOLDINGS LP",
-    "entity_type": "SFO",
-    "cik": "0001134002",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "TEANECK",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-022"
-  },
-  {
-    "entity_name": "FARM FAMILY HOLDINGS INC",
-    "entity_type": "SFO",
-    "cik": "0001013564",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "GLENMONT",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-023"
-  },
-  {
-    "entity_name": "Standish Family Holdings, LLC",
-    "entity_type": "SFO",
-    "cik": "0001644343",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "BUFFALO",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-024"
-  },
-  {
-    "entity_name": "Canarick Family Holdings LLC",
-    "entity_type": "SFO",
-    "cik": "0001666724",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": null,
-    "hq_city": "GARDEN CITY",
-    "hq_country": "United States",
-    "discovery_source": "sec_efts",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-025"
+    "id": "SFO-6D3B6B4D"
   },
   {
     "entity_name": "CAGLE FAMILY HOLDINGS LLC",
@@ -647,558 +247,1231 @@
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-026"
+    "id": "SFO-6B962143"
   },
   {
-    "entity_name": "Archegos Capital Management",
+    "entity_name": "COLLECTIVE FAMILY OFFICE LLC",
     "entity_type": "SFO",
+    "cik": "0001845066",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
+    "hq_city": "YORK",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
     "principals": [],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-027"
+    "id": "SFO-9CFDBD79"
   },
   {
-    "entity_name": "Ballmer Group",
+    "entity_name": "CVA Family Office, LLC",
     "entity_type": "SFO",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": "http://ballmergroup.org",
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-028"
-  },
-  {
-    "entity_name": "Bayshore Global Management",
-    "entity_type": "SFO",
+    "cik": "0001802084",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
+    "hq_city": "DENVER",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
     "principals": [],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-029"
+    "id": "SFO-B7C4A43B"
   },
   {
-    "entity_name": "Bessemer Trust",
+    "entity_name": "Callan Family Office, LLC",
     "entity_type": "SFO",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": "http://bessemertrust.com",
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-030"
-  },
-  {
-    "entity_name": "Bezos Expeditions",
-    "entity_type": "SFO",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": "https://www.bezosexpeditions.com/index.html",
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-031"
-  },
-  {
-    "entity_name": "Cascade Investment",
-    "entity_type": "SFO",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": "http://cascadeassetmanagement.com",
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-032"
-  },
-  {
-    "entity_name": "Cresset",
-    "entity_type": "SFO",
+    "cik": "0001938970",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
+    "hq_city": "RADNOR",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
     "principals": [],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-033"
+    "id": "SFO-A2341541"
   },
   {
-    "entity_name": "DFO Management",
+    "entity_name": "Canarick Family Holdings LLC",
     "entity_type": "SFO",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": "http://www.dellfamilyoffice.com",
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-034"
-  },
-  {
-    "entity_name": "Dubai Holding",
-    "entity_type": "SFO",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": "https://dubaiholding.com/en",
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-035"
-  },
-  {
-    "entity_name": "Edipresse",
-    "entity_type": "SFO",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": "http://www.edipresse.com",
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-036"
-  },
-  {
-    "entity_name": "Emerson Collective",
-    "entity_type": "SFO",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": "https://emersoncollective.com",
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-037"
-  },
-  {
-    "entity_name": "ICONIQ Capital",
-    "entity_type": "SFO",
+    "cik": "0001666724",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
+    "hq_city": "GARDEN CITY",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
     "principals": [],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-038"
+    "id": "SFO-9B4BBE62"
   },
   {
-    "entity_name": "Kirkbi",
+    "entity_name": "Capitol Family Office, Inc.",
     "entity_type": "SFO",
-    "family_name": null,
-    "source_of_wealth": null,
-    "estimated_aum_usd": null,
-    "aum_confidence": "Unresolved",
-    "year_established": null,
-    "website": "http://kirkbi.com",
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
-    "principals": [],
-    "contacts": [
-      {
-        "type": "email",
-        "value": "Unresolved",
-        "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
-      }
-    ],
-    "enrichment_status": "pending",
-    "id": "SFO-039"
-  },
-  {
-    "entity_name": "Mayfair Verm\u00f6gensverwaltung",
-    "entity_type": "SFO",
+    "cik": "0001863768",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
+    "hq_city": "BEAVERTON",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
     "principals": [],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-040"
+    "id": "SFO-D79E3B1C"
   },
   {
-    "entity_name": "Mousse Partners",
+    "entity_name": "Custos Family Office, LLC",
     "entity_type": "SFO",
+    "cik": "0001904423",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
+    "hq_city": "GREENWOOD VILLAGE",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
     "principals": [],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-041"
+    "id": "SFO-CFE9B6D8"
   },
   {
-    "entity_name": "Robert Wood Johnson Foundation",
+    "entity_name": "DOBRINSKY FAMILY HOLDINGS LP",
     "entity_type": "SFO",
+    "cik": "0001134002",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
+    "hq_city": "TEANECK",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
     "principals": [],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-042"
+    "id": "SFO-1370F9C1"
   },
   {
-    "entity_name": "Soros Fund Management",
+    "entity_name": "Duquesne Family Office LLC",
     "entity_type": "SFO",
+    "cik": "0001536411",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
+    "hq_city": "New York",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
     "principals": [],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-043"
+    "id": "SFO-D264206C"
   },
   {
-    "entity_name": "Spell Capital Partners",
+    "entity_name": "EMFO, LLC",
     "entity_type": "SFO",
+    "cik": "0001859434",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
+    "hq_city": "WESTON",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
     "principals": [],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-044"
+    "id": "SFO-6B91CF13"
   },
   {
-    "entity_name": "Thiel Capital",
+    "entity_name": "FARM FAMILY HOLDINGS INC",
     "entity_type": "SFO",
+    "cik": "0001013564",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
+    "hq_city": "GLENMONT",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
     "principals": [],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-045"
+    "id": "SFO-00E8947A"
   },
   {
-    "entity_name": "Vulcan Inc.",
+    "entity_name": "FIDUCIARY FAMILY OFFICE, LLC",
     "entity_type": "SFO",
+    "cik": "0002020280",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
+    "hq_city": "BOCA RATON",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
     "principals": [],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-046"
+    "id": "SFO-4FB1FB4B"
   },
   {
-    "entity_name": "Whittier Trust Company",
+    "entity_name": "Family Investment Center, Inc.",
     "entity_type": "SFO",
+    "cik": "0001897700",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
+    "hq_city": "SAINT JOSEPH",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
     "principals": [],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-047"
+    "id": "SFO-5825A2E0"
   },
   {
-    "entity_name": "Willett Advisors",
+    "entity_name": "Family Wealth Legacy Investments LP",
     "entity_type": "SFO",
+    "cik": "0001681500",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
+    "hq_city": "HOUSTON",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
     "principals": [],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-048"
+    "id": "SFO-5C5BC0C7"
   },
   {
-    "entity_name": "Winklevoss Capital Management",
+    "entity_name": "Forthright Family Wealth Advisory LLC",
     "entity_type": "SFO",
+    "cik": "0002008648",
     "family_name": null,
     "source_of_wealth": null,
     "estimated_aum_usd": null,
     "aum_confidence": "Unresolved",
     "year_established": null,
     "website": null,
-    "hq_city": null,
-    "hq_country": null,
-    "discovery_source": "wikipedia",
+    "hq_city": "HOUSTON",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
     "principals": [],
     "contacts": [
       {
         "type": "email",
         "value": "Unresolved",
         "confidence": "Unresolved",
-        "notes": "Discovered via Wikipedia. Enrichment pending."
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
       }
     ],
     "enrichment_status": "pending",
-    "id": "SFO-049"
+    "id": "SFO-5F0A27C3"
+  },
+  {
+    "entity_name": "Fortitude Family Office, LLC",
+    "entity_type": "SFO",
+    "cik": "0001950506",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "GREENWOOD VILLAGE",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-FAECA1C5"
+  },
+  {
+    "entity_name": "Fusion Family Wealth LLC",
+    "entity_type": "SFO",
+    "cik": "0001696209",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "WOODBURY",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-F2693454"
+  },
+  {
+    "entity_name": "Geller Family Office Services, LLC",
+    "entity_type": "SFO",
+    "cik": "0001354739",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "NEW YORK",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-05C46478"
+  },
+  {
+    "entity_name": "HMC SFO LP",
+    "entity_type": "SFO",
+    "cik": "0001129170",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "BETHESDA",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-C07210B6"
+  },
+  {
+    "entity_name": "HOST SFO GP LLC",
+    "entity_type": "SFO",
+    "cik": "0001489927",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "BETHESDA",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-0B46C7C8"
+  },
+  {
+    "entity_name": "Horizon Family Wealth, Inc.",
+    "entity_type": "SFO",
+    "cik": "0001910660",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "CHICAGO",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-DC90D782"
+  },
+  {
+    "entity_name": "INTREPID FAMILY OFFICE LLC",
+    "entity_type": "SFO",
+    "cik": "0001596197",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "ST. PETERSBURG",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-13528015"
+  },
+  {
+    "entity_name": "Independent Family Office, LLC",
+    "entity_type": "SFO",
+    "cik": "0001756485",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "NASHVILLE",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-0D107BC6"
+  },
+  {
+    "entity_name": "Kopp Family Office, LLC",
+    "entity_type": "SFO",
+    "cik": "0001683689",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "Westlake",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-4CF36792"
+  },
+  {
+    "entity_name": "Longboat Family Office LP",
+    "entity_type": "SFO",
+    "cik": "0001878856",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "Harrison",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-166487A2"
+  },
+  {
+    "entity_name": "Louis-Dreyfus Family Office LLC",
+    "entity_type": "SFO",
+    "cik": "0001889527",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "WILTON",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-73B6812C"
+  },
+  {
+    "entity_name": "Meristem Family Wealth, LLC",
+    "entity_type": "SFO",
+    "cik": "0001511915",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "MINNETONKA",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-A72B1943"
+  },
+  {
+    "entity_name": "Morton Brown Family Wealth, LLC",
+    "entity_type": "SFO",
+    "cik": "0001909851",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "ALLENTOWN",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-FB061D44"
+  },
+  {
+    "entity_name": "Mosaic Family Wealth, LLC",
+    "entity_type": "SFO",
+    "cik": "0001674343",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "ST. LOUIS",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-568648A8"
+  },
+  {
+    "entity_name": "Noble Family Wealth, LLC",
+    "entity_type": "SFO",
+    "cik": "0001976065",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "CLEARWATER",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-EED4363C"
+  },
+  {
+    "entity_name": "Omnia Family Wealth, LLC",
+    "entity_type": "SFO",
+    "cik": "0001696136",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "AVENTURA",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-C7C5F22F"
+  },
+  {
+    "entity_name": "OneAscent Family Office, LLC",
+    "entity_type": "SFO",
+    "cik": "0002055812",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "BIRMINGHAM",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-DFFAB539"
+  },
+  {
+    "entity_name": "Pathstone Family Office, LLC",
+    "entity_type": "SFO",
+    "cik": "0001511137",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "MIDDLETOWN",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-4574B448"
+  },
+  {
+    "entity_name": "PennTex SFO I, LP",
+    "entity_type": "SFO",
+    "cik": "0001791905",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "PITTSBURGH",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-882ED4C7"
+  },
+  {
+    "entity_name": "Pinnacle Family Office Investments L.P.",
+    "entity_type": "SFO",
+    "cik": "0001542604",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "DALLAS",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-3CC2BB31"
+  },
+  {
+    "entity_name": "Pioneer Family Office, LLC",
+    "entity_type": "SFO",
+    "cik": "0002135110",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "SALT LAKE CITY",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-8FBCC703"
+  },
+  {
+    "entity_name": "QTR Family Wealth, LLC",
+    "entity_type": "SFO",
+    "cik": "0002067954",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "LAKE MARY",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-19BC5DB4"
+  },
+  {
+    "entity_name": "RAINIER FAMILY WEALTH INC",
+    "entity_type": "SFO",
+    "cik": "0002073596",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "TACOMA",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-BF7FA4FC"
+  },
+  {
+    "entity_name": "RPg Family Wealth Advisory, LLC",
+    "entity_type": "SFO",
+    "cik": "0001569884",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "BURLINGTON",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-614C7393"
+  },
+  {
+    "entity_name": "Redwood Family Wealth LLC",
+    "entity_type": "SFO",
+    "cik": "0002116118",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "ADDISON",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-986BA8DB"
+  },
+  {
+    "entity_name": "S.F. Family Holdings, Ltd.",
+    "entity_type": "SFO",
+    "cik": "0001433020",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "PLANO",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-7A7287A6"
+  },
+  {
+    "entity_name": "Safe Harbor Family Capital, LLC",
+    "entity_type": "SFO",
+    "cik": "0002065810",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "PORTLAND",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-DBCB33A4"
+  },
+  {
+    "entity_name": "Standard Family Office LLC",
+    "entity_type": "SFO",
+    "cik": "0001809494",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "SIOUX FALLS",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-C17C4BFE"
+  },
+  {
+    "entity_name": "Standish Family Holdings, LLC",
+    "entity_type": "SFO",
+    "cik": "0001644343",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "BUFFALO",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-5C65784B"
+  },
+  {
+    "entity_name": "Stenger Family Office, LLC",
+    "entity_type": "SFO",
+    "cik": "0002056106",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "HARRISBURG",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-78CC8461"
+  },
+  {
+    "entity_name": "Stokes Family Office, LLC",
+    "entity_type": "SFO",
+    "cik": "0001802278",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "COVINGTON",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-2B47433B"
+  },
+  {
+    "entity_name": "TRED AVON FAMILY WEALTH, LLC",
+    "entity_type": "SFO",
+    "cik": "0002094435",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "EASTON",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-38943717"
+  },
+  {
+    "entity_name": "Tarbox Family Office, Inc.",
+    "entity_type": "SFO",
+    "cik": "0001599603",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "NEW YORK",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-B6176D27"
+  },
+  {
+    "entity_name": "West Bond (SFO), LLC",
+    "entity_type": "SFO",
+    "cik": "0001657668",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "PALO ALTO",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-5DCBB214"
+  },
+  {
+    "entity_name": "Woodlock Family Capital, L.P.",
+    "entity_type": "SFO",
+    "cik": "0001759792",
+    "family_name": null,
+    "source_of_wealth": null,
+    "estimated_aum_usd": null,
+    "aum_confidence": "Unresolved",
+    "year_established": null,
+    "website": null,
+    "hq_city": "BOSTON",
+    "hq_country": "United States",
+    "discovery_source": "sec_efts",
+    "principals": [],
+    "contacts": [
+      {
+        "type": "email",
+        "value": "Unresolved",
+        "confidence": "Unresolved",
+        "notes": "Discovered via SEC EDGAR bulk IA search. Enrichment pending."
+      }
+    ],
+    "enrichment_status": "pending",
+    "id": "SFO-706BAC1E"
   }
 ]

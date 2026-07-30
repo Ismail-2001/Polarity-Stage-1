@@ -12,9 +12,6 @@ Wikipedia (different data source entirely).
 from __future__ import annotations
 
 import re
-import time
-from typing import Optional
-from urllib.parse import urlencode
 
 import requests
 
@@ -147,7 +144,4 @@ def _excluded_name(name: str) -> bool:
         "registered investment adviser", "ria", "ria ",
         "securities", "exchange", "clearing",
     ]
-    for ex in excludes:
-        if ex in low:
-            return True
-    return False
+    return any(ex in low for ex in excludes)

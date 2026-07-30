@@ -130,18 +130,18 @@ h1, h2, h3, h4, h5, h6, .stMarkdown h1, .stMarkdown h2, .stMarkdown h3 {
 .confidence-badge--unverified { color: var(--color-text-muted); }
 
 /* ── Chips ────────────────────────────────────────────────────────────────── */
-[data-testid="stVerticalBlockBorderWrapper"][key="chip_container"] button {
-    background: var(--color-bg-tertiary);
-    border: 1px solid var(--color-border-hover);
-    color: var(--color-text-secondary);
-    border-radius: 20px;
-    font-size: 0.85em;
-    transition: all 0.15s ease;
+button[key^="chip_"] {
+    background: var(--color-bg-tertiary) !important;
+    border: 1px solid var(--color-border-hover) !important;
+    color: var(--color-text-secondary) !important;
+    border-radius: 20px !important;
+    font-size: 0.85em !important;
+    transition: all 0.15s ease !important;
 }
-[data-testid="stVerticalBlockBorderWrapper"][key="chip_container"] button:hover {
-    border-color: var(--color-accent-blue);
-    color: var(--color-text-primary);
-    background: rgba(59,130,246,0.1);
+button[key^="chip_"]:hover {
+    border-color: var(--color-accent-blue) !important;
+    color: var(--color-text-primary) !important;
+    background: rgba(59,130,246,0.1) !important;
 }
 
 /* ── KPI Cards ────────────────────────────────────────────────────────────── */
@@ -515,19 +515,18 @@ with tab1:
 
     # Example query chips
     st.markdown("**Try these:**")
-    with st.container(key="chip_container"):
-        chip_cols = st.columns(4)
-        example_queries = [
-            "Cascade Investment Gates",
-            "sports ownership family office",
-            "family offices in London",
-            "cannabis agriculture investment",
-        ]
-        for i, eq in enumerate(example_queries):
-            with chip_cols[i]:
-                if st.button(eq, key=f"chip_{i}", use_container_width=True):
-                    query = eq
-                    st.rerun()
+    chip_cols = st.columns(4)
+    example_queries = [
+        "Cascade Investment Gates",
+        "sports ownership family office",
+        "family offices in London",
+        "cannabis agriculture investment",
+    ]
+    for i, eq in enumerate(example_queries):
+        with chip_cols[i]:
+            if st.button(eq, key=f"chip_{i}", use_container_width=True):
+                query = eq
+                st.rerun()
 
     if query:
         results = []

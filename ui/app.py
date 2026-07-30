@@ -493,7 +493,7 @@ with tab3:
             "Status": ["Verified", "Catch-all", "Unresolved"],
             "Count": [verified, catch_all, unresolved],
         })
-        st.bar_chart(chart_data.set_index("Status"), color=["#1a7f37", "#bf8700", "#cf222e"])
+        st.bar_chart(chart_data.set_index("Status"))
 
         st.markdown("---")
         st.download_button(

@@ -9,3 +9,4 @@ streamlit==1.36.0
 sentence-transformers==2.7.0
 chromadb==0.4.24
 numpy<2.0.0
+pytest>=7.0.0

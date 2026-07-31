@@ -10,7 +10,6 @@ confidence/provenance status as a suffix:
 
 import csv
 import json
-import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -112,7 +111,7 @@ def main():
     # XLSX (if openpyxl available)
     try:
         import openpyxl
-        from openpyxl.styles import Font, PatternFill, Alignment
+        from openpyxl.styles import Alignment, Font, PatternFill
 
         wb = openpyxl.Workbook()
         ws = wb.active
